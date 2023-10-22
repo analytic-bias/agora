@@ -108,8 +108,15 @@ import GameServer.Commands
 -- Dependency Multiplication → AdvMultiplication
 -- Dependency AdvAddition → EvenOdd → Inequality → StrongInduction
 
-import Game.Levels.NL
+import Game.Levels.NLQuantifiers
+import Game.Levels.NLTenses
 
 Title "Project Agora"
+Introduction
+"
+# Project Agora
+
+This is an attempt to teach mathematics and philosophy via formal methods and formal toolsets, in particular via Lean 4.
+"
 
 MakeGame

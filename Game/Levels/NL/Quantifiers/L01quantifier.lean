@@ -1,6 +1,6 @@
 import Game.Metadata
 
-World "NL"
+World "NLQuantifiers"
 Level 1
 Title "Quantifiers - 1"
 
