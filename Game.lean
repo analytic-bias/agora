@@ -4,7 +4,7 @@ import GameServer.Commands
 -- Here are the imports defining many worlds for the game `Game` (the natural number game,
 -- in this case). Each world consists of a finite number of levels, and levels
 -- are numbered 1,2,3,4... inside the level files.
-import Game.Levels.Tutorial
+-- import Game.Levels.Tutorial
 -- import Game.Levels.Addition
 -- import Game.Levels.Multiplication
 -- import Game.Levels.Power
@@ -108,8 +108,8 @@ import Game.Levels.Tutorial
 -- Dependency Multiplication → AdvMultiplication
 -- Dependency AdvAddition → EvenOdd → Inequality → StrongInduction
 
--- import Game.Levels.NL
+import Game.Levels.NL
 
-Title "Stony Brook Project Agora"
+Title "Project Agora"
 
 MakeGame

@@ -1,6 +1,7 @@
 import GameServer.Commands
 
 import Game.MyNat.Definition
+import Game.MyNL.NL
 
 import Game.Doc.Definitions
 import Game.Doc.Tactics

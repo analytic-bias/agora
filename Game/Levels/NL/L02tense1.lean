@@ -1,13 +1,9 @@
--- import Game.Metadata
--- import Game.Levels.MyNL.NL
+import Game.Metadata
 
--- World "NL"
--- Level 2
--- Title "Tenses 1"
+World "NL"
+Level 2
+Title "Tenses 1"
 
--- namespace NL
+namespace NL
 
--- -- Yesterday, I had seen Jessica for lunch.
-
-
--- end NL
+-- E-R-S: Yesterday, I had seen Jessica for lunch.
