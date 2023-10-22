@@ -9,7 +9,7 @@ open NLCommon
 
 -- Someone loves everyone.
 
-#check Atom
+-- #check Atom
 
 def Value : Type := Bool
 
