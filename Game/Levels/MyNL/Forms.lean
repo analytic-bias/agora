@@ -18,15 +18,6 @@ inductive NLJudgement where
 
 infixr:0 "⊢" => NLJudgement.judge
 
--- #check 1
--- #check NLType.atom
-#check NLType.atom 1
-#check !1 ⊢ (!2 \ !3)
--- #check NLJudgement.judge
--- #check (NLJudgement.judge (NLType.atom 1) (NLType.atom 1))
-
--- axiom test : (a : atom) -> (NLJudgement.judge (NLType.atom a) (NLType.atom a))
-
 inductive NL : (NLJudgement atom) -> Type where
 | ax : NL (!a ⊢ !a)
 | residuation_rm : NL (b ⊢ a \\ c) -> NL (a ⊗ b ⊢ c)
@@ -40,16 +31,3 @@ end NL
 
 open NL
 
-namespace test
-
-  -- | _wh : Atom
-  -- | _pp : Atom
-
-  -- structure Parsable (Lexicon)
-
-  -- inductive LexiconChomsky where
-  -- |
-  -- def lexicon (s : String) :=
-  --   match s with
-  --   | "ideas" => Atom._np
-end test
