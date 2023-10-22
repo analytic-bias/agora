@@ -53,12 +53,18 @@ def l (c : NLCalculus _ (a ⊢ b)) :
   | NLCalculus.residuation_lm f => fun x => fun | (y, z) => (l f) (fun k => k (x, z)) y
   | NLCalculus.residuation_ml f => fun k x => k (fun | (y, z) => (l f) y (x, z))
   | NLCalculus.monotonicity_times f g => fun k => fun | (x, y) => deMorgan Value ((r f) x) ((r g) y) k
-  -- k k′ = k (λ{(x , y) → deMorgan (⌈ f ⌉ᴿ x) (λ k → k  (⌈ g ⌉ᴸ y)) k′})
   | NLCalculus.monotonicity_backslash f g => fun k k' => k (fun | (x, y) => deMorgan Value ((r f) x) (fun k => k ((l g) y)) k')
-  -- k (λ{(x , y) → deMorgan (λ k → k  (⌈ f ⌉ᴸ x)) (⌈ g ⌉ᴿ y) k′})
   | NLCalculus.monotonicity_slash f g => fun k k' => k (fun | (x, y) => deMorgan Value (fun k => k ((l f) x)) ((r g) y) k')
 def r (c : NLCalculus _ (a ⊢ b)) :
-      (interpret interpret_atom Value a) -> ~~(interpret interpret_atom Value b) := by sorry
+      (interpret interpret_atom Value a) -> ~~(interpret interpret_atom Value b) := match c with
+  | NLCalculus.reflexivity => fun x k => k x
+  | NLCalculus.residuation_rm f => fun | (x, y) => fun z => (r f) y (fun k => k (x, z))
+  | NLCalculus.residuation_mr f => fun x k => k (fun | (y , z) => (r f) (y , x) z)
+  | NLCalculus.residuation_lm f => fun | (x, y) => fun z => (r f) x (fun k => k (z, y))
+  | NLCalculus.residuation_ml f => fun x k => k (fun | (y , z) => (r f) (x, z) y)
+  | NLCalculus.monotonicity_times f g => fun | (x, y) => fun k => deMorgan Value ((r f) x) ((r g) y) k
+  | NLCalculus.monotonicity_backslash f g => fun k' k => k (fun | (x, y) => deMorgan Value ((r f) x) (fun k'' => k'' ((l g) y)) k')
+  | NLCalculus.monotonicity_slash f g => fun k' k => k (fun | (x, y) => deMorgan Value (fun k'' => k'' ((l f) x)) ((r g) y) k')
 end
 
 end NLInterpretation
