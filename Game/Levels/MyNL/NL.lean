@@ -1,8 +1,8 @@
 namespace NL
-variable (atom : Type)
+variable (Atom : Type)
 
 inductive NLType where
-| atom : atom -> NLType
+| atom : Atom -> NLType
 | slash : NLType -> NLType -> NLType
 | backslash : NLType -> NLType -> NLType
 | times : NLType -> NLType -> NLType
@@ -13,11 +13,11 @@ infixl:2 (priority := high) "⊗" => NLType.times
 prefix:max (priority := high) "!" => NLType.atom
 
 inductive NLJudgement where
-| judge : (NLType atom) -> (NLType atom) -> NLJudgement
+| judge : (NLType Atom) -> (NLType Atom) -> NLJudgement
 
 infixr:0 "⊢" => NLJudgement.judge
 
-inductive NLCalculus : (NLJudgement atom) -> Type where
+inductive NLCalculus : (NLJudgement Atom) -> Type where
 | reflexivity : NLCalculus (!a ⊢ !a)
 | residuation_rm {a b c} : NLCalculus (b ⊢ a \ c) -> NLCalculus (a ⊗ b ⊢ c)
 | residuation_mr {a b c} : NLCalculus (a ⊗ b ⊢ c) -> NLCalculus (b ⊢ a \ c)
@@ -30,12 +30,12 @@ end NL
 
 namespace NLInterpretation
 open NL
-variable (interpret_atom : atom -> Type) (Value : Type)
+variable (interpret_atom : Atom -> Type) (Value : Type)
 set_option quotPrecheck false
 -- notation:max (priority := high) "[" a "]" => (interpret_atom a)
 notation:max (priority := high) "~" a => (a -> Value)
 
-def interpret : (NLType atom) -> Type
+def interpret : (NLType Atom) -> Type
   | !a => interpret_atom a
   | a ⊗ b => (interpret a) × (interpret b)
   | a \ b => ~((interpret a) × (~(interpret b)))
@@ -66,5 +66,9 @@ def r (c : NLCalculus _ (a ⊢ b)) :
   | NLCalculus.monotonicity_backslash f g => fun k' k => k (fun | (x, y) => deMorgan Value ((r f) x) (fun k'' => k'' ((l g) y)) k')
   | NLCalculus.monotonicity_slash f g => fun k' k => k (fun | (x, y) => deMorgan Value (fun k'' => k'' ((l f) x)) ((r g) y) k')
 end
-
 end NLInterpretation
+
+namespace NLCommon
+open NL
+open NLInterpretation
+end NLCommon
