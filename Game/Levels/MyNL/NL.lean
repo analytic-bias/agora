@@ -24,8 +24,8 @@ inductive NLCalculus : (NLJudgement atom) -> Type where
 | residuation_lm {a b c} : NLCalculus (a ⊢ c / b) -> NLCalculus (a ⊗ b ⊢ c)
 | residuation_ml {a b c} : NLCalculus (a ⊗ b ⊢ c) -> NLCalculus (a ⊢ c / b)
 | monotonicity_times {a b c} : NLCalculus (a ⊢ b) -> NLCalculus (c ⊢ d) -> NLCalculus (a ⊗ c ⊢ b ⊗ d)
+| monotonicity_backslash {a b c} : NLCalculus (a ⊢ b) -> NLCalculus (c ⊢ d) -> NLCalculus (b \ c ⊢ a \ d) -- error in https://plato.stanford.edu/entries/typelogical-grammar/#LamSys
 | monotonicity_slash {a b c} : NLCalculus (a ⊢ b) -> NLCalculus (c ⊢ d) -> NLCalculus (a / d ⊢ b / c)
-| monotonicity_backslash {a b c} : NLCalculus (a ⊢ b) -> NLCalculus (c ⊢ d) -> NLCalculus (d \ a ⊢ c \ b)
 end NL
 
 namespace NLInterpretation
@@ -44,11 +44,21 @@ def interpret : (NLType atom) -> Type
 def deMorgan : (~~a) -> (~~b) -> ~~(a × b) := fun c1 c2 k =>
   c1 (fun x => c2 (fun y => k (x, y)))
 
+mutual
 def l (c : NLCalculus _ (a ⊢ b)) :
       (~(interpret interpret_atom Value b)) -> ~(interpret interpret_atom Value a) := match c with
   | NLCalculus.reflexivity => fun k x => k x
-  -- ⌈ r⇒⊗ f    ⌉ᴸ   x  =    λ{(y , z) → ⌈ f ⌉ᴸ (λ k → k (y , x)) z}
   | NLCalculus.residuation_rm f => fun x => fun | (y, z) => (l f) (fun k => k (y, x)) z
-
+  | NLCalculus.residuation_mr f => fun k x => k (fun | (y, z) => (l f) z (y, x))
+  | NLCalculus.residuation_lm f => fun x => fun | (y, z) => (l f) (fun k => k (x, z)) y
+  | NLCalculus.residuation_ml f => fun k x => k (fun | (y, z) => (l f) y (x, z))
+  | NLCalculus.monotonicity_times f g => fun k => fun | (x, y) => deMorgan Value ((r f) x) ((r g) y) k
+  -- k k′ = k (λ{(x , y) → deMorgan (⌈ f ⌉ᴿ x) (λ k → k  (⌈ g ⌉ᴸ y)) k′})
+  | NLCalculus.monotonicity_backslash f g => fun k k' => k (fun | (x, y) => deMorgan Value ((r f) x) (fun k => k ((l g) y)) k')
+  -- k (λ{(x , y) → deMorgan (λ k → k  (⌈ f ⌉ᴸ x)) (⌈ g ⌉ᴿ y) k′})
+  | NLCalculus.monotonicity_slash f g => fun k k' => k (fun | (x, y) => deMorgan Value (fun k => k ((l f) x)) ((r g) y) k')
+def r (c : NLCalculus _ (a ⊢ b)) :
+      (interpret interpret_atom Value a) -> ~~(interpret interpret_atom Value b) := by sorry
+end
 
 end NLInterpretation
