@@ -18,7 +18,7 @@ opening this project in VSCode.
 You can then open [localhost:3000](http://localhost:3000) in a browser.
 
 After making changes to the code, you need to run `lake build` in a terminal and
-reload the web page inside the "Simple Browser".
+reload the web page inside the "Simple Browser".ime
 
 ### Codespaces
 
