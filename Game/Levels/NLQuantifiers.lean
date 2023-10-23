@@ -1,5 +1,4 @@
 import Game.Levels.NL.Quantifiers.L01quantifier
--- import Game.Levels.NL.L02tense1
 
 World "NLQuantifiers"
 Title "non-associative Lambek calculus in quantifier' grammar"

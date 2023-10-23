@@ -87,8 +87,10 @@ theorem grammatical : NLCalculus Atom (((np // n) ⊗ n) ⊗ (((np \\ s) // np) 
 
 #check r Atom atom_interpretation Value grammatical (someone, loves, everyone)
 
+#print grammatical
+
 Statement : NLCalculus Atom (((np // n) ⊗ n) ⊗ (((np \\ s) // np) ⊗ ((np // n) ⊗ n)) ⊢ s) := by
-  Hint "In order to use the tactic `rfl` you can enter it in the text box
+  Hint "In order to use the tactic `apply rst` you can enter it in the text box
   under the goal and hit \"Execute\"."
   apply rst
   apply rst
@@ -106,7 +108,7 @@ Statement : NLCalculus Atom (((np // n) ⊗ n) ⊗ (((np \\ s) // np) ⊗ ((np /
 -- "The axiom schema Residuation Slash to Times, denoted `rst`, is a proof of `a`."
 
 NewLemma NL.NLCalculus.rst NL.NLCalculus.ms NL.NLCalculus.rts NL.NLCalculus.rbt NL.trefl
-LemmaTab "NLCalculus"
+LemmaTab "NLCalculus" -- "AdmissibleCut" "OperationalDecidability"
 NewTactic apply
 
 -- DefinitionDoc MyNat as "ℕ"

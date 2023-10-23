@@ -108,13 +108,17 @@ import GameServer.Commands
 -- Dependency Multiplication → AdvMultiplication
 -- Dependency AdvAddition → EvenOdd → Inequality → StrongInduction
 
+import Game.Levels.NLFoundation
 import Game.Levels.NLQuantifiers
 import Game.Levels.NLTenses
 
-Title "Project Agora"
+Dependency NLFoundation → NLQuantifiers
+Dependency NLFoundation → NLTenses
+
+Title "Project Agora - Logic 2030"
 Introduction
 "
-# Project Agora
+# Project Agora - Logic 2030
 
 This is an attempt to teach mathematics and philosophy via formal methods and formal toolsets, in particular via Lean 4.
 "

@@ -1,5 +1,4 @@
 import Game.Levels.NL.Tenses.L01EdRdS
--- import Game.Levels.NL.L02tense1
 
 World "NLTenses"
 Title "non-associative Lambek calculus in tenses' grammar"

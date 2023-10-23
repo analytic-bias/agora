@@ -72,19 +72,4 @@ def trefl {a : NLType Atom} : NLCalculus Atom (a ⊢ a) := match a with
 
 notation:max (priority := high) "[" a "]" => (interpret a)
 
--- namespace NLTacticMacro
--- open NL
--- open NLInterpretation
--- macro "arefl" : term => `(NLCalculus.arefl)
--- macro "rbt" : term => `(NLCalculus.rbt)
--- macro "rtb" : term => `(NLCalculus.rtb)
--- macro "rst" : term => `(NLCalculus.rst)
--- macro "rts" : term => `(NLCalculus.rts)
--- macro "mt" : term => `(NLCalculus.mt)
--- macro "mb" : term => `(NLCalculus.mb)
--- macro "ms" : term => `(NLCalculus.ms)
--- end NLTacticMacro
-
-namespace AdmissibleCut
-
-end AdmissibleCut
+-- TODO AdmissibleCut OperationalDecidability
