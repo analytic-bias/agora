@@ -108,12 +108,12 @@ import GameServer.Commands
 -- Dependency Multiplication → AdvMultiplication
 -- Dependency AdvAddition → EvenOdd → Inequality → StrongInduction
 
-import Game.Levels.NLFoundation
-import Game.Levels.NLQuantifiers
+-- import Game.Levels.NLFoundation
+-- import Game.Levels.NLQuantifiers
 import Game.Levels.NLTenses
 
-Dependency NLFoundation → NLQuantifiers
-Dependency NLFoundation → NLTenses
+-- Dependency NLFoundation → NLQuantifiers
+-- Dependency NLFoundation → NLTenses
 
 Title "Project Agora - Logic 2030"
 Introduction

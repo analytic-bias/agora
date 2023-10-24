@@ -1,7 +1,7 @@
 import Game.Levels.NL.Tenses.L01EdRdS
 
 World "NLTenses"
-Title "non-associative Lambek calculus in tenses' grammar"
+Title "Non-Associative Lambek Calculus in the Syntax and semantics of Tenses"
 
 Introduction
 "

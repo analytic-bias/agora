@@ -1,4 +1,4 @@
-import Game.Levels.NL.Quantifiers.L01quantifier
+import Game.Levels.NL.Quantifiers.L01somelove
 
 World "NLQuantifiers"
 Title "non-associative Lambek calculus in quantifier' grammar"
