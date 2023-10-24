@@ -50,6 +50,34 @@ open NLCalculus
 -- ⇒ \\ b
 -- ⇐ // s
 def NL := NLCalculus Atom
+def proof {r : Rei} : NL ((
+    (((np ⊗
+    (np \\ (((s (anteriorize r)) // np) // ((np \\ (s r)) // np)))) ⊗
+    ((np \\ (s r)) // np)) ⊗
+    np) ⊗
+    ((((s (anteriorize r)) \\ (s (anteriorize r))) // t) ⊗
+    t)) ⊢ s (anteriorize r)) := by
+  apply rbt
+  apply rst
+  apply ms
+  · apply mb
+    · apply rst
+      apply rst
+      apply rbt
+      apply mb
+      · apply arefl
+      · apply ms
+        · apply ms
+          · apply arefl
+          · apply arefl
+        · apply ms
+          · apply mb
+            · apply arefl
+            · apply arefl
+          · apply arefl
+    · apply arefl
+  · apply arefl
+
 Introduction
 "
 ## \"They had passed all exams by then.\"
@@ -145,3 +173,9 @@ Conclusion
 "
 conclusion
 "
+
+-- TODO put in conclusion:
+noncomputable def a := denote Atom interpa Value proof ((((they , had) , passed) , exams) , (by_ , then_)) id
+set_option maxRecDepth 2048
+#reduce a
+-- output: (PassP they exams, Nat.succ (Nat.succ then_))

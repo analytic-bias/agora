@@ -42,27 +42,28 @@ def deMorgan : (~~a) -> (~~b) -> ~~(a × b) := fun c1 c2 k =>
   c1 (fun x => c2 (fun y => k (x, y)))
 
 mutual
-def l (c : NLCalculus _ (a ⊢ b)) :
+def denotel (c : NLCalculus _ (a ⊢ b)) :
       (~(interpret Atom interpret_atom Value b)) -> ~(interpret Atom interpret_atom Value a) := match c with
   | NLCalculus.arefl => fun k x => k x
-  | NLCalculus.rbt f => fun x => fun | (y, z) => (l f) (fun k => k (y, x)) z
-  | NLCalculus.rtb f => fun k x => k (fun | (y, z) => (l f) z (y, x))
-  | NLCalculus.rst f => fun x => fun | (y, z) => (l f) (fun k => k (x, z)) y
-  | NLCalculus.rts f => fun k x => k (fun | (y, z) => (l f) y (x, z))
-  | NLCalculus.mt f g => fun k => fun | (x, y) => deMorgan Value ((r f) x) ((r g) y) k
-  | NLCalculus.mb f g => fun k k' => k (fun | (x, y) => deMorgan Value ((r f) x) (fun k => k ((l g) y)) k')
-  | NLCalculus.ms f g => fun k k' => k (fun | (x, y) => deMorgan Value (fun k => k ((l f) x)) ((r g) y) k')
-def r (c : NLCalculus _ (a ⊢ b)) :
+  | NLCalculus.rbt f => fun x => fun | (y, z) => (denotel f) (fun k => k (y, x)) z
+  | NLCalculus.rtb f => fun k x => k (fun | (y, z) => (denotel f) z (y, x))
+  | NLCalculus.rst f => fun x => fun | (y, z) => (denotel f) (fun k => k (x, z)) y
+  | NLCalculus.rts f => fun k x => k (fun | (y, z) => (denotel f) y (x, z))
+  | NLCalculus.mt f g => fun k => fun | (x, y) => deMorgan Value ((denoter f) x) ((denoter g) y) k
+  | NLCalculus.mb f g => fun k k' => k (fun | (x, y) => deMorgan Value ((denoter f) x) (fun k => k ((denotel g) y)) k')
+  | NLCalculus.ms f g => fun k k' => k (fun | (x, y) => deMorgan Value (fun k => k ((denotel f) x)) ((denoter g) y) k')
+def denoter (c : NLCalculus _ (a ⊢ b)) :
       (interpret Atom interpret_atom Value a) -> ~~(interpret Atom interpret_atom Value b) := match c with
   | NLCalculus.arefl => fun x k => k x
-  | NLCalculus.rbt f => fun | (x, y) => fun z => (r f) y (fun k => k (x, z))
-  | NLCalculus.rtb f => fun x k => k (fun | (y , z) => (r f) (y , x) z)
-  | NLCalculus.rst f => fun | (x, y) => fun z => (r f) x (fun k => k (z, y))
-  | NLCalculus.rts f => fun x k => k (fun | (y , z) => (r f) (x, z) y)
-  | NLCalculus.mt f g => fun | (x, y) => fun k => deMorgan Value ((r f) x) ((r g) y) k
-  | NLCalculus.mb f g => fun k' k => k (fun | (x, y) => deMorgan Value ((r f) x) (fun k'' => k'' ((l g) y)) k')
-  | NLCalculus.ms f g => fun k' k => k (fun | (x, y) => deMorgan Value (fun k'' => k'' ((l f) x)) ((r g) y) k')
+  | NLCalculus.rbt f => fun | (x, y) => fun z => (denoter f) y (fun k => k (x, z))
+  | NLCalculus.rtb f => fun x k => k (fun | (y , z) => (denoter f) (y , x) z)
+  | NLCalculus.rst f => fun | (x, y) => fun z => (denoter f) x (fun k => k (z, y))
+  | NLCalculus.rts f => fun x k => k (fun | (y , z) => (denoter f) (x, z) y)
+  | NLCalculus.mt f g => fun | (x, y) => fun k => deMorgan Value ((denoter f) x) ((denoter g) y) k
+  | NLCalculus.mb f g => fun k' k => k (fun | (x, y) => deMorgan Value ((denoter f) x) (fun k'' => k'' ((denotel g) y)) k')
+  | NLCalculus.ms f g => fun k' k => k (fun | (x, y) => deMorgan Value (fun k'' => k'' ((denotel f) x)) ((denoter g) y) k')
 end
+def denote := denoter
 
 def trefl {a : NLType Atom} : NLCalculus Atom (a ⊢ a) := match a with
   | NLType.atom _ => NLCalculus.arefl
