@@ -1,4 +1,5 @@
 import Game.Metadata
+import Paperproof
 World "NLTenses"
 Level 1
 Title "Tenses 1A - They had passed all exams by then."
@@ -81,9 +82,19 @@ def proof {r : Rei} : NL ((
 Introduction
 "
 ## \"They had passed all exams by then.\"
+
+In this level we are going to use what was formulated previously on System $\\mathbb{NL}$ to study the mechanized parsing of the sentence above.
+
+In case you jumped to this level or forgot them, here are the inference rules of System $\\mathbb{NL}$:
+- `arefl` (atom reflexivity)
 "
+-- lexer: example
+notation:0 "𝕃 " a => NLCalculus Atom a
+set_option pp.explicit false
+set_option pp.universes false
+set_option pp.notation true
 /-- exercise description -/
-Statement {r : Rei} : NL ((
+Statement {r : Rei} : 𝕃 ((
     (((np ⊗
     (np \\ (((s (anteriorize r)) // np) // ((np \\ (s r)) // np)))) ⊗
     ((np \\ (s r)) // np)) ⊗

@@ -7,15 +7,15 @@ inductive NLType where
 | backslash : NLType -> NLType -> NLType
 | times : NLType -> NLType -> NLType
 
-infixr:1 (priority := high) "//" => NLType.slash
-infixr:1 (priority := high) "\\\\" => NLType.backslash
-infixl:1 (priority := high) "⊗" => NLType.times
+infix:1 (priority := high) " // " => NLType.slash
+infix:1 (priority := high) " \\\\ " => NLType.backslash
+infix:2 (priority := high) " ⊗ " => NLType.times
 prefix:max (priority := high) "!" => NLType.atom
 
 inductive NLJudgement : Type where
 | judge : (NLType Atom) -> (NLType Atom) -> NLJudgement
 
-infixr:0 "⊢" => NLJudgement.judge
+infix:0 " ⊢ " => NLJudgement.judge
 
 inductive NLCalculus : (NLJudgement Atom) -> Type where
 | arefl : NLCalculus (!a ⊢ !a)
@@ -71,6 +71,6 @@ def trefl {a : NLType Atom} : NLCalculus Atom (a ⊢ a) := match a with
   | NLType.backslash _ _ => NLCalculus.mb trefl trefl
   | NLType.slash _ _ => NLCalculus.ms trefl trefl
 
-notation:max (priority := high) "[" a "]" => (interpret a)
+-- notation:max (priority := high) "[" a "]" => (interpret a)
 
 -- TODO AdmissibleCut OperationalDecidability

@@ -22,6 +22,8 @@ open Lean in
 require mathlib from git
   "https://github.com/leanprover-community/mathlib4" @ "v4.1.0"
 
+require Paperproof from git "https://github.com/Paper-Proof/paperproof.git"@"main"/"lean"
+
 -- NOTE: We abuse the `trace.debug` option to toggle messages in VSCode on and
 -- off when calling `lake build`. Ideally there would be a better way using `logInfo` and
 -- an option like `lean4game.verbose`.
