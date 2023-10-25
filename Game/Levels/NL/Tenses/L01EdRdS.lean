@@ -129,21 +129,37 @@ DefinitionDoc NL as "𝕃"
 𝕃
 "
 LemmaDoc NL.NLCalculus.arefl as "arefl" in "𝕃"
-"arefl"
+"
+$$\\dfrac{\\,\\,}{\\,\\alpha:\\text{Atom}\\quad\\alpha\\vdash\\alpha\\,}(\\text{arefl})$$
+"
 LemmaDoc NL.NLCalculus.rbt as "rbt" in "𝕃"
-"rbt"
+"
+$$\\dfrac{\\,\\beta\\vdash\\alpha\\ \\gamma\\,}{\\,\\alpha\\otimes\\beta\\vdash\\gamma\\,}(\\text{rbt})$$
+"
 LemmaDoc NL.NLCalculus.rtb as "rtb" in "𝕃"
-"rtb"
+"
+$$\\dfrac{\\,\\alpha\\otimes\\beta\\vdash\\gamma\\,}{\\,\\beta\\vdash\\alpha\\ \\gamma\\,}(\\text{rtb})$$
+"
 LemmaDoc NL.NLCalculus.rst as "rst" in "𝕃"
-"rst"
+"
+$$\\dfrac{\\,\\alpha\\vdash\\gamma/\\beta\\,}{\\,\\alpha\\otimes\\beta\\vdash\\gamma\\,}(\\text{rst})$$
+"
 LemmaDoc NL.NLCalculus.rts as "rts" in "𝕃"
-"rts"
+"
+$$\\dfrac{\\,\\alpha\\otimes\\beta\\vdash\\gamma\\,}{\\,\\alpha\\vdash\\gamma/\\beta\\,}(\\text{rts})$$
+"
 LemmaDoc NL.NLCalculus.mt as "mt" in "𝕃"
-"mt"
+"
+$$\\dfrac{\\,\\beta\\vdash\\alpha\\ \\gamma\\,}{\\,\\alpha\\otimes\\beta\\vdash\\gamma\\,}(\\text{rbt})$$
+"
 LemmaDoc NL.NLCalculus.mb as "mb" in "𝕃"
-"mb"
+"
+$$\\dfrac{\\,\\alpha\\vdash\\beta\\quad\\gamma\\vdash\\delta\\,}{\\,\\beta\\ \\gamma\\vdash\\alpha\\ \\delta\\,}(\\text{mb})$$
+"
 LemmaDoc NL.NLCalculus.ms as "ms" in "𝕃"
-"ms"
+"
+$$\\dfrac{\\,\\alpha\\vdash\\beta\\quad\\gamma\\vdash\\delta\\,}{\\,\\alpha/\\delta\\vdash\\beta/\\gamma\\,}(\\text{mt})$$
+"
 NewLemma
 NL.NLCalculus.arefl
 NL.NLCalculus.rbt
