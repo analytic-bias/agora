@@ -86,6 +86,8 @@ Introduction
 In this level we are going to use what was formulated previously on System $\\mathbb{NL}$ to study the mechanized parsing of the sentence above.
 
 In case you jumped to this level or forgot them, click on the buttons in the right-side panel to review the inference rules of System $\\mathbb{NL}$.
+
+
 "
 -- lexer: example
 notation:0 "𝕃 " a => NLCalculus Atom a
@@ -101,6 +103,7 @@ Statement {r : Rei} : 𝕃 ((
     ((((s (anteriorize r)) \\ (s (anteriorize r))) // t) ⊗
     t)) ⊢ s (anteriorize r)) := by
   Hint "Now start with the `apply` tactics; its usage can be found on the right too."
+  Hint (hidden := true) "Sample solution: "
   apply rbt
   Hint (hidden := true) "extra hint 1"
   apply rst
@@ -123,7 +126,7 @@ Statement {r : Rei} : 𝕃 ((
     · apply arefl
   · apply arefl
 
-DefinitionDoc NL as "𝕃"
+DefinitionDoc NL.Calculus as "𝕃"
 "
 𝕃
 "
@@ -159,6 +162,7 @@ LemmaDoc NL.NLCalculus.ms as "ms" in "𝕃"
 "
 $$\\dfrac{\\,\\alpha\\vdash\\beta\\quad\\gamma\\vdash\\delta\\,}{\\,\\alpha/\\delta\\vdash\\beta/\\gamma\\,}(\\text{mt})$$
 "
+NewDefinition NL.NLCalculus
 NewLemma
 NL.NLCalculus.arefl
 NL.NLCalculus.rbt
@@ -169,35 +173,43 @@ NL.NLCalculus.mt
 NL.NLCalculus.mb
 NL.NLCalculus.ms
 LemmaTab "𝕃"
-TacticDoc apply "
-## Summary
-
-If `t : P → Q` is a proof that $P\\implies Q$, and `h : P` is a proof of `P`,
-then `apply t at h` will change `h` to a proof of `Q`. The idea is that if
-you know `P` is true, then you can deduce from `t` that `Q` is true.
-
-If the *goal* is `Q`, then `apply t` will \"argue backwards\" and change the
-goal to `P`. The idea here is that if you want to prove `Q`, then by `t`
-it suffices to prove `P`, so you can reduce the goal to proving `P`.
-
-### Example:
-
-`succ_inj x y` is a proof that `succ x = succ y → x = y`.
-
-So if you have a hypothesis `h : succ (a + 37) = succ (b + 42)`
-then `apply succ_inj at h` will change `h` to `a + 37 = b + 42`.
-You could write `apply succ_inj (a + 37) (b + 42) at h`
-but Lean is smart enough to figure out the inputs to `succ_inj`.
-
-### Example
-
-If the goal is `a * b = 7`, then `apply succ_inj` will turn the
-goal into `succ (a * b) = succ 7`.
+TacticDoc apply
 "
+For an inference rule of the form
+$$\\dfrac{\\,P_1,\\dots,P_n\\,}{Q}(ρ),$$
+if the *goal* is $Q$, then `apply ρ` will \"argue backwards\" and replace that goal to a collection of new goals $\\{P_i\\}$.
+The idea here is that if you want to prove `Q`, then by $\\rho$
+it suffices to prove $\\{P_i\\}$, so you can reduce the goal to proving $\\{P_i\\}$.
+"
+
+-- TODO forward argument
+-- If `t : P → Q` is a proof that $P\\implies Q$, and `h : P` is a proof of `P`,
+-- then `apply t at h` will change `h` to a proof of `Q`. The idea is that if
+-- you know `P` is true, then you can deduce from `t` that `Q` is true.
+
+-- If the *goal* is `Q`, then `apply t` will \"argue backwards\" and change the
+-- goal to `P`. The idea here is that if you want to prove `Q`, then by `t`
+-- it suffices to prove `P`, so you can reduce the goal to proving `P`.
+
+-- ### Example:
+
+-- `succ_inj x y` is a proof that `succ x = succ y → x = y`.
+
+-- So if you have a hypothesis `h : succ (a + 37) = succ (b + 42)`
+-- then `apply succ_inj at h` will change `h` to `a + 37 = b + 42`.
+-- You could write `apply succ_inj (a + 37) (b + 42) at h`
+-- but Lean is smart enough to figure out the inputs to `succ_inj`.
+
+-- ### Example
+
+-- If the goal is `a * b = 7`, then `apply succ_inj` will turn the
+-- goal into `succ (a * b) = succ 7`.
+--
+
 NewTactic apply
 Conclusion
 "
-conclusion
+**Level passed!**
 "
 
 -- TODO put in conclusion:
