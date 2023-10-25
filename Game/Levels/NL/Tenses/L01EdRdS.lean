@@ -101,7 +101,7 @@ Statement {r : Rei} : 𝕃 ((
     ((((s (anteriorize r)) \\ (s (anteriorize r))) // t) ⊗
     t)) ⊢ s (anteriorize r)) := by
   Hint "Now start with the `apply` tactics; its usage can be found on the right too."
-  Hint (hidden := true) "Sample solution can be found [here](https://github.com/analytic-bias/agora/blob/main/res/PaperproofTreeNLEdRdS.pdf) if you need it."
+  Hint (hidden := true) "Sample solution can be found [here](https://analytic-bias.github.io/agora/res/PaperproofTreeNLEdRdS.pdf) if you need it."
   apply rbt
   Hint (hidden := true) "extra hint 1"
   apply rst
