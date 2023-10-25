@@ -86,8 +86,6 @@ Introduction
 In this level we are going to use what was formulated previously on System $\\mathbb{NL}$ to study the mechanized parsing of the sentence above.
 
 In case you jumped to this level or forgot them, click on the buttons in the right-side panel to review the inference rules of System $\\mathbb{NL}$.
-
-
 "
 -- lexer: example
 notation:0 "𝕃 " a => NLCalculus Atom a
@@ -103,7 +101,7 @@ Statement {r : Rei} : 𝕃 ((
     ((((s (anteriorize r)) \\ (s (anteriorize r))) // t) ⊗
     t)) ⊢ s (anteriorize r)) := by
   Hint "Now start with the `apply` tactics; its usage can be found on the right too."
-  Hint (hidden := true) "Sample solution: "
+  Hint (hidden := true) "Sample solution can be found [here](https://github.com/analytic-bias/agora/blob/main/res/PaperproofTreeNLEdRdS.pdf) if you need it."
   apply rbt
   Hint (hidden := true) "extra hint 1"
   apply rst
