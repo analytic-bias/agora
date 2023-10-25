@@ -85,15 +85,14 @@ Introduction
 
 In this level we are going to use what was formulated previously on System $\\mathbb{NL}$ to study the mechanized parsing of the sentence above.
 
-In case you jumped to this level or forgot them, here are the inference rules of System $\\mathbb{NL}$:
-- `arefl` (atom reflexivity)
+In case you jumped to this level or forgot them, click on the buttons in the right-side panel to review the inference rules of System $\\mathbb{NL}$.
 "
 -- lexer: example
 notation:0 "𝕃 " a => NLCalculus Atom a
 set_option pp.explicit false
 set_option pp.universes false
 set_option pp.notation true
-/-- exercise description -/
+/-- The goal of this level is to construct a proof of the judgement as shown below, which serves as a potential (and in this particular case, the unique) parsing of the sentence. -/
 Statement {r : Rei} : 𝕃 ((
     (((np ⊗
     (np \\ (((s (anteriorize r)) // np) // ((np \\ (s r)) // np)))) ⊗
@@ -101,7 +100,7 @@ Statement {r : Rei} : 𝕃 ((
     np) ⊗
     ((((s (anteriorize r)) \\ (s (anteriorize r))) // t) ⊗
     t)) ⊢ s (anteriorize r)) := by
-  Hint "hint 1"
+  Hint "Now start with the `apply` tactics; its usage can be found on the right too."
   apply rbt
   Hint (hidden := true) "extra hint 1"
   apply rst
@@ -130,15 +129,15 @@ DefinitionDoc NL as "𝕃"
 "
 LemmaDoc NL.NLCalculus.arefl as "arefl" in "𝕃"
 "
-$$\\dfrac{\\,\\,}{\\,\\alpha:\\text{Atom}\\quad\\alpha\\vdash\\alpha\\,}(\\text{arefl})$$
+$$\\dfrac{\\,\\,}{\\,\\alpha:\\text{Atom}\\quad\\alpha\\vdash\\alpha\\,}(\\text{arefl} - \\text{Reflexivity for Atom})$$
 "
 LemmaDoc NL.NLCalculus.rbt as "rbt" in "𝕃"
 "
-$$\\dfrac{\\,\\beta\\vdash\\alpha\\ \\gamma\\,}{\\,\\alpha\\otimes\\beta\\vdash\\gamma\\,}(\\text{rbt})$$
+$$\\dfrac{\\,\\beta\\vdash\\alpha\\backslash\\gamma\\,}{\\,\\alpha\\otimes\\beta\\vdash\\gamma\\,}(\\text{rbt} - \\text{Residuation from}\\backslash\\text{ to }\\otimes)$$
 "
 LemmaDoc NL.NLCalculus.rtb as "rtb" in "𝕃"
 "
-$$\\dfrac{\\,\\alpha\\otimes\\beta\\vdash\\gamma\\,}{\\,\\beta\\vdash\\alpha\\ \\gamma\\,}(\\text{rtb})$$
+$$\\dfrac{\\,\\alpha\\otimes\\beta\\vdash\\gamma\\,}{\\,\\beta\\vdash\\alpha\\backslash\\gamma\\,}(\\text{rtb})$$
 "
 LemmaDoc NL.NLCalculus.rst as "rst" in "𝕃"
 "
@@ -150,11 +149,11 @@ $$\\dfrac{\\,\\alpha\\otimes\\beta\\vdash\\gamma\\,}{\\,\\alpha\\vdash\\gamma/\\
 "
 LemmaDoc NL.NLCalculus.mt as "mt" in "𝕃"
 "
-$$\\dfrac{\\,\\beta\\vdash\\alpha\\ \\gamma\\,}{\\,\\alpha\\otimes\\beta\\vdash\\gamma\\,}(\\text{rbt})$$
+$$\\dfrac{\\,\\beta\\vdash\\alpha\\backslash\\gamma\\,}{\\,\\alpha\\otimes\\beta\\vdash\\gamma\\,}(\\text{rbt})$$
 "
 LemmaDoc NL.NLCalculus.mb as "mb" in "𝕃"
 "
-$$\\dfrac{\\,\\alpha\\vdash\\beta\\quad\\gamma\\vdash\\delta\\,}{\\,\\beta\\ \\gamma\\vdash\\alpha\\ \\delta\\,}(\\text{mb})$$
+$$\\dfrac{\\,\\alpha\\vdash\\beta\\quad\\gamma\\vdash\\delta\\,}{\\,\\beta\\backslash\\gamma\\vdash\\alpha\\backslash\\delta\\,}(\\text{mb})$$
 "
 LemmaDoc NL.NLCalculus.ms as "ms" in "𝕃"
 "
