@@ -1,5 +1,6 @@
 import Game.Metadata
 import Paperproof
+import LeanInfer
 World "NLTenses"
 Level 1
 Title "Tenses 1A - They had passed all exams by then."
@@ -78,6 +79,7 @@ def proof {r : Rei} : NL ((
           · apply arefl
     · apply arefl
   · apply arefl
+  -- suggest_tactics
 
 Introduction
 "

@@ -23,6 +23,7 @@ require mathlib from git
   "https://github.com/leanprover-community/mathlib4" @ "v4.1.0"
 
 require Paperproof from git "https://github.com/Paper-Proof/paperproof.git"@"main"/"lean"
+require LeanInfer from git "https://github.com/lean-dojo/LeanInfer.git" @ "v0.0.7"
 
 -- NOTE: We abuse the `trace.debug` option to toggle messages in VSCode on and
 -- off when calling `lake build`. Ideally there would be a better way using `logInfo` and
@@ -33,6 +34,7 @@ package Game where
   moreServerArgs := #["-Dtactic.hygienic=false", "-Dlinter.unusedVariables.funArgs=true",
     "-Dtrace.debug=true"]
   weakLeanArgs := #[]
+  moreLinkArgs := #["-L./lake-packages/LeanInfer/build/lib", "-lonnxruntime", "-lstdc++"]
 
 @[default_target]
 lean_lib Game
