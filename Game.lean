@@ -115,12 +115,15 @@ import Game.Levels.NLTenses
 -- Dependency NLFoundation → NLQuantifiers
 -- Dependency NLFoundation → NLTenses
 
-Title "Project Agora - Logic 2030"
+Title "Project Agora / Logic 2030"
 Introduction
 "
-# Project Agora - Logic 2030
+# Project Agora / Logic 2030
 
-This is an attempt to teach mathematics and philosophy via formal methods and formal toolsets, in particular via Lean 4.
+This is an attempt to teach mathematics and philosophy via formal methods and formal devices, in particular Lean 4.
+
+The author of the source code of the Agora acknowledges the contributions of (in cryptographically secure random order):
+- TODO insert names
 "
 
 MakeGame
