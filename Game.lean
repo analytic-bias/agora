@@ -122,7 +122,7 @@ Introduction
 
 This is an attempt to teach mathematics and philosophy via formal methods and formal devices, in particular Lean 4.
 
-The author of the source code of the Agora acknowledges the contributions of (in cryptographically secure random order):
+The author of the source code of the Agora acknowledges the contributions of and extend their profound appreciation for  (in cryptographically secure random order):
 - TODO insert names
 "
 
