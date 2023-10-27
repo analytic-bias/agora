@@ -1,4 +1,4 @@
-> Before the Agora on that day, Hypatia was told: the Cyrilists were not entirely wrong---"Two millenia then three centuries then fifteen years into the future, when, across the Chora, Alexandrians can finally reach every corner of 𝕍, you shall meet my teacher again."
+> Before the Agora on that day, a messenger told Hypatia: the Cyrilists were not wrong after all---"Two millenia then three centuries then fifteen years into the future, when, across the Chora, Alexandrians can finally reach every corner of 𝕍, you shall meet my teacher again."
 
 # Roadmap
 
