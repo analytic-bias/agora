@@ -24,6 +24,7 @@ require mathlib from git
 
 require Paperproof from git "https://github.com/Paper-Proof/paperproof.git"@"main"/"lean"
 require LeanInfer from git "https://github.com/lean-dojo/LeanInfer.git" @ "v0.0.7"
+-- require aesop from git "https://github.com/JLimperg/aesop"
 
 -- NOTE: We abuse the `trace.debug` option to toggle messages in VSCode on and
 -- off when calling `lake build`. Ideally there would be a better way using `logInfo` and

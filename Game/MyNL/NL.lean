@@ -1,3 +1,4 @@
+import Aesop
 namespace NL
 variable (Atom : Type)
 
@@ -23,9 +24,10 @@ inductive NLCalculus : (NLJudgement Atom) -> Type where
 | rtb {a b c} : NLCalculus (a ⊗ b ⊢ c) -> NLCalculus (b ⊢ a \\ c)
 | rst {a b c} : NLCalculus (a ⊢ c // b) -> NLCalculus (a ⊗ b ⊢ c)
 | rts {a b c} : NLCalculus (a ⊗ b ⊢ c) -> NLCalculus (a ⊢ c // b)
-| mt {a b c d} : NLCalculus (a ⊢ b) -> NLCalculus (c ⊢ d) -> NLCalculus (a ⊗ c ⊢ b ⊗ d)
+| mti {a b c d} : NLCalculus (a ⊢ b) -> NLCalculus (c ⊢ d) -> NLCalculus (a ⊗ c ⊢ b ⊗ d)
 | mb {a b c d} : NLCalculus (a ⊢ b) -> NLCalculus (c ⊢ d) -> NLCalculus (b \\ c ⊢ a \\ d) -- error in https://plato.stanford.edu/entries/typelogical-grammar/#LamSys
 | ms {a b c d} : NLCalculus (a ⊢ b) -> NLCalculus (c ⊢ d) -> NLCalculus (a // d ⊢ b // c)
+declare_aesop_rule_sets [rsNL]
 
 variable (interpret_atom : Atom -> Type) (Value : Type)
 set_option quotPrecheck false
@@ -49,7 +51,7 @@ def denotel (c : NLCalculus _ (a ⊢ b)) :
   | NLCalculus.rtb f => fun k x => k (fun | (y, z) => (denotel f) z (y, x))
   | NLCalculus.rst f => fun x => fun | (y, z) => (denotel f) (fun k => k (x, z)) y
   | NLCalculus.rts f => fun k x => k (fun | (y, z) => (denotel f) y (x, z))
-  | NLCalculus.mt f g => fun k => fun | (x, y) => deMorgan Value ((denoter f) x) ((denoter g) y) k
+  | NLCalculus.mti f g => fun k => fun | (x, y) => deMorgan Value ((denoter f) x) ((denoter g) y) k
   | NLCalculus.mb f g => fun k k' => k (fun | (x, y) => deMorgan Value ((denoter f) x) (fun k => k ((denotel g) y)) k')
   | NLCalculus.ms f g => fun k k' => k (fun | (x, y) => deMorgan Value (fun k => k ((denotel f) x)) ((denoter g) y) k')
 def denoter (c : NLCalculus _ (a ⊢ b)) :
@@ -59,7 +61,7 @@ def denoter (c : NLCalculus _ (a ⊢ b)) :
   | NLCalculus.rtb f => fun x k => k (fun | (y , z) => (denoter f) (y , x) z)
   | NLCalculus.rst f => fun | (x, y) => fun z => (denoter f) x (fun k => k (z, y))
   | NLCalculus.rts f => fun x k => k (fun | (y , z) => (denoter f) (x, z) y)
-  | NLCalculus.mt f g => fun | (x, y) => fun k => deMorgan Value ((denoter f) x) ((denoter g) y) k
+  | NLCalculus.mti f g => fun | (x, y) => fun k => deMorgan Value ((denoter f) x) ((denoter g) y) k
   | NLCalculus.mb f g => fun k' k => k (fun | (x, y) => deMorgan Value ((denoter f) x) (fun k'' => k'' ((denotel g) y)) k')
   | NLCalculus.ms f g => fun k' k => k (fun | (x, y) => deMorgan Value (fun k'' => k'' ((denotel f) x)) ((denoter g) y) k')
 end
@@ -67,7 +69,7 @@ def denote := denoter
 
 def trefl {a : NLType Atom} : NLCalculus Atom (a ⊢ a) := match a with
   | NLType.atom _ => NLCalculus.arefl
-  | NLType.times _ _ => NLCalculus.mt trefl trefl
+  | NLType.times _ _ => NLCalculus.mti trefl trefl
   | NLType.backslash _ _ => NLCalculus.mb trefl trefl
   | NLType.slash _ _ => NLCalculus.ms trefl trefl
 

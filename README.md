@@ -1,3 +1,5 @@
+> Before the Agora on that day, Hypatia was told: the Cyrilists were not entirely wrong---"Two millenia then three centuries then fifteen years into the future, when, across the Chora, we can reach every corner of $\mathbb{V}$, you shall meet my teacher again."
+
 # Roadmap
 
 - Linguistic Modalities

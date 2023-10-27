@@ -90,28 +90,30 @@ Sample solution can be found by clicking the **Show more help!** button below, s
 In the normal interactive mode, you do not need indentation, but in **Editor Mode**, as well as any Lean program, correct indentation is mandatory.
 ## Sample Solution
 ```
-apply rbt
-apply rst
-apply ms
-· apply mb
-\x20\x20· apply rst
-\x20\x20\x20\x20apply rst
-\x20\x20\x20\x20apply rbt
-\x20\x20\x20\x20apply mb
-\x20\x20\x20\x20· apply arefl
-\x20\x20\x20\x20· apply ms
-\x20\x20\x20\x20\x20\x20· apply ms
-\x20\x20\x20\x20\x20\x20\x20\x20· apply arefl
-\x20\x20\x20\x20\x20\x20\x20\x20· apply arefl
-\x20\x20\x20\x20\x20\x20· apply ms
-\x20\x20\x20\x20\x20\x20\x20\x20· apply mb
-\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20· apply arefl
-\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20· apply arefl
-\x20\x20\x20\x20\x20\x20\x20\x20· apply arefl
-\x20\x20· apply arefl
-· apply arefl
+apply NL.NLCalculus.rbt
+apply NL.NLCalculus.rst
+apply NL.NLCalculus.ms
+· apply NL.NLCalculus.mb
+\x20\x20· apply NL.NLCalculus.rst
+\x20\x20\x20\x20apply NL.NLCalculus.rst
+\x20\x20\x20\x20apply NL.NLCalculus.rbt
+\x20\x20\x20\x20apply NL.trefl
+\x20\x20· apply NL.trefl
+· apply NL.trefl
 ```
 "
+  apply NL.NLCalculus.rbt
+  apply NL.NLCalculus.rst
+  apply NL.NLCalculus.ms
+  · apply NL.NLCalculus.mb
+    · apply NL.NLCalculus.rst
+      apply NL.NLCalculus.rst
+      apply NL.NLCalculus.rbt
+      apply NL.trefl
+    · apply NL.trefl
+  · apply NL.trefl
+
+/- no trefl:
   apply rbt
   apply rst
   apply ms
@@ -132,6 +134,7 @@ apply ms
           · apply arefl
     · apply arefl
   · apply arefl
+-/
 
 DefinitionDoc NL.NLCalculus as "𝕃"
 "
@@ -164,7 +167,7 @@ LemmaDoc NL.NLCalculus.rts as "rts" in "𝕃"
 # Residuation from ⊗ to /
 $$\\dfrac{\\,\\alpha\\otimes\\beta\\vdash\\gamma\\,}{\\,\\alpha\\vdash\\gamma/\\beta\\,}(\\text{rts})$$
 "
-LemmaDoc NL.NLCalculus.mt as "mt" in "𝕃"
+LemmaDoc NL.NLCalculus.mti as "mti" in "𝕃"
 "
 # Monotonicity of ⊗
 $$\\dfrac{\\,\\beta\\vdash\\alpha\\backslash\\gamma\\,}{\\,\\alpha\\otimes\\beta\\vdash\\gamma\\,}(\\text{rbt})$$
@@ -177,7 +180,7 @@ $$\\dfrac{\\,\\alpha\\vdash\\beta\\quad\\gamma\\vdash\\delta\\,}{\\,\\beta\\back
 LemmaDoc NL.NLCalculus.ms as "ms" in "𝕃"
 "
 # Monotonicity of /
-$$\\dfrac{\\,\\alpha\\vdash\\beta\\quad\\gamma\\vdash\\delta\\,}{\\,\\alpha/\\delta\\vdash\\beta/\\gamma\\,}(\\text{mt})$$
+$$\\dfrac{\\,\\alpha\\vdash\\beta\\quad\\gamma\\vdash\\delta\\,}{\\,\\alpha/\\delta\\vdash\\beta/\\gamma\\,}(\\text{mti})$$
 "
 LemmaDoc NL.trefl as "trefl" in "𝕃⁺"
 "
@@ -191,7 +194,7 @@ NL.NLCalculus.rbt
 NL.NLCalculus.rtb
 NL.NLCalculus.rst
 NL.NLCalculus.rts
-NL.NLCalculus.mt
+NL.NLCalculus.mti
 NL.NLCalculus.mb
 NL.NLCalculus.ms
 NL.trefl
@@ -294,6 +297,17 @@ which is a glorified way of saying that the atemporal λ-denotation of the sente
 $(\\text{then} - 1) + 1 + 1$ (in Church encoding).
 "
 
+attribute [aesop 100% apply (rule_sets [rsNL])] arefl
+attribute [aesop 100% apply (rule_sets [rsNL])] trefl
+attribute [aesop 100% apply (rule_sets [rsNL])] mti
+attribute [aesop 100% apply (rule_sets [rsNL])] mb
+attribute [aesop 100% apply (rule_sets [rsNL])] ms
+attribute [aesop 50% apply (rule_sets [rsNL])] rbt
+attribute [aesop 50% apply (rule_sets [rsNL])] rtb
+attribute [aesop 50% apply (rule_sets [rsNL])] rst
+attribute [aesop 50% apply (rule_sets [rsNL])] rts
+
+-- set_option trace.aesop true
 def sample_proof : 𝕃 ((
     (((np ⊗
     (np \\ (((s (anteriorize r)) // np) // ((np \\ (s r)) // np)))) ⊗
@@ -301,26 +315,7 @@ def sample_proof : 𝕃 ((
     np) ⊗
     ((((s (anteriorize r)) \\ (s (anteriorize r))) // t) ⊗
     t)) ⊢ s (anteriorize r)) := by
-  apply rbt
-  apply rst
-  apply ms
-  · apply mb
-    · apply rst
-      apply rst
-      apply rbt
-      apply mb
-      · apply arefl
-      · apply ms
-        · apply ms
-          · apply arefl
-          · apply arefl
-        · apply ms
-          · apply mb
-            · apply arefl
-            · apply arefl
-          · apply arefl
-    · apply arefl
-  · apply arefl
+  aesop? (options := { maxRuleApplications := 200 }) (rule_sets [rsNL])
 noncomputable def human_readable := denote Atom interpa Value sample_proof ((((they , had) , passed) , exams) , (by_ , then_)) id
 set_option maxRecDepth 2048
 #reduce human_readable
