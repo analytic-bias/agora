@@ -42,11 +42,11 @@ noncomputable def passed : [ (np \\ (s (Rei.reid [ReiAtom._e, ReiAtom._s]))) // 
 noncomputable def had {r : Rei} : [ (np \\ (((s (anteriorize r)) // np) // ((np \\ (s r)) // np))) ] :=
   λ | (x , k) => k λ | (k , y) => k λ | (t , k) => (y ((λ z => z (x , (λ | (b , n) => t (b , (n + 1))))) , k))
 noncomputable def by_ {r : Rei} : [ ((s r) \\ (s r)) // t ] :=
-  λ | (k , t) => k (λ | ((b , n) , s) => s (b , (fun t':Nat => t' + n) t)) -- bad inference (or is it lazy evaluation on type level?)
+  λ | (k , t) => k (λ | ((b , n) , s) => s (b , (fun t':Nat => t' - 1 + n) t)) -- bad inference (or is it lazy evaluation on type level?)
 axiom they : [np]
 axiom exams : [np]
 -- def then_ : [t] := 10 -- FIXME failed to synthesize instance OfNat (interpret Atom interpa Value t) 10; why? (interpret Atom interpa Value t) ↝ 10
-axiom now : [t]
+axiom then_ : [t]
 
 open NLCalculus
 -- ⇒ \\ b
@@ -62,7 +62,7 @@ def NL := NLCalculus Atom
 
 Introduction
 "
-## \"They had passed exams by now.\"
+## \"They had passed exams by then.\"
 
 In this level we are going to use what was formulated previously on **System** $\\mathbb{NL}$ to study the mechanized parsing of the sentence above. Please click on the `apply` button on the right-side of this page and read the introduction to theorem proving in **Lean 4**.
 
@@ -273,19 +273,25 @@ Conclusion
 "
 # **Level passed!**
 
-## Remark **(currently the followng does not work; but the expected output is documented below)**
+## Remark
+### Lexicon
+In case you want to know what the particular λ-denotations of the lexis, they are
+
+TODO
+
+### Reduction to Weak Normal Form **(TODO currently the followng does not work; but the expected output is documented below)**
 In case you're interested in what the semantics of the parsing route you just constructed is in human-readable form, you can enter the **Editor Mode** and execute the following command
 ```
-noncomputable def human_readable := denote Atom interpa Value sample_proof ((((they , had) , passed) , exams) , (by_ , now)) id
+noncomputable def human_readable := denote Atom interpa Value sample_proof ((((they , had) , passed) , exams) , (by_ , then_)) id
 set_option maxRecDepth 2048
 #reduce human_readable
 ```
 which should give you something similar to
 ```
-(PassP they exams, Nat.succ (Nat.succ now))
+(PassP they exams, Nat.succ (Nat.succ (Nat.rec 0 (fun n n_ih => n) then_)))
 ```
-
-Are you able to guess what that means?
+which is a glorified way of saying that the atemporal λ-denotation of the sentence is expected proposition (`PassP` is a postulated binary predicate), with temporal index
+$(\\text{then} - 1) + 1 + 1$ (in Church encoding).
 "
 
 def sample_proof : 𝕃 ((
@@ -315,3 +321,6 @@ def sample_proof : 𝕃 ((
           · apply arefl
     · apply arefl
   · apply arefl
+noncomputable def human_readable := denote Atom interpa Value sample_proof ((((they , had) , passed) , exams) , (by_ , then_)) id
+set_option maxRecDepth 2048
+#reduce human_readable
