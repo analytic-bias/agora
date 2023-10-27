@@ -4,7 +4,7 @@
  [{"git":
    {"url": "https://github.com/leanprover-community/lean4game.git",
     "subDir?": "server",
-    "rev": "b70ac78cf77d36b21e3e24a193dd6eb0895163e9",
+    "rev": "918151ade519a4dd29c7735dcae62b6c23948598",
     "opts": {},
     "name": "GameServer",
     "inputRev?": "main",
