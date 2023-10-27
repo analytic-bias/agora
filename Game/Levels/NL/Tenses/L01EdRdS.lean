@@ -62,7 +62,7 @@ def NL := NLCalculus Atom
 
 Introduction
 "
-## \"They had passed all exams by then.\"
+## \"They had passed exams by then.\"
 
 In this level we are going to use what was formulated previously on **System** $\\mathbb{NL}$ to study the mechanized parsing of the sentence above. Please click on the `apply` button on the right-side of this page and read the introduction to theorem proving in **Lean 4**.
 
@@ -141,38 +141,47 @@ This symbol is an abbreviated notation for a particular technical definition in 
 "
 LemmaDoc NL.NLCalculus.arefl as "arefl" in "𝕃"
 "
-$$\\dfrac{\\,\\alpha:\\text{Atom}\\,}{\\,\\alpha\\vdash\\alpha\\,}(\\text{arefl} - \\text{Reflexivity for Atom})$$
+# Reflexivity (Atoms)
+$$\\dfrac{\\,\\alpha:\\text{Atom}\\,}{\\,\\alpha\\vdash\\alpha\\,}(\\text{arefl})$$
 "
 LemmaDoc NL.NLCalculus.rbt as "rbt" in "𝕃"
 "
-$$\\dfrac{\\,\\beta\\vdash\\alpha\\backslash\\gamma\\,}{\\,\\alpha\\otimes\\beta\\vdash\\gamma\\,}(\\text{rbt} - \\text{Residuation from}\\backslash\\text{ to }\\otimes)$$
+# Residuation from \\ to ⊗
+$$\\dfrac{\\,\\beta\\vdash\\alpha\\backslash\\gamma\\,}{\\,\\alpha\\otimes\\beta\\vdash\\gamma\\,}(\\text{rbt})$$
 "
 LemmaDoc NL.NLCalculus.rtb as "rtb" in "𝕃"
 "
+# Residuation from ⊗ to \\
 $$\\dfrac{\\,\\alpha\\otimes\\beta\\vdash\\gamma\\,}{\\,\\beta\\vdash\\alpha\\backslash\\gamma\\,}(\\text{rtb})$$
 "
 LemmaDoc NL.NLCalculus.rst as "rst" in "𝕃"
 "
+# Residuation from / to ⊗
 $$\\dfrac{\\,\\alpha\\vdash\\gamma/\\beta\\,}{\\,\\alpha\\otimes\\beta\\vdash\\gamma\\,}(\\text{rst})$$
 "
 LemmaDoc NL.NLCalculus.rts as "rts" in "𝕃"
 "
+# Residuation from ⊗ to /
 $$\\dfrac{\\,\\alpha\\otimes\\beta\\vdash\\gamma\\,}{\\,\\alpha\\vdash\\gamma/\\beta\\,}(\\text{rts})$$
 "
 LemmaDoc NL.NLCalculus.mt as "mt" in "𝕃"
 "
+# Monotonicity of ⊗
 $$\\dfrac{\\,\\beta\\vdash\\alpha\\backslash\\gamma\\,}{\\,\\alpha\\otimes\\beta\\vdash\\gamma\\,}(\\text{rbt})$$
 "
 LemmaDoc NL.NLCalculus.mb as "mb" in "𝕃"
 "
+# Monotonicity of \\
 $$\\dfrac{\\,\\alpha\\vdash\\beta\\quad\\gamma\\vdash\\delta\\,}{\\,\\beta\\backslash\\gamma\\vdash\\alpha\\backslash\\delta\\,}(\\text{mb})$$
 "
 LemmaDoc NL.NLCalculus.ms as "ms" in "𝕃"
 "
+# Monotonicity of /
 $$\\dfrac{\\,\\alpha\\vdash\\beta\\quad\\gamma\\vdash\\delta\\,}{\\,\\alpha/\\delta\\vdash\\beta/\\gamma\\,}(\\text{mt})$$
 "
 LemmaDoc NL.trefl as "trefl" in "𝕃⁺"
 "
+# Reflexivity (General Case)
 $$\\dfrac{\\,\\,}{\\,\\alpha\\vdash\\alpha\\,}(\\text{trefl} - \\text{Reflexivity})$$
 "
 NewDefinition NL.NLCalculus
