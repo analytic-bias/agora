@@ -297,16 +297,6 @@ which is a glorified way of saying that the atemporal λ-denotation of the sente
 $(\\text{then} - 1) + 1 + 1$ (in Church encoding).
 "
 
-attribute [aesop 100% apply (rule_sets [rsNL])] arefl
-attribute [aesop 100% apply (rule_sets [rsNL])] trefl
-attribute [aesop 100% apply (rule_sets [rsNL])] mti
-attribute [aesop 100% apply (rule_sets [rsNL])] mb
-attribute [aesop 100% apply (rule_sets [rsNL])] ms
-attribute [aesop 50% apply (rule_sets [rsNL])] rbt
-attribute [aesop 50% apply (rule_sets [rsNL])] rtb
-attribute [aesop 50% apply (rule_sets [rsNL])] rst
-attribute [aesop 50% apply (rule_sets [rsNL])] rts
-
 -- set_option trace.aesop true
 def sample_proof : 𝕃 ((
     (((np ⊗
