@@ -3,7 +3,7 @@ import Paperproof
 import LeanInfer
 World "NLTenses"
 Level 1
-Title "Tenses 1A - E-R-S"
+Title "Tenses 1A - (E-R⁺-S)"
 namespace NL
 -- Is E-R-S supposed to be encoded in the type or the term of the sentence?
 
@@ -46,7 +46,7 @@ noncomputable def by_ {r : Rei} : [ ((s r) \\ (s r)) // t ] :=
 axiom they : [np]
 axiom exams : [np]
 -- def then_ : [t] := 10 -- FIXME failed to synthesize instance OfNat (interpret Atom interpa Value t) 10; why? (interpret Atom interpa Value t) ↝ 10
-axiom then_ : [t]
+axiom now : [t]
 
 open NLCalculus
 -- ⇒ \\ b
@@ -62,7 +62,7 @@ def NL := NLCalculus Atom
 
 Introduction
 "
-## \"They had passed exams by then.\"
+## \"They had passed exams by now.\"
 
 In this level we are going to use what was formulated previously on **System** $\\mathbb{NL}$ to study the mechanized parsing of the sentence above. Please click on the `apply` button on the right-side of this page and read the introduction to theorem proving in **Lean 4**.
 
@@ -276,13 +276,13 @@ Conclusion
 ## Remark **(currently the followng does not work; but the expected output is documented below)**
 In case you're interested in what the semantics of the parsing route you just constructed is in human-readable form, you can enter the **Editor Mode** and execute the following command
 ```
-noncomputable def human_readable := denote Atom interpa Value sample_proof ((((they , had) , passed) , exams) , (by_ , then_)) id
+noncomputable def human_readable := denote Atom interpa Value sample_proof ((((they , had) , passed) , exams) , (by_ , now)) id
 set_option maxRecDepth 2048
 #reduce human_readable
 ```
 which should give you something similar to
 ```
-(PassP they exams, Nat.succ (Nat.succ then_))
+(PassP they exams, Nat.succ (Nat.succ now))
 ```
 
 Are you able to guess what that means?
