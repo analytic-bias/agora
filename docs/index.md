@@ -11,7 +11,7 @@ abstract: |
 
 # Introduction
 
-> Before the Agora on that day, a messenger told Hypatia: the Cyrilists were not wrong after all---"Two millennia then three centuries then fifteen years into the future, when, across the Chora Alexandrians can finally reach every corner of 𝕍, you shall meet my teacher again."
+> Before the Agora on that day, a messenger told Hypatia: the Cyrilists were not wrong after all---"Two millennia then three centuries then fifteen years into the future, when across the Chora Alexandrians can finally reach every corner of 𝕍, you shall meet my teacher again."
 
 The author of the source code of the Agora acknowledges the contributions of and extends their profound appreciation for (in cryptographically secure random order):
 

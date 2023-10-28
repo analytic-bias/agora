@@ -271,7 +271,7 @@ def temp : 𝕃 (np // a) ⊗ a ⊢ np := by
   · apply trefl
 ```
 "
-NewTactic apply
+NewTactic apply aesop?
 Conclusion
 "
 # **Level passed!**
