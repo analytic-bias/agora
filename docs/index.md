@@ -7,7 +7,7 @@ abstract: |
   Project Agora / Logic 2030 is an attempt to teach mathematics and philosophy via formal methods and formal devices, in particular Lean 4.
 ...
 
-<!-- pandoc index.md -s --mathjax --highlight-style pygments --bibliography /home/hypatia/Workspace/Library/zotero.bib --citeproc -o index.html -->
+<!-- pandoc index.md -s --mathjax --highlight-style pygments --bibliography /home/hypatia/Workspace/Library/zotero.bib --citeproc -c index.css -o index.html -->
 
 # Introduction
 
