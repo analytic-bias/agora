@@ -1,0 +1,201 @@
+
+.message {
+  margin: 10px 0;
+  padding: 5px 10px;
+  border-radius: 3px 3px 3px 3px;
+}
+.message.information, .message.info {
+  /* color: #059; */
+  color: #000;
+  background-color: #DDF6FF;
+}
+.message.warning {
+  color: #9F6000;
+  background-color: #FEEFB3;
+}
+.message.error {
+  color: #D8000C;
+  background-color: #FFBABA;
+}
+
+.message.deleted-hint {
+  background-color: #eee;
+  color: #777;
+  box-shadow: .0em .0em .5em .2em #eee;
+ }
+
+.hyp-group {
+  margin-bottom: 0.3em;
+}
+
+.hyp-group-title, .goal-title {
+  font-family: var(--ff-primary);
+  font-size: 1.2rem;
+}
+
+.goals-section-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.level-completed {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.typewriter {
+  background: var(--clr-primary);
+  padding: 0.5em;
+  font-family: var(--ff-primary);
+  border-radius: 0.2em;
+  /* margin: 0.2em 0 0; */
+}
+
+.typewriter.disabled{
+  background: #bbb;
+}
+
+.typewriter.disabled .btn-inverted,
+.typewriter.disabled .mtk1 {
+  color: #777;
+}
+
+.typewriter.disabled .typewriter-input-wrapper,
+.typewriter.disabled .monaco-editor,
+.typewriter.disabled .monaco-editor-background,
+.typewriter.disabled .btn-inverted {
+  background-color: #eee;
+}
+
+.typewriter form {
+  display: flex;
+}
+
+.typewriter button, .undo-button {
+  display: block;
+  white-space: nowrap;
+  flex: 0;
+}
+
+.typewriter .typewriter-input-wrapper{
+  min-width: 0;
+  flex: 1;
+  padding: 0.4em .6em 0;
+  font-size: 1rem;
+  background: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.typewriter-interface .proof .MuiCircularProgress-root {
+  left: 50%;
+  position: relative;
+  margin-left: -20px;
+  margin-bottom: 0.6em;
+}
+
+.typewriter .typewriter-input {
+  flex: 1;
+}
+
+/* Turn off some monaco decorations: */
+.typewriter-input .monaco-editor .view-overlays .current-line {
+  border: 0;
+}
+.typewriter-input .monaco-editor .scroll-decoration {
+  box-shadow: none;
+}
+
+.other-goals .goals-section-title, .other-goals summary, .other-goals summary .font-code {
+  color: #5191d1;
+}
+
+.goals-section {
+  display: flex;
+  flex-direction: row;
+}
+
+.goals-section div {
+  flex-grow: 1;
+}
+
+#current-proof, #main-assumptions {
+  margin-right: 0.8em;
+}
+
+#current-proof, #other-goals {
+  margin-left: 0.8em;
+}
+
+.proof-display {
+  max-height: 6em;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  scroll-snap-type: y proximity;
+  color: #ccc;
+
+}
+
+.proof-display div:nth-last-child(4) {
+  color: #999;
+}
+
+.proof-display div:nth-last-child(3) {
+  color: #666;
+}
+
+.proof-display div:nth-last-child(2) {
+  color: #333;
+}
+
+.proof-display div:nth-last-child(1) {
+  color: #000;
+  scroll-snap-align: end;
+}
+
+.proof-display-wrapper {
+  background-color: #f0f0f0;
+  border-radius: 1em;
+  padding: 0.6em;
+}
+
+
+/* Push the goals to the bottom for now, until we insert the proof history above. */
+.typewriter-interface .content {
+  display: flex;
+  flex-direction: column;
+  scroll-behavior: smooth;
+}
+
+/* TODO this is in the wrong file */
+.chat {
+  scroll-behavior: smooth;
+}
+
+.typewriter-interface .content .tmp-pusher {
+  flex: 1;
+}
+
+.exercise .command {
+  background-color: #bbb;
+  padding: .5em;
+  border-radius: .2em;
+  /* TODO: It seems my browsers merge the margings of the proof steps,
+  so that it only shows once 0.5rem instead of twice. Thus have 1.5 here now.
+  */
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.exercise .command-text {
+  flex: 1;
+  background-color: #fff;
+  font-family: "Droid Sans Mono", "monospace", monospace;
+  font-size: 14px;
+  padding: 0.4em .6em 0;
+}
+
+.undo-button {
+  color: #888;
+}
