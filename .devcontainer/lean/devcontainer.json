@@ -1,0 +1,17 @@
+{
+  "name": "Prover",
+  "dockerComposeFile": "./docker-compose.yml",
+  "updateRemoteUserUID": true,
+  "overrideCommand": true,
+  "onCreateCommand": {
+    "lake_build": "(cd ~/agora/NL/NLLean && lake update && lake exe cache get && lake build)"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "leanprover.lean4",
+        "paperproof.paperproof"
+      ]
+    }
+  }
+}

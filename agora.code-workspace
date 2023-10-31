@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "NL/NLLean"
+		},
+		{
+			"path": "NL/NLAgda"
+		},
+		{
+			"path": "LG"
+		},
+		{
+			"path": "lean4game"
+		},
+		{
+			"path": "docs"
+		}
+	],
+	"settings": {}
+}

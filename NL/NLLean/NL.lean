@@ -1,5 +1,4 @@
 import NL.NL
 import NL.NLAesop
 
-
--- def hello := "world"
+def hello := "world"
