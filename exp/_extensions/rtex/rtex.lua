@@ -7,7 +7,15 @@ local inspect = require 'inspect'
 local tikz_doc_template = [[
 \documentclass{standalone}
 \usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\usepackage{unicode-math}
+\usepackage{pgfplots}
+\usepackage{relsize}
 \usepackage{tikz}
+\usepackage{quiver}
 \begin{document}
 \nopagecolor
 %s
@@ -20,7 +28,7 @@ local function tikz2image(src, filetype, outfile)
       local f = io.open('tikz.tex', 'w')
       f:write(tikz_doc_template:format(src))
       f:close()
-      os.execute('pdflatex tikz.tex')
+      os.execute('xelatex tikz.tex')
       if filetype == 'pdf' then
         os.rename('tikz.pdf', outfile)
       else
@@ -45,7 +53,8 @@ local function starts_with(start, str)
 end
 
 local triggers = {
-  '\\begin{tikzpicture}'
+  '\\begin{tikzpicture}',
+  '\\begin{tikzcd}'
 }
 
 function RawBlock(el)
