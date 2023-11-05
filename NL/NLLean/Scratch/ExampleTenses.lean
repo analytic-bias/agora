@@ -44,7 +44,7 @@ noncomputable def by_ {r : Rei} : [ ((s r) \\ (s r)) // t ] :=
   λ | (k , t) => k (λ | ((b , n) , s) => s (b , (fun t':Nat => t' - 1 + n) t)) -- bad inference (or is it lazy evaluation on type level?)
 axiom they : [np]
 axiom exams : [np]
--- def then_ : [t] := 10 -- FIXME failed to synthesize instance OfNat (interpret Atom interpa Value t) 10; why? (interpret Atom interpa Value t) ↝ 10
+-- def then_ : [t] := 10 -- FIXME failed to synthesize instance OfNat (interpret Atom interpa Value t) 10; why? (interpret Atom interpa Value t) ↝ 10 doesit need coercion?
 axiom then_ : [t]
 
 open NLCalculus
@@ -65,13 +65,13 @@ example {r : Rei} : 𝕃 ((
     np) ⊗
     ((((s (anteriorize r)) \\ (s (anteriorize r))) // t) ⊗
     t)) ⊢ s (anteriorize r)) := by
-  apply NL.NLCalculus.rbt
-  apply NL.NLCalculus.rst
-  apply NL.NLCalculus.ms
-  · apply NL.NLCalculus.mb
-    · apply NL.NLCalculus.rst
-      apply NL.NLCalculus.rst
-      apply NL.NLCalculus.rbt
+  apply rbt
+  apply rst
+  apply ms
+  · apply mb
+    · apply rst
+      apply rst
+      apply rbt
       apply NL.trefl
     · apply NL.trefl
   · apply NL.trefl

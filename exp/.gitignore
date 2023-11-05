@@ -1,0 +1,8 @@
+/.quarto/
+*.html
+*.pdf
+*_files/
+/.luarc.json
+/_book/
+
+/frege/

@@ -1,0 +1,25 @@
+project:
+  type: book
+
+book:
+  title: "exp"
+  author: "N"
+  date: "11/4/2023"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - frege/frege.qmd
+    - summary.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    toc: true
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
+
+
+
