@@ -2,24 +2,35 @@ project:
   type: book
 
 book:
-  title: "exp"
-  author: "N"
-  date: "11/4/2023"
+  search:
+    location: navbar
+    type: overlay
+    copy-button: true
+  title: "Gödelian Explorations"
+  author: "Gary Mar"
+  date: "2030-01-01"
   chapters:
     - index.qmd
     - intro.qmd
+    - test.qmd
+    - retro/retro.qmd
+    - gödel/gödel.qmd
+    - wang/wang.qmd
     - frege/frege.qmd
     - summary.qmd
     - references.qmd
 
 bibliography: references.bib
+pdf-engine: xelatex
 
 format:
   html:
+    css: styles.css
     toc: true
     theme: cosmo
   pdf:
     documentclass: scrreprt
-
+    include-in-header:
+      - file: preamble.tex
 
 

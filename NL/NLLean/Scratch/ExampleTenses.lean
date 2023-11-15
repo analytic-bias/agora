@@ -57,7 +57,7 @@ set_option pp.explicit false
 set_option pp.universes false
 set_option pp.notation true
 
-/-- Notice that the non-associativity is exactly the cause of ambiguity of natural languages. -/
+/-- notice that the non-associativity here is exactly the cause of ambiguity of (e.g. adjuncts in) natural languages. -/
 example {r : Rei} : 𝕃 ((
     (((np ⊗
     (np \\ (((s (anteriorize r)) // np) // ((np \\ (s r)) // np)))) ⊗

@@ -15,7 +15,10 @@ local tikz_doc_template = [[
 \usepackage{pgfplots}
 \usepackage{relsize}
 \usepackage{tikz}
+\usepackage{frege}
+\usepackage{wrapfig}
 \usepackage{quiver}
+\newenvironment*{dummyenv}{}{}
 \begin{document}
 \nopagecolor
 %s
@@ -28,7 +31,7 @@ local function tikz2image(src, filetype, outfile)
       local f = io.open('tikz.tex', 'w')
       f:write(tikz_doc_template:format(src))
       f:close()
-      os.execute('xelatex tikz.tex')
+      os.execute('xelatex -shell-escape tikz.tex')
       if filetype == 'pdf' then
         os.rename('tikz.pdf', outfile)
       else
@@ -54,12 +57,13 @@ end
 
 local triggers = {
   '\\begin{tikzpicture}',
-  '\\begin{tikzcd}'
+  '\\begin{tikzcd}',
+  '\\begin{dummyenv}'
 }
 
 function RawBlock(el)
   t = fun.filter(function(x) return starts_with(x, el.text) end, triggers)
-  print(fun.length(t))
+  -- print(fun.length(t))
   if fun.length(t) ~= 0 then
     if starts_with('html', FORMAT) then
       local filetype = 'svg'

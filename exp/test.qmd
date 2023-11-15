@@ -1,14 +1,13 @@
 ---
-title: "Rtex Example"
+title: "Format Cheatsheet"
 filters:
   - rtex
 ---
 
-## Heading
-
-Here is a diagram of the cycle:
-
-<!-- % https://q.uiver.app/#q=WzAsOCxbMSwyLCJYIl0sWzIsMSwiVCJdLFsyLDIsIlMiXSxbMSwxLCJYXFx1bmRlcnNldHtTfXtcXHRpbWVzfVQiXSxbMCwzLCJDIl0sWzMsMCwiQiJdLFswLDAsIkEiXSxbMywzLCJwXypMIl0sWzMsMCwicSIsMl0sWzEsMiwicCJdLFswLDIsIlxcYmV0YSIsMl0sWzMsMSwiXFxhbHBoYSJdLFszLDIsIiIsMSx7InN0eWxlIjp7Im5hbWUiOiJjb3JuZXIifX1dXQ== -->
+# Format Cheatsheet
+## Quiver
+### SVG
+<!-- https://q.uiver.app/#q=WzAsMTIsWzIsMywiWCJdLFszLDIsIlQiXSxbMywzLCJTIl0sWzIsMiwiWFxcdW5kZXJzZXR7U317XFx0aW1lc31UIl0sWzEsNCwie1xcYmVnaW57YWxpZ25lZH0gWCY9XFxvdmVybGluZVxcZXRhXFxcXCBLJj1cXG1hdGhiYnsxfV9YXFxcXCBcXG1hdGhybXtMSFN9Jj1LXFxvdGltZXNcXGJldGFeKnBfKkxcXFxcICY9SF4qKFxcbWF0aGZyYWt7WH0pX3tcXG92ZXJsaW5le1xcZXRhfX1cXFxcIFxcbWF0aHJte1JIU30mPXFfKihLXFxib3h0aW1lcyBMKVxcXFwgJj1IXiooXFxtYXRoZnJha3tYfV97XFxvdmVybGluZXtcXGV0YX19KSBcXGVuZHthbGlnbmVkfX0iXSxbNCwxLCJ7XFxiZWdpbnthbGlnbmVkfSBUJj1cXG1hdGhmcmFre1h9X3tSfVxcXFwgTCY9XFxtYXRoYmJ7MX1fVCBcXGVuZHthbGlnbmVkfX0iXSxbMSwxLCJ7XFxiZWdpbnthbGlnbmVkfSBYXFx0aW1lcyBUJj1cXG1hdGhmcmFre1h9X3tcXG92ZXJsaW5le1xcZXRhfX1cXFxcIEtcXGJveHRpbWVzIEwmPXtcXEJiYnsxfX1fe1xcZG90c30gXFxlbmR7YWxpZ25lZH19Il0sWzQsNCwicF8qTCJdLFswLDBdLFs1LDBdLFs1LDVdLFswLDVdLFszLDAsInEiLDJdLFsxLDIsInAiXSxbMCwyLCJcXGJldGEiLDJdLFszLDEsIlxcYWxwaGEiXSxbMywyLCIiLDEseyJzdHlsZSI6eyJuYW1lIjoiY29ybmVyIn19XV0= -->
 \begin{tikzcd}[ampersand replacement=\&,cramped]
 	{\begin{aligned}
 X\times T&=\mathfrak{X}_{\overline{\eta}}\\
@@ -34,5 +33,64 @@ K&=\mathbb{1}_X\\
 	\arrow["\mathlarger{\lrcorner}"{anchor=center, pos=-0.2}, draw=none, from=2-2, to=3-3]
 \end{tikzcd}
 
-EOF
+### iframe
+<iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsMTIsWzIsMywiWCJdLFszLDIsIlQiXSxbMywzLCJTIl0sWzIsMiwiWFxcdW5kZXJzZXR7U317XFx0aW1lc31UIl0sWzEsNCwie1xcYmVnaW57YWxpZ25lZH0gWCY9XFxvdmVybGluZVxcZXRhXFxcXCBLJj1cXG1hdGhiYnsxfV9YXFxcXCBcXG1hdGhybXtMSFN9Jj1LXFxvdGltZXNcXGJldGFeKnBfKkxcXFxcICY9SF4qKFxcbWF0aGZyYWt7WH0pX3tcXG92ZXJsaW5le1xcZXRhfX1cXFxcIFxcbWF0aHJte1JIU30mPXFfKihLXFxib3h0aW1lcyBMKVxcXFwgJj1IXiooXFxtYXRoZnJha3tYfV97XFxvdmVybGluZXtcXGV0YX19KSBcXGVuZHthbGlnbmVkfX0iXSxbNCwxLCJ7XFxiZWdpbnthbGlnbmVkfSBUJj1cXG1hdGhmcmFre1h9X3tSfVxcXFwgTCY9XFxtYXRoYmJ7MX1fVCBcXGVuZHthbGlnbmVkfX0iXSxbMSwxLCJ7XFxiZWdpbnthbGlnbmVkfSBYXFx0aW1lcyBUJj1cXG1hdGhmcmFre1h9X3tcXG92ZXJsaW5le1xcZXRhfX1cXFxcIEtcXGJveHRpbWVzIEwmPXtcXEJiYnsxfX1fe1xcZG90c30gXFxlbmR7YWxpZ25lZH19Il0sWzQsNCwicF8qTCJdLFswLDBdLFs1LDBdLFs1LDVdLFswLDVdLFszLDAsInEiLDJdLFsxLDIsInAiXSxbMCwyLCJcXGJldGEiLDJdLFszLDEsIlxcYWxwaGEiXSxbMywyLCIiLDEseyJzdHlsZSI6eyJuYW1lIjoiY29ybmVyIn19XV0=&embed" width="400" height="400" style="border-radius: 8px; border: none;"></iframe>
 
+## Indented Text
+\let\labelitemito\labelitemi
+\renewcommand\labelitemi{}
+::: {.nobullet}
+* The other metaphorical analogue to Gödel’s Theorem which I find provocative suggests that ultimately, we cannot understand our own minds/brains…. All the limitative theorems of mathematics and the theory of computation suggest that once your ability to represent your own structure has reached a certain critical point, that is the kiss of death: it guarantees that you can never represent yourself totally.
+:::
+\renewcommand\labelitemi{\labelitemito}
+
+## Color
+[\ourblue PHI 631. Analytic Seminar]{.ourblue}
+
+## Conditional
+
+Some text
+[in HTML.]{.content-visible when-format="html"}
+[in PDF.]{.content-visible when-format="pdf"}
+
+::: {.content-visible when-format="pdf"}
+
+Will not appear in PDF.
+
+:::
+
+::: {.content-visible when-format="html"}
+
+Will only appear in HTML.
+
+:::
+
+## Frege
+
+\begin{dummyenv}
+\newlength{\betaheight}
+\settoheight{\betaheight}{$\widetilde{\beta}$}
+\setlength{\Fbaselength}{10pt}
+\Fbox{%
+\Fconditional[{\Fncontent}]{%
+    \Fncontent\Fquant{n}%
+    \Fconditional[{}]{%
+        \Fncontent\Fquant{d}%
+        \Fconditional[{}]{%
+            \Fncontent\Fcontent%
+            A-\mathfrak{n}<\mathfrak{d}
+        }{%
+            \Fconditional[{\Fncontent}]{%
+                \Fncontent\raisebox{-0.5\betaheight}{$\overset{\displaystyle\gamma}{\widetilde{\beta}}$}\left(0_\gamma+\Gamma=\mathfrak{d}_\beta\right)
+            }{\Fcontent\mathfrak{b}<B}
+        }
+    }{\Fcontent\Fcontent\Fcontent\Fcontent\mathfrak{n}>0}
+}{%
+    \Fcontent\Fcontent\Fquant{d}%
+    \Fconditional[{\Fcontent}]{\Fcontent\Fcontent A\geq\mathfrak{d}}{%
+        \Fncontent%
+        \Fconditional[{}]{\Fncontent\raisebox{-0.5\betaheight}{$\overset{\displaystyle\gamma}{\widetilde{\beta}}$}\left(0+\Gamma=\mathfrak{d}_\beta\right)}{\Fcontent\mathfrak{d}<B}%
+    }
+}
+}
+\end{dummyenv}
