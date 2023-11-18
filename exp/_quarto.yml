@@ -17,27 +17,28 @@ book:
   date: "2030-01-01"
   chapters:
     - index.qmd
-    - intro.qmd
+    # - intro.qmd
     - test.qmd
-    - retro/retro.qmd
-    - gödel/gödel.qmd
+    # - retro/retro.qmd
+    # - gödel/gödel.qmd
     - wang/wang.qmd
-    - frege/frege.qmd
-    - summary.qmd
+    # - frege/frege.qmd
+    # - summary.qmd
     - references.qmd
 
 format:
   html:
     css: styles.css
     toc: true
-    theme: cosmo
+    theme: cosmo # TODO: html theme and fonts
     grid: 
         margin-width: 300pt
   pdf:
     keep-tex: true
-    fontfamily: libertinus
+    fontfamily: libertinus # TODO: latex font
     colorlinks: true
     documentclass: scrreprt
+    classoption: [twoside]
     geometry:
       - paperwidth=890pt
       - paperheight=890pt
@@ -56,6 +57,4 @@ format:
     # TODO:
     # lof: true
     # lot: true
-    # TODO:
-
-
+    # toc

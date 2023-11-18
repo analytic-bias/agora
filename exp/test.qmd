@@ -98,4 +98,10 @@ Will only appear in HTML.
 
 ## Graphviz with MathJax
 
+## mathnote
+
+https://tex.stackexchange.com/questions/120104/collectively-aligning-multiple-align-environments
+
+macro: intertext
+
 
