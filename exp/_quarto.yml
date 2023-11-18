@@ -1,8 +1,12 @@
 project:
   type: book
+  post-render:
+  - rm -r ../docs/_book/
+  - cp -r _book/ ../docs/_book/
 filters:
   - extensions/rtex.lua
 bibliography: references.bib
+csl: glossa.csl
 pdf-engine: xelatex
 reference-location: margin
 citation-location: margin

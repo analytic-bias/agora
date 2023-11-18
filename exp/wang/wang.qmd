@@ -1,14 +1,4 @@
----
-nocite: |
-  @ButtsHintikka1977, @parsons1998, parsons1998
-csl: https://raw.githubusercontent.com/citation-style-language/styles/5bea241e5a2acacc29b947e21539be9cbe79c8bd/dependent/journal-of-symbolic-computation.csl
----
-
 # [\ourblue Hao Wang’s Logical Journey in Life]{.ourblue}
-
-[@parsons1998] 
-
-I think ChatGPT was hallucinating when converting bibliography...
 
 ## <span class="smallcaps">Abstract</span> {.unnumbered}
 
@@ -47,7 +37,7 @@ modern European-American approaches to science, art, and politics. The
 influence of Western approaches was brought about by Sun Yat-sen’s
 Revolution of (1911–12) that overthrew the Qing (or Manchu) Dynasty.
 Wang early education was in the context the “Post-May Fourth Movement in
-China” (Wang’s phrase in [@wang1993], p. 40), which was inspired by the May
+China” (Wang’s phrase in [@wang1993a], p. 40), which was inspired by the May
 4<sup>th</sup>, 1919 student demonstration in Tiananmen Square to
 protest Japanese and Western imperialism in the aftermath of World War
 I.
@@ -103,7 +93,7 @@ Harvard. During this time Wang was able to find an elegant repair for
 Quine’s inconsistent first edition of *Mathematical Logic* \[1946\] and
 demonstrate the consistency of his proposal relative to Quine’s *New
 Foundations,* a repair adopted and acknowledged by Quine in the second
-edition \[1951\]. In October of 1949 Mao Zedong declared the existence
+edition [@quine1951a]. In October of 1949 Mao Zedong declared the existence
 of the People’s Republic of China (PRC), and China, who had been an
 ally, became a communist threat. McCarthyism created a climate of
 anti-Communism domestically and the U.S entered into the Korean War
@@ -146,15 +136,15 @@ Upon returning to Harvard, Wang offered a professorship, not in
 Philosophy where most of his contributions, research and passion had
 been devoted, but in Applied Mathematics. Ahead of his time, Wang found
 ways to create academic partnerships with the emerging computer
-industry. While at IBM Wang \[1961\] invented a representation of formal
+industry. While at IBM Wang [@wang1961a] invented a representation of formal
 systems known as Wang Tiles, graphically represented by square tiles
-with a color on each side. Wang’s student Robert Berger \[1966\]
+with a color on each side. Wang’s student Robert Berger [@berger1966a]
 demonstrated in his dissertation the Undecidability of Wang’s Tiling
 Problem by showing its decidability would contradict Turing’s proof of
 the *Unsolvability of the Halting Problem*. Berger also found a
 counterexample to Wang’s conjecture that there were no aperiodic Wang
 Tilings.[^wang-10] Wang popularized his geometrization of logic in his
-*Scientific American* article, “Games, logic and computers” \[1965\].
+*Scientific American* article, “Games, logic and computers” [@wang1965a].
 
 Becoming an American citizen in 1967,[^wang-11] Wang moved his academic home
 from Harvard to Rockefeller University where he headed a research group
@@ -164,12 +154,12 @@ Skolem for Jean van Heijenoort’s classic anthology *From Frege to
 Gödel.*[^wang-12] In October of that year Wang began his weekly conversations
 with Gödel at the Institute for Advanced Studies at Princeton. The first
 series of conversations from 1971 - 1972 influenced significant parts of
-Wang’s *From Mathematics to Philosophy* \[1974\], which were published
+Wang’s *From Mathematics to Philosophy* [@wang1974a], which were published
 subject to Gödel’s approval. The second series of conversations with
 Gödel began in the Fall of 1975. These remarkable conversations are
 chronicled and commented upon in four of Wang’s books beginning with
 *From Mathematics to Philosophy* (1974) and continuing in *Beyond
-Analytic Philosophy* \[1986\], *Reflections on Kurt Gödel* \[1987\] and
+Analytic Philosophy* [@wang1986a], *Reflections on Kurt Gödel* [@wang1987a] and
 his posthumously published *A Logical Journey: From Gödel to Philosophy*
 \[1997\].
 
@@ -245,7 +235,7 @@ discrimination.
 
 *Professional Orientalism* in the *careers* and *outlook* of academics
 of Asian descent in America has been examined by Henry Yu in *Thinking
-Orientals* \[2001\] a sociological study of historical transition from
+Orientals* [@yu2001a] a sociological study of historical transition from
 “gentlemanly to institutionalized Orientalism” experienced by
 intellectuals of Chinese and Japanese descent living in the American
 from 1920 – 1965. Yu’s study focuses on the Chicago School of Sociology,
@@ -321,9 +311,9 @@ logicians were Charles Parsons, Burton Dreben, Michael Dummett, Donald
 A. (Tony) Martin, and Hilary Putnam.[^wang-22]
 
 Wang expressed his dissatisfaction with analytic philosophy in *Beyond
-Analytic Philosophy: Doing Justice to What We Know* \[1985\]. Quine, who
+Analytic Philosophy: Doing Justice to What We Know* [@wang1986a]. Quine, who
 described himself as a “disciple of Carnap for six years,” declared his
-independence from Carnap his celebrated “Two Dogmas of Empiricism”
+independence from Carnap his celebrated “Two Dogmas of Empiricism” [@quine1951a]
 \[1951, 1961\].
 
 \[DATE\]. Similarly, Wang playfully labeled Quine’s philosophy “Logical
@@ -383,7 +373,7 @@ Eckehart Köhler was scholar interested in Gödel’s Platonism, who first
 contacted Wang in 1979 on the advise of Solomon Feferman, and who later
 in 1986 as founder of the Kurt Gödel Society in Vienna invited Wang to
 become its first president. Köhler in his “Collaborating with Hao Wang
-on Gödel’s Philosophy” \[2011\] in the memorial volume recounts a
+on Gödel’s Philosophy” [@koehler2011a] in the memorial volume recounts a
 revealing with Wang:
 
 > I began explaining to Wang the well-known work of Herbert Simon, a
@@ -920,12 +910,11 @@ life could add to the conversation about the Analytic Tradition and
 Chinese Philosophy and to serve as a catalyst for diversifying what Wang
 once praised as “the elusive concept of an American spirit.”[^wang-48]
 
-## References, Raw
+## TODO
 
-**TODO: [cleaning](https://chat.openai.com/share/b82440b4-2331-4e0e-9110-0c68c42a51bc)**
+[cleaning bib](https://chat.openai.com/share/b82440b4-2331-4e0e-9110-0c68c42a51bc)
 
-
-Berger, Robert \[1966\], “The undecidability of the domino problem,”
+<!-- Berger, Robert \[1966\], “The undecidability of the domino problem,”
 *Memoirs of the American Mathematical Society* **66**, 72.
 
 Butts, Robert and Jaakko Hintikka (eds.) \[1977\]. *Logic, Foundations
@@ -1082,28 +1071,25 @@ Zhaowu, He \[1995\] “*Remembering Wang Hao”* (Chinese), *Southwest
 Associated Alumni Newsletter*,
 
 translated by Richard Jandovitz and Montgomery Link in Parsons and Link
-\[2011\], 49–53.
+\[2011\], 49–53. -->
 
-## References, Cleaned
-
-::: {#refs}
-:::
-
-## Footnotes
+<!-- will be using margin citations; unnecessary: -->
+<!-- ::: {#refs}
+::: -->
 
 [^wang-1]: Gary R. Mar is an Associate Professor of Philosophy at Stony Brook
-University where he is also the Founding Directors of the Philosophy
-Department Logic Lab and the Asian American Center. He was the last
-dissertation student of the 20<sup>th</sup> century logician Alonzo
-Church and co-author with Kalish and Montague of the logic textbook
-*Logic: Techniques of Formal Reasoning* (second edition, OUP) and the
-catalyst for the expansion of the APA Committee on Asian and
-Asian-American Philosophers and Philosophies. Email:
-Gary.Mar@stonybrook.edu.
+    University where he is also the Founding Directors of the Philosophy
+    Department Logic Lab and the Asian American Center. He was the last
+    dissertation student of the 20<sup>th</sup> century logician Alonzo
+    Church and co-author with Kalish and Montague of the logic textbook
+    *Logic: Techniques of Formal Reasoning* (second edition, OUP) and the
+    catalyst for the expansion of the APA Committee on Asian and
+    Asian-American Philosophers and Philosophies. Email:
+    Gary.Mar@stonybrook.edu.
 
-  Charles Parsons and Montgomery Link in their preface to *Hao Wang:
-Logician and Philosopher*, a collected work published 15 years after
-Wang’s death, p. 1.
+    Charles Parsons and Montgomery Link in their preface to *Hao Wang:
+    Logician and Philosopher*, a collected work published 15 years after
+    Wang’s death, p. 1.
 
 [^wang-2]: He \[1995\], translated in Parsons and Link \[2011\], 49, italics
 mine.

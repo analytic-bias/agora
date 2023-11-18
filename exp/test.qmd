@@ -1,6 +1,28 @@
-# Format Cheatsheet
-## Quiver
-### SVG
+# Test
+
+This is a testing page left for editorial purposes and will not be included in the publication.
+
+
+## TODO: Chapter Proposal
+
+- Yutong: What is ... *motivic philosophy*?
+  
+  [@Denef1999DefinableSetsMotives] says
+  $$
+  [ x \neq 0 \wedge(\exists y)\left(x=y^2\right) ]\quad\leadsto\quad\frac{1}{2}\left(\left[\mathbb{L}\right]-\mathbb{1}\right)
+  $$
+  as
+
+  > ... [over] finite fields of characteristic $>2$, half of the units are squares ...
+  >
+  > [---@Cluckers2011MotivicIntegrationIts, p.23]
+
+## Format Cheatsheet
+
+[Quarto's official docs](https://quarto.org/docs/authoring/markdown-basics.html)
+
+### Quiver CD
+#### SVG
 <!-- https://q.uiver.app/#q=WzAsMTIsWzIsMywiWCJdLFszLDIsIlQiXSxbMywzLCJTIl0sWzIsMiwiWFxcdW5kZXJzZXR7U317XFx0aW1lc31UIl0sWzEsNCwie1xcYmVnaW57YWxpZ25lZH0gWCY9XFxvdmVybGluZVxcZXRhXFxcXCBLJj1cXG1hdGhiYnsxfV9YXFxcXCBcXG1hdGhybXtMSFN9Jj1LXFxvdGltZXNcXGJldGFeKnBfKkxcXFxcICY9SF4qKFxcbWF0aGZyYWt7WH0pX3tcXG92ZXJsaW5le1xcZXRhfX1cXFxcIFxcbWF0aHJte1JIU30mPXFfKihLXFxib3h0aW1lcyBMKVxcXFwgJj1IXiooXFxtYXRoZnJha3tYfV97XFxvdmVybGluZXtcXGV0YX19KSBcXGVuZHthbGlnbmVkfX0iXSxbNCwxLCJ7XFxiZWdpbnthbGlnbmVkfSBUJj1cXG1hdGhmcmFre1h9X3tSfVxcXFwgTCY9XFxtYXRoYmJ7MX1fVCBcXGVuZHthbGlnbmVkfX0iXSxbMSwxLCJ7XFxiZWdpbnthbGlnbmVkfSBYXFx0aW1lcyBUJj1cXG1hdGhmcmFre1h9X3tcXG92ZXJsaW5le1xcZXRhfX1cXFxcIEtcXGJveHRpbWVzIEwmPXtcXEJiYnsxfX1fe1xcZG90c30gXFxlbmR7YWxpZ25lZH19Il0sWzQsNCwicF8qTCJdLFswLDBdLFs1LDBdLFs1LDVdLFswLDVdLFszLDAsInEiLDJdLFsxLDIsInAiXSxbMCwyLCJcXGJldGEiLDJdLFszLDEsIlxcYWxwaGEiXSxbMywyLCIiLDEseyJzdHlsZSI6eyJuYW1lIjoiY29ybmVyIn19XV0= -->
 \begin{tikzcd}[ampersand replacement=\&,cramped]
 	{\begin{aligned}
@@ -27,10 +49,10 @@ K&=\mathbb{1}_X\\
 	\arrow["\mathlarger{\lrcorner}"{anchor=center, pos=-0.2}, draw=none, from=2-2, to=3-3]
 \end{tikzcd}
 
-### iframe
+#### iframe
 <iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsMTIsWzIsMywiWCJdLFszLDIsIlQiXSxbMywzLCJTIl0sWzIsMiwiWFxcdW5kZXJzZXR7U317XFx0aW1lc31UIl0sWzEsNCwie1xcYmVnaW57YWxpZ25lZH0gWCY9XFxvdmVybGluZVxcZXRhXFxcXCBLJj1cXG1hdGhiYnsxfV9YXFxcXCBcXG1hdGhybXtMSFN9Jj1LXFxvdGltZXNcXGJldGFeKnBfKkxcXFxcICY9SF4qKFxcbWF0aGZyYWt7WH0pX3tcXG92ZXJsaW5le1xcZXRhfX1cXFxcIFxcbWF0aHJte1JIU30mPXFfKihLXFxib3h0aW1lcyBMKVxcXFwgJj1IXiooXFxtYXRoZnJha3tYfV97XFxvdmVybGluZXtcXGV0YX19KSBcXGVuZHthbGlnbmVkfX0iXSxbNCwxLCJ7XFxiZWdpbnthbGlnbmVkfSBUJj1cXG1hdGhmcmFre1h9X3tSfVxcXFwgTCY9XFxtYXRoYmJ7MX1fVCBcXGVuZHthbGlnbmVkfX0iXSxbMSwxLCJ7XFxiZWdpbnthbGlnbmVkfSBYXFx0aW1lcyBUJj1cXG1hdGhmcmFre1h9X3tcXG92ZXJsaW5le1xcZXRhfX1cXFxcIEtcXGJveHRpbWVzIEwmPXtcXEJiYnsxfX1fe1xcZG90c30gXFxlbmR7YWxpZ25lZH19Il0sWzQsNCwicF8qTCJdLFswLDBdLFs1LDBdLFs1LDVdLFswLDVdLFszLDAsInEiLDJdLFsxLDIsInAiXSxbMCwyLCJcXGJldGEiLDJdLFszLDEsIlxcYWxwaGEiXSxbMywyLCIiLDEseyJzdHlsZSI6eyJuYW1lIjoiY29ybmVyIn19XV0=&embed" width="400" height="400" style="border-radius: 8px; border: none;"></iframe>
 
-## Indented Text
+### Indented Text
 \let\labelitemito\labelitemi
 \renewcommand\labelitemi{}
 ::: {.nobullet}
@@ -38,10 +60,10 @@ K&=\mathbb{1}_X\\
 :::
 \renewcommand\labelitemi{\labelitemito}
 
-## Color
-[\ourblue PHI 631. Analytic Seminar]{.ourblue}
+### Color CSS
+[\ourblue Prof. Mar's favorite color]{.ourblue}
 
-## Conditional
+### TODO: Conditional
 
 <!-- FIXME somehow the span/inline version below doesn't work. -->
 Some text
@@ -50,7 +72,7 @@ Some text
 
 ::: {.content-visible when-format="pdf"}
 
-Will not appear in PDF.
+Will only appear in PDF.
 
 :::
 
@@ -60,7 +82,7 @@ Will only appear in HTML.
 
 :::
 
-## Frege
+### Frege
 
 \begin{dummyenv}
 \newlength{\betaheight}
@@ -90,18 +112,33 @@ Will only appear in HTML.
 }
 \end{dummyenv}
 
-## Tufte
+### Tufte
 
 - [twoside class](https://www.overleaf.com/learn/latex/Single_sided_and_double_sided_documents)
 - [tufte.qmd](https://github.com/quarto-dev/quarto-gallery/blob/main/page-layout/tufte.qmd)
 - [auto break sidenotes](https://tex.stackexchange.com/questions/624033/long-sidenotes-break-marginfix-or-how-to-make-breakable-sidenotes)
 
-## Graphviz with MathJax
+### TODO: Graphviz with MathJax
 
-## mathnote
+- [HTML: Graphviz + MathJax](https://observablehq.com/@mcmcclur/d3-graphviz-with-mathjax)
+- [TeX](https://dot2tex.readthedocs.io/en/latest/)
+
+### TODO: mathnote
+
+```latex
+\def\mathnote#1{%
+  \tag*{\rlap{\hspace\marginparsep{\parbox[t]{\marginparwidth}{\footnotesize#1}}}}%
+}
+\def\mathnotes#1{%
+  \tag*{\rlap{\hspace\marginparsep\smash{\parbox[t]{\marginparwidth}{\footnotesize#1}}}}%
+}
+\def\mathnoteps#1{%
+  \tag*{\rlap{\hspace\marginparsep{\parbox[t]{\marginparwidth}{\footnotesize#1}}}}%
+}
+```
 
 https://tex.stackexchange.com/questions/120104/collectively-aligning-multiple-align-environments
 
 macro: intertext
 
-
+### TODO: BibLaTeX with Zotero Group Library Sync?
