@@ -63,7 +63,7 @@ local triggers = {
 
 function RawBlock(el)
   t = fun.filter(function(x) return starts_with(x, el.text) end, triggers)
-  -- print(fun.length(t))
+  -- print("aaaaaaaaaaaa")
   if fun.length(t) ~= 0 then
     if starts_with('html', FORMAT) then
       local filetype = 'svg'
@@ -79,4 +79,10 @@ function RawBlock(el)
   else
     return el
   end
+end
+
+-- https://github.com/quarto-dev/quarto-cli/issues/7534
+Note = function(n)
+  n.content = pandoc.Para(pandoc.utils.blocks_to_inlines(n.content, {pandoc.RawInline('latex', '\n\\endgraf\n')}))
+  return n
 end

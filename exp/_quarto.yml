@@ -1,5 +1,11 @@
 project:
   type: book
+filters:
+  - extensions/rtex.lua
+bibliography: references.bib
+pdf-engine: xelatex
+reference-location: margin
+citation-location: margin
 
 book:
   search:
@@ -20,17 +26,36 @@ book:
     - summary.qmd
     - references.qmd
 
-bibliography: references.bib
-pdf-engine: xelatex
-
 format:
   html:
     css: styles.css
     toc: true
     theme: cosmo
+    grid: 
+        margin-width: 300pt
   pdf:
+    keep-tex: true
+    fontfamily: libertinus
+    colorlinks: true
     documentclass: scrreprt
+    geometry:
+      - paperwidth=890pt
+      - paperheight=890pt
+      - left=30pt
+      - textwidth=500pt
+      - marginparsep=30pt
+      - marginparwidth=300pt
+      - top=50pt
+      - bottom=50pt
+      - heightrounded
     include-in-header:
       - file: preamble.tex
+    # no need:
+    # documentclass: tufte-book
+    # classoption: [justified]
+    # TODO:
+    # lof: true
+    # lot: true
+    # TODO:
 
 

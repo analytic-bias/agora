@@ -1,9 +1,3 @@
----
-title: "Format Cheatsheet"
-filters:
-  - rtex
----
-
 # Format Cheatsheet
 ## Quiver
 ### SVG
@@ -49,6 +43,7 @@ K&=\mathbb{1}_X\\
 
 ## Conditional
 
+<!-- FIXME somehow the span/inline version below doesn't work. -->
 Some text
 [in HTML.]{.content-visible when-format="html"}
 [in PDF.]{.content-visible when-format="pdf"}
@@ -94,3 +89,13 @@ Will only appear in HTML.
 }
 }
 \end{dummyenv}
+
+## Tufte
+
+- [twoside class](https://www.overleaf.com/learn/latex/Single_sided_and_double_sided_documents)
+- [tufte.qmd](https://github.com/quarto-dev/quarto-gallery/blob/main/page-layout/tufte.qmd)
+- [auto break sidenotes](https://tex.stackexchange.com/questions/624033/long-sidenotes-break-marginfix-or-how-to-make-breakable-sidenotes)
+
+## Graphviz with MathJax
+
+

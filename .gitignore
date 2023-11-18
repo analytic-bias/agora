@@ -1,3 +1,5 @@
 /.luarc.json
 *.aux
 *.log
+exp/Gödelian-Explorations.tex
+exp/index.fdb_latexmk
