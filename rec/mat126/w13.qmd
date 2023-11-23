@@ -10,9 +10,6 @@ format:
 ---
 
 <style>
-  .almar {
-    position: relative;
-  }
   .compensate-above {
     margin-top: -1rem;
   }
