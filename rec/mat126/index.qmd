@@ -1,3 +1,5 @@
 # Preface {.unnumbered}
 
 This is site hosting online notes for R110 and R210, for when interactive handouts are distributed.
+
+They don't want to write a new textbook or reform the curriculum, so someday I will turn all of these into a new book/course, one better than ever.

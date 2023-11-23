@@ -1,0 +1,54 @@
+# Optional Excursions
+
+## Euler's Formula
+Recall Euler's formula
+^[The reason this formula makes sense amounts to the *analytic continuation of the exponential function*, which is definitely not a required topic of calculus courses; you can refer to common complex analysis textbooks if so interested. The main ingredient of the proof is the power series expansion of the exponential function.]
+$$
+e^{i x}=\cos x+i \sin x
+$$
+where $i=\sqrt{-1}$.
+
+So for example, to derive the double-angle formula for cosine used above, redefine
+^[Recall that 
+$$\operatorname{Re}(z)=\frac{z+\bar{z}}{2} \quad \text { and } \quad \operatorname{Im}(z)=\frac{z-\bar{z}}{2 i},$$
+where $\bar{z}$ denotes the complex conjugate of $z$.]
+$$
+\cos (x)=\frac{e^{i x}+e^{-i x}}{2}
+$$
+with the Euler's formula, and write
+$$
+\cos ^2(\theta)=\frac{e^{2 i \theta}+2+e^{-2 i \theta}}{4}\quad\text{and}\quad\cos (2 \theta)=\frac{e^{2 i \theta}+e^{-2 i \theta}}{2};
+$$
+which, via algebraic manipulations, gives
+$$\cos (2 \theta)=2 \cos ^2 \theta-1,$$
+as desired.
+
+## Partial Fractions
+This is a more technical explanation of why one wants to use partial fraction decomposition (PFD) for evaluating antiderivatives, series expansions, and various integral transforms.
+
+::: {#thm-pfd-extuni}
+## Existence and Uniqueness of PFD
+^[The ingredients for its proof are the *Euclidean division for polynomials* and the *Bézout's identity*.]
+Let $f$ and $g$ be nonzero polynomials over a field $K$ and let
+$$
+g=\prod_{i=1}^k p_i^{n_i}.
+$$
+be a decomposition of $g$ into a product of powers of distinct irreducible polynomials,
+then there are polynomials $b$ and $a_{i j}$ (unique up to signs) such that deg $a_{i j}<\operatorname{deg} p_i$ and that
+$$
+\frac{\,f\,}{\,g\,}=b+\sum_{i=1}^k \sum_{j=1}^{n_i} \frac{\,a_{i,j}\,}{\,(p_i)^j\,}.
+$$
+:::
+
+What this is saying is that if one encounters a rational function whose antiderivative, series expansion, etc. are not apparent at first sight, one can decompose the function into summands in the forms that are easier to handle, and evaluate them individually by linearity. For example, one may notice in particular that in the statement of the theorem above if $\deg f<\deg g$, then $b=0$, and if $K$ is algebraically closed, then $a_{i,j}\in K$ can be achieved, which is exactly the situation we encountered in the above homework question; in this case, the ``easier" summands are of the form
+$$
+\frac{c}{ax+b}\quad\text{where}\quad a,b,c\in\mathbb{Q}.
+$$
+
+Furthermore, in some cases, it is not practically required to complete the full decomposition (as that might require irrational and/or complex coefficients in the denominator); for example, you may encounter problems in the homework where summands of the form
+$$
+\frac{dx+e}{ax^2+bx+c}\quad\text{where}\quad a,b,c,d,e\in\mathbb{Q}
+$$
+already suffice.
+
+
