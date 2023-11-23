@@ -74,7 +74,7 @@ $$
 A(x)&=\pi(3 x-3)^2-\pi(3 \sqrt{x}-3)^2 \\
 & =9 \pi\left[\left(1-2 x+x^2\right)-(1-2 \sqrt{x}+x)\right] \\
 & =9 \pi\left(-3 x+x^2+2 \sqrt{x}\right)\text{; and}\\\\
-V&=\int_0^{1\class{alref}{\cssId{alref1}{}}} A(x)\,\mathrm{d}x\\
+V&=\int_0^{1} A(x)\,\mathrm{d}x\class{alref}{\cssId{alref1}{}}\\
 &=9 \pi \int_0^1\left(-3 x+x^2+2 \sqrt{x}\right)\,\mathrm{d}x\\
 & =9 \pi\left[-\frac{3}{2} x^2+\frac{1}{3} x^3+\frac{4}{3} x^{3 / 2}\right]_0^1\\
 &=9 \pi\left(-\frac{3}{2}+\frac{5}{3}\right)=\frac{3}{2} \pi.
