@@ -5,3 +5,7 @@
 .nobullet li {
     list-style-type: none;
 }
+
+.almar {
+    position: relative; /* or 'relative' depending on your layout */
+}

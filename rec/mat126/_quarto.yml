@@ -1,8 +1,8 @@
 project:
   type: book
-  # post-render:
-  # - rm -r ../docs/mat126/
-  # - cp -r _book/ ../docs/mat126/
+  post-render:
+  - rm -r ../../docs/mat126/
+  - cp -r _book/ ../../docs/mat126/
 filters:
   - extensions/rtex.lua
 bibliography: references.bib
@@ -21,35 +21,35 @@ book:
   date: "2030-01-01"
   chapters:
     - index.qmd
-    - intro.qmd
-    - summary.qmd
+    - w13.qmd
     - references.qmd
 
 format:
   html:
     css: styles.css
     toc: true
+    toc-depth: 6
     theme: cosmo # TODO: html theme and fonts
     grid: 
         margin-width: 300pt
-  pdf:
-    keep-tex: true
-    fontfamily: libertinus # TODO: latex font
-    colorlinks: true
-    documentclass: scrreprt
-    classoption: [twoside]
-    geometry:
-      - paperwidth=890pt
-      - paperheight=890pt
-      - left=30pt
-      - textwidth=500pt
-      - marginparsep=30pt
-      - marginparwidth=300pt
-      - top=50pt
-      - bottom=50pt
-      - heightrounded
-    include-in-header:
-      - file: preamble.tex
+  # pdf:
+  #   keep-tex: true
+  #   fontfamily: libertinus # TODO: latex font
+  #   colorlinks: true
+  #   documentclass: scrreprt
+  #   classoption: [twoside]
+  #   geometry:
+  #     - paperwidth=890pt
+  #     - paperheight=890pt
+  #     - left=30pt
+  #     - textwidth=500pt
+  #     - marginparsep=30pt
+  #     - marginparwidth=300pt
+  #     - top=50pt
+  #     - bottom=50pt
+  #     - heightrounded
+  #   include-in-header:
+  #     - file: preamble.tex
     # no need:
     # documentclass: tufte-book
     # classoption: [justified]

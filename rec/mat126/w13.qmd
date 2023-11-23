@@ -1,64 +1,104 @@
 ---
 jupyter: python3
+include-in-header:
+  text: |
+    <script src="alignmargin.js"></script>
 format:
   html:
     code-fold: true
+    code-block-border-left: true
 ---
 
-# Week 13
+<style>
+  .almar {
+    position: relative;
+  }
+  .compensate-above {
+    margin-top: -1rem;
+  }
+</style>
 
-## question 7 of homework 10, SCalcCC5 6.2.014.
+# Week 13--14
+Since these homeworks would better be explained in terms of interactive figures, I've put them in a web format which you can use directly from browser.
 
-**Question.**
-Consider the solid obtained by rotating the region bounded by the given curves about the line $y_0 = 3$.
+## HW 10.7 - SCalcCC5 6.2.014.
+```{python}
+#| label: fig-hw10-7-plot-1
+#| fig-cap: "Plot of $y=3x$ and $y=3\\sqrt{x}$ with area between curves from $x=0$ to $x=1$"
+#| column: margin
+#| echo: false
 
+%matplotlib inline
+import matplotlib_inline
+matplotlib_inline.backend_inline.set_matplotlib_formats('svg')
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Define the range for x
+x = np.linspace(0, 1, 200)
+x_sqrt = np.linspace(0, 1, 200)
+
+# Define the functions
+y1 = 3 * x
+y2 = 3 * np.sqrt(x_sqrt)
+
+# Plotting the functions
+plt.figure(figsize=(6, 6))
+plt.plot(x, y1, label='$3x$', color='blue')
+plt.plot(x_sqrt, y2, label='$3\sqrt{x}$', color='red')
+
+# Filling the area between the curves
+plt.fill_between(x, y1, y2, where=(x >= 0) & (x <= 1), color='green', alpha=0.3)
+
+# Adding labels and title
+plt.xlabel('x')
+plt.ylabel('y')
+plt.legend()
+plt.grid(True)
+
+# Show the plot
+plt.show()
+```
+Consider the solid obtained by rotating the region bounded by the given curves about the line $y = 3$.
 $$y=\underbrace{3x}_{\substack{f_1(x)\\\uparrow\\\text{outer}}}\quad y=\underbrace{3\sqrt{x}}_{\substack{f_2(x)\\\uparrow\\\text{inner}}}$$
-
 Find the volume V of this solid.
 
-**Solution.**
+### Solution
 Recall that the area of the annulus at $x$ (where $0\leq x\leq1$) is
-
 $$A(x)=\pi\big[f_1(x)-y_0\big]^2-\pi\big[f_2(x)-y_0\big]^2$$
-
 and that the volume is
-
 $$V=\int_a^bA(x)\,\mathrm{d}x,$$
+which in our case are
 
-which in our particular case are
-
+:::: {.compensate-above}
 $$
 \begin{aligned}
 A(x)&=\pi(3 x-3)^2-\pi(3 \sqrt{x}-3)^2 \\
 & =9 \pi\left[\left(1-2 x+x^2\right)-(1-2 \sqrt{x}+x)\right] \\
 & =9 \pi\left(-3 x+x^2+2 \sqrt{x}\right)\text{; and}\\\\
-\text{warning: WebAssign answer has a typo on this line}\,\to\quad
-V&=\int_0^1 A(x)\,\mathrm{d}x\\
+V&=\int_0^{1\class{alref}{\cssId{alref1}{}}} A(x)\,\mathrm{d}x\\
 &=9 \pi \int_0^1\left(-3 x+x^2+2 \sqrt{x}\right)\,\mathrm{d}x\\
 & =9 \pi\left[-\frac{3}{2} x^2+\frac{1}{3} x^3+\frac{4}{3} x^{3 / 2}\right]_0^1\\
 &=9 \pi\left(-\frac{3}{2}+\frac{5}{3}\right)=\frac{3}{2} \pi.
 \end{aligned}
 $$
 
+::: {#almar1 .callout-warning .column-margin .almar .compensate-above}
+## WebAssign's solution has a typo on this line.
+:::
+::::
+
 <!-- <details>
   <summary><i>WebAssign answers (with typo)</i></summary>
   <object data="https://www.webassign.net/latex2pdf/55cf5565f7021a0121f1a755234fe118.pdf" width="600" height="600"/>
 </details> -->
 
-**Sketch** the region, the solid, and a typical disk or washer. (Do this on paper. Your instructor may ask you to turn in this work.)
+### Sketch
+Sketch the region, the solid, and a typical disk or washer. (Do this on paper. Your instructor may ask you to turn in this work.)
+[Mathematicians usually call them annuli (sing. annulus), not washers.]{.aside}
 
-<br/>
-
-----
-
-<br/>
-
-Mathematicians usually call them annuli (sing. annulus), not washers...
-
-The plot below is interactive.
-
-You may also use the Mathematica subscription from the university; GPT (preferably 4) and Copilot are good resources for coding questions.
-
+[The plot is interactive, and optionally you may also want to check the code by clicking on the triangle if you so wish. You may also use the Mathematica subscription from the university; GPT (preferably 4) and Copilot are good resources for coding questions.]{.aside}
 ```{python}
 import plotly.graph_objects as go
 import plotly.io as pio
@@ -90,13 +130,11 @@ inner_surface = go.Surface(x=X_inner, y=Y_inner, z=Z_inner, opacity=0.9, name='i
 
 # Create the layout for the plot
 layout = go.Layout(
-    # title=r'$y = 3x\\,\\text{and}\\,y = 3\sqrt{x},\\,\\text{revolving around}\\,y=3\\,\\text{from the intersection point}\\,x=0\\,\\text{to}\\,x=1$',
     scene=dict(
         xaxis_title='X',
         yaxis_title='Y',
         zaxis_title='Z'
-    ),
-    width=600, height=600
+    ), autosize=True
 )
 
 # Show the figure, suppressing the extra color saturation axis
@@ -105,25 +143,26 @@ fig.update_traces(showscale=False)
 fig.show()
 ```
 
-## question 10 of homework 10, SCalcCC5 6.3.025.
-
-**Question.** Consider the following.
-
+## HW 10.10 - SCalcCC5 6.3.025.
+Consider the following.
 $$
 x=4 \sqrt{\sin (y)}, \quad 0 \leq y \leq \Pi, \quad x=0 ; \text { about } y=4
 $$
 
-(a) Set up an integral for the volume of the solid obtained by rotating the region bounded by the given curve about the specified axis.
+### (a)
+Set up an integral for the volume of the solid obtained by rotating the region bounded by the given curve about the specified axis.
 
-**Solution.**
+#### Solution
 $$
 \begin{aligned}
-\text{area of the red cylinder at y}\,\to\quad
+\class{alref}{\cssId{alref2}{\phantom{.}}}
 A(y)&=\underbrace{2\pi(4-y)}_{\text{circumference}} \cdot \underbrace{4\sqrt{\sin (y)}}_{\text{height}},\,\text{and thus}\\
 V&=\int_0^{\pi} 2 \pi(4-y) 4 \sqrt{\sin (y)}\,\mathrm{d}y.
 \end{aligned}
 $$
+[$\leftarrow\quad$ area of the red cylinder at y]{#almar2 .aside .almar}
 
+[The red cylinder is extended for clarity.]{.aside}
 ```{python}
 import plotly.graph_objects as go
 import numpy as np
@@ -150,50 +189,69 @@ layout = go.Layout(
         yaxis_title='Y',
         zaxis_title='Z'
     ),
-    width=600, height=600
+    autosize=True
 )
 fig = go.Figure(data=[curve_surface, line_surface], layout=layout)
 fig.update_traces(showscale=False)
 fig.show()
 ```
 
-**Question.** (b) Use technology to evaluate the integral. (Round your answer to four decimal places.)
+### (b)
+Use technology to evaluate the integral. (Round your answer to four decimal places.)
 
-**Solution.**
-The anti-derivative is non-elementary (optional: if you're really curious, [here](https://math.stackexchange.com/questions/3906193/completely-stuck-at-integrating-%24%5Cint-x%5Csqrt%7B%5Ccos-x%7D%5C%2Cdx%24), which will be much more ugly than the logarithmic integral for $x^n\tan x$ we talked about several weeks ago).
+#### Solution
+For the numerical integration, we can use `scipy`:
 
-For the numerical integration, we can use `scipy`, or whatever "technology" you'd prefer:
+::: {.column-margin .callout-tip collapse="true"}
+## Optional
 
+The anti-derivative is non-elementary. If you're really curious, you can start from [here](https://math.stackexchange.com/questions/3906193/completely-stuck-at-integrating-%24%5Cint-x%5Csqrt%7B%5Ccos-x%7D%5C%2Cdx%24); you may notice that it will be much more complicated than the $x^n\tan x$ some of you asked a while ago.
+:::
 ```{python}
 #| echo: true
+#| code-fold: false
 
 import numpy
 import scipy
-round(scipy.integrate.quad(lambda y: 2 * numpy.pi * (4 - y) * 4 * numpy.sqrt(numpy.sin(y)), 0, numpy.pi)[0], 4)
+round(scipy.integrate.quad(lambda y:
+  2 * numpy.pi * (4 - y) *
+    4 * numpy.sqrt(numpy.sin(y)),
+  0, numpy.pi)[0],
+4)
 ```
+or whatever "technology" you'd prefer.
 
-## hints on arc length (HW11.6 - SCalcCC5 6.4.017.MI. and HW11.7 - SCalcCC5 6.4.021.)
-
+## Recall: Arc Length
+:::: {}
 $$
 \begin{array}{rcl}
 f(x(t)) & = & g(y(t))\\
 \leadsto\quad
-x(t)=f^{-1}(t) &\text{and}& y(t)=g^{-1}(t)\quad\leftarrow\text{beware of conditions for the existence of inverse}\\\\
-r(t)=\Big(x(t),y(t)\Big)&:&\text{injective, continuously differentiable}\\
-\leadsto\quad\displaystyle
-L=\int_a^b\Big\|{r}^{\prime}(t)\Big\|\,\mathrm{d}t
-&=&\displaystyle
-\int_a^b \sqrt{\left(x^{\prime}(t)\right)^2+\left(y^{\prime}(t)\right)^2}\,\mathrm{d}t
+x(t)=f^{-1}(t) &\text{and}& y(t)=g^{-1}(t)\class{alref}{\cssId{alref3}{}}\\\\\\
 \end{array}
 $$
 
-<br/>
+::: {#almar3 .column-margin .almar .callout-tip .compensate-above collapse="true"}
+## Optional
+Beware of conditions for the existence of inverse.
+:::
+::::
 
-----
+::: {.column-margin .callout-tip collapse="true"}
+## Optional
+- The condition for this is that the parameterization $$r(t)=\Big(x(t),y(t)\Big)$$ has to be injective and continuously differentiable.
+- In case you want to know, the norm $\left\|{r}^{\prime}(t)\right\|$ here is called a metric tensor, which, if you intend to study e.g. the theory of relativity, will be encountered again.
+:::
+$$
+L=\int_a^b\Big\|{r}^{\prime}(t)\Big\|\,\mathrm{d}t
+\int_a^b \sqrt{\left(x^{\prime}(t)\right)^2+\left(y^{\prime}(t)\right)^2}\,\mathrm{d}t
+$$
 
-<br/>
+## HW11.6 - SCalcCC5 6.4.017.MI.
+Find the exact length of the curve. 
+$$y^2=16(x+1)^3, 0 \leq x \leq 3, y>0$$
 
-**Question 6.** $\displaystyle y^2=16(x+1)^3, 0 \leq x \leq 3, y>0$:
+### Solution
 
 $$\begin{aligned}
 y>0\implies\quad&
@@ -201,40 +259,43 @@ y(t)=\sqrt{t}\\
 0\leq x\implies\quad&x(t)=\sqrt[3]{\frac{1}{16}t}-1\\
 \,0 \leq x \leq 3\implies\quad&\text{with bounds from }t=16\text{ to }t=16\cdot4^3\\\\
 \implies\quad&\left\{\begin{aligned}
-y'(t)&=\frac{1}{2\sqrt{t}}\\x'(t)&=\frac{1}{6\cdot\sqrt[3]{2}\cdot t^{\frac{2}{3}}}\\
+y'(t)&=\frac{t^{-½}}{2}\\x'(t)&=\frac{2^{-⅓}}{6}t^{-⅔}\\
 \end{aligned}\right.\\\\
 \implies\quad&
 \left\{\begin{aligned}
-\text{length}&=\int_{16}^{16\cdot4^3}\sqrt{\left[\frac{1}{2\sqrt{t}}\right]^2+\left[\frac{1}{6\cdot\sqrt[3]{2}\cdot t^{\frac{2}{3}}}\right]^2}\,\mathrm{d}t\\
+\text{length}&=\int_{16}^{16\cdot4^3}\sqrt{\left(\frac{t^{-½}}{2}\right)^2+\left(\frac{2^{-⅓}}{6}t^{-⅔}\right)^2}\,\mathrm{d}t\\
 &=\cdots=\frac{-37 \sqrt{37} + 145 \sqrt{145}}{54}.
 \end{aligned}\right.
 \end{aligned}$$
 
-### optional remarks:
+## Homework 11.7
+Find the exact length of the curve.
+$$
+\begin{aligned}
+x &= 9 + 12t^2\\
+y &= 6 + 8t^3\\
+0 &\leq t \leq 5 
+\end{aligned}
+$$
 
-In case you want to know, the norm $\left\|{r}^{\prime}(t)\right\|$ here is called a metric tensor, which, if you intend to study e.g. the theory of relativity, will be encountered again.
+## Miscellanies (you probably don't need to read this)
 
-## optional excursion: rectification, measuring, pathologies; probably no time to code something original, but wikipedia:
+::: {.callout-tip collapse="true"}
+## Optionally, these were the excursions we briefly chatted about before the Thanksgiving
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Hilbert-curve_rounded-gradient-animated.gif" width="600" />
+On rectification, measuring, pathologies; probably no time to code something original, but wikipedia:
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Quadrat_Diagonale.svg" width="600" />
+<img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Hilbert-curve_rounded-gradient-animated.gif" width="100%" />
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/2/20/Schwarz-lantern.gif" width="600" />
+<img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Quadrat_Diagonale.svg" width="100%" />
 
-## optionally, something for you to ponder around:
+<img src="https://upload.wikimedia.org/wikipedia/commons/2/20/Schwarz-lantern.gif" width="100%" />
 
 - recall the discussion we had about Riemann sums; can you try to play with the above and see if you can make the same observation as the pioneers of measure theory did a century ago?
-
-### technically,
-
 - https://www.wikiwand.com/en/Lebesgue_measure
 - https://www.wikiwand.com/en/Minkowski_content
-
-### cool stuff to mention for students' interests:
-
 - Hilbert's curve above
 - Banach-Tarski
 - locales, cardinals
 - fractals, dimensions, GMT
-
+:::

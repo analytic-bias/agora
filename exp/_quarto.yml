@@ -1,8 +1,8 @@
 project:
   type: book
   post-render:
-  - rm -r ../docs/book/
-  - cp -r _book/ ../docs/book/
+  - rm -r ../docs/gb/
+  - cp -r _book/ ../docs/gb/
 filters:
   - extensions/rtex.lua
 bibliography: references.bib
