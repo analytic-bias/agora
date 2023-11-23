@@ -34,6 +34,7 @@ format:
   html:
     css: styles.css
     toc: true
+    toc-depth: 6
     theme: cosmo # TODO: html theme and fonts
     grid: 
         margin-width: 300pt

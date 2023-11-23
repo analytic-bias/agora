@@ -5,7 +5,7 @@ This is a testing page left for editorial purposes and will not be included in t
 
 ## TODO: Chapter Proposal
 
-- Yutong: What is ... *motivic philosophy*?
+### Yutong: What is ... *motivic philosophy*?
   
   [@Denef1999DefinableSetsMotives] says
   $$
@@ -118,10 +118,157 @@ Will only appear in HTML.
 - [tufte.qmd](https://github.com/quarto-dev/quarto-gallery/blob/main/page-layout/tufte.qmd)
 - [auto break sidenotes](https://tex.stackexchange.com/questions/624033/long-sidenotes-break-marginfix-or-how-to-make-breakable-sidenotes)
 
-### TODO: Graphviz with MathJax
+### Graphviz with MathJax
+
+**Actually, this is horrible as it requires manual coding of size and position.**
 
 - [HTML: Graphviz + MathJax](https://observablehq.com/@mcmcclur/d3-graphviz-with-mathjax)
 - [TeX](https://dot2tex.readthedocs.io/en/latest/)
+
+```{ojs}
+//| code-fold: true
+
+d3 = require("d3@7", "d3-graphviz@2");
+mathjaxBlob = (await fetch('https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js')).blob();
+mj = {
+  delete window.MathJax
+  delete window.ContextMenu
+  window.MathJax = {
+    loader: {load: ['output/svg']},
+  }
+  const MathJax = await import(URL.createObjectURL(await mathjaxBlob))
+    .then(() => window.MathJax );
+  return MathJax;
+};
+
+seir_graph = {
+  let graph = d3.create('div').style('width', `${width}px`);
+
+  // Here's the source code describing the graph to graphviz.
+  // Note that nodes and edge labels contain LaTeX code that
+  // will be passed to MathJax. I guess it gets piped through
+  // a couple of things; hence, the double escape leading to
+  // quadruple backslashes \\\\.
+  let source_code = `digraph {
+      S [pos="0,0!"]
+      E [pos="2.7,0!"]
+      I_1 [pos="4,0!"]
+      I_2 [pos="6,0.5!"]
+      I_3 [pos="8,0!"]
+      D [pos="10,0!"]
+      R [pos="6,-1.5!"]
+      S -> E [label="\\\\beta_1 I_1 S + \\\\beta_2 I_2 S + \\\\beta_3 I_3"]
+      E -> I_1 [label="\\\\alpha E"]
+      I_1 -> I_2 [label="p_1 I_1"]
+      I_2 -> I_3 [label="p_2 I_2"]
+      I_3-> D [label="\\\\mu I_3"]
+      I_1 -> R [label="\\\\gamma_1 I_1"]
+      I_2 -> R [label="\\\\gamma_2 I_2"]
+      I_3 -> R [label="\\\\gamma_3 I_3"]
+    }`;
+  d3.graphviz(graph.node())
+    .width(width)
+    .fit(true) // Doesn't quite work; see transform in penultimate line.
+    .zoom(false) // Re-transform for fit breaks the zoom.
+    .engine('neato')
+    .renderDot(source_code);
+
+  // The image is completely contained in a top level group,
+  // which we're going to manipulate
+  let main_group = graph.select('g');
+
+  // Don't really want the title
+  main_group.select('title').remove();
+
+  // Typeset the nodes
+  main_group.selectAll('.node').each(function(e, i) {
+    let text = d3.select(this).select('text');
+    if (text.node() != null) {
+      let x = parseFloat(text.attr('x'));
+      let y = parseFloat(text.attr('y'));
+      let tex_group = main_group
+        .append('g')
+        .attr('transform', `translate(${x - 8} ${y - 10})`)
+        .append(() =>
+          mj.tex2svg(String.raw`${text.text()}`).querySelector("svg")
+        );
+      text.remove();
+    }
+  });
+
+  // Placement of the typeset edge labels is a bit trickier. The following
+  // list of shifts adjusts the placement of the labels from the location
+  // specified by graphviz.
+  let shifts = [
+    [60, -30],
+    [-9, -27],
+    [-37, -15],
+    [10, 5],
+    [-20, -10],
+    [10, 0],
+    [-25, -12],
+    [44, 5]
+  ];
+  main_group.selectAll('.edge').each(function(e, i) {
+    let text = d3.select(this).select('text');
+    if (text.node() != null) {
+      let x = parseFloat(text.attr('x'));
+      let y = parseFloat(text.attr('y'));
+      let tex_group = main_group
+        .append('g')
+        .attr(
+          'transform',
+          `translate(${x + shifts[i][0]} ${y + shifts[i][1]}) scale(0.75)`
+        )
+        .append(() =>
+          mj.tex2svg(String.raw`${text.text()}`).querySelector("svg")
+        );
+      text.remove();
+    }
+  });
+
+  // There's far more space to the left of the graph than I'd expect;
+  // I guess the reason is that the first, pre-shifted edge label extends
+  // quite far to the left. A hacky fix is to redefine the main transform
+  // to fit it a bit better. Unfortunately, this breaks zoom.
+  main_group.attr('transform', `translate(-130, 204) scale(1.15)`);
+  return graph.node();
+}
+```
+
+#### Let's try the [TikZJax](https://tikzjax.com/) or just plain tikz
+
+```{r include=FALSE}
+# Necessary for using dvisvgm on macOS
+# See https://www.andrewheiss.com/blog/2021/08/27/tikz-knitr-html-svg-fun/
+# Sys.setenv(LIBGS = "/usr/local/share/ghostscript/9.53.3/lib/libgs.dylib.9.53")
+# font_opts <- list(dvisvgm.opts = "--font-format=woff")
+```
+
+```{tikz complete-pooling}
+#| echo: false
+#| fig-cap: "Complete pooling"
+#| fig-align: center
+#| fig-ext: svg
+#| out-width: 100%
+\usetikzlibrary{positioning}
+\usetikzlibrary{shapes.geometric}
+\begin{tikzpicture}[{every node/.append style}=draw]
+  \node [rectangle] (pop) at (0, 4) {Population};
+  \node [ellipse] (y1) at (-5, 2.5) {$y_1$};
+  \node [ellipse] (y2) at (-3, 2.5) {$y_2$};
+  \node [ellipse] (y3) at (-1, 2.5) {$y_3$};
+  \node [ellipse] (y4) at (1, 2.5) {$y_4$};
+  \node [ellipse, draw=white] (ydots) at (3, 2.5) {$\dots$};
+  \node [ellipse] (yn) at (5, 2.5) {$y_n$};
+  \draw [-latex] (pop) to (y1);
+  \draw [-latex] (pop) to (y2);
+  \draw [-latex] (pop) to (y3);
+  \draw [-latex] (pop) to (y4);
+  \draw [-latex, dashed] (pop) to (ydots);
+  \draw [-latex] (pop) to (yn);
+\end{tikzpicture}
+```
 
 ### TODO: mathnote
 
