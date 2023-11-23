@@ -1,0 +1,61 @@
+project:
+  type: book
+  # post-render:
+  # - rm -r ../docs/mat126/
+  # - cp -r _book/ ../docs/mat126/
+filters:
+  - extensions/rtex.lua
+bibliography: references.bib
+# csl: glossa.csl
+pdf-engine: xelatex
+reference-location: margin
+citation-location: margin
+
+book:
+  search:
+    location: navbar
+    type: overlay
+    copy-button: true
+  title: "MAT 126 Online Notes"
+  author: "Yutong Zhang"
+  date: "2030-01-01"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - summary.qmd
+    - references.qmd
+
+format:
+  html:
+    css: styles.css
+    toc: true
+    theme: cosmo # TODO: html theme and fonts
+    grid: 
+        margin-width: 300pt
+  pdf:
+    keep-tex: true
+    fontfamily: libertinus # TODO: latex font
+    colorlinks: true
+    documentclass: scrreprt
+    classoption: [twoside]
+    geometry:
+      - paperwidth=890pt
+      - paperheight=890pt
+      - left=30pt
+      - textwidth=500pt
+      - marginparsep=30pt
+      - marginparwidth=300pt
+      - top=50pt
+      - bottom=50pt
+      - heightrounded
+    include-in-header:
+      - file: preamble.tex
+    # no need:
+    # documentclass: tufte-book
+    # classoption: [justified]
+    # TODO:
+    # lof: true
+    # lot: true
+    # toc
+
+

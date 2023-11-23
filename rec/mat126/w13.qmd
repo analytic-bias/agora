@@ -1,0 +1,240 @@
+---
+jupyter: python3
+format:
+  html:
+    code-fold: true
+---
+
+# Week 13
+
+## question 7 of homework 10, SCalcCC5 6.2.014.
+
+**Question.**
+Consider the solid obtained by rotating the region bounded by the given curves about the line $y_0 = 3$.
+
+$$y=\underbrace{3x}_{\substack{f_1(x)\\\uparrow\\\text{outer}}}\quad y=\underbrace{3\sqrt{x}}_{\substack{f_2(x)\\\uparrow\\\text{inner}}}$$
+
+Find the volume V of this solid.
+
+**Solution.**
+Recall that the area of the annulus at $x$ (where $0\leq x\leq1$) is
+
+$$A(x)=\pi\big[f_1(x)-y_0\big]^2-\pi\big[f_2(x)-y_0\big]^2$$
+
+and that the volume is
+
+$$V=\int_a^bA(x)\,\mathrm{d}x,$$
+
+which in our particular case are
+
+$$
+\begin{aligned}
+A(x)&=\pi(3 x-3)^2-\pi(3 \sqrt{x}-3)^2 \\
+& =9 \pi\left[\left(1-2 x+x^2\right)-(1-2 \sqrt{x}+x)\right] \\
+& =9 \pi\left(-3 x+x^2+2 \sqrt{x}\right)\text{; and}\\\\
+\text{warning: WebAssign answer has a typo on this line}\,\to\quad
+V&=\int_0^1 A(x)\,\mathrm{d}x\\
+&=9 \pi \int_0^1\left(-3 x+x^2+2 \sqrt{x}\right)\,\mathrm{d}x\\
+& =9 \pi\left[-\frac{3}{2} x^2+\frac{1}{3} x^3+\frac{4}{3} x^{3 / 2}\right]_0^1\\
+&=9 \pi\left(-\frac{3}{2}+\frac{5}{3}\right)=\frac{3}{2} \pi.
+\end{aligned}
+$$
+
+<!-- <details>
+  <summary><i>WebAssign answers (with typo)</i></summary>
+  <object data="https://www.webassign.net/latex2pdf/55cf5565f7021a0121f1a755234fe118.pdf" width="600" height="600"/>
+</details> -->
+
+**Sketch** the region, the solid, and a typical disk or washer. (Do this on paper. Your instructor may ask you to turn in this work.)
+
+<br/>
+
+----
+
+<br/>
+
+Mathematicians usually call them annuli (sing. annulus), not washers...
+
+The plot below is interactive.
+
+You may also use the Mathematica subscription from the university; GPT (preferably 4) and Copilot are good resources for coding questions.
+
+```{python}
+import plotly.graph_objects as go
+import plotly.io as pio
+import numpy as np
+
+# Define the sampling range for x
+x = np.linspace(0, 1, 100)
+
+# Define the values of samples for the outer and inner curves
+outer_curve = 3 * x
+inner_curve = 3 * np.sqrt(x)
+
+# Definethe sampling range of angles for revolving the curves
+theta = np.linspace(0, 2 * np.pi, 100)
+
+# Create grid of values for X, Y, Z for the outer surface plot
+X_outer, T_outer = np.meshgrid(x, theta)
+Y_outer = np.cos(T_outer) * (outer_curve - 3) + 3  # Revolving around y=3
+Z_outer = np.sin(T_outer) * (outer_curve - 3)
+
+# Create grid of values for X, Y, Z for the inner surface plot
+X_inner, T_inner = np.meshgrid(x, theta)
+Y_inner = np.cos(T_inner) * (inner_curve - 3) + 3  # Revolving around y=3
+Z_inner = np.sin(T_inner) * (inner_curve - 3)
+
+# Create 3D surface plots for both the outer and inner surfaces
+outer_surface = go.Surface(x=X_outer, y=Y_outer, z=Z_outer, opacity=0.4, name='outer surface', colorscale='Blues')
+inner_surface = go.Surface(x=X_inner, y=Y_inner, z=Z_inner, opacity=0.9, name='inner surface', colorscale='Reds')
+
+# Create the layout for the plot
+layout = go.Layout(
+    # title=r'$y = 3x\\,\\text{and}\\,y = 3\sqrt{x},\\,\\text{revolving around}\\,y=3\\,\\text{from the intersection point}\\,x=0\\,\\text{to}\\,x=1$',
+    scene=dict(
+        xaxis_title='X',
+        yaxis_title='Y',
+        zaxis_title='Z'
+    ),
+    width=600, height=600
+)
+
+# Show the figure, suppressing the extra color saturation axis
+fig = go.Figure(data=[outer_surface, inner_surface], layout=layout)
+fig.update_traces(showscale=False)
+fig.show()
+```
+
+## question 10 of homework 10, SCalcCC5 6.3.025.
+
+**Question.** Consider the following.
+
+$$
+x=4 \sqrt{\sin (y)}, \quad 0 \leq y \leq \Pi, \quad x=0 ; \text { about } y=4
+$$
+
+(a) Set up an integral for the volume of the solid obtained by rotating the region bounded by the given curve about the specified axis.
+
+**Solution.**
+$$
+\begin{aligned}
+\text{area of the red cylinder at y}\,\to\quad
+A(y)&=\underbrace{2\pi(4-y)}_{\text{circumference}} \cdot \underbrace{4\sqrt{\sin (y)}}_{\text{height}},\,\text{and thus}\\
+V&=\int_0^{\pi} 2 \pi(4-y) 4 \sqrt{\sin (y)}\,\mathrm{d}y.
+\end{aligned}
+$$
+
+```{python}
+import plotly.graph_objects as go
+import numpy as np
+
+y = np.linspace(0, np.pi, 100)
+curve = 4 * np.sqrt(np.sin(y))
+theta = np.linspace(0, 2 * np.pi, 100)
+X_curve, T_curve = np.meshgrid(curve, theta)
+Y_curve = np.cos(T_curve) * (y - 4) + 4
+Z_curve = np.sin(T_curve) * (y - 4)
+
+x = np.linspace(-1, 5, 100)
+X_line, T_line = np.meshgrid(x, theta)
+Y_line = 3 * np.cos(T_line) + 4
+Z_line = 3 * np.sin(T_line)
+
+curve_surface = go.Surface(x=X_curve, y=Y_curve, z=Z_curve, opacity=0.9, name='revolved curve', colorscale='Blues')
+line_surface = go.Surface(x=X_line, y=Y_line, z=Z_line, opacity=0.4, name='cylinder (extended)', colorscale='Reds')
+
+layout = go.Layout(
+    # title=r"$x=4\sqrt{\sin y},\,\text{revolved around}\,y=4,\,\text{from}\,x=0\,\text{to}\,x=4$",
+    scene=dict(
+        xaxis_title='X',
+        yaxis_title='Y',
+        zaxis_title='Z'
+    ),
+    width=600, height=600
+)
+fig = go.Figure(data=[curve_surface, line_surface], layout=layout)
+fig.update_traces(showscale=False)
+fig.show()
+```
+
+**Question.** (b) Use technology to evaluate the integral. (Round your answer to four decimal places.)
+
+**Solution.**
+The anti-derivative is non-elementary (optional: if you're really curious, [here](https://math.stackexchange.com/questions/3906193/completely-stuck-at-integrating-%24%5Cint-x%5Csqrt%7B%5Ccos-x%7D%5C%2Cdx%24), which will be much more ugly than the logarithmic integral for $x^n\tan x$ we talked about several weeks ago).
+
+For the numerical integration, we can use `scipy`, or whatever "technology" you'd prefer:
+
+```{python}
+#| echo: true
+
+import numpy
+import scipy
+round(scipy.integrate.quad(lambda y: 2 * numpy.pi * (4 - y) * 4 * numpy.sqrt(numpy.sin(y)), 0, numpy.pi)[0], 4)
+```
+
+## hints on arc length (HW11.6 - SCalcCC5 6.4.017.MI. and HW11.7 - SCalcCC5 6.4.021.)
+
+$$
+\begin{array}{rcl}
+f(x(t)) & = & g(y(t))\\
+\leadsto\quad
+x(t)=f^{-1}(t) &\text{and}& y(t)=g^{-1}(t)\quad\leftarrow\text{beware of conditions for the existence of inverse}\\\\
+r(t)=\Big(x(t),y(t)\Big)&:&\text{injective, continuously differentiable}\\
+\leadsto\quad\displaystyle
+L=\int_a^b\Big\|{r}^{\prime}(t)\Big\|\,\mathrm{d}t
+&=&\displaystyle
+\int_a^b \sqrt{\left(x^{\prime}(t)\right)^2+\left(y^{\prime}(t)\right)^2}\,\mathrm{d}t
+\end{array}
+$$
+
+<br/>
+
+----
+
+<br/>
+
+**Question 6.** $\displaystyle y^2=16(x+1)^3, 0 \leq x \leq 3, y>0$:
+
+$$\begin{aligned}
+y>0\implies\quad&
+y(t)=\sqrt{t}\\
+0\leq x\implies\quad&x(t)=\sqrt[3]{\frac{1}{16}t}-1\\
+\,0 \leq x \leq 3\implies\quad&\text{with bounds from }t=16\text{ to }t=16\cdot4^3\\\\
+\implies\quad&\left\{\begin{aligned}
+y'(t)&=\frac{1}{2\sqrt{t}}\\x'(t)&=\frac{1}{6\cdot\sqrt[3]{2}\cdot t^{\frac{2}{3}}}\\
+\end{aligned}\right.\\\\
+\implies\quad&
+\left\{\begin{aligned}
+\text{length}&=\int_{16}^{16\cdot4^3}\sqrt{\left[\frac{1}{2\sqrt{t}}\right]^2+\left[\frac{1}{6\cdot\sqrt[3]{2}\cdot t^{\frac{2}{3}}}\right]^2}\,\mathrm{d}t\\
+&=\cdots=\frac{-37 \sqrt{37} + 145 \sqrt{145}}{54}.
+\end{aligned}\right.
+\end{aligned}$$
+
+### optional remarks:
+
+In case you want to know, the norm $\left\|{r}^{\prime}(t)\right\|$ here is called a metric tensor, which, if you intend to study e.g. the theory of relativity, will be encountered again.
+
+## optional excursion: rectification, measuring, pathologies; probably no time to code something original, but wikipedia:
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Hilbert-curve_rounded-gradient-animated.gif" width="600" />
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Quadrat_Diagonale.svg" width="600" />
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/2/20/Schwarz-lantern.gif" width="600" />
+
+## optionally, something for you to ponder around:
+
+- recall the discussion we had about Riemann sums; can you try to play with the above and see if you can make the same observation as the pioneers of measure theory did a century ago?
+
+### technically,
+
+- https://www.wikiwand.com/en/Lebesgue_measure
+- https://www.wikiwand.com/en/Minkowski_content
+
+### cool stuff to mention for students' interests:
+
+- Hilbert's curve above
+- Banach-Tarski
+- locales, cardinals
+- fractals, dimensions, GMT
+
