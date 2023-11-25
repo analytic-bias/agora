@@ -5,7 +5,7 @@ This is a testing page left for editorial purposes and will not be included in t
 
 ## TODO: Chapter Proposal
 
-### Yutong: What is ... *motivic model theory*?
+### Yutong: What is a ... *motivic model*?
   [@Denef1999DefinableSetsMotives] says
   $$
   \begin{aligned}
@@ -13,12 +13,12 @@ This is a testing page left for editorial purposes and will not be included in t
   \varphi(\mathbb{F})&\leftrightarrow\zeta\left(\frac{1}{2}\left(\left[\mathbb{L}\right]-\mathbb{1}\right)\right)
   \end{aligned}
   $$
-  > for $\mathbb{F}$ with a sufficiently large characteristics from compactness, as
+  for $\mathbb{F}$ with a sufficiently large characteristics from compactness, as
   > ... [over] finite fields of characteristic $>2$, half of the units are squares ...
   >
   > [---@Cluckers2011MotivicIntegrationIts, p.23]
 
-### Yutong: What is ... *motivic path integral*?
+### Yutong: What is a ... *motivic path integral*?
   [@Brown2017FeynmanAmplitudesCosmic] says
   $$K(x,y) = \int \exp(i S(\phi))\; D\phi.$$
 
