@@ -5,7 +5,9 @@ project:
   - cp -r _book/ ../docs/gb/
 filters:
   - extensions/rtex.lua
-bibliography: references.bib
+bibliography:
+  - references.bib
+  - /home/hypatia/Workspace/Library/zotero.bib
 csl: glossa.csl
 pdf-engine: xelatex
 reference-location: margin

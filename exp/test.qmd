@@ -5,17 +5,22 @@ This is a testing page left for editorial purposes and will not be included in t
 
 ## TODO: Chapter Proposal
 
-### Yutong: What is ... *motivic philosophy*?
-  
+### Yutong: What is ... *motivic model theory*?
   [@Denef1999DefinableSetsMotives] says
   $$
-  [ x \neq 0 \wedge(\exists y)\left(x=y^2\right) ]\quad\leadsto\quad\frac{1}{2}\left(\left[\mathbb{L}\right]-\mathbb{1}\right)
+  \begin{aligned}
+  \chi\left(\left\{\varphi:= x \neq 0 \wedge(\exists y)\left(x=y^2\right) \right\}\right)&=\frac{1}{2}\left(\left[\mathbb{L}\right]-\mathbb{1}\right)\\
+  \varphi(\mathbb{F})&\leftrightarrow\zeta\left(\frac{1}{2}\left(\left[\mathbb{L}\right]-\mathbb{1}\right)\right)
+  \end{aligned}
   $$
-  as
-
+  > for $\mathbb{F}$ with a sufficiently large characteristics from compactness, as
   > ... [over] finite fields of characteristic $>2$, half of the units are squares ...
   >
   > [---@Cluckers2011MotivicIntegrationIts, p.23]
+
+### Yutong: What is ... *motivic path integral*?
+  [@Brown2017FeynmanAmplitudesCosmic] says
+  $$K(x,y) = \int \exp(i S(\phi))\; D\phi.$$
 
 ## Format Cheatsheet
 
@@ -245,12 +250,8 @@ seir_graph = {
 # font_opts <- list(dvisvgm.opts = "--font-format=woff")
 ```
 
-```{tikz complete-pooling}
-#| echo: false
-#| fig-cap: "Complete pooling"
-#| fig-align: center
-#| fig-ext: svg
-#| out-width: 100%
+::: {fig-1}
+\begin{dummyenv}
 \usetikzlibrary{positioning}
 \usetikzlibrary{shapes.geometric}
 \begin{tikzpicture}[{every node/.append style}=draw]
@@ -268,7 +269,8 @@ seir_graph = {
   \draw [-latex, dashed] (pop) to (ydots);
   \draw [-latex] (pop) to (yn);
 \end{tikzpicture}
-```
+\end{dummyenv}
+:::
 
 ### TODO: mathnote
 
