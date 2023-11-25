@@ -237,7 +237,7 @@ Beware of conditions for the existence of inverse.
 ::: {.column-margin .callout-tip collapse="true"}
 ## Optional
 - The condition for this is that the parameterization $$r(t)=\Big(x(t),y(t)\Big)$$ has to be injective and continuously differentiable.
-- In case you want to know, the norm $\left\|{r}^{\prime}(t)\right\|$ here is called a metric tensor, which, if you intend to study e.g. the theory of relativity, will be encountered again.
+- In case you want to know, the norm $\left\|{r}^{\prime}(t)\right\|$ here is given by a metric tensor, which, if you intend to study e.g. the theory of relativity, will be encountered again.
 :::
 $$
 L=\int_a^b\Big\|{r}^{\prime}(t)\Big\|\,\mathrm{d}t
