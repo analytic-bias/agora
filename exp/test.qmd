@@ -1,7 +1,6 @@
-# Test
+# For Editors' Use
 
 This is a testing page left for editorial purposes and will not be included in the publication.
-
 
 ## TODO: Chapter Proposal
 
@@ -14,7 +13,7 @@ This is a testing page left for editorial purposes and will not be included in t
   \end{aligned}
   $$
   for $\mathbb{F}$ with a sufficiently large characteristics from compactness, as
-  
+
   > ... [over] finite fields of characteristic $>2$, half of the units are squares ...
   >
   > [---@Cluckers2011MotivicIntegrationIts, p.23]

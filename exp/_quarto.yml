@@ -25,8 +25,8 @@ book:
     - index.qmd
     # - intro.qmd
     - test.qmd
-    # - retro/retro.qmd
-    # - gödel/gödel.qmd
+    - retro/retro.qmd
+    - gödel/gödel.qmd
     - wang/wang.qmd
     # - frege/frege.qmd
     # - summary.qmd

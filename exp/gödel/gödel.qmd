@@ -2,8 +2,10 @@
 
 ## [\ourblue Gödel’s Ontological Dreams and Explorations in Logic]{.ourblue}
 
+::: {.column-body}
 > *Die Welt ist vernünftig.*\
 > — Gödel’s notebooks, “My Philosophical Outlook”[^gödel-1]
+:::
 
 [^gödel-1]: This is the first in a list of 14 propositions under the heading “My Philosophical Outlook” in Gödel’s notebooks. The last proposition is “Religions are, for the most part, bad—but religion is not.” Three of the remaining propositions are: (6) “There is incomparably more knowable *a priori* than is currently known”; (10) “Materialism is false”; and (13) “There is a scientific (exact) philosophy and theology, which deals with concepts of the highest abstractness; and this is also most highly fruitful for science”.
 
@@ -212,7 +214,7 @@ On the other hand, it has been argued that if a system $S$ like $\mathrm{PA}$ ha
 
 Torkel Franzén’s untimely death on April 19, 2006 came shortly before he was to attend, as an invited lecturer, the Gödel Centenary Conference, “Horizons of Truth”, held at the University of Vienna later that month. This, and his invitations to speak at other conferences featuring a tribute to Gödel, testifies to the growing international recognition that he deserved for these works.
 
-***Acknowledgements***: I wish to thank Solomon Feferman for substantive and insightful correspondence during the preparation of this review, Robert Shrock, C. N. Yang Institute for Theoretical Physics, for assistance with $\text{\LaTeX}$ to submit my “Gödel Incompleteness, Complexity and Chaos” for the proceedings from the *Kurt Gödel Centenary Symposium* published by the *Collegium Logicum of the Kurt Gödel Society,* and Teresa Spörk-Greenwood for support for my participation in the Gödel Centenary “Horizons of Truth” Conference, University of Vienna, April 28-29<sup>th</sup>, 2006
+***Acknowledgements***: I wish to thank Solomon Feferman for substantive and insightful correspondence during the preparation of this review, Robert Shrock, C. N. Yang Institute for Theoretical Physics, for assistance with \LaTeX to submit my “Gödel Incompleteness, Complexity and Chaos” for the proceedings from the *Kurt Gödel Centenary Symposium* published by the *Collegium Logicum of the Kurt Gödel Society,* and Teresa Spörk-Greenwood for support for my participation in the Gödel Centenary “Horizons of Truth” Conference, University of Vienna, April 28-29<sup>th</sup>, 2006
 
 Gary Mar  
 Department of Philosophy  
@@ -220,4 +222,3 @@ Stony Brook University
 Stony Brook, New York, USA 11794-3750  
 [Gary.Mar\@stonybrook.edu](mailto:Gary.Mar@stonybrook.edu){.email}
 
-## Footnotes

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Gödelian Explorations - 1&nbsp; Test</title>
+<title>Gödelian Explorations - 1&nbsp; For Editors’ Use</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -83,7 +83,7 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./wang/wang.html" rel="next">
+<link href="./retro/retro.html" rel="next">
 <link href="./index.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -132,7 +132,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./test.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Test</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./test.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">For Editors' Use</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -166,13 +166,25 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./test.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Test</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">For Editors’ Use</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./retro/retro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title"><span class="ourblue">LOGIC IN RETROSPECT</span></span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./gödel/gödel.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title"><span class="ourblue">PHI 631. Analytic Seminar</span></span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./wang/wang.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title"><span class="ourblue">Hao Wang’s Logical Journey in Life</span></span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title"><span class="ourblue">Hao Wang’s Logical Journey in Life</span></span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -223,7 +235,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Test</span></h1>
+<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">For Editors’ Use</span></h1>
 </div>
 
 
@@ -321,112 +333,112 @@ Brown, Francis. 2017, February 1. Feynman <span>Amplitudes</span> and <span>Cosm
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1" data-startfrom="137" data-source-offset="-1"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 136;"><span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a>d3 <span class="op">=</span> <span class="pp">require</span>(<span class="st">"d3@7"</span><span class="op">,</span> <span class="st">"d3-graphviz@2"</span>)<span class="op">;</span></span>
-<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a>mathjaxBlob <span class="op">=</span> (<span class="cf">await</span> <span class="fu">fetch</span>(<span class="st">'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js'</span>))<span class="op">.</span><span class="fu">blob</span>()<span class="op">;</span></span>
-<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a>mj <span class="op">=</span> {</span>
-<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a>  <span class="kw">delete</span> <span class="bu">window</span><span class="op">.</span><span class="at">MathJax</span></span>
-<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a>  <span class="kw">delete</span> <span class="bu">window</span><span class="op">.</span><span class="at">ContextMenu</span></span>
-<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a>  <span class="bu">window</span><span class="op">.</span><span class="at">MathJax</span> <span class="op">=</span> {</span>
-<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a>    <span class="dt">loader</span><span class="op">:</span> {<span class="dt">load</span><span class="op">:</span> [<span class="st">'output/svg'</span>]}<span class="op">,</span></span>
-<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> MathJax <span class="op">=</span> <span class="cf">await</span> <span class="im">import</span>(URL<span class="op">.</span><span class="fu">createObjectURL</span>(<span class="cf">await</span> mathjaxBlob))</span>
-<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">then</span>(() <span class="kw">=&gt;</span> <span class="bu">window</span><span class="op">.</span><span class="at">MathJax</span> )<span class="op">;</span></span>
-<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> MathJax<span class="op">;</span></span>
-<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span>
-<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a>seir_graph <span class="op">=</span> {</span>
-<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> graph <span class="op">=</span> d3<span class="op">.</span><span class="fu">create</span>(<span class="st">'div'</span>)<span class="op">.</span><span class="fu">style</span>(<span class="st">'width'</span><span class="op">,</span> <span class="vs">`</span><span class="sc">${</span>width<span class="sc">}</span><span class="vs">px`</span>)<span class="op">;</span></span>
-<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Here's the source code describing the graph to graphviz.</span></span>
-<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Note that nodes and edge labels contain LaTeX code that</span></span>
-<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a>  <span class="co">// will be passed to MathJax. I guess it gets piped through</span></span>
-<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a>  <span class="co">// a couple of things; hence, the double escape leading to</span></span>
-<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a>  <span class="co">// quadruple backslashes \\\\.</span></span>
-<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> source_code <span class="op">=</span> <span class="vs">`digraph {</span></span>
-<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a><span class="vs">      S [pos="0,0!"]</span></span>
-<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a><span class="vs">      E [pos="2.7,0!"]</span></span>
-<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a><span class="vs">      I_1 [pos="4,0!"]</span></span>
-<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a><span class="vs">      I_2 [pos="6,0.5!"]</span></span>
-<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a><span class="vs">      I_3 [pos="8,0!"]</span></span>
-<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a><span class="vs">      D [pos="10,0!"]</span></span>
-<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a><span class="vs">      R [pos="6,-1.5!"]</span></span>
-<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a><span class="vs">      S -&gt; E [label="</span><span class="sc">\\\\</span><span class="vs">beta_1 I_1 S + </span><span class="sc">\\\\</span><span class="vs">beta_2 I_2 S + </span><span class="sc">\\\\</span><span class="vs">beta_3 I_3"]</span></span>
-<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a><span class="vs">      E -&gt; I_1 [label="</span><span class="sc">\\\\</span><span class="vs">alpha E"]</span></span>
-<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a><span class="vs">      I_1 -&gt; I_2 [label="p_1 I_1"]</span></span>
-<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a><span class="vs">      I_2 -&gt; I_3 [label="p_2 I_2"]</span></span>
-<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a><span class="vs">      I_3-&gt; D [label="</span><span class="sc">\\\\</span><span class="vs">mu I_3"]</span></span>
-<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a><span class="vs">      I_1 -&gt; R [label="</span><span class="sc">\\\\</span><span class="vs">gamma_1 I_1"]</span></span>
-<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a><span class="vs">      I_2 -&gt; R [label="</span><span class="sc">\\\\</span><span class="vs">gamma_2 I_2"]</span></span>
-<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a><span class="vs">      I_3 -&gt; R [label="</span><span class="sc">\\\\</span><span class="vs">gamma_3 I_3"]</span></span>
-<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a><span class="vs">    }`</span><span class="op">;</span></span>
-<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a>  d3<span class="op">.</span><span class="fu">graphviz</span>(graph<span class="op">.</span><span class="fu">node</span>())</span>
-<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">width</span>(width)</span>
-<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">fit</span>(<span class="kw">true</span>) <span class="co">// Doesn't quite work; see transform in penultimate line.</span></span>
-<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">zoom</span>(<span class="kw">false</span>) <span class="co">// Re-transform for fit breaks the zoom.</span></span>
-<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">engine</span>(<span class="st">'neato'</span>)</span>
-<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">renderDot</span>(source_code)<span class="op">;</span></span>
-<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a>  <span class="co">// The image is completely contained in a top level group,</span></span>
-<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a>  <span class="co">// which we're going to manipulate</span></span>
-<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> main_group <span class="op">=</span> graph<span class="op">.</span><span class="fu">select</span>(<span class="st">'g'</span>)<span class="op">;</span></span>
-<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Don't really want the title</span></span>
-<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a>  main_group<span class="op">.</span><span class="fu">select</span>(<span class="st">'title'</span>)<span class="op">.</span><span class="fu">remove</span>()<span class="op">;</span></span>
-<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Typeset the nodes</span></span>
-<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a>  main_group<span class="op">.</span><span class="fu">selectAll</span>(<span class="st">'.node'</span>)<span class="op">.</span><span class="fu">each</span>(<span class="kw">function</span>(e<span class="op">,</span> i) {</span>
-<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> text <span class="op">=</span> d3<span class="op">.</span><span class="fu">select</span>(<span class="kw">this</span>)<span class="op">.</span><span class="fu">select</span>(<span class="st">'text'</span>)<span class="op">;</span></span>
-<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (text<span class="op">.</span><span class="fu">node</span>() <span class="op">!=</span> <span class="kw">null</span>) {</span>
-<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a>      <span class="kw">let</span> x <span class="op">=</span> <span class="pp">parseFloat</span>(text<span class="op">.</span><span class="fu">attr</span>(<span class="st">'x'</span>))<span class="op">;</span></span>
-<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a>      <span class="kw">let</span> y <span class="op">=</span> <span class="pp">parseFloat</span>(text<span class="op">.</span><span class="fu">attr</span>(<span class="st">'y'</span>))<span class="op">;</span></span>
-<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a>      <span class="kw">let</span> tex_group <span class="op">=</span> main_group</span>
-<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">append</span>(<span class="st">'g'</span>)</span>
-<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">attr</span>(<span class="st">'transform'</span><span class="op">,</span> <span class="vs">`translate(</span><span class="sc">${</span>x <span class="op">-</span> <span class="dv">8</span><span class="sc">}</span><span class="vs"> </span><span class="sc">${</span>y <span class="op">-</span> <span class="dv">10</span><span class="sc">}</span><span class="vs">)`</span>)</span>
-<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">append</span>(() <span class="kw">=&gt;</span></span>
-<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a>          mj<span class="op">.</span><span class="fu">tex2svg</span>(<span class="bu">String</span><span class="op">.</span><span class="fu">raw</span><span class="vs">`${text.text()}`</span>)<span class="op">.</span><span class="fu">querySelector</span>(<span class="st">"svg"</span>)</span>
-<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a>        )<span class="op">;</span></span>
-<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a>      text<span class="op">.</span><span class="fu">remove</span>()<span class="op">;</span></span>
-<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
-<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Placement of the typeset edge labels is a bit trickier. The following</span></span>
-<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a>  <span class="co">// list of shifts adjusts the placement of the labels from the location</span></span>
-<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a>  <span class="co">// specified by graphviz.</span></span>
-<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> shifts <span class="op">=</span> [</span>
-<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">60</span><span class="op">,</span> <span class="op">-</span><span class="dv">30</span>]<span class="op">,</span></span>
-<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a>    [<span class="op">-</span><span class="dv">9</span><span class="op">,</span> <span class="op">-</span><span class="dv">27</span>]<span class="op">,</span></span>
-<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a>    [<span class="op">-</span><span class="dv">37</span><span class="op">,</span> <span class="op">-</span><span class="dv">15</span>]<span class="op">,</span></span>
-<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">10</span><span class="op">,</span> <span class="dv">5</span>]<span class="op">,</span></span>
-<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a>    [<span class="op">-</span><span class="dv">20</span><span class="op">,</span> <span class="op">-</span><span class="dv">10</span>]<span class="op">,</span></span>
-<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">10</span><span class="op">,</span> <span class="dv">0</span>]<span class="op">,</span></span>
-<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a>    [<span class="op">-</span><span class="dv">25</span><span class="op">,</span> <span class="op">-</span><span class="dv">12</span>]<span class="op">,</span></span>
-<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">44</span><span class="op">,</span> <span class="dv">5</span>]</span>
-<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a>  ]<span class="op">;</span></span>
-<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a>  main_group<span class="op">.</span><span class="fu">selectAll</span>(<span class="st">'.edge'</span>)<span class="op">.</span><span class="fu">each</span>(<span class="kw">function</span>(e<span class="op">,</span> i) {</span>
-<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> text <span class="op">=</span> d3<span class="op">.</span><span class="fu">select</span>(<span class="kw">this</span>)<span class="op">.</span><span class="fu">select</span>(<span class="st">'text'</span>)<span class="op">;</span></span>
-<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (text<span class="op">.</span><span class="fu">node</span>() <span class="op">!=</span> <span class="kw">null</span>) {</span>
-<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a>      <span class="kw">let</span> x <span class="op">=</span> <span class="pp">parseFloat</span>(text<span class="op">.</span><span class="fu">attr</span>(<span class="st">'x'</span>))<span class="op">;</span></span>
-<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a>      <span class="kw">let</span> y <span class="op">=</span> <span class="pp">parseFloat</span>(text<span class="op">.</span><span class="fu">attr</span>(<span class="st">'y'</span>))<span class="op">;</span></span>
-<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a>      <span class="kw">let</span> tex_group <span class="op">=</span> main_group</span>
-<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">append</span>(<span class="st">'g'</span>)</span>
-<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">attr</span>(</span>
-<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a>          <span class="st">'transform'</span><span class="op">,</span></span>
-<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a>          <span class="vs">`translate(</span><span class="sc">${</span>x <span class="op">+</span> shifts[i][<span class="dv">0</span>]<span class="sc">}</span><span class="vs"> </span><span class="sc">${</span>y <span class="op">+</span> shifts[i][<span class="dv">1</span>]<span class="sc">}</span><span class="vs">) scale(0.75)`</span></span>
-<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a>        )</span>
-<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">append</span>(() <span class="kw">=&gt;</span></span>
-<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a>          mj<span class="op">.</span><span class="fu">tex2svg</span>(<span class="bu">String</span><span class="op">.</span><span class="fu">raw</span><span class="vs">`${text.text()}`</span>)<span class="op">.</span><span class="fu">querySelector</span>(<span class="st">"svg"</span>)</span>
-<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a>        )<span class="op">;</span></span>
-<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a>      text<span class="op">.</span><span class="fu">remove</span>()<span class="op">;</span></span>
-<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
-<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a>  <span class="co">// There's far more space to the left of the graph than I'd expect;</span></span>
-<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a>  <span class="co">// I guess the reason is that the first, pre-shifted edge label extends</span></span>
-<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a>  <span class="co">// quite far to the left. A hacky fix is to redefine the main transform</span></span>
-<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a>  <span class="co">// to fit it a bit better. Unfortunately, this breaks zoom.</span></span>
-<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a>  main_group<span class="op">.</span><span class="fu">attr</span>(<span class="st">'transform'</span><span class="op">,</span> <span class="vs">`translate(-130, 204) scale(1.15)`</span>)<span class="op">;</span></span>
-<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> graph<span class="op">.</span><span class="fu">node</span>()<span class="op">;</span></span>
-<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1" data-startfrom="136" data-source-offset="-1"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 135;"><span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a>d3 <span class="op">=</span> <span class="pp">require</span>(<span class="st">"d3@7"</span><span class="op">,</span> <span class="st">"d3-graphviz@2"</span>)<span class="op">;</span></span>
+<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a>mathjaxBlob <span class="op">=</span> (<span class="cf">await</span> <span class="fu">fetch</span>(<span class="st">'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js'</span>))<span class="op">.</span><span class="fu">blob</span>()<span class="op">;</span></span>
+<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a>mj <span class="op">=</span> {</span>
+<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a>  <span class="kw">delete</span> <span class="bu">window</span><span class="op">.</span><span class="at">MathJax</span></span>
+<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a>  <span class="kw">delete</span> <span class="bu">window</span><span class="op">.</span><span class="at">ContextMenu</span></span>
+<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a>  <span class="bu">window</span><span class="op">.</span><span class="at">MathJax</span> <span class="op">=</span> {</span>
+<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a>    <span class="dt">loader</span><span class="op">:</span> {<span class="dt">load</span><span class="op">:</span> [<span class="st">'output/svg'</span>]}<span class="op">,</span></span>
+<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> MathJax <span class="op">=</span> <span class="cf">await</span> <span class="im">import</span>(URL<span class="op">.</span><span class="fu">createObjectURL</span>(<span class="cf">await</span> mathjaxBlob))</span>
+<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">then</span>(() <span class="kw">=&gt;</span> <span class="bu">window</span><span class="op">.</span><span class="at">MathJax</span> )<span class="op">;</span></span>
+<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> MathJax<span class="op">;</span></span>
+<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span>
+<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a>seir_graph <span class="op">=</span> {</span>
+<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> graph <span class="op">=</span> d3<span class="op">.</span><span class="fu">create</span>(<span class="st">'div'</span>)<span class="op">.</span><span class="fu">style</span>(<span class="st">'width'</span><span class="op">,</span> <span class="vs">`</span><span class="sc">${</span>width<span class="sc">}</span><span class="vs">px`</span>)<span class="op">;</span></span>
+<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Here's the source code describing the graph to graphviz.</span></span>
+<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Note that nodes and edge labels contain LaTeX code that</span></span>
+<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a>  <span class="co">// will be passed to MathJax. I guess it gets piped through</span></span>
+<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a>  <span class="co">// a couple of things; hence, the double escape leading to</span></span>
+<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a>  <span class="co">// quadruple backslashes \\\\.</span></span>
+<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> source_code <span class="op">=</span> <span class="vs">`digraph {</span></span>
+<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a><span class="vs">      S [pos="0,0!"]</span></span>
+<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a><span class="vs">      E [pos="2.7,0!"]</span></span>
+<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a><span class="vs">      I_1 [pos="4,0!"]</span></span>
+<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a><span class="vs">      I_2 [pos="6,0.5!"]</span></span>
+<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a><span class="vs">      I_3 [pos="8,0!"]</span></span>
+<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a><span class="vs">      D [pos="10,0!"]</span></span>
+<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a><span class="vs">      R [pos="6,-1.5!"]</span></span>
+<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a><span class="vs">      S -&gt; E [label="</span><span class="sc">\\\\</span><span class="vs">beta_1 I_1 S + </span><span class="sc">\\\\</span><span class="vs">beta_2 I_2 S + </span><span class="sc">\\\\</span><span class="vs">beta_3 I_3"]</span></span>
+<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a><span class="vs">      E -&gt; I_1 [label="</span><span class="sc">\\\\</span><span class="vs">alpha E"]</span></span>
+<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a><span class="vs">      I_1 -&gt; I_2 [label="p_1 I_1"]</span></span>
+<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a><span class="vs">      I_2 -&gt; I_3 [label="p_2 I_2"]</span></span>
+<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a><span class="vs">      I_3-&gt; D [label="</span><span class="sc">\\\\</span><span class="vs">mu I_3"]</span></span>
+<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a><span class="vs">      I_1 -&gt; R [label="</span><span class="sc">\\\\</span><span class="vs">gamma_1 I_1"]</span></span>
+<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a><span class="vs">      I_2 -&gt; R [label="</span><span class="sc">\\\\</span><span class="vs">gamma_2 I_2"]</span></span>
+<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a><span class="vs">      I_3 -&gt; R [label="</span><span class="sc">\\\\</span><span class="vs">gamma_3 I_3"]</span></span>
+<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a><span class="vs">    }`</span><span class="op">;</span></span>
+<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a>  d3<span class="op">.</span><span class="fu">graphviz</span>(graph<span class="op">.</span><span class="fu">node</span>())</span>
+<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">width</span>(width)</span>
+<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">fit</span>(<span class="kw">true</span>) <span class="co">// Doesn't quite work; see transform in penultimate line.</span></span>
+<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">zoom</span>(<span class="kw">false</span>) <span class="co">// Re-transform for fit breaks the zoom.</span></span>
+<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">engine</span>(<span class="st">'neato'</span>)</span>
+<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">renderDot</span>(source_code)<span class="op">;</span></span>
+<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a>  <span class="co">// The image is completely contained in a top level group,</span></span>
+<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a>  <span class="co">// which we're going to manipulate</span></span>
+<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> main_group <span class="op">=</span> graph<span class="op">.</span><span class="fu">select</span>(<span class="st">'g'</span>)<span class="op">;</span></span>
+<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Don't really want the title</span></span>
+<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a>  main_group<span class="op">.</span><span class="fu">select</span>(<span class="st">'title'</span>)<span class="op">.</span><span class="fu">remove</span>()<span class="op">;</span></span>
+<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Typeset the nodes</span></span>
+<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a>  main_group<span class="op">.</span><span class="fu">selectAll</span>(<span class="st">'.node'</span>)<span class="op">.</span><span class="fu">each</span>(<span class="kw">function</span>(e<span class="op">,</span> i) {</span>
+<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> text <span class="op">=</span> d3<span class="op">.</span><span class="fu">select</span>(<span class="kw">this</span>)<span class="op">.</span><span class="fu">select</span>(<span class="st">'text'</span>)<span class="op">;</span></span>
+<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (text<span class="op">.</span><span class="fu">node</span>() <span class="op">!=</span> <span class="kw">null</span>) {</span>
+<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a>      <span class="kw">let</span> x <span class="op">=</span> <span class="pp">parseFloat</span>(text<span class="op">.</span><span class="fu">attr</span>(<span class="st">'x'</span>))<span class="op">;</span></span>
+<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a>      <span class="kw">let</span> y <span class="op">=</span> <span class="pp">parseFloat</span>(text<span class="op">.</span><span class="fu">attr</span>(<span class="st">'y'</span>))<span class="op">;</span></span>
+<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a>      <span class="kw">let</span> tex_group <span class="op">=</span> main_group</span>
+<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">append</span>(<span class="st">'g'</span>)</span>
+<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">attr</span>(<span class="st">'transform'</span><span class="op">,</span> <span class="vs">`translate(</span><span class="sc">${</span>x <span class="op">-</span> <span class="dv">8</span><span class="sc">}</span><span class="vs"> </span><span class="sc">${</span>y <span class="op">-</span> <span class="dv">10</span><span class="sc">}</span><span class="vs">)`</span>)</span>
+<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">append</span>(() <span class="kw">=&gt;</span></span>
+<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a>          mj<span class="op">.</span><span class="fu">tex2svg</span>(<span class="bu">String</span><span class="op">.</span><span class="fu">raw</span><span class="vs">`${text.text()}`</span>)<span class="op">.</span><span class="fu">querySelector</span>(<span class="st">"svg"</span>)</span>
+<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a>        )<span class="op">;</span></span>
+<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a>      text<span class="op">.</span><span class="fu">remove</span>()<span class="op">;</span></span>
+<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
+<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Placement of the typeset edge labels is a bit trickier. The following</span></span>
+<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a>  <span class="co">// list of shifts adjusts the placement of the labels from the location</span></span>
+<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a>  <span class="co">// specified by graphviz.</span></span>
+<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> shifts <span class="op">=</span> [</span>
+<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">60</span><span class="op">,</span> <span class="op">-</span><span class="dv">30</span>]<span class="op">,</span></span>
+<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a>    [<span class="op">-</span><span class="dv">9</span><span class="op">,</span> <span class="op">-</span><span class="dv">27</span>]<span class="op">,</span></span>
+<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a>    [<span class="op">-</span><span class="dv">37</span><span class="op">,</span> <span class="op">-</span><span class="dv">15</span>]<span class="op">,</span></span>
+<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">10</span><span class="op">,</span> <span class="dv">5</span>]<span class="op">,</span></span>
+<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a>    [<span class="op">-</span><span class="dv">20</span><span class="op">,</span> <span class="op">-</span><span class="dv">10</span>]<span class="op">,</span></span>
+<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">10</span><span class="op">,</span> <span class="dv">0</span>]<span class="op">,</span></span>
+<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a>    [<span class="op">-</span><span class="dv">25</span><span class="op">,</span> <span class="op">-</span><span class="dv">12</span>]<span class="op">,</span></span>
+<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">44</span><span class="op">,</span> <span class="dv">5</span>]</span>
+<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a>  ]<span class="op">;</span></span>
+<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a>  main_group<span class="op">.</span><span class="fu">selectAll</span>(<span class="st">'.edge'</span>)<span class="op">.</span><span class="fu">each</span>(<span class="kw">function</span>(e<span class="op">,</span> i) {</span>
+<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> text <span class="op">=</span> d3<span class="op">.</span><span class="fu">select</span>(<span class="kw">this</span>)<span class="op">.</span><span class="fu">select</span>(<span class="st">'text'</span>)<span class="op">;</span></span>
+<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (text<span class="op">.</span><span class="fu">node</span>() <span class="op">!=</span> <span class="kw">null</span>) {</span>
+<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a>      <span class="kw">let</span> x <span class="op">=</span> <span class="pp">parseFloat</span>(text<span class="op">.</span><span class="fu">attr</span>(<span class="st">'x'</span>))<span class="op">;</span></span>
+<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a>      <span class="kw">let</span> y <span class="op">=</span> <span class="pp">parseFloat</span>(text<span class="op">.</span><span class="fu">attr</span>(<span class="st">'y'</span>))<span class="op">;</span></span>
+<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a>      <span class="kw">let</span> tex_group <span class="op">=</span> main_group</span>
+<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">append</span>(<span class="st">'g'</span>)</span>
+<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">attr</span>(</span>
+<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a>          <span class="st">'transform'</span><span class="op">,</span></span>
+<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a>          <span class="vs">`translate(</span><span class="sc">${</span>x <span class="op">+</span> shifts[i][<span class="dv">0</span>]<span class="sc">}</span><span class="vs"> </span><span class="sc">${</span>y <span class="op">+</span> shifts[i][<span class="dv">1</span>]<span class="sc">}</span><span class="vs">) scale(0.75)`</span></span>
+<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">append</span>(() <span class="kw">=&gt;</span></span>
+<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a>          mj<span class="op">.</span><span class="fu">tex2svg</span>(<span class="bu">String</span><span class="op">.</span><span class="fu">raw</span><span class="vs">`${text.text()}`</span>)<span class="op">.</span><span class="fu">querySelector</span>(<span class="st">"svg"</span>)</span>
+<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a>        )<span class="op">;</span></span>
+<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a>      text<span class="op">.</span><span class="fu">remove</span>()<span class="op">;</span></span>
+<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
+<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a>  <span class="co">// There's far more space to the left of the graph than I'd expect;</span></span>
+<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a>  <span class="co">// I guess the reason is that the first, pre-shifted edge label extends</span></span>
+<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a>  <span class="co">// quite far to the left. A hacky fix is to redefine the main transform</span></span>
+<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a>  <span class="co">// to fit it a bit better. Unfortunately, this breaks zoom.</span></span>
+<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a>  main_group<span class="op">.</span><span class="fu">attr</span>(<span class="st">'transform'</span><span class="op">,</span> <span class="vs">`translate(-130, 204) scale(1.15)`</span>)<span class="op">;</span></span>
+<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> graph<span class="op">.</span><span class="fu">node</span>()<span class="op">;</span></span>
+<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
 <div>
@@ -738,8 +750,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./wang/wang.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title"><span class="ourblue">Hao Wang’s Logical Journey in Life</span></span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./retro/retro.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title"><span class="ourblue">LOGIC IN RETROSPECT</span></span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
