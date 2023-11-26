@@ -5,6 +5,7 @@ include-in-header:
     <script src="alignmargin.js"></script>
 format:
   html:
+    css: styles.css
     code-fold: true
     code-block-border-left: true
 ---
