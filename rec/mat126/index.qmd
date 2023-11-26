@@ -1,5 +1,13 @@
 # Preface {.unnumbered}
 
+## What?
+
 This is site hosting online notes for R110 and R210, for when interactive handouts are distributed.
 
-They don't want to write a new textbook or reform the curriculum, so someday I will turn all of these into a new book/course, one better than ever.
+## Why?
+
+They don't want to write a new textbook or reform the curriculum, so someday I will turn all of these into a new book/course, ~~by one mathematical pedagogy to rule them all,~~ with compassion and beauty, without apathy or boredom.
+
+## Old Notes?
+
+Those originally written in TeX can be found [here](https://www.overleaf.com/project/64fc3139393e43431b1f977f).
