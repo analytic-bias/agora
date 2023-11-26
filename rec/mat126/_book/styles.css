@@ -2,10 +2,40 @@
     color: #002060;
 }
 
-.nobullet li {
+.opbullet li {
     list-style-type: none;
+}
+
+.opbullet li::before {
+    content: "✓";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: green; /* Change the color */
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1.1em; /* Also needed for space (tweak if needed) */
+    margin-left: -1.1em; /* Also needed for space (tweak if needed) */
+}
+
+.wabullet li {
+    list-style-type: none;
+}
+
+.wabullet li::before {
+    content: "⚠";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: red; /* Change the color */
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1.2em; /* Also needed for space (tweak if needed) */
+    margin-left: -1.2em; /* Also needed for space (tweak if needed) */
 }
 
 .almar {
     position: relative; /* or 'relative' depending on your layout */
+}
+
+.compensate-above {
+    margin-top: -1em;
+}
+
+.compensate-below {
+    margin-bottom: -1em;
 }
