@@ -101,6 +101,7 @@ Sketch the region, the solid, and a typical disk or washer. (Do this on paper. Y
 
 [The plot is interactive.]{.aside}
 ```{python}
+#| echo: false
 import plotly.graph_objects as go
 import plotly.io as pio
 import numpy as np
@@ -210,6 +211,7 @@ $$
 
 [The red cylinder is extended for clarity.]{.aside}
 ```{python}
+#| echo: false
 import plotly.graph_objects as go
 import numpy as np
 
@@ -328,11 +330,78 @@ $$
 :::
 
 ## HW12.4 - SCalcCC5 1.6.010.
+Consider the parametric equations below.
+$$
+x = t^2,\quad y = t^5
+$$
+
+### (a)
+Sketch the curve by using the parametric equations to plot points. Indicate with an arrow the direction in which the curve is traced as t increases.
+
+#### Solution
+::: {#fig-hw12-4 .fullwidth .column-page-right layout-ncol=2}
 ```{python}
 #| label: fig-hw12-4-plot-1
-#| fig-cap: "Plot of algebraic curve $C$ given by $x=t^2$ and $y=t^5$"
-#| column: margin
 #| echo: false
+#| fig-cap: ""
+
+import plotly.graph_objects as go
+import numpy as np
+
+# Generate curve data
+t = np.linspace(-1, 1, 100)
+x = t ** 2
+y = t ** 5
+xm = np.min(x) - .1
+xM = np.max(x) + .1
+ym = np.min(y) - .1
+yM = np.max(y) + .1
+N = 50
+s = np.linspace(-1, 1, N)
+xx = s ** 2
+yy = s ** 5
+
+# Create figure
+fig = go.Figure(
+    data=[go.Scatter(x=x, y=y,
+                     mode="lines",
+                     line=dict(width=2, color="blue")),
+          go.Scatter(x=x, y=y,
+                     mode="lines",
+                     line=dict(width=2, color="blue"))],
+    layout=go.Layout(
+        xaxis=dict(range=[xm, xM], autorange=False, zeroline=False),
+        yaxis=dict(range=[ym, yM], autorange=False, zeroline=False),
+        hovermode="closest",
+        updatemenus=[dict(type="buttons",
+                          buttons=[dict(label="Play",
+                                        method="animate",
+                                        args=[None, {"frame": {"duration": 500, "redraw": False},
+                                "fromcurrent": True, "transition": {"duration": 300,
+                                                                    "easing": "quadratic-in-out"}}]),
+                                   dict(label="Pause",
+                                        method="animate",
+                                        args=[[None], {"frame": {"duration": 0, "redraw": False},
+                                  "mode": "immediate",
+                                  "transition": {"duration": 0}}])])]),
+    frames=[go.Frame(
+        data=[go.Scatter(
+            x=[xx[k]],
+            y=[yy[k]],
+            mode='markers',
+            text=[f't = {k}'],  # Update the hover text for each frame
+            hoverinfo='text+x+y',
+            marker=dict(color="red", size=10))])
+        for k in range(N)]
+)
+fig.update_layout(showlegend=False)
+fig.show()
+```
+
+```{python}
+#| label: fig-hw12-4-plot-2
+#| echo: false
+#| fig-cap: ""
 
 %matplotlib inline
 import matplotlib_inline
@@ -364,16 +433,9 @@ ax.grid(True)
 plt.show()
 ```
 
-Consider the parametric equations below.
-$$
-x = t^2,\quad y = t^5
-$$
+Plot of algebraic curve given by $x=t^2$ and $y=t^5$ from $t=-1$ to $t=1$
+:::
 
-### (a)
-Sketch the curve by using the parametric equations to plot points. Indicate with an arrow the direction in which the curve is traced as t increases.
-
-#### Solution
-See @fig-hw12-4-plot-1.
 
 ### (b)
 Eliminate the parameter to find a Cartesian equation of the curve. 
