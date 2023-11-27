@@ -15,10 +15,10 @@ Since these homeworks would better be explained in terms of interactive figures,
 
 :::: {.aside}
 ::: {.opbullet}
-- This symbolizes an optional content;
+- This checkmark symbolizes an optional content in the current course; you may skip them if you're not interested.
 :::
 ::: {.wabullet}
-- While this symbolizes an warning.
+- The responsive layout on mobile portrait might not be as polished; if content is overlapped thus unintelligible, please rotate device to landscape.
 :::
 ::::
 
@@ -280,7 +280,7 @@ x(t)=f^{-1}(t) &\text{and}& y(t)=g^{-1}(t)\\
 \end{array}
 $$
 $$
-L=\int_a^b\Big\|{r}^{\prime}(t)\Big\|\,\mathrm{d}t
+L=\int_a^b\Big\|{r}^{\prime}(t)\Big\|\,\mathrm{d}t=
 \int_a^b \sqrt{\left(x^{\prime}(t)\right)^2+\left(y^{\prime}(t)\right)^2}\,\mathrm{d}t
 $$
 ::::
@@ -317,13 +317,13 @@ y &= 6 + 8t^3\\
 $$
 
 ::: {.aside}
-Sometimes,
+Again,
 $$
-\sqrt{d x^2+d y^2}=\sqrt{1+\left(\frac{d y}{d x}\right)^2} d x
+L=\int_a^b \sqrt{\left(x^{\prime}(t)\right)^2+\left(y^{\prime}(t)\right)^2}\,\mathrm{d}t;
 $$
-
+but sometimes, when the curve is given in the form of $y=f(x)$, i.e. $y(t)=t$, one may reduce the above to
 $$
-s=\int_a^b \sqrt{1+\left(\frac{d y}{d x}\right)^2} d x
+L=\int_a^b \sqrt{1+\left(y'(x)\right)^2}\,\mathrm{d}x.
 $$
 :::
 
@@ -388,7 +388,7 @@ $$
 $$
 
 ::: {.aside .opbullet .opbullet}
-- You might (or might not) want to know that the singularity at $(0,0)$ is called a [cusp](https://en.wikipedia.org/wiki/Cusp_(singularity)).
+- You might (or might not...) want to know that the singularity at $(0,0)$ is called a [cusp](https://en.wikipedia.org/wiki/Cusp_(singularity)), or even read a bit more on [algebraic curves](https://en.wikipedia.org/wiki/Algebraic_curve).
 :::
 ::::
 

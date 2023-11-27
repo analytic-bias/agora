@@ -25,5 +25,12 @@
 			"path": "rec"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"grammarly.selectors": [
+			{
+				"language": "quarto",
+				"scheme": "file"
+			}
+		]
+	}
 }

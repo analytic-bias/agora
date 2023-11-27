@@ -46,7 +46,7 @@
     "href": "w13t14.html#recall---arc-length",
     "title": "1  Week 13–14",
     "section": "1.3 Recall - Arc Length",
-    "text": "1.3 Recall - Arc Length\n\n\n\n\nBeware of conditions for the existence of inverse.\nThe condition for this is that the parameterization \\[r(t)=\\Big(x(t),y(t)\\Big)\\] has to be injective and continuously differentiable.\nIn case you want to know, the norm \\(\\left\\|{r}^{\\prime}(t)\\right\\|\\) here is given by a metric tensor, which, if you intend to study e.g. the theory of relativity, will be encountered again.\n\n\\[\n\\begin{array}{rcl}\nf(x(t)) & = & g(y(t))\\\\\n\\leadsto\\quad\nx(t)=f^{-1}(t) &\\text{and}& y(t)=g^{-1}(t)\\\\\n\\end{array}\n\\] \\[\nL=\\int_a^b\\Big\\|{r}^{\\prime}(t)\\Big\\|\\,\\mathrm{d}t\n\\int_a^b \\sqrt{\\left(x^{\\prime}(t)\\right)^2+\\left(y^{\\prime}(t)\\right)^2}\\,\\mathrm{d}t\n\\]"
+    "text": "1.3 Recall - Arc Length\n\n\n\n\nBeware of conditions for the existence of inverse.\nThe condition for this is that the parameterization \\[r(t)=\\Big(x(t),y(t)\\Big)\\] has to be injective and continuously differentiable.\nIn case you want to know, the norm \\(\\left\\|{r}^{\\prime}(t)\\right\\|\\) here is given by a metric tensor, which, if you intend to study e.g. the theory of relativity, will be encountered again.\n\n\\[\n\\begin{array}{rcl}\nf(x(t)) & = & g(y(t))\\\\\n\\leadsto\\quad\nx(t)=f^{-1}(t) &\\text{and}& y(t)=g^{-1}(t)\\\\\n\\end{array}\n\\] \\[\nL=\\int_a^b\\Big\\|{r}^{\\prime}(t)\\Big\\|\\,\\mathrm{d}t=\n\\int_a^b \\sqrt{\\left(x^{\\prime}(t)\\right)^2+\\left(y^{\\prime}(t)\\right)^2}\\,\\mathrm{d}t\n\\]"
   },
   {
     "objectID": "w13t14.html#hw11.6---scalccc5-6.4.017.mi.",
@@ -60,14 +60,14 @@
     "href": "w13t14.html#hw11.7---scalccc5-6.4.021.",
     "title": "1  Week 13–14",
     "section": "1.5 HW11.7 - SCalcCC5 6.4.021.",
-    "text": "1.5 HW11.7 - SCalcCC5 6.4.021.\nFind the exact length of the curve. \\[\n\\begin{aligned}\nx &= 9 + 12t^2\\\\\ny &= 6 + 8t^3\\\\\n0 &\\leq t \\leq 5\n\\end{aligned}\n\\]\n\n\nSometimes, \\[\n\\sqrt{d x^2+d y^2}=\\sqrt{1+\\left(\\frac{d y}{d x}\\right)^2} d x\n\\]\n\\[\ns=\\int_a^b \\sqrt{1+\\left(\\frac{d y}{d x}\\right)^2} d x\n\\]"
+    "text": "1.5 HW11.7 - SCalcCC5 6.4.021.\nFind the exact length of the curve. \\[\n\\begin{aligned}\nx &= 9 + 12t^2\\\\\ny &= 6 + 8t^3\\\\\n0 &\\leq t \\leq 5\n\\end{aligned}\n\\]\n\n\nAgain, \\[\nL=\\int_a^b \\sqrt{\\left(x^{\\prime}(t)\\right)^2+\\left(y^{\\prime}(t)\\right)^2}\\,\\mathrm{d}t;\n\\] but sometimes, when the curve is given in the form of \\(y=f(x)\\), i.e. \\(y(t)=t\\), one may reduce the above to \\[\nL=\\int_a^b \\sqrt{1+\\left(y'(x)\\right)^2}\\,\\mathrm{d}x.\n\\]"
   },
   {
     "objectID": "w13t14.html#hw12.4---scalccc5-1.6.010.",
     "href": "w13t14.html#hw12.4---scalccc5-1.6.010.",
     "title": "1  Week 13–14",
     "section": "1.6 HW12.4 - SCalcCC5 1.6.010.",
-    "text": "1.6 HW12.4 - SCalcCC5 1.6.010.\n\n\n\n\n\n\nFigure 1.3: Plot of algebraic curve \\(C\\) given by \\(x=t^2\\) and \\(y=t^5\\)\n\n\n\nConsider the parametric equations below. \\[\nx = t^2,\\quad y = t^5\n\\]\n\n1.6.1 (a)\nSketch the curve by using the parametric equations to plot points. Indicate with an arrow the direction in which the curve is traced as t increases.\n\n1.6.1.1 Solution\nSee Figure 1.3.\n\n\n\n1.6.2 (b)\nEliminate the parameter to find a Cartesian equation of the curve.\n\n1.6.2.1 Solution\n\n\\[\n\\begin{aligned}\n&y=t^5 \\Rightarrow t=\\sqrt[5]{y}=y^{1/5}\\\\\n\\Rightarrow\\,&x=t^2=(y^{1/5})^2=y^{2 / 5}\n\\end{aligned}\n\\]\n\n\n\nYou might (or might not) want to know that the singularity at \\((0,0)\\) is called a cusp."
+    "text": "1.6 HW12.4 - SCalcCC5 1.6.010.\n\n\n\n\n\n\nFigure 1.3: Plot of algebraic curve \\(C\\) given by \\(x=t^2\\) and \\(y=t^5\\)\n\n\n\nConsider the parametric equations below. \\[\nx = t^2,\\quad y = t^5\n\\]\n\n1.6.1 (a)\nSketch the curve by using the parametric equations to plot points. Indicate with an arrow the direction in which the curve is traced as t increases.\n\n1.6.1.1 Solution\nSee Figure 1.3.\n\n\n\n1.6.2 (b)\nEliminate the parameter to find a Cartesian equation of the curve.\n\n1.6.2.1 Solution\n\n\\[\n\\begin{aligned}\n&y=t^5 \\Rightarrow t=\\sqrt[5]{y}=y^{1/5}\\\\\n\\Rightarrow\\,&x=t^2=(y^{1/5})^2=y^{2 / 5}\n\\end{aligned}\n\\]\n\n\n\nYou might (or might not…) want to know that the singularity at \\((0,0)\\) is called a cusp, or even read a bit more on algebraic curves."
   },
   {
     "objectID": "w13t14.html#miscellanies",
