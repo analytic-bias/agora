@@ -22,45 +22,7 @@ Since these homeworks would better be explained in terms of interactive figures,
 :::
 ::::
 
-## HW 10.7 - SCalcCC5 6.2.014.
-```{python}
-#| label: fig-hw10-7-plot-1
-#| fig-cap: "Plot of $y=3x$ and $y=3\\sqrt{x}$ with area between curves from $x=0$ to $x=1$"
-#| column: margin
-#| echo: false
-
-%matplotlib inline
-import matplotlib_inline
-matplotlib_inline.backend_inline.set_matplotlib_formats('svg')
-
-import matplotlib.pyplot as plt
-import numpy as np
-
-# Define the range for x
-x = np.linspace(0, 1, 200)
-x_sqrt = np.linspace(0, 1, 200)
-
-# Define the functions
-y1 = 3 * x
-y2 = 3 * np.sqrt(x_sqrt)
-
-# Plotting the functions
-plt.figure(figsize=(6, 6))
-plt.plot(x, y1, label='$3x$', color='blue')
-plt.plot(x_sqrt, y2, label='$3\sqrt{x}$', color='red')
-
-# Filling the area between the curves
-plt.fill_between(x, y1, y2, where=(x >= 0) & (x <= 1), color='green', alpha=0.3)
-
-# Adding labels and title
-plt.xlabel('x')
-plt.ylabel('y')
-plt.legend()
-plt.grid(True)
-
-# Show the plot
-plt.show()
-```
+## HW 10.7 - SCalcCC5 6.2.014. {#sec-hw10d7}
 Consider the solid obtained by rotating the region bounded by the given curves about the line $y = 3$.
 $$y=\underbrace{3x}_{\substack{f_1(x)\\\uparrow\\\text{outer}}}\quad y=\underbrace{3\sqrt{x}}_{\substack{f_2(x)\\\uparrow\\\text{inner}}}$$
 Find the volume V of this solid.
@@ -99,7 +61,7 @@ $$
 Sketch the region, the solid, and a typical disk or washer. (Do this on paper. Your instructor may ask you to turn in this work.)
 [Mathematicians usually call them annuli (sing. annulus), not washers.]{.aside}
 
-[The plot is interactive.]{.aside}
+:::: {#fig-hw10-7 .fullwidth .column-page-right layout-ncol=2}
 ```{python}
 #| echo: false
 import plotly.graph_objects as go
@@ -142,22 +104,133 @@ layout = go.Layout(
 # Show the figure, suppressing the extra color saturation axis
 fig = go.Figure(data=[outer_surface, inner_surface], layout=layout)
 fig.update_traces(showscale=False)
+fig.update_layout(margin=dict(
+        l=0,
+        r=0,
+        b=0,
+        t=0,
+        pad=0))
 fig.show()
 ```
 
-## HW 10.10 - SCalcCC5 6.3.025.
+```{python}
+#| fig-cap: "Plot of $y=3x$ and $y=3\\sqrt{x}$ with area between curves from $x=0$ to $x=1$"
+#| echo: false
+
+%matplotlib inline
+import matplotlib_inline
+matplotlib_inline.backend_inline.set_matplotlib_formats('svg')
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Define the range for x
+x = np.linspace(0, 1, 200)
+x_sqrt = np.linspace(0, 1, 200)
+
+# Define the functions
+y1 = 3 * x
+y2 = 3 * np.sqrt(x_sqrt)
+
+# Plotting the functions
+plt.figure(figsize=(6, 6))
+plt.plot(x, y1, label='$3x$', color='blue')
+plt.plot(x_sqrt, y2, label='$3\sqrt{x}$', color='red')
+
+# Filling the area between the curves
+plt.fill_between(x, y1, y2, where=(x >= 0) & (x <= 1), color='green', alpha=0.3)
+
+# Adding labels and title
+plt.xlabel('x')
+plt.ylabel('y')
+plt.legend()
+plt.grid(True)
+
+# Show the plot
+plt.show()
+```
+
+Figures for HW 10.7 - SCalcCC5 6.2.014.
+::::
+
+## HW 10.10 - SCalcCC5 6.3.025. {#sec-hw10d10}
 <style>
   .compensate-above-2cm {
     margin-top: -2cm;
   }
 </style>
 
+Consider the following.
+$$
+x=4 \sqrt{\sin (y)}, \quad 0 \leq y \leq \pi, \quad x=0;\quad \text { about } y=4
+$$
+
+### (a)
+Set up an integral for the volume of the solid obtained by rotating the region bounded by the given curve about the specified axis.
+
+#### Solution
+:::: {}
+$$
+\begin{aligned}
+\class{alref}{\cssId{alref2}{\phantom{.}}}
+A(y)&=\underbrace{2\pi(4-y)}_{\text{circumference}} \cdot \underbrace{4\sqrt{\sin (y)}}_{\text{height}},\,\text{and thus}\\
+V&=\int_0^{\pi} 2 \pi(4-y) 4 \sqrt{\sin (y)}\,\mathrm{d}y.\\\\
+\end{aligned}
+$$
+
+::: {#almar2 .aside .almar}
+$\leftarrow$ area of the red cylinder at y
+
+- When to use cylindrical shells or annuli?
+  + the line around which the region is rotated is parallel to the axis of the independent variable $\rightarrow$ annuli (@sec-hw10d7);
+  + the line is orthogonal to the axis $\rightarrow$ cylinders (@sec-hw10d10).
+:::
+::::
+
+:::: {#fig-hw10-10 .fullwidth .column-page-right layout-ncol=2}
 ```{python}
-#| label: fig-hw10-10-plot-1
-#| fig-cap: "Plot of $x=4\\sqrt{\\sin y}$ and $y=4$ with area between curves from $y=0$ to $y=\\pi$"
-#| column: margin
 #| echo: false
-#| classes: .compensate-above-2cm
+import plotly.graph_objects as go
+import numpy as np
+
+y = np.linspace(0, np.pi, 100)
+curve = 4 * np.sqrt(np.sin(y))
+theta = np.linspace(0, 2 * np.pi, 100)
+X_curve, T_curve = np.meshgrid(curve, theta)
+Y_curve = np.cos(T_curve) * (y - 4) + 4
+Z_curve = np.sin(T_curve) * (y - 4)
+
+x = np.linspace(-1, 5, 100)
+X_line, T_line = np.meshgrid(x, theta)
+Y_line = 3 * np.cos(T_line) + 4
+Z_line = 3 * np.sin(T_line)
+
+curve_surface = go.Surface(x=X_curve, y=Y_curve, z=Z_curve, opacity=0.9, name='revolved curve', colorscale='Blues')
+line_surface = go.Surface(x=X_line, y=Y_line, z=Z_line, opacity=0.4, name='cylinder (extended)', colorscale='Reds')
+
+layout = go.Layout(
+    # title=r"$x=4\sqrt{\sin y},\,\text{revolved around}\,y=4,\,\text{from}\,x=0\,\text{to}\,x=4$",
+    scene=dict(
+        xaxis_title='X',
+        yaxis_title='Y',
+        zaxis_title='Z'
+    ),
+    autosize=True
+)
+fig = go.Figure(data=[curve_surface, line_surface], layout=layout)
+fig.update_traces(showscale=False)
+fig.update_layout(margin=dict(
+        l=0,
+        r=0,
+        b=0,
+        t=0,
+        pad=0))
+fig.show()
+```
+
+```{python}
+#| fig-cap: "Plot of $x=4\\sqrt{\\sin y}$ and $y=4$ with area between curves from $y=0$ to $y=\\pi$"
+#| echo: false
 
 %matplotlib inline
 import matplotlib_inline
@@ -191,58 +264,9 @@ plt.grid(True)
 # Show the plot
 plt.show()
 ```
-Consider the following.
-$$
-x=4 \sqrt{\sin (y)}, \quad 0 \leq y \leq \pi, \quad x=0;\quad \text { about } y=4
-$$
 
-### (a)
-Set up an integral for the volume of the solid obtained by rotating the region bounded by the given curve about the specified axis.
-
-#### Solution
-$$
-\begin{aligned}
-\class{alref}{\cssId{alref2}{\phantom{.}}}
-A(y)&=\underbrace{2\pi(4-y)}_{\text{circumference}} \cdot \underbrace{4\sqrt{\sin (y)}}_{\text{height}},\,\text{and thus}\\
-V&=\int_0^{\pi} 2 \pi(4-y) 4 \sqrt{\sin (y)}\,\mathrm{d}y.
-\end{aligned}
-$$
-[$\leftarrow$ area of the red cylinder at y]{#almar2 .aside .almar}
-
-[The red cylinder is extended for clarity.]{.aside}
-```{python}
-#| echo: false
-import plotly.graph_objects as go
-import numpy as np
-
-y = np.linspace(0, np.pi, 100)
-curve = 4 * np.sqrt(np.sin(y))
-theta = np.linspace(0, 2 * np.pi, 100)
-X_curve, T_curve = np.meshgrid(curve, theta)
-Y_curve = np.cos(T_curve) * (y - 4) + 4
-Z_curve = np.sin(T_curve) * (y - 4)
-
-x = np.linspace(-1, 5, 100)
-X_line, T_line = np.meshgrid(x, theta)
-Y_line = 3 * np.cos(T_line) + 4
-Z_line = 3 * np.sin(T_line)
-
-curve_surface = go.Surface(x=X_curve, y=Y_curve, z=Z_curve, opacity=0.9, name='revolved curve', colorscale='Blues')
-line_surface = go.Surface(x=X_line, y=Y_line, z=Z_line, opacity=0.4, name='cylinder (extended)', colorscale='Reds')
-
-layout = go.Layout(
-    # title=r"$x=4\sqrt{\sin y},\,\text{revolved around}\,y=4,\,\text{from}\,x=0\,\text{to}\,x=4$",
-    scene=dict(
-        xaxis_title='X',
-        yaxis_title='Y',
-        zaxis_title='Z'
-    ),
-    autosize=True
-)
-fig = go.Figure(data=[curve_surface, line_surface], layout=layout)
-fig.update_traces(showscale=False)
-fig.show()
-```
+Figures for HW 10.10 - SCalcCC5 6.3.025.
+::::
 
 ### (b)
 Use technology to evaluate the integral. (Round your answer to four decimal places.)
@@ -339,11 +363,9 @@ $$
 Sketch the curve by using the parametric equations to plot points. Indicate with an arrow the direction in which the curve is traced as t increases.
 
 #### Solution
-::: {#fig-hw12-4 .fullwidth .column-page-right layout-ncol=2}
+:::: {#fig-hw12-4 .fullwidth .column-page-right layout-ncol=2}
 ```{python}
-#| label: fig-hw12-4-plot-1
 #| echo: false
-#| fig-cap: ""
 
 import plotly.graph_objects as go
 import numpy as np
@@ -395,13 +417,18 @@ fig = go.Figure(
         for k in range(N)]
 )
 fig.update_layout(showlegend=False)
+# https://community.plotly.com/t/plot-sizing-problems/1620/27
+fig.update_layout(margin=dict(
+        l=0,
+        r=0,
+        b=0,
+        t=0,
+        pad=0))
 fig.show()
 ```
 
 ```{python}
-#| label: fig-hw12-4-plot-2
 #| echo: false
-#| fig-cap: ""
 
 %matplotlib inline
 import matplotlib_inline
@@ -434,8 +461,7 @@ plt.show()
 ```
 
 Plot of algebraic curve given by $x=t^2$ and $y=t^5$ from $t=-1$ to $t=1$
-:::
-
+::::
 
 ### (b)
 Eliminate the parameter to find a Cartesian equation of the curve. 
