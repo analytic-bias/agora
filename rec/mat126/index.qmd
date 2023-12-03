@@ -10,4 +10,4 @@ They don't want to write a new textbook or reform the curriculum, so someday I w
 
 ## Old Notes?
 
-Those originally written in TeX can be found [here](https://www.overleaf.com/read/brnvkmpfcghf#a79d19).
+Those originally written in TeX, currently including the solution to both midterm exams, can be found [here](https://www.overleaf.com/read/brnvkmpfcghf#a79d19).
