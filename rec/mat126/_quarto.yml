@@ -22,6 +22,7 @@ book:
   chapters:
     - index.qmd
     - w13t14.qmd
+    - w15.qmd
     - ex.qmd
     - references.qmd
 
