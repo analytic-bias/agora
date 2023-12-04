@@ -258,7 +258,7 @@ One may furthermore notice that this equation is not well-defined at every $\the
 
 ### Solution
 ::: {.wabullet .aside}
-- Postpone. The solution is complicated and the best I can give right now.
+- temporary, not well-thought nor well-written
 :::
 
 Let us first study the case under the assumption that $r>0$ and $-\frac{\pi}{2}<\theta<\frac{\pi}{2}$, by deducing
