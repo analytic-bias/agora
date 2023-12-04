@@ -1,6 +1,6 @@
 # Optional Excursions
 
-## Euler's Formula
+## Euler's Formula and Trigonometric Identities {#sec-exeulertrigid}
 Recall Euler's formula
 ^[The reason this formula makes sense amounts to the *analytic continuation of the exponential function*, which is definitely not a required topic of calculus courses; you can refer to common complex analysis textbooks if so interested. The main ingredient of the proof is the power series expansion of the exponential function.]
 $$

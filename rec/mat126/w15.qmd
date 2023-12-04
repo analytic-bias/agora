@@ -161,12 +161,8 @@ From what you already know about coordinates, one can make a change of coordinat
 $$
 \left\{\begin{aligned}
 x(t)&=r(t)\cdot\cos\theta(t)\\
-y(t)&=r(t)\cdot\sin\theta(t).
-\end{aligned}\right.
-$$
-
-Or conversely,
-$$
+y(t)&=r(t)\cdot\sin\theta(t);
+\end{aligned}\right.\quad
 \left\{\begin{aligned}
 r(t)&=\sqrt{x(t)^2+y(t)^2}\\
 \theta(t)&=\arctan\left(\frac{y(t)}{x(t)}\right).
@@ -177,6 +173,12 @@ $$
 - However, since we are considering negative $r$ sometimes, e.g. HW 13.9 - SCalcCC5 A.H.1.035., you might wish to segment the curve when it passes through the origin.
 :::
 
+If the curve is given by an equation, you might wish to try to manipulate the equation symbolically first
+$$
+f(r)=g(\theta)\quad\leadsto\quad f\left(\sqrt{x(t)^2+y(t)^2}\right)=g\left(\frac{y(t)}{x(t)}\right),
+$$
+which might make the process easier.
+
 ### Arc Length and Area inside Curve
 [From Prof. Rico's notes.]{.aside}
 $$
@@ -185,6 +187,137 @@ A&=\int_a^b \frac{1}{2} r^2\,\mathrm{d}\theta,\\
 L&=\int_a^b \sqrt{r^2+\left(\frac{d r}{d \theta}\right)^2}\,\mathrm{d}\theta.
 \end{aligned}
 $$
+
+## HW 13.5 - SCalcCC5 A.H.1.016. [POSTPONED]
+Find a Cartesian equation for the curve and identify it.
+$$
+r=4\tan\theta\sec\theta
+$$
+
+::: {.aside .wabullet}
+- Please be warned that this question and its WebAssign solution are quite ambiguous and non-rigorous. **Prof. Rico, I recommend adding the an restriction of $-\frac{\pi}{2}<\theta<\frac{\pi}{2}$ or striking this question entirely.**
+:::
+
+```{python}
+#| label: fig-hw13-5-contours-1
+#| fig-cap: "Contour plot of the components of $x^4-16y^2=0$ over $\\mathbb{Q}$"
+#| echo: false
+#| column: margin
+#| class: compensate-above
+
+%matplotlib inline
+import matplotlib_inline
+matplotlib_inline.backend_inline.set_matplotlib_formats('svg')
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Define the range of x and y values
+x = np.linspace(-5, 5, 100)
+y = np.linspace(-5, 5, 100)
+
+# Create a meshgrid of x and y values
+X, Y = np.meshgrid(x, y)
+
+# Define the equation
+Z = X**2 - 4 * Y
+Zp = X**2 + 4 * Y
+
+plt.figure(figsize=(6, 6))
+# Create a contour plot
+plt.contour(X, Y, Z, levels=[0], colors='green')
+plt.contour(X, Y, Zp, levels=[0], colors='red')
+
+# Add labels and title
+plt.xlabel('x')
+plt.ylabel('y')
+plt.grid(True)
+# Show the plot
+plt.show()
+```
+
+::: {.callout-caution}
+## Remarks
+
+```{=html}
+<object data="https://www.webassign.net/latex2pdf/6eb1bcc0e783682997073fa9fbbbf3cc.pdf" type="application/pdf" width="100%" height="400px">
+  <p>Unable to display PDF file. <a href="https://www.webassign.net/latex2pdf/6eb1bcc0e783682997073fa9fbbbf3cc.pdf">Download</a> instead.</p>
+</object>
+```
+
+The WebAssign claims
+
+::: {.compensate-above .compensate-below}
+> $$ r=\frac{4 \sin \theta}{\cos ^2 \theta} \iff r \cos ^2 \theta=4 \sin \theta $$
+:::
+
+which is technically not true, as for $\displaystyle\theta=\frac{\pi}{2}$, the equation on the left is not well-defined but the second equation is simply not satisfied.
+
+One may furthermore notice that this equation is not well-defined at every $\theta=\frac{n\pi}{2}$ and "re-traces" itself at every interval in-between.
+:::
+
+### Solution
+::: {.wabullet .aside}
+- Postpone. The solution is complicated and the best I can give right now.
+:::
+
+Let us first study the case under the assumption that $r>0$ and $-\frac{\pi}{2}<\theta<\frac{\pi}{2}$, by deducing
+
+::::: {.compensate-above}
+$$
+\begin{aligned}
+r&=4\tan\theta\sec\theta\\
+\leadsto\;\sqrt{x^2+y^2}&=4\tan\left(\arctan\left(\frac{y}{x}\right)\right)\sec\left(\arctan\left(\frac{y}{x}\right)\right)\class{alref}{\cssId{alref1}{}}\\\\\\\\
+\leadsto\;\sqrt{x^2+y^2}&=4\cdot\frac{y}{x}\cdot\sqrt{1+\left(\frac{y}{x}\right)^2}\class{alref}{\cssId{alref2}{}}\\\\\\
+\leadsto\;x^2+y^2&=4^2\cdot\frac{y^2}{x^2}\cdot\left(1+\left(\frac{y}{x}\right)^2\right)\class{alref}{\cssId{alref3}{}}\\\\
+\leadsto\;0&=\frac{(x^4 - 16 y^2) (x^2 + y^2)}{x}\\\\
+\leadsto\;0&=(x^4 - 16 y^2) (x^2 + y^2)\class{alref}{\cssId{alref4}{}}\\\\
+\leadsto\;0&=x^4 - 16 y^2\class{alref}{\cssId{alref5}{}}.\\
+\end{aligned}
+$$
+
+::: {#almar1 .arbullet .column-margin .almar}
+- Notice that since $x=0$ only if $r=0$ or $\theta=\pm\pi$, we may safely carry out the change of coordinate system in this case.
+:::
+::: {#almar2 .opbullet .column-margin .almar}
+- By $\sec\arctan z=\sqrt{1+z^2}$, which, as before, may be proven by [the Euler's formula](#sec-exeulertrigid).
+:::
+:::: {#almar3 .arbullet .column-margin .almar}
+::: {#lst-eq3}
+- This step actually eliminates our assumption that $r>0$, and also adds an additional "mirroring" component to the curve, which will be of importance later.
+:::
+::::
+::: {#almar4 .arbullet .column-margin .almar}
+- Again, $x\neq0$.
+:::
+::: {#almar5 .arbullet .column-margin .almar}
+- $r>0\implies x^2+y^2\neq0.$
+:::
+:::::
+
+At this point, one may perform a factorization
+
+::::: {.compensate-above .compensate-below}
+:::: {}
+$$0=x^4 - 16 y^2={\color{green}(x^2 - 4 y)}\cdot{\color{red}(x^2 + 4 y)}\class{alref}{\cssId{alref6}{}},$$
+
+::: {#almar6 .opbullet .column-margin .almar}
+- over $\mathbb{Q}$
+:::
+::::
+:::::
+
+from which one may observe the two components and the double-points at the origin, as shown in @fig-hw13-5-contours-1, as remarked before at @lst-eq3, out of which, by observing the condition that $r\geq0$ and the remarks above, the original polar equation satisfies precisely the component where $y>0$ (the <span style="color:green">green one</span>) and the origin.
+
+<!-- ::: {.opbullet .aside}
+- You might notice that the origin on the polar curve has multiplicity $1$ instead of $2$, which is not an error but a pathology from the transcendentality of the change of coordinate system.
+::: -->
+<!-- No? -->
+
+One may thus observe that the curve is a parabola, "re-traced" over itself.
+
+
+## HW 13.6 - SCalcCC5 A.H.1.019.
 
 ## HW 13.12 - SCalcCC5 A.H.2.022.
 
