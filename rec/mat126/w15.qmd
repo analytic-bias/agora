@@ -259,7 +259,7 @@ One may furthermore notice that this equation is not well-defined at every $\the
 ### Solution [temporary, not well-thought nor well-written]
 Let us first study the case under the assumption that $r>0$ and $-\frac{\pi}{2}<\theta<\frac{\pi}{2}$, by deducing
 
-::::: {.compensate-above}
+:::: {}
 $$
 \begin{aligned}
 r&=4\tan\theta\sec\theta\\
@@ -278,18 +278,16 @@ $$
 ::: {#almar2 .opbullet .column-margin .almar}
 - By $\sec\arctan z=\sqrt{1+z^2}$, which, as before, may be proven by [the Euler's formula](#sec-exeulertrigid).
 :::
-:::: {#almar3 .arbullet .column-margin .almar}
-::: {#lst-eq3}
+::: {#almar3 .arbullet .column-margin .almar}
 - This step actually eliminates our assumption that $r>0$, and also adds an additional "mirroring" component to the curve, which will be of importance later.
 :::
-::::
 ::: {#almar4 .arbullet .column-margin .almar}
 - Again, $x\neq0$.
 :::
 ::: {#almar5 .arbullet .column-margin .almar}
 - $r>0\implies x^2+y^2\neq0.$
 :::
-:::::
+::::
 
 At this point, one may perform a factorization
 

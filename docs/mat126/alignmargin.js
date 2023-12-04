@@ -12,7 +12,9 @@ window.MathJax = {
       return MathJax.startup.defaultPageReady().then(() => {  
         Array.from(almar).forEach((m, i) => {
           m.parentElement.style.position = 'relative'
+          m.parentElement.style.height = '0px'
           m.style.position = 'absolute'
+          m.style.padding = '0px'
           const r = Array.from(alref).filter(e => e.id != '').find(e => e.id.match('\\d+')[0] == m.id.match('\\d+')[0])
           m.style.top = (r.getBoundingClientRect().top - lookupclassmath(r).getBoundingClientRect().top) + 'px'
         });
