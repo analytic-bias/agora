@@ -256,11 +256,7 @@ which is technically not true, as for $\displaystyle\theta=\frac{\pi}{2}$, the e
 One may furthermore notice that this equation is not well-defined at every $\theta=\frac{n\pi}{2}$ and "re-traces" itself at every interval in-between.
 :::
 
-### Solution
-::: {.wabullet .aside}
-- temporary, not well-thought nor well-written
-:::
-
+### Solution [temporary, not well-thought nor well-written]
 Let us first study the case under the assumption that $r>0$ and $-\frac{\pi}{2}<\theta<\frac{\pi}{2}$, by deducing
 
 ::::: {.compensate-above}
