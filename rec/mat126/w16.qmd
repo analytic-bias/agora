@@ -1,0 +1,97 @@
+---
+jupyter: python3
+include-in-header:
+  text: |
+    <script src="alignmargin.js"></script>
+format:
+  html:
+    css: styles.css
+    code-fold: true
+    code-block-border-left: true
+---
+
+# Week 16
+:::: {.aside}
+::: {.opbullet}
+- This checkmark symbolizes an optional content in the current course; you may skip them if you're not interested.
+:::
+::: {.wabullet}
+- The responsive layout on mobile portrait might not be as polished; if content is overlapped thus unintelligible, please rotate device to landscape.
+:::
+::::
+
+## Riemann Sum and Arc Length of Polar Curves [In Progress]
+Last time I wasn't able to answer this so let's try again this time.
+
+```{python}
+#| echo: false
+
+%matplotlib inline
+import matplotlib_inline
+matplotlib_inline.backend_inline.set_matplotlib_formats('svg')
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Parameters remain the same
+a = 0  # Spiral tightness
+b = 2  # Spiral growth rate
+
+# Function to calculate intersection points
+def find_intersection(theta_vals, r_vals, angle):
+    # Convert angle to radians
+    angle_rad = np.deg2rad(angle)
+    
+    # Find the index where the theta value just exceeds the given angle
+    index = np.argmax(theta_vals >= angle_rad)
+    
+    # Return the coordinates of the intersection point
+    return (r_vals[index] * np.cos(theta_vals[index]), r_vals[index] * np.sin(theta_vals[index]))
+
+# Generate theta values for the spiral
+theta = np.linspace(0, 2 * np.pi, 1000)
+r = a + b * theta
+
+# Plotting
+plt.figure(figsize=(8, 8))
+ax = plt.subplot(111, projection='polar')
+
+d1 = 260
+d2 = 280
+t1 = np.deg2rad(d1)
+t2 = np.deg2rad(d2)
+
+point1 = find_intersection(theta, r, d1)
+point2 = find_intersection(theta, r, d2)
+
+# Plot the spiral
+ax.plot(theta, r, label='$r=f(\\theta)$')
+
+ax.plot([t1, t1], [0, r.max()], color='orange', linestyle='--', alpha=0.5)
+ax.plot([t2, t2], [0, r.max()], color='green', linestyle='--', alpha=0.5)
+
+# Plot intersection points
+ax.plot(t1, np.sqrt(point1[0]**2 + point1[1]**2), 'ro') 
+ax.plot(t2, np.sqrt(point2[0]**2 + point2[1]**2), 'go') 
+ax.plot([t1, t2], [np.sqrt(point1[0]**2 + point1[1]**2), np.sqrt(point1[0]**2 + point1[1]**2)], color='magenta', label='$r(\\theta_i)$')
+ax.plot([t2, t2], [np.sqrt(point1[0]**2 + point1[1]**2), np.sqrt(point2[0]**2 + point2[1]**2)], color='cyan', label='$r\'(\\theta_i)=\\frac{\\mathrm{d}r}{\\mathrm{d}\\theta}(\\theta_i)$')
+ax.plot([t1, t2], [np.sqrt(point1[0]**2 + point1[1]**2), np.sqrt(point2[0]**2 + point2[1]**2)], color='red', label='$\\sqrt{r(\\theta_i)^2+r\'(\\theta_i)^2}\\cdot\\Delta\\theta$')
+
+ax.grid(True)
+ax.legend()
+plt.show()
+```
+
+::: {.aside}
+$$
+\begin{aligned}
+L&=\int_a^b \sqrt{r^2+\left(\frac{d r}{d \theta}\right)^2}\,\mathrm{d}\theta\\
+&=\lim_{n\to\infty}\sum_{i=1}^n\left(\sqrt{r(\theta_i)^2+r'(\theta_i)^2}\cdot\Delta\theta\right)
+\end{aligned}
+$$
+:::
+
+## Bijective Functions, Their Inverses, and Change of Coordinate System
+
+This was asked multiple times in my MLC, so I'd also like to discuss a bit about it: @sec-exchangecoordinate.
+
+

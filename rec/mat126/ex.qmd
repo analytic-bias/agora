@@ -51,4 +51,11 @@ $$
 $$
 already suffice.
 
+## Change of Coordinate System {#sec-exchangecoordinate}
+
+### TODO
+
+- bijection, inverses, inverse function theorem
+- forms and measures (too much?)
+
 

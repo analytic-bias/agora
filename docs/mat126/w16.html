@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>MAT 126 Online Notes - 4&nbsp; Optional Excursions</title>
+<title>MAT 126 Online Notes - 3&nbsp; Week 16</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./references.html" rel="next">
-<link href="./w16.html" rel="prev">
+<link href="./ex.html" rel="next">
+<link href="./w15.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -61,6 +61,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="alignmargin.js"></script>
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -77,7 +78,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ex.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Optional Excursions</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./w16.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week 16</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -122,13 +123,13 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./w16.html" class="sidebar-item-text sidebar-link">
+  <a href="./w16.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week 16</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ex.html" class="sidebar-item-text sidebar-link active">
+  <a href="./ex.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Optional Excursions</span></span></a>
   </div>
 </li>
@@ -148,12 +149,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#sec-exeulertrigid" id="toc-sec-exeulertrigid" class="nav-link active" data-scroll-target="#sec-exeulertrigid"><span class="header-section-number">4.1</span> Euler’s Formula and Trigonometric Identities</a></li>
-  <li><a href="#partial-fractions" id="toc-partial-fractions" class="nav-link" data-scroll-target="#partial-fractions"><span class="header-section-number">4.2</span> Partial Fractions</a></li>
-  <li><a href="#sec-exchangecoordinate" id="toc-sec-exchangecoordinate" class="nav-link" data-scroll-target="#sec-exchangecoordinate"><span class="header-section-number">4.3</span> Change of Coordinate System</a>
-  <ul>
-  <li><a href="#todo" id="toc-todo" class="nav-link" data-scroll-target="#todo"><span class="header-section-number">4.3.1</span> TODO</a></li>
-  </ul></li>
+  <li><a href="#riemann-sum-and-arc-length-of-polar-curves-in-progress" id="toc-riemann-sum-and-arc-length-of-polar-curves-in-progress" class="nav-link active" data-scroll-target="#riemann-sum-and-arc-length-of-polar-curves-in-progress"><span class="header-section-number">3.1</span> Riemann Sum and Arc Length of Polar Curves [In Progress]</a></li>
+  <li><a href="#bijective-functions-their-inverses-and-change-of-coordinate-system" id="toc-bijective-functions-their-inverses-and-change-of-coordinate-system" class="nav-link" data-scroll-target="#bijective-functions-their-inverses-and-change-of-coordinate-system"><span class="header-section-number">3.2</span> Bijective Functions, Their Inverses, and Change of Coordinate System</a></li>
   </ul>
 </nav>
     </div>
@@ -162,7 +159,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Optional Excursions</span></h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week 16</span></h1>
 </div>
 
 
@@ -177,47 +174,41 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="sec-exeulertrigid" class="level2 page-columns page-full" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="sec-exeulertrigid"><span class="header-section-number">4.1</span> Euler’s Formula and Trigonometric Identities</h2>
-<div class="page-columns page-full"><p>Recall Euler’s formula <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> <span class="math display">\[
-e^{i x}=\cos x+i \sin x
-\]</span> where <span class="math inline">\(i=\sqrt{-1}\)</span>.</p><div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;The reason this formula makes sense amounts to the <em>analytic continuation of the exponential function</em>, which is definitely not a required topic of calculus courses; you can refer to common complex analysis textbooks if so interested. The main ingredient of the proof is the power series expansion of the exponential function.</p></li></div></div>
-<div class="page-columns page-full"><p>So for example, to derive the double-angle formula for cosine used above, redefine <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> <span class="math display">\[
-\cos (x)=\frac{e^{i x}+e^{-i x}}{2}
-\]</span> with the Euler’s formula, and write <span class="math display">\[
-\cos ^2(\theta)=\frac{e^{2 i \theta}+2+e^{-2 i \theta}}{4}\quad\text{and}\quad\cos (2 \theta)=\frac{e^{2 i \theta}+e^{-2 i \theta}}{2};
-\]</span> which, via algebraic manipulations, gives <span class="math display">\[\cos (2 \theta)=2 \cos ^2 \theta-1,\]</span> as desired.</p><div class="no-row-height column-margin column-container"><li id="fn2"><p><sup>2</sup>&nbsp;Recall that <span class="math display">\[\operatorname{Re}(z)=\frac{z+\bar{z}}{2} \quad \text { and } \quad \operatorname{Im}(z)=\frac{z-\bar{z}}{2 i},\]</span> where <span class="math inline">\(\bar{z}\)</span> denotes the complex conjugate of <span class="math inline">\(z\)</span>.</p></li></div></div>
-</section>
-<section id="partial-fractions" class="level2 page-columns page-full" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="partial-fractions"><span class="header-section-number">4.2</span> Partial Fractions</h2>
-<p>This is a more technical explanation of why one wants to use partial fraction decomposition (PFD) for evaluating antiderivatives, series expansions, and various integral transforms.</p>
-<div id="thm-pfd-extuni" class="theorem page-columns page-full">
-<div class="page-columns page-full"><p><span class="theorem-title"><strong>Theorem 4.1 (Existence and Uniqueness of PFD) </strong></span><a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> Let <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> be nonzero polynomials over a field <span class="math inline">\(K\)</span> and let <span class="math display">\[
-g=\prod_{i=1}^k p_i^{n_i}.
-\]</span> be a decomposition of <span class="math inline">\(g\)</span> into a product of powers of distinct irreducible polynomials, then there are polynomials <span class="math inline">\(b\)</span> and <span class="math inline">\(a_{i j}\)</span> (unique up to signs) such that deg <span class="math inline">\(a_{i j}&lt;\operatorname{deg} p_i\)</span> and that <span class="math display">\[
-\frac{\,f\,}{\,g\,}=b+\sum_{i=1}^k \sum_{j=1}^{n_i} \frac{\,a_{i,j}\,}{\,(p_i)^j\,}.
-\]</span></p><div class="no-row-height column-margin column-container"><li id="fn3"><p><sup>3</sup>&nbsp;The ingredients for its proof are the <em>Euclidean division for polynomials</em> and the <em>Bézout’s identity</em>.</p></li></div></div>
-</div>
-<p>What this is saying is that if one encounters a rational function whose antiderivative, series expansion, etc. are not apparent at first sight, one can decompose the function into summands in the forms that are easier to handle, and evaluate them individually by linearity. For example, one may notice in particular that in the statement of the theorem above if <span class="math inline">\(\deg f&lt;\deg g\)</span>, then <span class="math inline">\(b=0\)</span>, and if <span class="math inline">\(K\)</span> is algebraically closed, then <span class="math inline">\(a_{i,j}\in K\)</span> can be achieved, which is exactly the situation we encountered in the above homework question; in this case, the ``easier” summands are of the form <span class="math display">\[
-\frac{c}{ax+b}\quad\text{where}\quad a,b,c\in\mathbb{Q}.
-\]</span></p>
-<p>Furthermore, in some cases, it is not practically required to complete the full decomposition (as that might require irrational and/or complex coefficients in the denominator); for example, you may encounter problems in the homework where summands of the form <span class="math display">\[
-\frac{dx+e}{ax^2+bx+c}\quad\text{where}\quad a,b,c,d,e\in\mathbb{Q}
-\]</span> already suffice.</p>
-</section>
-<section id="sec-exchangecoordinate" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="sec-exchangecoordinate"><span class="header-section-number">4.3</span> Change of Coordinate System</h2>
-<section id="todo" class="level3" data-number="4.3.1">
-<h3 data-number="4.3.1" class="anchored" data-anchor-id="todo"><span class="header-section-number">4.3.1</span> TODO</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<div class="opbullet">
 <ul>
-<li>bijection, inverses, inverse function theorem</li>
-<li>forms and measures (too much?)</li>
+<li>This checkmark symbolizes an optional content in the current course; you may skip them if you’re not interested.</li>
 </ul>
+</div>
+<div class="wabullet">
+<ul>
+<li>The responsive layout on mobile portrait might not be as polished; if content is overlapped thus unintelligible, please rotate device to landscape.</li>
+</ul>
+</div>
+</div></div><section id="riemann-sum-and-arc-length-of-polar-curves-in-progress" class="level2 page-columns page-full" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="riemann-sum-and-arc-length-of-polar-curves-in-progress"><span class="header-section-number">3.1</span> Riemann Sum and Arc Length of Polar Curves [In Progress]</h2>
+<p>Last time I wasn’t able to answer this so let’s try again this time.</p>
+<div class="cell" data-execution_count="1">
+<div class="cell-output cell-output-display">
+<p><img src="w16_files/figure-html/cell-2-output-1.svg" class="img-fluid"></p>
+</div>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="math display">\[
+\begin{aligned}
+L&amp;=\int_a^b \sqrt{r^2+\left(\frac{d r}{d \theta}\right)^2}\,\mathrm{d}\theta\\
+&amp;=\lim_{n\to\infty}\sum_{i=1}^n\left(\sqrt{r(\theta_i)^2+r'(\theta_i)^2}\cdot\Delta\theta\right)
+\end{aligned}
+\]</span></p>
+</div></div></section>
+<section id="bijective-functions-their-inverses-and-change-of-coordinate-system" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="bijective-functions-their-inverses-and-change-of-coordinate-system"><span class="header-section-number">3.2</span> Bijective Functions, Their Inverses, and Change of Coordinate System</h2>
+<p>This was asked multiple times in my MLC, so I’d also like to discuss a bit about it: <a href="ex.html#sec-exchangecoordinate"><span>Section&nbsp;4.3</span></a>.</p>
 
 
 </section>
-</section>
-
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -455,13 +446,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./w16.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week 16</span></span>
+      <a href="./w15.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week 15</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./references.html" class="pagination-link">
-        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./ex.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Optional Excursions</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
