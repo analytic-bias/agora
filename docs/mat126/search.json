@@ -67,7 +67,7 @@
     "href": "w13t14.html#miscellanies",
     "title": "1  Week 13–14",
     "section": "1.6 Miscellanies",
-    "text": "1.6 Miscellanies\n\n\n\n\n\n\nOptionally, these were the excursions we briefly chatted about before the Thanksgiving…\n\n\n\n\n\nOn rectification, measuring, pathologies; probably no time to code something original, but wikipedia:\n\n\n\n\nrecall the discussion we had about Riemann sums; can you try to play with the above and see if you can make the same observation as the pioneers of measure theory did a century ago?\nhttps://www.wikiwand.com/en/Lebesgue_measure\nhttps://www.wikiwand.com/en/Minkowski_content\nHilbert’s curve above\nBanach-Tarski\nlocales, cardinals\nfractals, dimensions, GMT"
+    "text": "1.6 Miscellanies\n\n\n\n\n\n\nOptionally, these were the excursions we briefly chatted about before the Thanksgiving…\n\n\n\n\n\nOn rectification, measuring, pathologies; probably no time to code something original, but wikipedia:\n\n\n\n1.6.1 Schwarz’s Lantern\n\n\nrecall the discussion we had about Riemann sums; can you try to play with the above and see if you can make the same observation as the pioneers of measure theory did a century ago?\nhttps://www.wikiwand.com/en/Lebesgue_measure\nhttps://www.wikiwand.com/en/Minkowski_content\nHilbert’s curve above\nBanach-Tarski\nlocales, cardinals\nfractals, dimensions, GMT"
   },
   {
     "objectID": "w15.html#hw12.4---scalccc5-1.6.010.",
@@ -109,14 +109,21 @@
     "href": "w16.html#riemann-sum-and-arc-length-of-polar-curves-in-progress",
     "title": "3  Week 16",
     "section": "3.1 Riemann Sum and Arc Length of Polar Curves [In Progress]",
-    "text": "3.1 Riemann Sum and Arc Length of Polar Curves [In Progress]\nLast time I wasn’t able to answer this so let’s try again this time.\n\n\n\n\n\n\n\n\\[\n\\begin{aligned}\nL&=\\int_a^b \\sqrt{r^2+\\left(\\frac{d r}{d \\theta}\\right)^2}\\,\\mathrm{d}\\theta\\\\\n&=\\lim_{n\\to\\infty}\\sum_{i=1}^n\\left(\\sqrt{r(\\theta_i)^2+r'(\\theta_i)^2}\\cdot\\Delta\\theta\\right)\n\\end{aligned}\n\\]"
+    "text": "3.1 Riemann Sum and Arc Length of Polar Curves [In Progress]\nLast time I wasn’t able to answer this so let’s try again this time.\n\n\n\n\n\n\n\n\\[\n\\begin{aligned}\nL&=\\int_a^b \\sqrt{r^2+\\left(\\frac{d r}{d \\theta}\\right)^2}\\,\\mathrm{d}\\theta\\\\\n&=\\lim_{n\\to\\infty}\\sum_{i=1}^n\\left(\\sqrt{r(\\theta_i)^2+r'(\\theta_i)^2}\\cdot\\Delta\\theta\\right)\n\\end{aligned}\n\\]\nTODO"
   },
   {
-    "objectID": "w16.html#bijective-functions-their-inverses-and-change-of-coordinate-system",
-    "href": "w16.html#bijective-functions-their-inverses-and-change-of-coordinate-system",
+    "objectID": "w16.html#hw14.3---wacalctutbanklt1-7.5.003c.tut.",
+    "href": "w16.html#hw14.3---wacalctutbanklt1-7.5.003c.tut.",
     "title": "3  Week 16",
-    "section": "3.2 Bijective Functions, Their Inverses, and Change of Coordinate System",
-    "text": "3.2 Bijective Functions, Their Inverses, and Change of Coordinate System\nThis was asked multiple times in my MLC, so I’d also like to discuss a bit about it: Section 4.3."
+    "section": "3.2 HW14.3 - WACalcTutBankLT1 7.5.003c.Tut.",
+    "text": "3.2 HW14.3 - WACalcTutBankLT1 7.5.003c.Tut.\nCompute the surface area obtained by rotating the curve \\(y = \\sqrt[3]{x}\\), for \\(x\\in [1, 125]\\) about the y-axis.\n\n3.2.1 Solution\nSince the function is bijective within the domain, let us consider again \\[\\left\\{\\begin{aligned}\ny &= \\sqrt[3]{x}\\\\\nx &\\in [1, 125]\n\\end{aligned}\\right.\\;\\implies\\;\\left\\{\\begin{aligned}\nx&=y^3\\\\\ny&\\in [1,5]\n\\end{aligned}\\right.\\] by taking the inverse (i.e. swapping the variable \\(x\\) and \\(y\\) as before).\n\n\n\nSection 4.3\n\nNow one may use the integral\n\n\\[\n\\begin{aligned}\nA&=\\int_1^5 \\underbrace{2\\pi x(y)}_{\\text{circumference}} \\cdot \\underbrace{\\sqrt{1+x'(y)^2}}_{\\text{\\color{orange}height}\\class{alref}{\\cssId{alref1}{}}}\\,\\mathrm{d}y\\\\\n&=\\cdots=\\frac{(-10 \\sqrt{10} + 5626 \\sqrt{5626}) \\cdot \\pi}{27},\n\\end{aligned}\n\\]\n\n\n\nIf you’re curious about the height part being an arc length, or that the band in the widget is a cone section instead of a cylinder, recall the discussion we had about Schwarz’s Lantern in Section 1.6.1.\n\n\nas demonstrated by the plot and widget below."
+  },
+  {
+    "objectID": "w16.html#bijective-functions-inverses-and-change-of-coordinate-system",
+    "href": "w16.html#bijective-functions-inverses-and-change-of-coordinate-system",
+    "title": "3  Week 16",
+    "section": "3.3 Bijective Functions, Inverses, and Change of Coordinate System",
+    "text": "3.3 Bijective Functions, Inverses, and Change of Coordinate System\nThis was asked multiple times in my MLC, so I’d also like to discuss a bit about it: Section 4.3."
   },
   {
     "objectID": "ex.html#sec-exeulertrigid",
@@ -137,6 +144,6 @@
     "href": "ex.html#sec-exchangecoordinate",
     "title": "4  Optional Excursions",
     "section": "4.3 Change of Coordinate System",
-    "text": "4.3 Change of Coordinate System\n\n4.3.1 TODO\n\nbijection, inverses, inverse function theorem\nforms and measures (too much?)"
+    "text": "4.3 Change of Coordinate System\n\n4.3.1 TODO\n\nbijection, inverses\ninverse function theorem, forms and measures (too much?)"
   }
 ]

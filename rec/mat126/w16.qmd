@@ -88,10 +88,85 @@ L&=\int_a^b \sqrt{r^2+\left(\frac{d r}{d \theta}\right)^2}\,\mathrm{d}\theta\\
 &=\lim_{n\to\infty}\sum_{i=1}^n\left(\sqrt{r(\theta_i)^2+r'(\theta_i)^2}\cdot\Delta\theta\right)
 \end{aligned}
 $$
+
+TODO
 :::
 
-## Bijective Functions, Their Inverses, and Change of Coordinate System
+## HW14.3 - WACalcTutBankLT1 7.5.003c.Tut.
+Compute the surface area obtained by rotating the curve $y = \sqrt[3]{x}$, for $x\in [1, 125]$ about the y-axis.
+
+### Solution
+Since the function is bijective within the domain, let us consider again
+$$\left\{\begin{aligned}
+y &= \sqrt[3]{x}\\
+x &\in [1, 125]
+\end{aligned}\right.\;\implies\;\left\{\begin{aligned}
+x&=y^3\\
+y&\in [1,5]
+\end{aligned}\right.$$
+by taking the inverse (i.e. swapping the variable $x$ and $y$ as before).
+
+::: {.opbullet .aside}
+- @sec-exchangecoordinate
+:::
+
+Now one may use the integral
+
+:::: {.compensate-above .compensate-below}
+$$
+\begin{aligned}
+A&=\int_1^5 \underbrace{2\pi x(y)}_{\text{circumference}} \cdot \underbrace{\sqrt{1+x'(y)^2}}_{\text{\color{orange}height}\class{alref}{\cssId{alref1}{}}}\,\mathrm{d}y\\
+&=\cdots=\frac{(-10 \sqrt{10} + 5626 \sqrt{5626}) \cdot \pi}{27},
+\end{aligned}
+$$
+
+::: {#almar1 .opbullet .column-margin .almar}
+- If you're curious about the <span style="color: orange;">height</span> part being an arc length, or that the band in the widget is a cone section instead of a cylinder, recall the discussion we had about Schwarz's Lantern in @sec-schwarzlantern.
+:::
+::::
+
+as demonstrated by the plot and widget below.
+
+```{python}
+#| echo: false
+import plotly.graph_objects as go
+import numpy as np
+
+y = np.linspace(1, 5, 100)
+curve = y ** 3
+theta = np.linspace(0, 2 * np.pi, 100)
+X_curve, T_curve = np.meshgrid(curve, theta)
+Y_curve = np.cos(T_curve) * (y)
+Z_curve = np.sin(T_curve) * (y)
+
+x = np.linspace(59, 69, 100)
+X_line, T_line = np.meshgrid(x, theta)
+Y_line = np.cbrt(X_line) * np.cos(T_line)
+Z_line = np.cbrt(X_line) * np.sin(T_line)
+
+curve_surface = go.Surface(x=X_curve, y=Y_curve, z=Z_curve, opacity=0.9, name='revolved curve', colorscale='Blues')
+line_surface = go.Surface(x=X_line, y=Y_line, z=Z_line, opacity=0.4, name='one example of the \"bands\" in Riemann sum', colorscale='Reds')
+
+layout = go.Layout(
+    # title=r"$x=4\sqrt{\sin y},\,\text{revolved around}\,y=4,\,\text{from}\,x=0\,\text{to}\,x=4$",
+    scene=dict(
+        xaxis_title='X',
+        yaxis_title='Y',
+        zaxis_title='Z'
+    ),
+    autosize=True
+)
+fig = go.Figure(data=[curve_surface, line_surface], layout=layout)
+fig.update_traces(showscale=False)
+fig.update_layout(margin=dict(
+        l=0,
+        r=0,
+        b=0,
+        t=0,
+        pad=0))
+fig.show()
+```
+
+## Bijective Functions, Inverses, and Change of Coordinate System
 
 This was asked multiple times in my MLC, so I'd also like to discuss a bit about it: @sec-exchangecoordinate.
-
-

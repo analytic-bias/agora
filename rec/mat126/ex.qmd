@@ -55,7 +55,7 @@ already suffice.
 
 ### TODO
 
-- bijection, inverses, inverse function theorem
-- forms and measures (too much?)
+- bijection, inverses
+- inverse function theorem, forms and measures (too much?)
 
 

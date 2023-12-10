@@ -362,6 +362,8 @@ On rectification, measuring, pathologies; probably no time to code something ori
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Quadrat_Diagonale.svg" width="100%" />
 
+### Schwarz's Lantern {#sec-schwarzlantern}
+
 <img src="https://upload.wikimedia.org/wikipedia/commons/2/20/Schwarz-lantern.gif" width="100%" />
 
 - recall the discussion we had about Riemann sums; can you try to play with the above and see if you can make the same observation as the pioneers of measure theory did a century ago?
