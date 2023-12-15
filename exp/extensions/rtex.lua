@@ -17,8 +17,10 @@ local tikz_doc_template = [[
 \usepackage{tikz}
 \usepackage{frege}
 \usepackage{wrapfig}
+\usepackage{soul}
 \usepackage{quiver}
-\newenvironment*{dummyenv}{}{}
+\usetikzlibrary{fit}
+\newenvironment{dummyenv}{}{}
 \begin{document}
 \nopagecolor
 %s
@@ -72,7 +74,9 @@ function RawBlock(el)
       if not file_exists(fname) then
         tikz2image(el.text, filetype, fname)
       end
-      return pandoc.Para({pandoc.Image({}, fbasename)})
+      local img = pandoc.Image({}, fbasename)
+      img.attributes.style = 'display: block; margin: auto; width: 100%;'
+      return pandoc.Para({img})
     else
       return el
     end

@@ -6,18 +6,57 @@
     list-style-type: none;
 }
 
-/* blockquote .page-full {
-    grid-column: body-content-start/body-content-end !important;
-} */
+.ourblue {
+    color: #002060;
+}
 
-/* blockquote > div .page-full {
-    grid-column: body-content-start/body-content-end !important;
-    background: #f9f9f9;
-    border-left: 3px solid #ccc;
-    margin: 1.5em 10px;
-    padding: 0.5em 10px;
-} */
+.opbullet li {
+    list-style-type: none;
+}
 
-/* blockquote p {
-    display: inline-block;
-} */
+.opbullet li::before {
+    content: "✓";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: blue; /* Change the color */
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1.2em; /* Also needed for space (tweak if needed) */
+    margin-left: -1.2em; /* Also needed for space (tweak if needed) */
+}
+
+.wabullet li {
+    list-style-type: none;
+}
+
+.wabullet li::before {
+    content: "⚠";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: red; /* Change the color */
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1.2em; /* Also needed for space (tweak if needed) */
+    margin-left: -1.2em; /* Also needed for space (tweak if needed) */
+}
+
+.arbullet li {
+    list-style-type: none;
+}
+
+.arbullet li::before {
+    content: "←";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: green; /* Change the color */
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1.2em; /* Also needed for space (tweak if needed) */
+    margin-left: -1.2em; /* Also needed for space (tweak if needed) */
+}
+
+.almar {
+    position: relative; /* or 'relative' depending on your layout */
+}
+
+.compensate-above {
+    margin-top: -1.2em !important;
+}
+
+.compensate-below {
+    margin-bottom: -1.2em !important;
+}
