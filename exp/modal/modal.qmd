@@ -7,7 +7,7 @@ include-in-header:
 # ‘Must’ and ‘Might’ --- The Modal Logic of Necessity and Possibility
 
 ::: {.wabullet .aside when-format="html"}
-- The responsive layout on mobile portrait might not be as polished; if content is overlapped thus unintelligible, please rotate device to landscape.
+- The responsive layout on mobile portrait might not be as polished; if content is overlapped thus unintelligible, please rotate device to landscape. **You might also wish to try access the [pdf version](/gb.pdf) of this book.**
 :::
 
 ## [Modes of Truth and Modal Logics]{.smallcaps}

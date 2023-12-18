@@ -43,6 +43,7 @@ book:
     # - summary.qmd
     - references.qmd
 
+format-links: [pdf]
 format:
   html:
     css: styles.css
