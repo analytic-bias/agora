@@ -34,7 +34,7 @@ book:
   chapters:
     - index.qmd
     # - intro.qmd
-    - test.qmd
+    # - test.qmd
     - modal/modal.qmd
     # - retro/retro.qmd
     # - gödel/gödel.qmd

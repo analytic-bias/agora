@@ -1,37 +1,4 @@
 
-<!-- 
-
-
-
-<table>
-<colgroup>
-<col style="width: 21%" />
-<col style="width: 78%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>¿P</th>
-<th><em>It was always the case that it will sometime be the case
-that</em> P</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>P → P</td>
-<td><em>It will sometime be the case that it was once the case that</em>
-P</td>
-</tr>
-<tr class="even">
-<td>P</td>
-<td><em>Whatever will always be, will be</em></td>
-</tr>
-<tr class="odd">
-<td>¿P</td>
-<td><em>Once upon a time, it was always the case that</em> P</td>
-</tr>
-</tbody>
-</table>
-
 **<span class="smallcaps">2. The Symbolic Language for Modal
 Propositional Logic.</span>**
 
