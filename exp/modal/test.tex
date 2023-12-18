@@ -1,4 +1,4 @@
-\documentclass{standalone}
+\documentclass[border={10pt 10pt 10pt 10pt}]{standalone}
 \usepackage{xcolor}
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -22,17 +22,17 @@
 $\displaystyle
 \begin{array}{lrlr}
 1.&\text{\st{Show}}&P\land\lnot P\to Q\quad\quad&6,\,\text{CD}\\
-2.&&P\land\lnot P&\text{Assume}\,(\text{CD})\\
+2.&&\tikzmark{start1}P\land\lnot P&\text{Assume}\,(\text{CD})\\
 3.&&P&2,\,\text{S}\\
 4.&&\lnot P&2,\,\text{S}\\
-5.&&P\lor Q&3,\,\text{ADD}\\
-6.&&Q&5,\,4\,\text{MTP}
+5.&&P\lor Q\quad&3,\,\text{ADD}\\
+6.&&Q&\tikzmark{end1}5,\,4\,\text{MTP}
 \end{array}
 $
 \begin{tikzpicture}[remember picture,overlay]
-  \coordinate (start) at (-5.15,-1.15);
-  \coordinate (end) at (-3,0.95);
-  \node[inner sep=0pt,draw=blue,fit=(start) (end)] {};
+  \coordinate (start) at ([xshift=-0.2ex,yshift=1.6ex]pic cs:start1);
+  \coordinate (end) at ([xshift=-6ex,yshift=-0.5ex]pic cs:end1);
+  \node[inner sep=2pt,draw=blue,fit=(start) (end)] {};
 \end{tikzpicture}
 \end{dummyenv}
 \end{document}

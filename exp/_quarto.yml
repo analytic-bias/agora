@@ -3,8 +3,11 @@ project:
   post-render:
   - rm -r ../docs/gb/
   - cp -r _book/ ../docs/gb/
+  - mv ../docs/gb/Gödelian-Explorations.pdf ../docs/gb/gb.pdf
 filters:
   - extensions/rtex.lua
+  - quarto
+  - extensions/after.lua
 bibliography:
   - references.bib
   - /home/hypatia/Workspace/Library/zotero.bib
@@ -18,7 +21,7 @@ crossref:
     - kind: float
       reference-prefix: ""
       key: eqn
-      latex-env: eqn
+      latex-env: eqnc
 
 book:
   search:
@@ -66,6 +69,8 @@ format:
       - heightrounded
     include-in-header:
       - file: preamble.tex
+    include-before-body:
+      - file: beforebody.tex
     # no need:
     # documentclass: tufte-book
     # classoption: [justified]

@@ -17,6 +17,8 @@
 \usepackage{qrcode}
 \usepackage{xcolor}
 \usepackage{relsize}
+\usepackage{soul}
+% \usepackage{caption}
 
 \usepackage{tikz-cd}
 \usepackage{quiver}
@@ -24,9 +26,18 @@
 \usepackage{empheq}
 
 \newcommand{\ourblue}{\color[RGB]{0, 32, 96}}
+\usetikzlibrary{fit}
 \newenvironment{dummyenv}{}{}
+\newcommand{\class}[2]{}
+\newcommand{\cssId}[2]{}
 
+\let\captionto\caption
+\let\captionsetupto\captionsetup
 \let\labelitemito\labelitemi
+\let\phantomsectionto\phantomsection
+% \let\textfloatsepto\textfloatsep
+% \let\floatsepto\floatsep
+% \let\intextsepto\intextsep
 \counterwithout{footnote}{chapter}
 
 \usepackage{graphicx} % allow embedded images
@@ -47,9 +58,10 @@
 \setlength{\headwidth}{820pt}
 \pagestyle{fancy}
 \fancyhf{}
-\cfoot{}
+\cfoot{}\lfoot{}\rfoot{}
 \fancyhead{}
 \fancyfoot{}
+\fancyhf{}
 \fancyhead[RO,LE]{\thepage}
 \usepackage{datetime}
 \usepackage{pgfplots}
