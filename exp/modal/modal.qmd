@@ -6,9 +6,11 @@ include-in-header:
 
 # ‘Must’ and ‘Might’ --- The Modal Logic of Necessity and Possibility
 
-::: {.wabullet .aside when-format="html"}
+:::: {.content-visible when-format="html"}
+::: {.wabullet .aside}
 - The responsive layout on mobile portrait might not be as polished; if content is overlapped thus unintelligible, please rotate device to landscape. **You might also wish to access the [pdf version](/gb.pdf) of this book.**
 :::
+::::
 
 ## [Modes of Truth and Modal Logics]{.smallcaps}
 
@@ -426,7 +428,7 @@ div .proof {
 
 ::::: {.column-margin}
 :::: {.callout-tip}
-## A Classical Theorem in Intuitionism
+## A Classical Theorem, but in Intuitionism
 
 **Theorem.** There exist two irrational numbers $x$ and $y$ such that $x^y$ is irrational.
 
@@ -447,7 +449,7 @@ The number $\sqrt{2}^{\sqrt{2}}$ is either rational or irrational.
   are both irrational and $x^y$ is rational.
 
 Either way there exist $x$ and $y$ such that $x^y$ is rational.
-<span style="float: right;" when-format="html">$\Box$</span>
+<span class="content-visible" style="float: right;" when-format="html">$\Box$</span>
 :::
 
 Intuitionists reject this classical argument by separation of cases because it does not 
