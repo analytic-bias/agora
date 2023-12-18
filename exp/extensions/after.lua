@@ -19,18 +19,18 @@ function Math(el)
   return el
 end
 
-function RawInline(el)
-  if el.format == "latex" then
-    print(el.text)
-    el.text = el.text:gsub('\\marginnote{', '\\marginpar{')
-  end
-  return el
-end
+-- function RawInline(el)
+--   if el.format == "latex" then
+--     print(el.text)
+--     el.text = el.text:gsub('\\marginnote{', '\\marginpar{')
+--   end
+--   return el
+-- end
 
-function RawBlock(el)
-  if el.format == "latex" then
-    print(el.text)
-    el.text = el.text:gsub('\\marginnote{', '\\marginpar{')
-  end
-  return el
-end
+-- function RawBlock(el)
+--   if el.format == "latex" then
+--     print(el.text)
+--     el.text = el.text:gsub('\\marginnote{', '\\marginpar{')
+--   end
+--   return el
+-- end

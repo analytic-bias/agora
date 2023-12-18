@@ -90,8 +90,8 @@ for a particular case as follows:
     citing such proof texts as Phil. 1:9, Titus 3:6, Acts 2:33. Orthodox
     theology, citing the words of Jesus in proof texts such John 15:26,
     regarded the insertion of *filioque* into the Nicean-Constantipolitan
-    creed, is as Semi-Sabellianism. The great church historian Jaroslav
-    Pelikan opined: “If there is a special circle of the inferno
+    creed, is as Semi-Sabellianism. The great church historian @Pelikan1988melody [p.90]
+    opined: “If there is a special circle of the inferno
     described by Dante reserved for historians of theology, the principal
     homework assigned to that subdivision of Hell for at least the first
     several eons of eternity may well be a thorough study of all the
@@ -172,7 +172,7 @@ This implication follows from the inference rules of simplification, addition, a
 tollendo ponens*^[*"mode that denies by affirming"*], which are themselves not particularly puzzling.
 
 \begin{dummyenv}
-\nopagecolor
+\nopagecolor\hspace{2cm}
 $\displaystyle
 \begin{array}{lrlr}
 1.&\text{\st{Show}}&P\land\lnot P\to Q\quad\quad&6,\,\text{CD}\\
@@ -187,7 +187,7 @@ $
   \coordinate (start) at ([xshift=-0.2ex,yshift=1.6ex]pic cs:start1);
   \coordinate (end) at ([xshift=-8ex,yshift=-0.5ex]pic cs:end1);
   \node[inner sep=2pt,draw=blue,fit=(start) (end)] {};
-\end{tikzpicture}
+\end{tikzpicture}\hspace{2cm}
 \end{dummyenv}
 
 The following theorems are known as the *paradoxes of material
@@ -414,13 +414,6 @@ $$
 \varphi\to\lnot\Diamond\lnot\Diamond\varphi\tag*{(\textbf{B})}
 $$ {#eq-modal-axiom-B}
 
-According to intuitionism, mathematical objects do not exist as eternal
-Platonic objects but are constructions in intuition. Intuitionists read
-the propositional connectives as involving not merely truth, but proof,
-and so they rejected such classical forms of reasoning as *reductio ad
-absurdum* and theorems such as the *law of excluded middle.*
-Intuitionists reject the following mathematical proof.
-
 <style>
 div .proof > ul {
     margin-bottom: .1rem !important;
@@ -463,6 +456,13 @@ involving a kind of provability.
 ::::
 :::::
 
+According to intuitionism, mathematical objects do not exist as eternal
+Platonic objects but are constructions in intuition. Intuitionists read
+the propositional connectives as involving not merely truth, but proof,
+and so they rejected such classical forms of reasoning as *reductio ad
+absurdum* and theorems such as the *law of excluded middle.*
+Intuitionists reject the following mathematical proof.
+
 Around the 1970s it was noticed that the famous incompleteness theorems
 [@Godel1931Incomepleteness] were propositional in character and that their logic
 could be captured in propositional modal logic. These modal provability
@@ -472,8 +472,9 @@ $$
 \Box(\Box\varphi\to\varphi)\to\Box\varphi\tag*{(\textbf{W})}
 $$ {#eq-modal-axiom-W}
 
+\marginpar{\vspace{10cm}}
 *Modal Provability Logics* proliferated from the 1950s--1970s, but the
-genesis of the idea goes back to a short note [@Godel1933] in
+genesis of the idea goes back to a short note of @Godel1933 in
 which he noted that intuitionistic truth is defined in terms of proof since
 provability is a kind of necessity. The above axiom can be read as a
 kind of soundness theorem.

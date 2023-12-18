@@ -1,6 +1,7 @@
 /.quarto/
 *.html
 *.pdf
+*.svg
 *_files/
 /.luarc.json
 /_book/

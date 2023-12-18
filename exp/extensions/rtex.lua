@@ -6,6 +6,7 @@ local inspect = require 'inspect'
 
 local html_template = [[
 \documentclass[border={10pt 10pt 10pt 10pt}]{standalone}
+\usepackage{graphics}
 \usepackage{xcolor}
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -29,6 +30,7 @@ local html_template = [[
 
 local tex_template = [[
 \documentclass[border={10pt 10pt 10pt 10pt}]{standalone}
+\usepackage{graphics}
 \usepackage{xcolor}
 \usepackage{amsmath}
 \usepackage{amssymb}

@@ -54,7 +54,7 @@ format:
     grid: 
         margin-width: 300pt
   pdf:
-    cite-method: biblatex
+    # cite-method: biblatex
     keep-tex: true
     fontfamily: libertinus # TODO: latex font
     colorlinks: true
