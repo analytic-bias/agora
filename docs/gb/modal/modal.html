@@ -344,18 +344,33 @@ Figure&nbsp;1.1: <span class="smallcaps">An Aristotelian Diamond of Opposition</
 \]</span></span></p>
 </div>
 <p>The axiom <a href="#eq-modal-axiom-K">(<strong>K</strong>)</a> expresses logical omniscience insofar as this axiom requires that the knowledge of an agent is closed under <em>modus ponens</em>; and hence such knowers know all the logical consequences of their knowledge.</p>
-<p>Axiom <a href="#eq-modal-axiom-K">(<strong>T</strong>)</a> states the truism that whatever is known is true. Notice that this axiom would be too strong for deontic logic insofar as an action’s being obligatory doesn’t imply that the agent actually performs that action.</p>
+<p>Axiom <a href="#eq-modal-axiom-T-2">(<strong>T</strong>)</a> states the truism that whatever is known is true. Notice that this axiom would be too strong for deontic logic insofar as an action’s being obligatory doesn’t imply that the agent actually performs that action.</p>
 <p>Axiom <a href="#eq-modal-axiom-4">(<strong>4</strong>)</a> expresses a high degree of <em>positive introspective knowledge</em>: if someone knows P, then she knows that she knows that <span class="math inline">\(P\)</span>. Axiom <a href="#eq-modal-axiom-E">(<strong>E</strong>)</a> on the other hand, expresses a high degree of <em>negative</em> introspective knowledge: if someone doesn’t know that <span class="math inline">\(P\)</span>, then he knows he doesn’t know <span class="math inline">\(P\)</span>. This axiom is contrary to the experience of Socrates: as the gadfly of Athens, Socrates found through his questioning that many of his fellow Athenians did not know what they were talking about but also didn’t know that they didn’t know. The gadfly of Athens believed his vocation was to sting his fellow Athenians into the awareness they were own ignorance, a service for which they did not always show adequate appreciation.</p>
 <p>The <em>temporal logic</em> or Diodorian temporal logic was studied by the logician A. N. Prior (1914–1969). To model temporal language, we introduce a pair of modal operators for the future and a pair of modal operators for the past.</p>
-<div class="nobullet">
-<ul>
-<li><span class="math inline">\(\color{green}\Box\)</span> It <span style="color:green;"><em>is always going</em></span> [i.e., in <em>all</em> futures] <em>to be the case that</em></li>
-<li><span class="math inline">\(\color{green}\Diamond\)</span> It <span style="color:green;"><em>will</em></span> [i.e., in <em>some</em> future] be the case that</li>
-<li></li>
-<li><span class="math inline">\(\color{red}\Box\)</span> It <span style="color:red;"><em>has always been</em></span> [i.e., in <em>all</em> pasts] the case that</li>
-<li><span class="math inline">\(\color{red}\Diamond\)</span> It <span style="color:red;"><em>was once</em></span> [i.e., in <em>some</em> past or <em>“once upon a time”</em>] the case that</li>
-</ul>
-</div>
+<table class="table-borderless table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 88%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\color{green}\Box\)</span></td>
+<td style="text-align: left;">It <span style="color:green;"> <em>is always going</em></span> [i.e., in <em>all</em> futures] to be the case that</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\color{green}\Diamond\)</span></td>
+<td style="text-align: left;">It <span style="color:green;"> <em>will</em>&gt;</span> [i.e., in <em>some</em> future] be the case that</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\color{red}\Box\)</span></td>
+<td style="text-align: left;">It <span style="color:red;"> <em>has always been</em></span> [i.e., in <em>all</em> pasts] the case that</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\color{red}\Diamond\)</span></td>
+<td style="text-align: left;">It <span style="color:red;"> <em>was once</em>]</span> [i.e., in <em>some</em> past or <em>“once upon a time”</em>] the case that</td>
+</tr>
+</tbody>
+</table>
 <p>The axioms for minimal tense logic include version of Axiom <a href="#eq-modal-axiom-K">(<strong>K</strong>)</a> for the two necessity operators: <span class="math display">\[\begin{align*}
 &amp;{\color{red}\Box}(\varphi\to\psi)\to({\color{red}\Box}\varphi\to{\color{red}\Box}\psi)
 &amp;\begin{aligned}\text{\textit{Whatever has always followed from what always has been,}}\\\text{\textit{always has been.}}\end{aligned}&amp;
@@ -365,12 +380,12 @@ Figure&nbsp;1.1: <span class="smallcaps">An Aristotelian Diamond of Opposition</
 \tag*{(K${\color{green}\Box}$)}
 \end{align*}\]</span></p>
 <p>It also contains two axioms concerning the interaction of the past and future that has the form of the so-called Brouwersche axiom with alternating valences: <span class="math display">\[\begin{align*}
+\tag*{(B${\color{green}\Box}{\color{red}\Diamond}$)}
 &amp;\varphi\to{\color{green}\Box}{\color{red}\Diamond}\varphi
-&amp;\text{\textit{What is, will always have been}}
-\tag*{(B${\color{green}\Box}{\color{red}\Diamond}$)}\\
+&amp;\text{\textit{What is, will always have been}}\\
+\tag*{(B${\color{red}\Box}{\color{green}\Diamond}$)}
 &amp;\varphi\to{\color{red}\Box}{\color{green}\Diamond}\varphi
-&amp;\text{\textit{What is, has always been going to happen}}
-\tag*{(B${\color{red}\Box}{\color{green}\Diamond}$)}\\
+&amp;\text{\textit{What is, has always been going to happen}}\\
 \end{align*}\]</span></p>
 <p>The Brouwersche <a href="#eq-modal-axiom-B">(<strong>B</strong>)</a> axiom was so-named by the logician Oskar Becker <span class="citation" data-cites="Becker1930Logik">(<a href="../references.html#ref-Becker1930Logik" role="doc-biblioref">Becker 1930</a>)</span> after the charismatic Dutch mathematician L. E. J. Brouwer (1881–1966), who championed a philosophy of mathematics known as <em>intuitionism</em>. It happens that when the <span class="math inline">\(\Diamond\)</span> can be paraphrased as <span class="math inline">\(\Diamond\lnot\Diamond\)</span>, the resulting axiom has the form of the acceptable form of double negation in intuitionistic logic: <span id="eq-modal-axiom-B"><span class="math display">\[
 \varphi\to\lnot\Diamond\lnot\Diamond\varphi\tag*{(\textbf{B})}
@@ -380,10 +395,10 @@ Becker, Oskar. 1930. Zur logik der modalit<span>ä</span>ten.
 </div></div><p>According to intuitionism, mathematical objects do not exist as eternal Platonic objects but are constructions in intuition. Intuitionists read the propositional connectives as involving not merely truth, but proof, and so they rejected such classical forms of reasoning as <em>reductio ad absurdum</em> and theorems such as the <em>law of excluded middle.</em> Intuitionists reject the following mathematical proof.</p>
 <style>
 div .proof > ul {
-    margin-bottom: .5rem !important;
+    margin-bottom: .1rem !important;
 }
 div .proof {
-    margin-top: .5rem !important;
+    margin-top: .1rem !important;
 }
 </style>
 

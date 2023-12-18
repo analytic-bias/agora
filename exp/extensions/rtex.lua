@@ -52,8 +52,6 @@ local tex_template = [[
 ]]
 
 local function tikz2image(src, outfile)
-  print(html_template:format(src))
-
   system.with_temporary_directory('tikz2image', function (tmpdir)
     system.with_working_directory(tmpdir, function()
       local f = io.open('tikz.tex', 'w')

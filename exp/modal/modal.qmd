@@ -1,4 +1,8 @@
 ---
+filters:
+  - latex-environment
+commands: [textcolor, colorbox]
+environments: [center]
 include-in-header:
   text: |
     <script src="../alignmargin.js"></script>
@@ -299,6 +303,7 @@ In *epistemic logic*, $\Box$ is read for some subject $S$ “it is known that”
 and $\Diamond$ is read “it is believed that”. Some modal axioms for epistemic
 logic that have been considered include:
 
+\vspace{-2\parskip}
 \renewcommand\labelitemi{$\leftarrow$}
 :::: {}
 ::: {#almar5 .arbullet .column-margin .almar}
@@ -345,7 +350,7 @@ requires that the knowledge of an agent is closed under *modus ponens*;
 and hence such knowers know all the logical consequences of their
 knowledge.
 
-Axiom [(**T**)](#eq-modal-axiom-K) states the truism that whatever is known is true. Notice
+Axiom [(**T**)](#eq-modal-axiom-T-2) states the truism that whatever is known is true. Notice
 that this axiom would be too strong for deontic logic insofar as an
 action’s being obligatory doesn’t imply that the agent actually performs
 that action.
@@ -367,15 +372,14 @@ logician A. N. Prior (1914--1969). To model temporal language, we
 introduce a pair of modal operators for the future and a pair of modal
 operators for the past.
 
-\renewcommand\labelitemi{}
-::: {.nobullet}
-- $\color{green}\Box$ It <span style="color:green;">*is always going*</span> \[i.e., in *all* futures\] *to be the case that*
-- $\color{green}\Diamond$ It <span style="color:green;">*will*</span> \[i.e., in *some* future\] be the case that
-- 
-- $\color{red}\Box$ It <span style="color:red;">*has always been*</span> \[i.e., in *all* pasts\] the case that
-- $\color{red}\Diamond$ It <span style="color:red;">*was once*</span> \[i.e., in *some* past or *“once upon a time”*\] the case that
-:::
-\renewcommand\labelitemi{\labelitemito}
+| | |
+|:-:|:--|
+| $\color{green}\Box$ | It <span style="color:green;">\color{green} *is always going*</span> \[i.e., in *all* futures\] to be the case that |
+| $\color{green}\Diamond$ | It <span style="color:green;">\color{green} *will*></span> \[i.e., in *some* future\] be the case that |
+| $\color{red}\Box$ | It <span style="color:red;">\color{red} *has always been*</span> \[i.e., in *all* pasts\] the case that |
+| $\color{red}\Diamond$ | It <span style="color:red;">\color{red} *was once*]</span> \[i.e., in *some* past or *“once upon a time”*\] the case that |
+
+: {.borderless tbl-colwidths="[12,88]"}
 
 The axioms for minimal tense logic include version of Axiom [(**K**)](#eq-modal-axiom-K) for
 the two necessity operators:
@@ -392,12 +396,12 @@ It also contains two axioms concerning the interaction of the past and
 future that has the form of the so-called Brouwersche axiom with
 alternating valences:
 \begin{align*}
+\tag*{(B${\color{green}\Box}{\color{red}\Diamond}$)}
 &\varphi\to{\color{green}\Box}{\color{red}\Diamond}\varphi
-&\text{\textit{What is, will always have been}}
-\tag*{(B${\color{green}\Box}{\color{red}\Diamond}$)}\\
+&\text{\textit{What is, will always have been}}\\
+\tag*{(B${\color{red}\Box}{\color{green}\Diamond}$)}
 &\varphi\to{\color{red}\Box}{\color{green}\Diamond}\varphi
-&\text{\textit{What is, has always been going to happen}}
-\tag*{(B${\color{red}\Box}{\color{green}\Diamond}$)}\\
+&\text{\textit{What is, has always been going to happen}}\\
 \end{align*}
 
 The Brouwersche [(**B**)](#eq-modal-axiom-B) axiom was so-named by the logician Oskar Becker
@@ -419,14 +423,14 @@ Intuitionists reject the following mathematical proof.
 
 <style>
 div .proof > ul {
-    margin-bottom: .5rem !important;
+    margin-bottom: .1rem !important;
 }
 div .proof {
-    margin-top: .5rem !important;
+    margin-top: .1rem !important;
 }
 </style>
 
-::::: {.column-margin}
+::::: {.aside}
 :::: {.callout-tip}
 ## A Classical Theorem, but in Intuitionism
 
@@ -528,7 +532,6 @@ $$ {#eq-modal-axiom-M}
 (@) Match the following symbolizations with the best corresponding
     translation below.
     
-    \hspace{1cm}
     | symbolization | translation |
     |--:|---|
     | ${\color{red}\Diamond\Box}P$ | *It was always the case that it will sometime be the case that* $P$. |

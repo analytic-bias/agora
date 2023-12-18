@@ -5,6 +5,7 @@ project:
   - cp -r _book/ ../docs/gb/
   - mv ../docs/gb/Gödelian-Explorations.pdf ../docs/gb/gb.pdf
 filters:
+  - latex-environment
   - extensions/rtex.lua
   - quarto
   - extensions/after.lua
@@ -53,6 +54,7 @@ format:
     grid: 
         margin-width: 300pt
   pdf:
+    cite-method: biblatex
     keep-tex: true
     fontfamily: libertinus # TODO: latex font
     colorlinks: true
