@@ -87,3 +87,13 @@
 }
 
 \extrafloats{100}
+
+\usepackage{ifoddpage}
+\newcommand{\oddorevenarrow}{
+  \checkoddpage
+  \ifoddpage
+    \leftarrow
+  \else
+    \rightarrow
+  \fi
+}

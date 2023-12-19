@@ -523,6 +523,7 @@ studies information flow and dynamics, game theory, and computability.
     Use familiar equivalences from propositional logic and the modal
     negation laws to show that this symbolization is equivalent to
 
+\renewcommand\labelitemi{$\oddorevenarrow$}
 :::: {.compensate-above-1 .compensate-below}
 ::: {#almar9 .arbullet .column-margin .almar}
 - *McKinsey’s Axiom*
@@ -532,6 +533,7 @@ $$
 \Box\Diamond\varphi\to\Diamond\Box\varphi\tag*{(\textbf{M})}
 $$ {#eq-modal-axiom-M}
 ::::
+\renewcommand\labelitemi{\labelitemito}
 
 (@) Match the following symbolizations with the best corresponding
     translation below.
