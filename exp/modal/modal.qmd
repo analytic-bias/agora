@@ -453,6 +453,9 @@ Intuitionists reject this classical argument by separation of cases because it d
 actually construct the numbers $x$ and $y$ such that $xy$ is irrational.
 The idea behind intuitionistic logic is that the connectives are reinterpreted as
 involving a kind of provability.
+
+In case you're curious, it is actually known that $\sqrt{2}^{\sqrt{2}}$ is irrational, due to the
+[Gelfond--Schneider theorem](https://en.wikipedia.org/wiki/Gelfond\%E2\%80\%93Schneider_theorem).
 ::::
 :::::
 

@@ -547,6 +547,7 @@ INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/tools/calc.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/marginfix/marginfix.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/marginfix/marginfix.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/marginfix/marginfix.sty
