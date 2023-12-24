@@ -149,10 +149,10 @@ argument:
 :::
 \renewcommand\labelitemi{\labelitemito}
 
-Using ‘$\Diamond$’ for ‘it is possible that’, the above argument can be
+Using ‘$\diamond$’ for ‘it is possible that’, the above argument can be
 symbolized:
 $$
-\Box(G\to\Box G).\quad\Diamond G\quad\therefore G\tag*{(2)}
+\Box(G\to\Box G).\quad\diamond G\quad\therefore G\tag*{(2)}
 $$ {#eq-modal-2}
 
 The question of whether Anselm’s argument is valid became a precise
@@ -175,7 +175,7 @@ tollendo ponens*^[*"mode that denies by affirming"*], which are themselves not p
 \nopagecolor\hspace{2cm}
 $\displaystyle
 \begin{array}{lrlr}
-1.&\text{\st{Show}}&P\land\lnot P\to Q\quad\quad&6,\,\text{CD}\\
+1.&\text{\st{\textit{Show}}}&P\land\lnot P\to Q\quad\quad&6,\,\text{CD}\\[1ex]
 2.&&\tikzmark{start1}P\land\lnot P&\text{Assume}\,(\text{CD})\\
 3.&&P&2,\,\text{S}\\
 4.&&\lnot P&2,\,\text{S}\\
@@ -193,7 +193,7 @@ $
 The following theorems are known as the *paradoxes of material
 implication*:
 
-\renewcommand\labelitemi{$\leftarrow$}
+\renewcommand\labelitemi{$\oddorevenarrow$}
 :::: {}
 ::: {#almar1 .arbullet .column-margin .almar}
 - law of denying the antecedent
@@ -268,7 +268,7 @@ negation.
 	\\
 	{\Large\substack{P\\\text{It is actually the case that }P}} \&\&\&\&\&\& {\Large\substack{\lnot P\\\text{It is actually not that case that }P}} \\
 	\\
-	\& {\Large\substack{\Diamond P\\\text{It is possible that }P}} \&\&\&\& {\Large\substack{\Diamond\lnot P\\\text{It is possible that not }P}}
+	\& {\Large\substack{\diamond P\\\text{It is possible that }P}} \&\&\&\& {\Large\substack{\diamond\lnot P\\\text{It is possible that not }P}}
 	\arrow[from=1-2, to=3-1]
 	\arrow[from=3-1, to=5-2]
 	\arrow[from=1-6, to=3-7]
@@ -291,20 +291,20 @@ permissibility, epistemic notions of knowledge and belief, as well as
 temporal operators—share these logical relations and hence can be
 represented as modal logics.
 
-In *deontic logic*, $\Box$ is read “it is morally obligatory that” and $\Diamond$ is
+In *deontic logic*, $\Box$ is read “it is morally obligatory that” and $\diamond$ is
 read “it is morally permissible that”. Kant’s maxim that “ought implies
 can”, that is, whatever is obligatory is permissible, is captured by
 modal axiom [(**D**)](#eq-modal-axiom-D):
 $$
-\Box P \to\Diamond P.\tag*{(\textbf{D})}
+\Box P \to\diamond P.\tag*{(\textbf{D})}
 $$ {#eq-modal-axiom-D}
 
 In *epistemic logic*, $\Box$ is read for some subject $S$ “it is known that”
-and $\Diamond$ is read “it is believed that”. Some modal axioms for epistemic
+and $\diamond$ is read “it is believed that”. Some modal axioms for epistemic
 logic that have been considered include:
 
 \vspace{-2\parskip}
-\renewcommand\labelitemi{$\leftarrow$}
+\renewcommand\labelitemi{$\oddorevenarrow$}
 :::: {}
 ::: {#almar5 .arbullet .column-margin .almar}
 - logical omniscience
@@ -375,9 +375,9 @@ operators for the past.
 | | |
 |:-:|:--|
 | $\color{green}\Box$ | It <span style="color:green;">\color{green} *is always going*</span> \[i.e., in *all* futures\] to be the case that |
-| $\color{green}\Diamond$ | It <span style="color:green;">\color{green} *will*></span> \[i.e., in *some* future\] be the case that |
+| $\color{green}\diamond$ | It <span style="color:green;">\color{green} *will*></span> \[i.e., in *some* future\] be the case that |
 | $\color{red}\Box$ | It <span style="color:red;">\color{red} *has always been*</span> \[i.e., in *all* pasts\] the case that |
-| $\color{red}\Diamond$ | It <span style="color:red;">\color{red} *was once*]</span> \[i.e., in *some* past or *“once upon a time”*\] the case that |
+| $\color{red}\diamond$ | It <span style="color:red;">\color{red} *was once*]</span> \[i.e., in *some* past or *“once upon a time”*\] the case that |
 
 : {.borderless tbl-colwidths="[12,88]"}
 
@@ -396,22 +396,22 @@ It also contains two axioms concerning the interaction of the past and
 future that has the form of the so-called Brouwersche axiom with
 alternating valences:
 \begin{align*}
-\tag*{(B${\color{green}\Box}{\color{red}\Diamond}$)}
-&\varphi\to{\color{green}\Box}{\color{red}\Diamond}\varphi
+\tag*{(B${\color{green}\Box}{\color{red}\diamond}$)}
+&\varphi\to{\color{green}\Box}{\color{red}\diamond}\varphi
 &\text{\textit{What is, will always have been}}\\
-\tag*{(B${\color{red}\Box}{\color{green}\Diamond}$)}
-&\varphi\to{\color{red}\Box}{\color{green}\Diamond}\varphi
+\tag*{(B${\color{red}\Box}{\color{green}\diamond}$)}
+&\varphi\to{\color{red}\Box}{\color{green}\diamond}\varphi
 &\text{\textit{What is, has always been going to happen}}\\
 \end{align*}
 
 The Brouwersche [(**B**)](#eq-modal-axiom-B) axiom was so-named by the logician Oskar Becker
 [@Becker1930Logik]
 after the charismatic Dutch mathematician L. E. J. Brouwer (1881--1966), who championed a philosophy of mathematics known as
-*intuitionism*. It happens that when the $\Diamond$ can be paraphrased as $\Diamond\lnot\Diamond$,
+*intuitionism*. It happens that when the $\diamond$ can be paraphrased as $\diamond\lnot\diamond$,
 the resulting axiom has the form of the acceptable form of double
 negation in intuitionistic logic:
 $$
-\varphi\to\lnot\Diamond\lnot\Diamond\varphi\tag*{(\textbf{B})}
+\varphi\to\lnot\diamond\lnot\diamond\varphi\tag*{(\textbf{B})}
 $$ {#eq-modal-axiom-B}
 
 <style>
@@ -519,7 +519,7 @@ studies information flow and dynamics, game theory, and computability.
 (@) Johan van Benthem [@VanBenthem2010, p. 12] was asked to symbolize the
     philosophical claim that “nothing is absolutely relative”. He came up
     with the following:
-    $$\lnot\Box(\Diamond\varphi\land\Diamond\lnot\varphi).$$
+    $$\lnot\Box(\diamond\varphi\land\diamond\lnot\varphi).$$
     Use familiar equivalences from propositional logic and the modal
     negation laws to show that this symbolization is equivalent to
 
@@ -530,7 +530,7 @@ studies information flow and dynamics, game theory, and computability.
 :::
 $$
 \class{alref}{\cssId{alref9}{}}
-\Box\Diamond\varphi\to\Diamond\Box\varphi\tag*{(\textbf{M})}
+\Box\diamond\varphi\to\diamond\Box\varphi\tag*{(\textbf{M})}
 $$ {#eq-modal-axiom-M}
 ::::
 \renewcommand\labelitemi{\labelitemito}
@@ -540,10 +540,10 @@ $$ {#eq-modal-axiom-M}
     
     | symbolization | translation |
     |--:|---|
-    | ${\color{red}\Diamond\Box}P$ | *It was always the case that it will sometime be the case that* $P$. |
-    | ${\color{green}\Diamond}P\to{\color{green}\Diamond}P$ | *It will sometime be the case that it was once the case that* $P$. |
-    | ${\color{red}\Box}{\color{green}\Diamond}P$ | *Whatever will always be, will be.* |
-    | ${\color{green}\Diamond}{\color{red}\Diamond}P$ | *Once upon a time, it was always the case that* $P$. |
+    | ${\color{red}\diamond\Box}P$ | *It was always the case that it will sometime be the case that* $P$. |
+    | ${\color{green}\diamond}P\to{\color{green}\diamond}P$ | *It will sometime be the case that it was once the case that* $P$. |
+    | ${\color{red}\Box}{\color{green}\diamond}P$ | *Whatever will always be, will be.* |
+    | ${\color{green}\diamond}{\color{red}\diamond}P$ | *Once upon a time, it was always the case that* $P$. |
     
     : {tbl-colwidths="[25,75]"}
     

@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1703025616 "/home/hypatia/Workspace/Source/Formal/agora/exp/Gödelian-Explorations.tex" "Gödelian-Explorations.pdf" "Gödelian-Explorations" 1703025617 2
-  "/home/hypatia/Workspace/Source/Formal/agora/exp/Gödelian-Explorations.tex" 1703025598 36246 95e9f2f09222bbe703485360be218c58 ""
+["pdflatex"] 1703284206 "/home/hypatia/Workspace/Source/Formal/agora/exp/Gödelian-Explorations.tex" "Gödelian-Explorations.pdf" "Gödelian-Explorations" 1703284208 2
+  "/home/hypatia/Workspace/Source/Formal/agora/exp/Gödelian-Explorations.tex" 1703284189 36362 c64da4f8e13db01ba7012049886a63d4 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/ecrm1095.tfm" 1136768653 3584 929cdff2b7a8c11bd4d49fd68cb0ae70 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr10.tfm" 1136768653 1296 45809c5a464d5f32c8f98ba97c1bb47f ""
@@ -76,8 +76,8 @@
   "/usr/local/texlive/2023/texmf-dist/web2c/texmf.cnf" 1681165822 40967 d940221f8762fd5848760382d97d1226 ""
   "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1683770458 7886712 1376043c42c08c90d28e51b5ea037c0f ""
   "/usr/local/texlive/2023/texmf.cnf" 1683770392 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
-  "Gödelian-Explorations.aux" 1703025616 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
-  "Gödelian-Explorations.tex" 1703025598 36246 95e9f2f09222bbe703485360be218c58 ""
+  "Gödelian-Explorations.aux" 1703284206 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "Gödelian-Explorations.tex" 1703284189 36362 c64da4f8e13db01ba7012049886a63d4 ""
   (generated)
   "Gödelian-Explorations.aux"
   "Gödelian-Explorations.log"

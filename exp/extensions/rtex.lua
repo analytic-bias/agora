@@ -36,6 +36,8 @@ local tex_template = [[
 \usepackage{amssymb}
 \usepackage{amsfonts}
 \usepackage[]{libertinus}
+\setmathfont{TeX Gyre Termes Math}[range=\smwhtdiamond]
+\setmathfont{LibertinusMath-Regular.otf}[range=]
 \usepackage{mathtools}
 \usepackage{unicode-math}
 \usepackage{pgfplots}
