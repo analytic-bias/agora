@@ -48,11 +48,11 @@ truth-values.
 Using the ‘$\Box$’ for ‘it is necessary that’, the principle that all
 necessary truths are in fact 
 $$
-\Box P\to P,\tag*{(\textbf{T})}
+\Box \mathrm{P}\to \mathrm{P},\tag*{(\textbf{T})}
 $$ {#eq-modal-axiom-T}
 but adding its converse that all truths are necessary truths:
 $$
-P \to \Box P \tag*{(\textbf{V})}
+\mathrm{P} \to \Box \mathrm{P} \tag*{(\textbf{V})}
 $$ {#eq-modal-axiom-V}
 collapses the notions of truth and necessary truth.
 
@@ -126,10 +126,10 @@ with [(1*b*)](#eq-modal-1b) the *necessity of the consequent*. Using the ‘$\Bo
 abbreviate ‘it is necessary that’, the difference between these two can
 be made more perspicuous with symbols:
 $$
-\Box (P \to Q) \tag*{(1\textit{a})}
+\Box (\mathrm{P} \to \mathrm{Q}) \tag*{(1\textit{a})}
 $$ {#eq-modal-symbol-1a}
 $$
-(P \to \Box Q) \tag*{(1\textit{b})}
+(\mathrm{P} \to \Box \mathrm{Q}) \tag*{(1\textit{b})}
 $$ {#eq-modal-symbol-1b}
 Solving the famous theological problem of reconciling divine foreknowledge
 with human freedom may turn on exposing ambiguities of this sort.
@@ -149,10 +149,10 @@ argument:
 :::
 \renewcommand\labelitemi{\labelitemito}
 
-Using ‘$\diamond$’ for ‘it is possible that’, the above argument can be
+Using ‘${\Large\diamond}$’ for ‘it is possible that’, the above argument can be
 symbolized:
 $$
-\Box(G\to\Box G).\quad\diamond G\quad\therefore G\tag*{(2)}
+\Box(G\to\Box G).\quad{\Large\diamond} G\quad\therefore G\tag*{(2)}
 $$ {#eq-modal-2}
 
 The question of whether Anselm’s argument is valid became a precise
@@ -166,7 +166,7 @@ investigated extensional logic.
 
 One of the most puzzling validities, at least to the beginning logical
 students is known as *Lewis’s Dilemma*:
-$$P\land\lnot P\to Q,$$
+$$\mathrm{P}\land\lnot \mathrm{P}\to \mathrm{Q},$$
 which states *“a contradiction implies anything”*^[Or *"ex falso quodlibet"*, in Latin.]. 
 This implication follows from the inference rules of simplification, addition, and *modus
 tollendo ponens*^[*"mode that denies by affirming"*], which are themselves not particularly puzzling.
@@ -175,12 +175,12 @@ tollendo ponens*^[*"mode that denies by affirming"*], which are themselves not p
 \nopagecolor\hspace{2cm}
 $\displaystyle
 \begin{array}{lrlr}
-1.&\text{\st{\textit{Show}}}&P\land\lnot P\to Q\quad\quad&6,\,\text{CD}\\[1ex]
-2.&&\tikzmark{start1}P\land\lnot P&\text{Assume}\,(\text{CD})\\
-3.&&P&2,\,\text{S}\\
-4.&&\lnot P&2,\,\text{S}\\
-5.&&P\lor Q\quad&3,\,\text{ADD}\\
-6.&&Q&\tikzmark{end1}5,\,4\,\text{MTP}
+1.&\text{\st{\textit{Show}}}&\mathrm{P}\land\lnot\mathrm{P}\to\mathrm{Q}\quad\quad&6,\,\text{CD}\\[1ex]
+2.&&\tikzmark{start1}\mathrm{P}\land\lnot\mathrm{P}&\text{Assume}\,(\text{CD})\\
+3.&&\mathrm{P}&2,\,\text{S}\\
+4.&&\lnot\mathrm{P}&2,\,\text{S}\\
+5.&&\mathrm{P}\lor\mathrm{Q}\quad&3,\,\text{ADD}\\
+6.&&\mathrm{Q}&\tikzmark{end1}5,\,4\,\text{MTP}
 \end{array}
 $
 \begin{tikzpicture}[remember picture,overlay]
@@ -199,7 +199,7 @@ implication*:
 - law of denying the antecedent
 :::
 $$
-\class{alref}{\cssId{alref1}{}}\lnot P\to(P\to Q)\tag*{(T18)}
+\class{alref}{\cssId{alref1}{}}\lnot \mathrm{P}\to(\mathrm{P}\to \mathrm{Q})\tag*{(T18)}
 $$ {#eq-modal-t18}
 ::::
 \vspace{-2\parskip}
@@ -209,7 +209,7 @@ $$ {#eq-modal-t18}
 - law of affirming the consequent
 :::
 $$
-\class{alref}{\cssId{alref2}{}}Q\to(P\to Q)\tag*{(T2)}
+\class{alref}{\cssId{alref2}{}}\mathrm{Q}\to(\mathrm{P}\to \mathrm{Q})\tag*{(T2)}
 $$ {#eq-modal-t2}
 ::::
 \vspace{-2\parskip}
@@ -219,7 +219,7 @@ $$ {#eq-modal-t2}
 - conditional excluded middle
 :::
 $$
-\class{alref}{\cssId{alref3}{}}(P\to Q)\lor(Q\to\lnot Q)\tag*{(T58)}
+\class{alref}{\cssId{alref3}{}}(\mathrm{P}\to \mathrm{Q})\lor(\mathrm{Q}\to\lnot \mathrm{Q})\tag*{(T58)}
 $$ {#eq-modal-t58}
 ::::
 \vspace{-2\parskip}
@@ -229,21 +229,21 @@ $$ {#eq-modal-t58}
 - Consequentia Mirabilis, "admirable consequence" [Cantor's $\Delta$?]
 :::
 $$
-\class{alref}{\cssId{alref4}{}}(\lnot P\to P)\to P\tag*{(T114)}
+\class{alref}{\cssId{alref4}{}}(\lnot \mathrm{P}\to \mathrm{P})\to \mathrm{P}\tag*{(T114)}
 $$ {#eq-modal-t114}
 ::::
 \vspace{-1\parskip}
 
 C. I. Lewis investigated modal logic in order to find a stricter form of
 the conditional which would not result in such paradoxes. Lewis defined
-*strict implication* $P\Rightarrow Q$ (read “$P$ *strictly implies* $Q$”) by combining
+*strict implication* $\mathrm{P}\Rightarrow \mathrm{Q}$ (read “$\mathrm{P}$ *strictly implies* $\mathrm{Q}$”) by combining
 modality with the truth-functional conditional:
 $$
-P\Rightarrow Q\quad:=\quad\Box(P\land\lnot Q),
+\mathrm{P}\Rightarrow \mathrm{Q}\quad:=\quad\Box(\mathrm{P}\land\lnot \mathrm{Q}),
 $$
 or alternatively,
 $$
-P\Rightarrow Q\quad:=\quad\Box(P\to Q).
+\mathrm{P}\Rightarrow \mathrm{Q}\quad:=\quad\Box(\mathrm{P}\to \mathrm{Q}).
 $$
 
 The notion of strict implication was characterized by such axioms as:
@@ -262,13 +262,13 @@ negation.
 
 ::: {#fig-modal-aristotelian-diamond-1 .fullwidth .column-page-right}
 \begin{dummyenv}
-% https://q.uiver.app/#q=WzAsNixbMSwwLCJcXExhcmdlXFxzdWJzdGFja3tcXEJveCBQXFxcXFxcdGV4dHtJdCBpcyBuZWNlc3NhcnkgdGhhdCB9UH0iXSxbNSwwLCJcXExhcmdlXFxzdWJzdGFja3tcXEJveFxcbG5vdCBQXFxcXFxcdGV4dHtJdCBpcyBpbXBvc3NpYmxlIHRoYXQgfVB9Il0sWzYsMiwiXFxMYXJnZVxcc3Vic3RhY2t7XFxsbm90IFBcXFxcXFx0ZXh0e0l0IGlzIGFjdHVhbGx5IG5vdCB0aGF0IGNhc2UgdGhhdCB9UH0iXSxbNSw0LCJcXExhcmdlXFxzdWJzdGFja3tcXERpYW1vbmRcXGxub3QgUFxcXFxcXHRleHR7SXQgaXMgcG9zc2libGUgdGhhdCBub3QgfVB9Il0sWzEsNCwiXFxMYXJnZVxcc3Vic3RhY2t7XFxEaWFtb25kIFBcXFxcXFx0ZXh0e0l0IGlzIHBvc3NpYmxlIHRoYXQgfVB9Il0sWzAsMiwiXFxMYXJnZVxcc3Vic3RhY2t7UFxcXFxcXHRleHR7SXQgaXMgYWN0dWFsbHkgdGhlIGNhc2UgdGhhdCB9UH0iXSxbMCw1XSxbNSw0XSxbMSwyXSxbMiwzXSxbMCw0LCJcXHRleHR7U1VCQUxURVJOfSIsMV0sWzEsMywiXFx0ZXh0e1NVQkFMVEVSTn0iLDFdLFswLDEsIlxcdGV4dHtDT05UUkFSSUVTfSIsMSx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNCwzLCJcXHRleHR7U1VCQ09OVFJBUklFfSIsMSx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMSw0LCJcXHBoYW50b217TU1NfSIsMSx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMCwzLCJcXHRleHR7Q09OVFJBRElDVE9SSUVTfSIsMSx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XV0=
+% https://q.uiver.app/#q=WzAsNixbMSwwLCJcXExhcmdlXFxzdWJzdGFja3t7XFxCb3h9XFxtYXRocm17UH1cXFxcXFx0ZXh0e0l0IGlzIG5lY2Vzc2FyeSB0aGF0IH1cXG1hdGhybXtQfX0iXSxbNSwwLCJcXExhcmdlXFxzdWJzdGFja3tcXEJveFxcbG5vdFxcbWF0aHJte1B9XFxcXFxcdGV4dHtJdCBpcyBpbXBvc3NpYmxlIHRoYXQgfVxcbWF0aHJte1B9fSJdLFs2LDIsIlxcTGFyZ2VcXHN1YnN0YWNre1xcbG5vdFxcbWF0aHJte1B9XFxcXFxcdGV4dHtJdCBpcyBhY3R1YWxseSBub3QgdGhhdCBjYXNlIHRoYXQgfVxcbWF0aHJte1B9fSJdLFs1LDQsIlxcTGFyZ2VcXHN1YnN0YWNre3tcXExhcmdlXFxkaWFtb25kfVxcbG5vdFxcbWF0aHJte1B9XFxcXFxcdGV4dHtJdCBpcyBwb3NzaWJsZSB0aGF0IG5vdCB9XFxtYXRocm17UH19Il0sWzEsNCwiXFxMYXJnZVxcc3Vic3RhY2t7e1xcTGFyZ2VcXGRpYW1vbmR9XFxtYXRocm17UH1cXFxcXFx0ZXh0e0l0IGlzIHBvc3NpYmxlIHRoYXQgfVB9Il0sWzAsMiwiXFxMYXJnZVxcc3Vic3RhY2t7XFxtYXRocm17UH1cXFxcXFx0ZXh0e0l0IGlzIGFjdHVhbGx5IHRoZSBjYXNlIHRoYXQgfVxcbWF0aHJte1B9fSJdLFswLDVdLFs1LDRdLFsxLDJdLFsyLDNdLFswLDQsIlxcdGV4dHtTVUJBTFRFUk59IiwxXSxbMSwzLCJcXHRleHR7U1VCQUxURVJOfSIsMV0sWzAsMSwiXFx0ZXh0e0NPTlRSQVJJRVN9IiwxLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs0LDMsIlxcdGV4dHtTVUJDT05UUkFSSUV9IiwxLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxLDQsIlxccGhhbnRvbXtNTU19IiwxLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFswLDMsIlxcdGV4dHtDT05UUkFESUNUT1JJRVN9IiwxLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ==
 \begin{tikzcd}[ampersand replacement=\&]
-	\& {\Large\substack{\Box P\\\text{It is necessary that }P}} \&\&\&\& {\Large\substack{\Box\lnot P\\\text{It is impossible that }P}} \\
+	\& {\Large\substack{{\Box}\mathrm{P}\\\text{It is necessary that }\mathrm{P}}} \&\&\&\& {\Large\substack{\Box\lnot\mathrm{P}\\\text{It is impossible that }\mathrm{P}}} \\
 	\\
-	{\Large\substack{P\\\text{It is actually the case that }P}} \&\&\&\&\&\& {\Large\substack{\lnot P\\\text{It is actually not that case that }P}} \\
+	{\Large\substack{\mathrm{P}\\\text{It is actually the case that }\mathrm{P}}} \&\&\&\&\&\& {\Large\substack{\lnot\mathrm{P}\\\text{It is actually not that case that }\mathrm{P}}} \\
 	\\
-	\& {\Large\substack{\diamond P\\\text{It is possible that }P}} \&\&\&\& {\Large\substack{\diamond\lnot P\\\text{It is possible that not }P}}
+	\& {\Large\substack{{\Large\diamond}\mathrm{P}\\\text{It is possible that }P}} \&\&\&\& {\Large\substack{{\Large\diamond}\lnot\mathrm{P}\\\text{It is possible that not }\mathrm{P}}}
 	\arrow[from=1-2, to=3-1]
 	\arrow[from=3-1, to=5-2]
 	\arrow[from=1-6, to=3-7]
@@ -291,16 +291,16 @@ permissibility, epistemic notions of knowledge and belief, as well as
 temporal operators—share these logical relations and hence can be
 represented as modal logics.
 
-In *deontic logic*, $\Box$ is read “it is morally obligatory that” and $\diamond$ is
+In *deontic logic*, $\Box$ is read “it is morally obligatory that” and ${\Large\diamond}$ is
 read “it is morally permissible that”. Kant’s maxim that “ought implies
 can”, that is, whatever is obligatory is permissible, is captured by
 modal axiom [(**D**)](#eq-modal-axiom-D):
 $$
-\Box P \to\diamond P.\tag*{(\textbf{D})}
+\Box \mathrm{P} \to{\Large\diamond} \mathrm{P}.\tag*{(\textbf{D})}
 $$ {#eq-modal-axiom-D}
 
 In *epistemic logic*, $\Box$ is read for some subject $S$ “it is known that”
-and $\diamond$ is read “it is believed that”. Some modal axioms for epistemic
+and ${\Large\diamond}$ is read “it is believed that”. Some modal axioms for epistemic
 logic that have been considered include:
 
 \vspace{-2\parskip}
@@ -310,7 +310,7 @@ logic that have been considered include:
 - logical omniscience
 :::
 $$
-\class{alref}{\cssId{alref5}{}}\Box(P\to Q)\to(\Box P\to\Box Q)\tag*{(\textbf{K})}
+\class{alref}{\cssId{alref5}{}}\Box(\mathrm{P}\to \mathrm{Q})\to(\Box \mathrm{P}\to\Box \mathrm{Q})\tag*{(\textbf{K})}
 $$ {#eq-modal-axiom-K}
 ::::
 \vspace{-2\parskip}
@@ -320,7 +320,7 @@ $$ {#eq-modal-axiom-K}
 - law of affirming the consequent
 :::
 $$
-\class{alref}{\cssId{alref6}{}}\Box P\to P\tag*{(\textbf{T})}
+\class{alref}{\cssId{alref6}{}}\Box \mathrm{P}\to \mathrm{P}\tag*{(\textbf{T})}
 $$ {#eq-modal-axiom-T-2}
 ::::
 \vspace{-2\parskip}
@@ -330,7 +330,7 @@ $$ {#eq-modal-axiom-T-2}
 - law of affirming the consequent
 :::
 $$
-\class{alref}{\cssId{alref7}{}}\Box P\to\Box\Box P\tag*{(\textbf{4})}
+\class{alref}{\cssId{alref7}{}}\Box \mathrm{P}\to\Box\Box \mathrm{P}\tag*{(\textbf{4})}
 $$ {#eq-modal-axiom-4}
 ::::
 \vspace{-2\parskip}
@@ -340,7 +340,7 @@ $$ {#eq-modal-axiom-4}
 - law of affirming the consequent
 :::
 $$
-\class{alref}{\cssId{alref8}{}}\lnot\Box P\to\Box\lnot\Box P\tag*{(\textbf{E})}
+\class{alref}{\cssId{alref8}{}}\lnot\Box \mathrm{P}\to\Box\lnot\Box \mathrm{P}\tag*{(\textbf{E})}
 $$ {#eq-modal-axiom-E}
 ::::
 \vspace{-1\parskip}
@@ -356,10 +356,10 @@ action’s being obligatory doesn’t imply that the agent actually performs
 that action.
 
 Axiom [(**4**)](#eq-modal-axiom-4) expresses a high degree of *positive introspective
-knowledge*: if someone knows P, then she knows that she knows that $P$.
+knowledge*: if someone knows P, then she knows that she knows that $\mathrm{P}$.
 Axiom [(**E**)](#eq-modal-axiom-E) on the other hand, expresses a high degree of *negative*
-introspective knowledge: if someone doesn’t know that $P$, then he knows
-he doesn’t know $P$. This axiom is contrary to the experience of Socrates:
+introspective knowledge: if someone doesn’t know that $\mathrm{P}$, then he knows
+he doesn’t know $\mathrm{P}$. This axiom is contrary to the experience of Socrates:
 as the gadfly of Athens, Socrates found through his questioning that
 many of his fellow Athenians did not know what they were talking about
 but also didn’t know that they didn’t know. The gadfly of Athens
@@ -375,9 +375,9 @@ operators for the past.
 | | |
 |:-:|:--|
 | $\color{green}\Box$ | It <span style="color:green;">\color{green} *is always going*</span> \[i.e., in *all* futures\] to be the case that |
-| $\color{green}\diamond$ | It <span style="color:green;">\color{green} *will*></span> \[i.e., in *some* future\] be the case that |
+| $\color{green}{\Large\diamond}$ | It <span style="color:green;">\color{green} *will*></span> \[i.e., in *some* future\] be the case that |
 | $\color{red}\Box$ | It <span style="color:red;">\color{red} *has always been*</span> \[i.e., in *all* pasts\] the case that |
-| $\color{red}\diamond$ | It <span style="color:red;">\color{red} *was once*]</span> \[i.e., in *some* past or *“once upon a time”*\] the case that |
+| $\color{red}{\Large\diamond}$ | It <span style="color:red;">\color{red} *was once*]</span> \[i.e., in *some* past or *“once upon a time”*\] the case that |
 
 : {.borderless tbl-colwidths="[12,88]"}
 
@@ -396,22 +396,22 @@ It also contains two axioms concerning the interaction of the past and
 future that has the form of the so-called Brouwersche axiom with
 alternating valences:
 \begin{align*}
-\tag*{(B${\color{green}\Box}{\color{red}\diamond}$)}
-&\varphi\to{\color{green}\Box}{\color{red}\diamond}\varphi
+\tag*{(B${\color{green}\Box}{\color{red}{\Large\diamond}}$)}
+&\varphi\to{\color{green}\Box}{\color{red}{\Large\diamond}}\varphi
 &\text{\textit{What is, will always have been}}\\
-\tag*{(B${\color{red}\Box}{\color{green}\diamond}$)}
-&\varphi\to{\color{red}\Box}{\color{green}\diamond}\varphi
+\tag*{(B${\color{red}\Box}{\color{green}{\Large\diamond}}$)}
+&\varphi\to{\color{red}\Box}{\color{green}{\Large\diamond}}\varphi
 &\text{\textit{What is, has always been going to happen}}\\
 \end{align*}
 
 The Brouwersche [(**B**)](#eq-modal-axiom-B) axiom was so-named by the logician Oskar Becker
 [@Becker1930Logik]
 after the charismatic Dutch mathematician L. E. J. Brouwer (1881--1966), who championed a philosophy of mathematics known as
-*intuitionism*. It happens that when the $\diamond$ can be paraphrased as $\diamond\lnot\diamond$,
+*intuitionism*. It happens that when the ${\Large\diamond}$ can be paraphrased as ${\Large\diamond}\lnot{\Large\diamond}$,
 the resulting axiom has the form of the acceptable form of double
 negation in intuitionistic logic:
 $$
-\varphi\to\lnot\diamond\lnot\diamond\varphi\tag*{(\textbf{B})}
+\varphi\to\lnot{\Large\diamond}\lnot{\Large\diamond}\varphi\tag*{(\textbf{B})}
 $$ {#eq-modal-axiom-B}
 
 <style>
@@ -475,7 +475,7 @@ $$
 \Box(\Box\varphi\to\varphi)\to\Box\varphi\tag*{(\textbf{W})}
 $$ {#eq-modal-axiom-W}
 
-\marginpar{\vspace{10cm}}
+\marginpar{\vspace{15cm}}
 *Modal Provability Logics* proliferated from the 1950s--1970s, but the
 genesis of the idea goes back to a short note of @Godel1933 in
 which he noted that intuitionistic truth is defined in terms of proof since
@@ -519,7 +519,7 @@ studies information flow and dynamics, game theory, and computability.
 (@) Johan van Benthem [@VanBenthem2010, p. 12] was asked to symbolize the
     philosophical claim that “nothing is absolutely relative”. He came up
     with the following:
-    $$\lnot\Box(\diamond\varphi\land\diamond\lnot\varphi).$$
+    $$\lnot\Box({\Large\diamond}\varphi\land{\Large\diamond}\lnot\varphi).$$
     Use familiar equivalences from propositional logic and the modal
     negation laws to show that this symbolization is equivalent to
 
@@ -530,7 +530,7 @@ studies information flow and dynamics, game theory, and computability.
 :::
 $$
 \class{alref}{\cssId{alref9}{}}
-\Box\diamond\varphi\to\diamond\Box\varphi\tag*{(\textbf{M})}
+\Box{\Large\diamond}\varphi\to{\Large\diamond}\Box\varphi\tag*{(\textbf{M})}
 $$ {#eq-modal-axiom-M}
 ::::
 \renewcommand\labelitemi{\labelitemito}
@@ -540,10 +540,10 @@ $$ {#eq-modal-axiom-M}
     
     | symbolization | translation |
     |--:|---|
-    | ${\color{red}\diamond\Box}P$ | *It was always the case that it will sometime be the case that* $P$. |
-    | ${\color{green}\diamond}P\to{\color{green}\diamond}P$ | *It will sometime be the case that it was once the case that* $P$. |
-    | ${\color{red}\Box}{\color{green}\diamond}P$ | *Whatever will always be, will be.* |
-    | ${\color{green}\diamond}{\color{red}\diamond}P$ | *Once upon a time, it was always the case that* $P$. |
+    | ${\color{red}{\Large\diamond}\Box}\mathrm{P}$ | *It was always the case that it will sometime be the case that* $\mathrm{P}$. |
+    | ${\color{green}{\Large\diamond}}\mathrm{P}\to{\color{green}{\Large\diamond}}\mathrm{P}$ | *It will sometime be the case that it was once the case that* $\mathrm{P}$. |
+    | ${\color{red}\Box}{\color{green}{\Large\diamond}}\mathrm{P}$ | *Whatever will always be, will be.* |
+    | ${\color{green}{\Large\diamond}}{\color{red}{\Large\diamond}}\mathrm{P}$ | *Once upon a time, it was always the case that* $\mathrm{P}$. |
     
     : {tbl-colwidths="[25,75]"}
     
