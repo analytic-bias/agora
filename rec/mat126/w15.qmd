@@ -188,14 +188,14 @@ L&=\int_a^b \sqrt{r^2+\left(\frac{d r}{d \theta}\right)^2}\,\mathrm{d}\theta.
 \end{aligned}
 $$
 
-## HW 13.5 - SCalcCC5 A.H.1.016. [POSTPONED]
+## HW 13.5 - SCalcCC5 A.H.1.016. [FIXME]
 Find a Cartesian equation for the curve and identify it.
 $$
 r=4\tan\theta\sec\theta
 $$
 
 ::: {.aside .wabullet}
-- Please be warned that this question and its WebAssign solution are quite ambiguous and non-rigorous. **Prof. Rico, I recommend adding the an restriction of $-\frac{\pi}{2}<\theta<\frac{\pi}{2}$ or striking this question entirely.**
+- Please be advised of an ambiguity in this problem.
 :::
 
 ```{python}
@@ -236,6 +236,7 @@ plt.grid(True)
 plt.show()
 ```
 
+<!-- 
 ::: {.callout-caution}
 ## Remarks
 

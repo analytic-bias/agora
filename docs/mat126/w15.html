@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.526">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -23,7 +23,7 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -42,12 +42,17 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
+  "location": "sidebar",
   "copy-button": true,
   "collapse-after": 3,
-  "panel-placement": "end",
+  "panel-placement": "start",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -56,13 +61,14 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
 }</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 <script type="text/javascript">
 window.PlotlyConfig = {MathJaxConfig: 'local'};
@@ -94,12 +100,12 @@ require(['plotly'], function(Plotly) {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./w15.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week 15</span></a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./w15.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week 15</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
@@ -109,17 +115,15 @@ require(['plotly'], function(Plotly) {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">MAT 126 Online Notes</a> 
+        <div class="sidebar-tools-main">
+    <div id="quarto-search" class="quarto-navigation-tool px-1" title="Search"></div>
+</div>
     </div>
       </div>
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-        </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
@@ -161,7 +165,7 @@ require(['plotly'], function(Plotly) {
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -184,10 +188,7 @@ require(['plotly'], function(Plotly) {
   <li><a href="#change-of-coordinate-system" id="toc-change-of-coordinate-system" class="nav-link" data-scroll-target="#change-of-coordinate-system"><span class="header-section-number">2.2.1</span> Change of Coordinate System</a></li>
   <li><a href="#arc-length-and-area-inside-curve" id="toc-arc-length-and-area-inside-curve" class="nav-link" data-scroll-target="#arc-length-and-area-inside-curve"><span class="header-section-number">2.2.2</span> Arc Length and Area inside Curve</a></li>
   </ul></li>
-  <li><a href="#hw-13.5---scalccc5-a.h.1.016.-postponed" id="toc-hw-13.5---scalccc5-a.h.1.016.-postponed" class="nav-link" data-scroll-target="#hw-13.5---scalccc5-a.h.1.016.-postponed"><span class="header-section-number">2.3</span> HW 13.5 - SCalcCC5 A.H.1.016. [POSTPONED]</a>
-  <ul>
-  <li><a href="#solution-temporary-not-well-thought-nor-well-written" id="toc-solution-temporary-not-well-thought-nor-well-written" class="nav-link" data-scroll-target="#solution-temporary-not-well-thought-nor-well-written"><span class="header-section-number">2.3.1</span> Solution [temporary, not well-thought nor well-written]</a></li>
-  </ul></li>
+  <li><a href="#hw-13.5---scalccc5-a.h.1.016.-fixme" id="toc-hw-13.5---scalccc5-a.h.1.016.-fixme" class="nav-link" data-scroll-target="#hw-13.5---scalccc5-a.h.1.016.-fixme"><span class="header-section-number">2.3</span> HW 13.5 - SCalcCC5 A.H.1.016. [FIXME]</a></li>
   <li><a href="#hw-13.6---scalccc5-a.h.1.019." id="toc-hw-13.6---scalccc5-a.h.1.019." class="nav-link" data-scroll-target="#hw-13.6---scalccc5-a.h.1.019."><span class="header-section-number">2.4</span> HW 13.6 - SCalcCC5 A.H.1.019.</a></li>
   <li><a href="#hw-13.12---scalccc5-a.h.2.022." id="toc-hw-13.12---scalccc5-a.h.2.022." class="nav-link" data-scroll-target="#hw-13.12---scalccc5-a.h.2.022."><span class="header-section-number">2.5</span> HW 13.12 - SCalcCC5 A.H.2.022.</a></li>
   </ul>
@@ -211,7 +212,9 @@ require(['plotly'], function(Plotly) {
   </div>
   
 
+
 </header>
+
 
 
 <div class="no-row-height column-margin column-container"><div class="">
@@ -238,20 +241,20 @@ x = t^2,\quad y = t^5
 <ul>
 <li>To help with sketching, you might want to observe that the tangent line at a point on the parametric curve where <span class="math inline">\(t=t_0\)</span> is determined by its <a href="https://en.wikipedia.org/wiki/Tangent_vector">tangent vector</a>, i.e.&nbsp;a line passing through the points <span class="math inline">\(\big(x(t_0),y(t_0)\big)\)</span> and <span class="math inline">\(\big(x(t_0)+x'(t_0),y(t_0)+y'(t_0)\big)\)</span>.</li>
 </ul>
-</div></div><section id="solution" class="level4 page-columns page-full" data-number="2.1.1.1">
+</div></div><section id="solution" class="level4" data-number="2.1.1.1">
 <h4 data-number="2.1.1.1" class="anchored" data-anchor-id="solution"><span class="header-section-number">2.1.1.1</span> Solution</h4>
 <p>The left plot is animated.</p>
-<div id="fig-hw12-4" class="fullwidth column-page-right quarto-layout-panel">
-<figure class="figure">
+<div id="fig-hw12-4" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-hw12-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="quarto-layout-row quarto-layout-valign-top">
-<div class="cell quarto-layout-cell" data-execution_count="1" style="flex-basis: 50.0%;justify-content: center;">
+<div id="b93089b1" class="cell quarto-layout-cell" data-execution_count="1" style="flex-basis: 50.0%;justify-content: center;text-align: center;">
 <div class="cell-output cell-output-display">
-
-<div>                            <div id="9207ccd6-aa0f-49cc-bab0-c99f22a648a1" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("9207ccd6-aa0f-49cc-bab0-c99f22a648a1")) {                    Plotly.newPlot(                        "9207ccd6-aa0f-49cc-bab0-c99f22a648a1",                        [{"line":{"color":"blue","width":2},"mode":"lines","x":[1.0,0.9600040812162024,0.9208244056728905,0.8824609733700643,0.8449137843077238,0.8081828384858688,0.7722681359044995,0.7371696765636159,0.7028874604632179,0.6694214876033057,0.6367717579838792,0.6049382716049383,0.573921028466483,0.5437200285685134,0.5143352719110295,0.4857667584940313,0.4580144883175185,0.4310784613814917,0.4049586776859504,0.3796551372308948,0.3551678400163248,0.33149678604224053,0.308641975308642,0.2866034078155289,0.26538108356290174,0.2449750025507601,0.2253851647791041,0.2066115702479338,0.18865421895724918,0.1715131109070503,0.155188246097337,0.13967962452810934,0.12498724619936737,0.11111111111111106,0.09805121926334041,0.08580757065605545,0.07438016528925619,0.06376900316294254,0.05397408427711455,0.04499540863177223,0.03683297622691559,0.0294867870625446,0.022956841138659312,0.017243138455259654,0.012345679012345664,0.00826446280991734,0.004999489847974682,0.0025507601265176904,0.0009182736455463712,0.00010203040506070717,0.0001020304050607094,0.0009182736455463846,0.0025507601265177125,0.0049994898479746985,0.008264462809917382,0.01234567901234569,0.017243138455259713,0.022956841138659347,0.029486787062544637,0.03683297622691567,0.04499540863177228,0.053974084277114656,0.0637690031629426,0.07438016528925631,0.08580757065605557,0.09805121926334048,0.11111111111111122,0.12498724619936745,0.1396796245281095,0.15518824609733708,0.1715131109070505,0.18865421895724938,0.20661157024793392,0.22538516477910434,0.2449750025507602,0.26538108356290196,0.2866034078155292,0.308641975308642,0.33149678604224075,0.35516784001632495,0.37965513723089506,0.40495867768595056,0.431078461381492,0.4580144883175188,0.4857667584940313,0.5143352719110298,0.5437200285685135,0.5739210284664833,0.6049382716049385,0.6367717579838796,0.669421487603306,0.7028874604632181,0.7371696765636163,0.7722681359044997,0.8081828384858692,0.844913784307724,0.8824609733700643,0.9208244056728909,0.9600040812162026,1.0],"y":[-1.0,-0.9029894958315272,-0.8136582896754447,-0.731541165307833,-0.6561920865161727,-0.5871837933096339,-0.5241073981293608,-0.4665719820587578,-0.41420419103377615,-0.3666478320532004,-0.3235634693889346,-0.28462802079628785,-0.2495343537242618,-0.2179908815258362,-0.18972115966825526,-0.16446348194331412,-0.14197047667764448,-0.12200870294300227,-0.1043582467665522,-0.08881231734115537,-0.07517684323565495,-0.06327006860516256,-0.05292214940134466,-0.0439747495827085,-0.036280637324889,-0.02970328123093435,-0.024116446541592767,-0.019403791345598585,-0.015458462789958561,-0.012182693290238179,-0.009487396740847854,-0.007291764725329327,-0.005522862726641864,-0.004115226337448555,-0.0030104574704025995,-0.0021568205684335796,-0.0015088388150337464,-0.0010268903445442865,-0.0006768044524416209,-0.00042945780562367086,-0.0002603706526961417,-0.000149303034258802,-7.985099319176373e-05,-3.904278494176066e-05,-1.6935087808430238e-05,-6.209213230591524e-06,-1.7673160725253852e-06,-3.2860491025416805e-07,-2.5552317821364297e-08,-1.0515357128133262e-10,1.051535712813384e-10,2.5552317821365233e-08,3.286049102541753e-07,1.7673160725253991e-06,6.2092132305916e-06,1.6935087808430323e-05,3.904278494176099e-05,7.985099319176401e-05,0.0001493030342588025,0.00026037065269614323,0.000429457805623672,0.0006768044524416241,0.0010268903445442889,0.0015088388150337527,0.002156820568433588,0.0030104574704026047,0.004115226337448569,0.0055228627266418725,0.007291764725329349,0.009487396740847868,0.012182693290238212,0.0154584627899586,0.01940379134559861,0.024116446541592822,0.029703281230934384,0.03628063732488908,0.04397474958270859,0.05292214940134466,0.06327006860516268,0.07517684323565502,0.08881231734115554,0.1043582467665523,0.12200870294300248,0.14197047667764473,0.16446348194331412,0.18972115966825556,0.21799088152583637,0.24953435372426216,0.2846280207962881,0.3235634693889351,0.3666478320532009,0.4142041910337764,0.4665719820587584,0.5241073981293611,0.5871837933096347,0.656192086516173,0.731541165307833,0.8136582896754457,0.9029894958315278,1.0],"type":"scatter"},{"line":{"color":"blue","width":2},"mode":"lines","x":[1.0,0.9600040812162024,0.9208244056728905,0.8824609733700643,0.8449137843077238,0.8081828384858688,0.7722681359044995,0.7371696765636159,0.7028874604632179,0.6694214876033057,0.6367717579838792,0.6049382716049383,0.573921028466483,0.5437200285685134,0.5143352719110295,0.4857667584940313,0.4580144883175185,0.4310784613814917,0.4049586776859504,0.3796551372308948,0.3551678400163248,0.33149678604224053,0.308641975308642,0.2866034078155289,0.26538108356290174,0.2449750025507601,0.2253851647791041,0.2066115702479338,0.18865421895724918,0.1715131109070503,0.155188246097337,0.13967962452810934,0.12498724619936737,0.11111111111111106,0.09805121926334041,0.08580757065605545,0.07438016528925619,0.06376900316294254,0.05397408427711455,0.04499540863177223,0.03683297622691559,0.0294867870625446,0.022956841138659312,0.017243138455259654,0.012345679012345664,0.00826446280991734,0.004999489847974682,0.0025507601265176904,0.0009182736455463712,0.00010203040506070717,0.0001020304050607094,0.0009182736455463846,0.0025507601265177125,0.0049994898479746985,0.008264462809917382,0.01234567901234569,0.017243138455259713,0.022956841138659347,0.029486787062544637,0.03683297622691567,0.04499540863177228,0.053974084277114656,0.0637690031629426,0.07438016528925631,0.08580757065605557,0.09805121926334048,0.11111111111111122,0.12498724619936745,0.1396796245281095,0.15518824609733708,0.1715131109070505,0.18865421895724938,0.20661157024793392,0.22538516477910434,0.2449750025507602,0.26538108356290196,0.2866034078155292,0.308641975308642,0.33149678604224075,0.35516784001632495,0.37965513723089506,0.40495867768595056,0.431078461381492,0.4580144883175188,0.4857667584940313,0.5143352719110298,0.5437200285685135,0.5739210284664833,0.6049382716049385,0.6367717579838796,0.669421487603306,0.7028874604632181,0.7371696765636163,0.7722681359044997,0.8081828384858692,0.844913784307724,0.8824609733700643,0.9208244056728909,0.9600040812162026,1.0],"y":[-1.0,-0.9029894958315272,-0.8136582896754447,-0.731541165307833,-0.6561920865161727,-0.5871837933096339,-0.5241073981293608,-0.4665719820587578,-0.41420419103377615,-0.3666478320532004,-0.3235634693889346,-0.28462802079628785,-0.2495343537242618,-0.2179908815258362,-0.18972115966825526,-0.16446348194331412,-0.14197047667764448,-0.12200870294300227,-0.1043582467665522,-0.08881231734115537,-0.07517684323565495,-0.06327006860516256,-0.05292214940134466,-0.0439747495827085,-0.036280637324889,-0.02970328123093435,-0.024116446541592767,-0.019403791345598585,-0.015458462789958561,-0.012182693290238179,-0.009487396740847854,-0.007291764725329327,-0.005522862726641864,-0.004115226337448555,-0.0030104574704025995,-0.0021568205684335796,-0.0015088388150337464,-0.0010268903445442865,-0.0006768044524416209,-0.00042945780562367086,-0.0002603706526961417,-0.000149303034258802,-7.985099319176373e-05,-3.904278494176066e-05,-1.6935087808430238e-05,-6.209213230591524e-06,-1.7673160725253852e-06,-3.2860491025416805e-07,-2.5552317821364297e-08,-1.0515357128133262e-10,1.051535712813384e-10,2.5552317821365233e-08,3.286049102541753e-07,1.7673160725253991e-06,6.2092132305916e-06,1.6935087808430323e-05,3.904278494176099e-05,7.985099319176401e-05,0.0001493030342588025,0.00026037065269614323,0.000429457805623672,0.0006768044524416241,0.0010268903445442889,0.0015088388150337527,0.002156820568433588,0.0030104574704026047,0.004115226337448569,0.0055228627266418725,0.007291764725329349,0.009487396740847868,0.012182693290238212,0.0154584627899586,0.01940379134559861,0.024116446541592822,0.029703281230934384,0.03628063732488908,0.04397474958270859,0.05292214940134466,0.06327006860516268,0.07517684323565502,0.08881231734115554,0.1043582467665523,0.12200870294300248,0.14197047667764473,0.16446348194331412,0.18972115966825556,0.21799088152583637,0.24953435372426216,0.2846280207962881,0.3235634693889351,0.3666478320532009,0.4142041910337764,0.4665719820587584,0.5241073981293611,0.5871837933096347,0.656192086516173,0.731541165307833,0.8136582896754457,0.9029894958315278,1.0],"type":"scatter"}],                        {"hovermode":"closest","updatemenus":[{"buttons":[{"args":[null,{"frame":{"duration":500,"redraw":false},"fromcurrent":true,"transition":{"duration":300,"easing":"quadratic-in-out"}}],"label":"Play","method":"animate"},{"args":[[null],{"frame":{"duration":0,"redraw":false},"mode":"immediate","transition":{"duration":0}}],"label":"Pause","method":"animate"}],"type":"buttons"}],"xaxis":{"autorange":false,"range":[-0.0998979695949393,1.1],"zeroline":false},"yaxis":{"autorange":false,"range":[-1.1,1.1],"zeroline":false},"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"showlegend":false,"margin":{"l":0,"r":0,"b":0,"t":0,"pad":0}},                        {"responsive": true}                    ).then(function(){
-                            Plotly.addFrames('9207ccd6-aa0f-49cc-bab0-c99f22a648a1', [{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 0"],"x":[1.0],"y":[-1.0],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 1"],"x":[0.920033319450229],"y":[-0.8119118677190721],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 2"],"x":[0.8433985839233653],"y":[-0.6532541369668817],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 3"],"x":[0.7700957934194085],"y":[-0.5204294660166845],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 4"],"x":[0.7001249479383591],"y":[-0.4101463806480264],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 5"],"x":[0.6334860474802165],"y":[-0.31940568003535064],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 6"],"x":[0.5701790920449812],"y":[-0.2454868426366091],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 7"],"x":[0.5102040816326531],"y":[-0.18593443208187066],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 8"],"x":[0.4535610162432321],"y":[-0.1385445030619303],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 9"],"x":[0.40024989587671805],"y":[-0.10135100721691906],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 10"],"x":[0.3502707205331112],"y":[-0.0726121990249135],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 11"],"x":[0.3036234902124116],"y":[-0.05079704169054474],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 12"],"x":[0.2603082049146189],"y":[-0.03457161303360777],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 13"],"x":[0.22032486463973353],"y":[-0.0227855113776712],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 14"],"x":[0.18367346938775514],"y":[-0.014458261438686266],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 15"],"x":[0.15035401915868396],"y":[-0.008765720213596496],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 16"],"x":[0.12036651395251982],"y":[-0.005026482868946869],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 17"],"x":[0.0937109537692628],"y":[-0.0026882886294933403],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 18"],"x":[0.070387338608913],"y":[-0.0013144266668121444],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 19"],"x":[0.050395668471470235],"y":[-0.0005701419879091782],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 20"],"x":[0.033735943356934646],"y":[-0.00020904132382940267],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 21"],"x":[0.020408163265306135],"y":[-5.949901826619871e-05],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 22"],"x":[0.01041232819658478],"y":[-1.1062916170754548e-05],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 23"],"x":[0.0037484381507705204],"y":[-8.602523614378736e-07],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 24"],"x":[0.0004164931278633912],"y":[-3.5401331746414553e-09],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 25"],"x":[0.0004164931278633912],"y":[3.5401331746414553e-09],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 26"],"x":[0.0037484381507704935],"y":[8.60252361437858e-07],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 27"],"x":[0.010412328196584735],"y":[1.1062916170754426e-05],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 28"],"x":[0.020408163265306103],"y":[5.949901826619848e-05],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 29"],"x":[0.033735943356934604],"y":[0.00020904132382940202],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 30"],"x":[0.05039566847147013],"y":[0.0005701419879091754],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 31"],"x":[0.07038733860891287],"y":[0.0013144266668121388],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 32"],"x":[0.09371095376926274],"y":[0.0026882886294933355],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 33"],"x":[0.12036651395251974],"y":[0.00502648286894686],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 34"],"x":[0.15035401915868388],"y":[0.008765720213596482],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 35"],"x":[0.18367346938775495],"y":[0.01445826143868623],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 36"],"x":[0.2203248646397333],"y":[0.022785511377671146],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 37"],"x":[0.2603082049146188],"y":[0.034571613033607736],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 38"],"x":[0.3036234902124114],"y":[0.05079704169054469],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 39"],"x":[0.3502707205331109],"y":[0.07261219902491337],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 40"],"x":[0.4002498958767178],"y":[0.10135100721691888],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 41"],"x":[0.4535610162432318],"y":[0.13854450306193006],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 42"],"x":[0.510204081632653],"y":[0.18593443208187052],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 43"],"x":[0.5701790920449812],"y":[0.2454868426366091],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 44"],"x":[0.6334860474802162],"y":[0.3194056800353502],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 45"],"x":[0.7001249479383587],"y":[0.41014638064802583],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 46"],"x":[0.7700957934194084],"y":[0.5204294660166842],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 47"],"x":[0.8433985839233651],"y":[0.6532541369668813],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 48"],"x":[0.920033319450229],"y":[0.8119118677190721],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 49"],"x":[1.0],"y":[1.0],"type":"scatter"}]}]);
+<div>                            <div id="a8fe19e5-a5a6-41de-ae04-06208b2b65d1" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("a8fe19e5-a5a6-41de-ae04-06208b2b65d1")) {                    Plotly.newPlot(                        "a8fe19e5-a5a6-41de-ae04-06208b2b65d1",                        [{"line":{"color":"blue","width":2},"mode":"lines","x":[1.0,0.9600040812162024,0.9208244056728905,0.8824609733700643,0.8449137843077238,0.8081828384858688,0.7722681359044995,0.7371696765636159,0.7028874604632179,0.6694214876033057,0.6367717579838792,0.6049382716049383,0.573921028466483,0.5437200285685134,0.5143352719110295,0.4857667584940313,0.4580144883175185,0.4310784613814917,0.4049586776859504,0.3796551372308948,0.3551678400163248,0.33149678604224053,0.308641975308642,0.2866034078155289,0.26538108356290174,0.2449750025507601,0.2253851647791041,0.2066115702479338,0.18865421895724918,0.1715131109070503,0.155188246097337,0.13967962452810934,0.12498724619936737,0.11111111111111106,0.09805121926334041,0.08580757065605545,0.07438016528925619,0.06376900316294254,0.05397408427711455,0.04499540863177223,0.03683297622691559,0.0294867870625446,0.022956841138659312,0.017243138455259654,0.012345679012345664,0.00826446280991734,0.004999489847974682,0.0025507601265176904,0.0009182736455463712,0.00010203040506070717,0.0001020304050607094,0.0009182736455463846,0.0025507601265177125,0.0049994898479746985,0.008264462809917382,0.01234567901234569,0.017243138455259713,0.022956841138659347,0.029486787062544637,0.03683297622691567,0.04499540863177228,0.053974084277114656,0.0637690031629426,0.07438016528925631,0.08580757065605557,0.09805121926334048,0.11111111111111122,0.12498724619936745,0.1396796245281095,0.15518824609733708,0.1715131109070505,0.18865421895724938,0.20661157024793392,0.22538516477910434,0.2449750025507602,0.26538108356290196,0.2866034078155292,0.308641975308642,0.33149678604224075,0.35516784001632495,0.37965513723089506,0.40495867768595056,0.431078461381492,0.4580144883175188,0.4857667584940313,0.5143352719110298,0.5437200285685135,0.5739210284664833,0.6049382716049385,0.6367717579838796,0.669421487603306,0.7028874604632181,0.7371696765636163,0.7722681359044997,0.8081828384858692,0.844913784307724,0.8824609733700643,0.9208244056728909,0.9600040812162026,1.0],"y":[-1.0,-0.9029894958315272,-0.8136582896754447,-0.731541165307833,-0.6561920865161727,-0.5871837933096339,-0.5241073981293608,-0.4665719820587578,-0.41420419103377615,-0.3666478320532004,-0.3235634693889346,-0.28462802079628785,-0.2495343537242618,-0.2179908815258362,-0.18972115966825526,-0.16446348194331412,-0.14197047667764448,-0.12200870294300227,-0.1043582467665522,-0.08881231734115537,-0.07517684323565495,-0.06327006860516256,-0.05292214940134466,-0.0439747495827085,-0.036280637324889,-0.02970328123093435,-0.024116446541592767,-0.019403791345598585,-0.015458462789958561,-0.012182693290238179,-0.009487396740847854,-0.007291764725329327,-0.005522862726641864,-0.004115226337448555,-0.0030104574704025995,-0.0021568205684335796,-0.0015088388150337464,-0.0010268903445442865,-0.0006768044524416209,-0.00042945780562367086,-0.0002603706526961417,-0.000149303034258802,-7.985099319176373e-05,-3.904278494176066e-05,-1.6935087808430238e-05,-6.209213230591524e-06,-1.7673160725253852e-06,-3.2860491025416805e-07,-2.5552317821364297e-08,-1.0515357128133262e-10,1.051535712813384e-10,2.5552317821365233e-08,3.286049102541753e-07,1.7673160725253991e-06,6.2092132305916e-06,1.6935087808430323e-05,3.904278494176099e-05,7.985099319176401e-05,0.0001493030342588025,0.00026037065269614323,0.000429457805623672,0.0006768044524416241,0.0010268903445442889,0.0015088388150337527,0.002156820568433588,0.0030104574704026047,0.004115226337448569,0.0055228627266418725,0.007291764725329349,0.009487396740847868,0.012182693290238212,0.0154584627899586,0.01940379134559861,0.024116446541592822,0.029703281230934384,0.03628063732488908,0.04397474958270859,0.05292214940134466,0.06327006860516268,0.07517684323565502,0.08881231734115554,0.1043582467665523,0.12200870294300248,0.14197047667764473,0.16446348194331412,0.18972115966825556,0.21799088152583637,0.24953435372426216,0.2846280207962881,0.3235634693889351,0.3666478320532009,0.4142041910337764,0.4665719820587584,0.5241073981293611,0.5871837933096347,0.656192086516173,0.731541165307833,0.8136582896754457,0.9029894958315278,1.0],"type":"scatter"},{"line":{"color":"blue","width":2},"mode":"lines","x":[1.0,0.9600040812162024,0.9208244056728905,0.8824609733700643,0.8449137843077238,0.8081828384858688,0.7722681359044995,0.7371696765636159,0.7028874604632179,0.6694214876033057,0.6367717579838792,0.6049382716049383,0.573921028466483,0.5437200285685134,0.5143352719110295,0.4857667584940313,0.4580144883175185,0.4310784613814917,0.4049586776859504,0.3796551372308948,0.3551678400163248,0.33149678604224053,0.308641975308642,0.2866034078155289,0.26538108356290174,0.2449750025507601,0.2253851647791041,0.2066115702479338,0.18865421895724918,0.1715131109070503,0.155188246097337,0.13967962452810934,0.12498724619936737,0.11111111111111106,0.09805121926334041,0.08580757065605545,0.07438016528925619,0.06376900316294254,0.05397408427711455,0.04499540863177223,0.03683297622691559,0.0294867870625446,0.022956841138659312,0.017243138455259654,0.012345679012345664,0.00826446280991734,0.004999489847974682,0.0025507601265176904,0.0009182736455463712,0.00010203040506070717,0.0001020304050607094,0.0009182736455463846,0.0025507601265177125,0.0049994898479746985,0.008264462809917382,0.01234567901234569,0.017243138455259713,0.022956841138659347,0.029486787062544637,0.03683297622691567,0.04499540863177228,0.053974084277114656,0.0637690031629426,0.07438016528925631,0.08580757065605557,0.09805121926334048,0.11111111111111122,0.12498724619936745,0.1396796245281095,0.15518824609733708,0.1715131109070505,0.18865421895724938,0.20661157024793392,0.22538516477910434,0.2449750025507602,0.26538108356290196,0.2866034078155292,0.308641975308642,0.33149678604224075,0.35516784001632495,0.37965513723089506,0.40495867768595056,0.431078461381492,0.4580144883175188,0.4857667584940313,0.5143352719110298,0.5437200285685135,0.5739210284664833,0.6049382716049385,0.6367717579838796,0.669421487603306,0.7028874604632181,0.7371696765636163,0.7722681359044997,0.8081828384858692,0.844913784307724,0.8824609733700643,0.9208244056728909,0.9600040812162026,1.0],"y":[-1.0,-0.9029894958315272,-0.8136582896754447,-0.731541165307833,-0.6561920865161727,-0.5871837933096339,-0.5241073981293608,-0.4665719820587578,-0.41420419103377615,-0.3666478320532004,-0.3235634693889346,-0.28462802079628785,-0.2495343537242618,-0.2179908815258362,-0.18972115966825526,-0.16446348194331412,-0.14197047667764448,-0.12200870294300227,-0.1043582467665522,-0.08881231734115537,-0.07517684323565495,-0.06327006860516256,-0.05292214940134466,-0.0439747495827085,-0.036280637324889,-0.02970328123093435,-0.024116446541592767,-0.019403791345598585,-0.015458462789958561,-0.012182693290238179,-0.009487396740847854,-0.007291764725329327,-0.005522862726641864,-0.004115226337448555,-0.0030104574704025995,-0.0021568205684335796,-0.0015088388150337464,-0.0010268903445442865,-0.0006768044524416209,-0.00042945780562367086,-0.0002603706526961417,-0.000149303034258802,-7.985099319176373e-05,-3.904278494176066e-05,-1.6935087808430238e-05,-6.209213230591524e-06,-1.7673160725253852e-06,-3.2860491025416805e-07,-2.5552317821364297e-08,-1.0515357128133262e-10,1.051535712813384e-10,2.5552317821365233e-08,3.286049102541753e-07,1.7673160725253991e-06,6.2092132305916e-06,1.6935087808430323e-05,3.904278494176099e-05,7.985099319176401e-05,0.0001493030342588025,0.00026037065269614323,0.000429457805623672,0.0006768044524416241,0.0010268903445442889,0.0015088388150337527,0.002156820568433588,0.0030104574704026047,0.004115226337448569,0.0055228627266418725,0.007291764725329349,0.009487396740847868,0.012182693290238212,0.0154584627899586,0.01940379134559861,0.024116446541592822,0.029703281230934384,0.03628063732488908,0.04397474958270859,0.05292214940134466,0.06327006860516268,0.07517684323565502,0.08881231734115554,0.1043582467665523,0.12200870294300248,0.14197047667764473,0.16446348194331412,0.18972115966825556,0.21799088152583637,0.24953435372426216,0.2846280207962881,0.3235634693889351,0.3666478320532009,0.4142041910337764,0.4665719820587584,0.5241073981293611,0.5871837933096347,0.656192086516173,0.731541165307833,0.8136582896754457,0.9029894958315278,1.0],"type":"scatter"}],                        {"hovermode":"closest","updatemenus":[{"buttons":[{"args":[null,{"frame":{"duration":500,"redraw":false},"fromcurrent":true,"transition":{"duration":300,"easing":"quadratic-in-out"}}],"label":"Play","method":"animate"},{"args":[[null],{"frame":{"duration":0,"redraw":false},"mode":"immediate","transition":{"duration":0}}],"label":"Pause","method":"animate"}],"type":"buttons"}],"xaxis":{"autorange":false,"range":[-0.0998979695949393,1.1],"zeroline":false},"yaxis":{"autorange":false,"range":[-1.1,1.1],"zeroline":false},"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30}}},"showlegend":false,"margin":{"l":0,"r":0,"b":0,"t":0,"pad":0}},                        {"responsive": true}                    ).then(function(){
+                            Plotly.addFrames('a8fe19e5-a5a6-41de-ae04-06208b2b65d1', [{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 0"],"x":[1.0],"y":[-1.0],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 1"],"x":[0.920033319450229],"y":[-0.8119118677190721],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 2"],"x":[0.8433985839233653],"y":[-0.6532541369668817],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 3"],"x":[0.7700957934194085],"y":[-0.5204294660166845],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 4"],"x":[0.7001249479383591],"y":[-0.4101463806480264],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 5"],"x":[0.6334860474802165],"y":[-0.31940568003535064],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 6"],"x":[0.5701790920449812],"y":[-0.2454868426366091],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 7"],"x":[0.5102040816326531],"y":[-0.18593443208187066],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 8"],"x":[0.4535610162432321],"y":[-0.1385445030619303],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 9"],"x":[0.40024989587671805],"y":[-0.10135100721691906],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 10"],"x":[0.3502707205331112],"y":[-0.0726121990249135],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 11"],"x":[0.3036234902124116],"y":[-0.05079704169054474],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 12"],"x":[0.2603082049146189],"y":[-0.03457161303360777],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 13"],"x":[0.22032486463973353],"y":[-0.0227855113776712],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 14"],"x":[0.18367346938775514],"y":[-0.014458261438686266],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 15"],"x":[0.15035401915868396],"y":[-0.008765720213596496],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 16"],"x":[0.12036651395251982],"y":[-0.005026482868946869],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 17"],"x":[0.0937109537692628],"y":[-0.0026882886294933403],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 18"],"x":[0.070387338608913],"y":[-0.0013144266668121444],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 19"],"x":[0.050395668471470235],"y":[-0.0005701419879091782],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 20"],"x":[0.033735943356934646],"y":[-0.00020904132382940267],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 21"],"x":[0.020408163265306135],"y":[-5.949901826619871e-05],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 22"],"x":[0.01041232819658478],"y":[-1.1062916170754548e-05],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 23"],"x":[0.0037484381507705204],"y":[-8.602523614378736e-07],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 24"],"x":[0.0004164931278633912],"y":[-3.5401331746414553e-09],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 25"],"x":[0.0004164931278633912],"y":[3.5401331746414553e-09],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 26"],"x":[0.0037484381507704935],"y":[8.60252361437858e-07],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 27"],"x":[0.010412328196584735],"y":[1.1062916170754426e-05],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 28"],"x":[0.020408163265306103],"y":[5.949901826619848e-05],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 29"],"x":[0.033735943356934604],"y":[0.00020904132382940202],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 30"],"x":[0.05039566847147013],"y":[0.0005701419879091754],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 31"],"x":[0.07038733860891287],"y":[0.0013144266668121388],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 32"],"x":[0.09371095376926274],"y":[0.0026882886294933355],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 33"],"x":[0.12036651395251974],"y":[0.00502648286894686],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 34"],"x":[0.15035401915868388],"y":[0.008765720213596482],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 35"],"x":[0.18367346938775495],"y":[0.01445826143868623],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 36"],"x":[0.2203248646397333],"y":[0.022785511377671146],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 37"],"x":[0.2603082049146188],"y":[0.034571613033607736],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 38"],"x":[0.3036234902124114],"y":[0.05079704169054469],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 39"],"x":[0.3502707205331109],"y":[0.07261219902491337],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 40"],"x":[0.4002498958767178],"y":[0.10135100721691888],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 41"],"x":[0.4535610162432318],"y":[0.13854450306193006],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 42"],"x":[0.510204081632653],"y":[0.18593443208187052],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 43"],"x":[0.5701790920449812],"y":[0.2454868426366091],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 44"],"x":[0.6334860474802162],"y":[0.3194056800353502],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 45"],"x":[0.7001249479383587],"y":[0.41014638064802583],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 46"],"x":[0.7700957934194084],"y":[0.5204294660166842],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 47"],"x":[0.8433985839233651],"y":[0.6532541369668813],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 48"],"x":[0.920033319450229],"y":[0.8119118677190721],"type":"scatter"}]},{"data":[{"hoverinfo":"text+x+y","marker":{"color":"red","size":10},"mode":"markers","text":["t = 49"],"x":[1.0],"y":[1.0],"type":"scatter"}]}]);
                         }).then(function(){
                             
-var gd = document.getElementById('9207ccd6-aa0f-49cc-bab0-c99f22a648a1');
+var gd = document.getElementById('a8fe19e5-a5a6-41de-ae04-06208b2b65d1');
 var x = new MutationObserver(function (mutations, observer) {{
         var display = window.getComputedStyle(gd).display;
         if (!display || display === 'none') {{
@@ -276,13 +279,20 @@ if (outputEl) {{
                         })                };                });            </script>        </div>
 </div>
 </div>
-<div class="cell quarto-layout-cell" data-execution_count="2" style="flex-basis: 50.0%;justify-content: center;">
+<div id="04c53171" class="cell quarto-layout-cell" data-execution_count="2" style="flex-basis: 50.0%;justify-content: center;text-align: center;">
 <div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
 <p><img src="w15_files/figure-html/cell-3-output-1.svg" class="img-fluid figure-img"></p>
+</figure>
 </div>
 </div>
 </div>
-<p></p><figcaption class="figure-caption">Figure&nbsp;2.1: Plot of algebraic curve given by <span class="math inline">\(x=t^2\)</span> and <span class="math inline">\(y=t^5\)</span> from <span class="math inline">\(t=-1\)</span> to <span class="math inline">\(t=1\)</span></figcaption><p></p>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-hw12-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.1: Plot of algebraic curve given by <span class="math inline">\(x=t^2\)</span> and <span class="math inline">\(y=t^5\)</span> from <span class="math inline">\(t=-1\)</span> to <span class="math inline">\(t=1\)</span>
+</figcaption>
 </figure>
 </div>
 </section>
@@ -341,108 +351,107 @@ L&amp;=\int_a^b \sqrt{r^2+\left(\frac{d r}{d \theta}\right)^2}\,\mathrm{d}\theta
 \]</span></p><div class="no-row-height column-margin column-container"><span class="">From Prof.&nbsp;Rico’s notes.</span></div></div>
 </section>
 </section>
-<section id="hw-13.5---scalccc5-a.h.1.016.-postponed" class="level2 page-columns page-full" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="hw-13.5---scalccc5-a.h.1.016.-postponed"><span class="header-section-number">2.3</span> HW 13.5 - SCalcCC5 A.H.1.016. [POSTPONED]</h2>
+<section id="hw-13.5---scalccc5-a.h.1.016.-fixme" class="level2 page-columns page-full" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="hw-13.5---scalccc5-a.h.1.016.-fixme"><span class="header-section-number">2.3</span> HW 13.5 - SCalcCC5 A.H.1.016. [FIXME]</h2>
 <p>Find a Cartesian equation for the curve and identify it. <span class="math display">\[
 r=4\tan\theta\sec\theta
 \]</span></p>
 
 <div class="no-row-height column-margin column-container"><div class="wabullet">
 <ul>
-<li>Please be warned that this question and its WebAssign solution are quite ambiguous and non-rigorous. <strong>Prof.&nbsp;Rico, I recommend adding the an restriction of <span class="math inline">\(-\frac{\pi}{2}&lt;\theta&lt;\frac{\pi}{2}\)</span> or striking this question entirely.</strong></li>
+<li>Please be advised of an ambiguity in this problem.</li>
 </ul>
-</div></div><div class="cell compensate-above page-columns page-full" data-execution_count="3">
+</div></div><div id="cell-fig-hw13-5-contours-1" class="cell compensate-above page-columns page-full" data-execution_count="3">
 
 <div class="no-row-height column-margin column-container"><div class="cell-output cell-output-display">
 <div id="fig-hw13-5-contours-1" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="w15_files/figure-html/fig-hw13-5-contours-1-output-1.svg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Figure&nbsp;2.2: Contour plot of the components of <span class="math inline">\(x^4-16y^2=0\)</span> over <span class="math inline">\(\mathbb{Q}\)</span></figcaption>
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-hw13-5-contours-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="w15_files/figure-html/fig-hw13-5-contours-1-output-1.svg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-hw13-5-contours-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.2: Contour plot of the components of <span class="math inline">\(x^4-16y^2=0\)</span> over <span class="math inline">\(\mathbb{Q}\)</span>
+</figcaption>
 </figure>
 </div>
 </div></div></div>
-<div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Remarks
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<!-- 
+::: {.callout-caution}
+## Remarks
+
+
+
+```{=html}
 <object data="https://www.webassign.net/latex2pdf/6eb1bcc0e783682997073fa9fbbbf3cc.pdf" type="application/pdf" width="100%" height="400px">
   <p>Unable to display PDF file. <a href="https://www.webassign.net/latex2pdf/6eb1bcc0e783682997073fa9fbbbf3cc.pdf">Download</a> instead.</p>
 </object>
-<p>The WebAssign claims</p>
-<div class="compensate-above compensate-below">
-<blockquote class="blockquote">
-<p><span class="math display">\[ r=\frac{4 \sin \theta}{\cos ^2 \theta} \iff r \cos ^2 \theta=4 \sin \theta \]</span></p>
-</blockquote>
-</div>
-<p>which is technically not true, as for <span class="math inline">\(\displaystyle\theta=\frac{\pi}{2}\)</span>, the equation on the left is not well-defined but the second equation is simply not satisfied.</p>
-<p>One may furthermore notice that this equation is not well-defined at every <span class="math inline">\(\theta=\frac{n\pi}{2}\)</span> and “re-traces” itself at every interval in-between.</p>
-</div>
-</div>
-<section id="solution-temporary-not-well-thought-nor-well-written" class="level3 page-columns page-full" data-number="2.3.1">
-<h3 data-number="2.3.1" class="anchored" data-anchor-id="solution-temporary-not-well-thought-nor-well-written"><span class="header-section-number">2.3.1</span> Solution [temporary, not well-thought nor well-written]</h3>
-<p>Let us first study the case under the assumption that <span class="math inline">\(r&gt;0\)</span> and <span class="math inline">\(-\frac{\pi}{2}&lt;\theta&lt;\frac{\pi}{2}\)</span>, by deducing</p>
-<div class="page-columns page-full">
-<p><span class="math display">\[
+```
+
+
+
+The WebAssign claims
+
+::: {.compensate-above .compensate-below}
+> $$ r=\frac{4 \sin \theta}{\cos ^2 \theta} \iff r \cos ^2 \theta=4 \sin \theta $$
+:::
+
+which is technically not true, as for $\displaystyle\theta=\frac{\pi}{2}$, the equation on the left is not well-defined but the second equation is simply not satisfied.
+
+One may furthermore notice that this equation is not well-defined at every $\theta=\frac{n\pi}{2}$ and "re-traces" itself at every interval in-between.
+:::
+
+### Solution [temporary, not well-thought nor well-written]
+Let us first study the case under the assumption that $r>0$ and $-\frac{\pi}{2}<\theta<\frac{\pi}{2}$, by deducing
+
+:::: {}
+$$
 \begin{aligned}
-r&amp;=4\tan\theta\sec\theta\\
-\leadsto\;\sqrt{x^2+y^2}&amp;=4\tan\left(\arctan\left(\frac{y}{x}\right)\right)\sec\left(\arctan\left(\frac{y}{x}\right)\right)\class{alref}{\cssId{alref1}{}}\\\\\\\\
-\leadsto\;\sqrt{x^2+y^2}&amp;=4\cdot\frac{y}{x}\cdot\sqrt{1+\left(\frac{y}{x}\right)^2}\class{alref}{\cssId{alref2}{}}\\\\\\
-\leadsto\;x^2+y^2&amp;=4^2\cdot\frac{y^2}{x^2}\cdot\left(1+\left(\frac{y}{x}\right)^2\right)\class{alref}{\cssId{alref3}{}}\\\\
-\leadsto\;0&amp;=\frac{(x^4 - 16 y^2) (x^2 + y^2)}{x}\\\\
-\leadsto\;0&amp;=(x^4 - 16 y^2) (x^2 + y^2)\class{alref}{\cssId{alref4}{}}\\\\
-\leadsto\;0&amp;=x^4 - 16 y^2\class{alref}{\cssId{alref5}{}}.\\
+r&=4\tan\theta\sec\theta\\
+\leadsto\;\sqrt{x^2+y^2}&=4\tan\left(\arctan\left(\frac{y}{x}\right)\right)\sec\left(\arctan\left(\frac{y}{x}\right)\right)\class{alref}{\cssId{alref1}{}}\\\\\\\\
+\leadsto\;\sqrt{x^2+y^2}&=4\cdot\frac{y}{x}\cdot\sqrt{1+\left(\frac{y}{x}\right)^2}\class{alref}{\cssId{alref2}{}}\\\\\\
+\leadsto\;x^2+y^2&=4^2\cdot\frac{y^2}{x^2}\cdot\left(1+\left(\frac{y}{x}\right)^2\right)\class{alref}{\cssId{alref3}{}}\\\\
+\leadsto\;0&=\frac{(x^4 - 16 y^2) (x^2 + y^2)}{x}\\\\
+\leadsto\;0&=(x^4 - 16 y^2) (x^2 + y^2)\class{alref}{\cssId{alref4}{}}\\\\
+\leadsto\;0&=x^4 - 16 y^2\class{alref}{\cssId{alref5}{}}.\\
 \end{aligned}
-\]</span></p>
+$$
 
-<div class="no-row-height column-margin column-container"><div id="almar1" class="arbullet almar">
-<ul>
-<li>Notice that since <span class="math inline">\(x=0\)</span> only if <span class="math inline">\(r=0\)</span> or <span class="math inline">\(\theta=\pm\pi\)</span>, we may safely carry out the change of coordinate system in this case.</li>
-</ul>
-</div><div id="almar2" class="opbullet almar">
-<ul>
-<li>By <span class="math inline">\(\sec\arctan z=\sqrt{1+z^2}\)</span>, which, as before, may be proven by <a href="ex.html#sec-exeulertrigid">the Euler’s formula</a>.</li>
-</ul>
-</div><div id="almar3" class="arbullet almar">
-<ul>
-<li>This step actually eliminates our assumption that <span class="math inline">\(r&gt;0\)</span>, and also adds an additional “mirroring” component to the curve, which will be of importance later.</li>
-</ul>
-</div><div id="almar4" class="arbullet almar">
-<ul>
-<li>Again, <span class="math inline">\(x\neq0\)</span>.</li>
-</ul>
-</div><div id="almar5" class="arbullet almar">
-<ul>
-<li><span class="math inline">\(r&gt;0\implies x^2+y^2\neq0.\)</span></li>
-</ul>
-</div></div>
+::: {#almar1 .arbullet .column-margin .almar}
+- Notice that since $x=0$ only if $r=0$ or $\theta=\pm\pi$, we may safely carry out the change of coordinate system in this case.
+:::
+::: {#almar2 .opbullet .column-margin .almar}
+- By $\sec\arctan z=\sqrt{1+z^2}$, which, as before, may be proven by [the Euler's formula](#sec-exeulertrigid).
+:::
+::: {#almar3 .arbullet .column-margin .almar}
+- This step actually eliminates our assumption that $r>0$, and also adds an additional "mirroring" component to the curve, which will be of importance later.
+:::
+::: {#almar4 .arbullet .column-margin .almar}
+- Again, $x\neq0$.
+:::
+::: {#almar5 .arbullet .column-margin .almar}
+- $r>0\implies x^2+y^2\neq0.$
+:::
+::::
 
+At this point, one may perform a factorization
 
+::::: {.compensate-above .compensate-below}
+:::: {}
+$$0=x^4 - 16 y^2={\color{green}(x^2 - 4 y)}\cdot{\color{red}(x^2 + 4 y)}\class{alref}{\cssId{alref6}{}},$$
 
-</div>
-<p>At this point, one may perform a factorization</p>
-<div class="compensate-above compensate-below page-columns page-full">
-<div class="page-columns page-full">
-<p><span class="math display">\[0=x^4 - 16 y^2={\color{green}(x^2 - 4 y)}\cdot{\color{red}(x^2 + 4 y)}\class{alref}{\cssId{alref6}{}},\]</span></p>
+::: {#almar6 .opbullet .column-margin .almar}
+- over $\mathbb{Q}$
+:::
+::::
+:::::
 
-<div class="no-row-height column-margin column-container"><div id="almar6" class="opbullet almar">
-<ul>
-<li>over <span class="math inline">\(\mathbb{Q}\)</span></li>
-</ul>
-</div></div></div>
-</div>
-<p>from which one may observe the two components and the double-points at the origin, as shown in <a href="#fig-hw13-5-contours-1">Figure&nbsp;<span>2.2</span></a>, as remarked before at <span class="quarto-unresolved-ref">?lst-eq3</span>, out of which, by observing the condition that <span class="math inline">\(r\geq0\)</span> and the remarks above, the original polar equation satisfies precisely the component where <span class="math inline">\(y&gt;0\)</span> (the <span style="color:green">green one</span>) and the origin.</p>
+from which one may observe the two components and the double-points at the origin, as shown in @fig-hw13-5-contours-1, as remarked before at @lst-eq3, out of which, by observing the condition that $r\geq0$ and the remarks above, the original polar equation satisfies precisely the component where $y>0$ (the <span style="color:green">green one</span>) and the origin.
+
 <!-- ::: {.opbullet .aside}
 - You might notice that the origin on the polar curve has multiplicity $1$ instead of $2$, which is not an error but a pathology from the transcendentality of the change of coordinate system.
 ::: -->
 <!-- No? -->
 <p>One may thus observe that the curve is a parabola, “re-traced” over itself.</p>
-</section>
 </section>
 <section id="hw-13.6---scalccc5-a.h.1.019." class="level2" data-number="2.4">
 <h2 data-number="2.4" class="anchored" data-anchor-id="hw-13.6---scalccc5-a.h.1.019."><span class="header-section-number">2.4</span> HW 13.6 - SCalcCC5 A.H.1.019.</h2>
@@ -533,10 +542,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -546,8 +554,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -560,6 +577,135 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    const typesetMath = (el) => {
+      if (window.MathJax) {
+        // MathJax Typeset
+        window.MathJax.typeset([el]);
+      } else if (window.katex) {
+        // KaTeX Render
+        var mathElements = el.getElementsByClassName("math");
+        var macros = [];
+        for (var i = 0; i < mathElements.length; i++) {
+          var texText = mathElements[i].firstChild;
+          if (mathElements[i].tagName == "SPAN") {
+            window.katex.render(texText.data, mathElements[i], {
+              displayMode: mathElements[i].classList.contains('display'),
+              throwOnError: false,
+              macros: macros,
+              fleqn: false
+            });
+          }
+        }
+      }
+    }
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        typesetMath(container);
+        return container.innerHTML
+      } else {
+        typesetMath(note);
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      typesetMath(note);
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -603,6 +749,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -628,6 +775,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -689,17 +862,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./w13t14.html" class="pagination-link">
+      <a href="./w13t14.html" class="pagination-link  aria-label=" &lt;span="" 13--14&lt;="" span&gt;"="">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Week 13–14</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./w16.html" class="pagination-link">
+      <a href="./w16.html" class="pagination-link" aria-label="<span class='chapter-number'>3</span>&nbsp; <span class='chapter-title'>Week 16</span>">
         <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week 16</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
+
 
 
 

@@ -148,7 +148,7 @@ Y_line = np.cbrt(X_line) * np.cos(T_line)
 Z_line = np.cbrt(X_line) * np.sin(T_line)
 
 curve_surface = go.Surface(x=X_curve, y=Y_curve, z=Z_curve, opacity=0.9, name='revolved curve', colorscale='Blues')
-line_surface = go.Surface(x=X_line, y=Y_line, z=Z_line, opacity=0.4, name='a \"bands\"', colorscale='Reds')
+line_surface = go.Surface(x=X_line, y=Y_line, z=Z_line, opacity=0.4, name='a \"band\"', colorscale='Reds')
 
 layout = go.Layout(
     # title=r"$x=4\sqrt{\sin y},\,\text{revolved around}\,y=4,\,\text{from}\,x=0\,\text{to}\,x=4$",

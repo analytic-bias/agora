@@ -2,7 +2,8 @@ namespace Mech
 
 def hello := "world"
 
--- Copilot experment:
+-- Γ, a generic collection of sentences, and the notions of its consistency and satisfiability (in terms of a model in the metalanguage of Lean's type theory), to be used in the proof of Gödel's completeness theorem
+
 -- syntax tree of a generic first-order language
 inductive Term (α : Type) where
   | var : Nat → Term α
@@ -45,4 +46,16 @@ inductive FOLProof (α : Type) where
   | not_imp_elim_left : Formula α → Formula α → FOLProof α
   | not_imp_elim_right : Formula α → Formula α → FOLProof α
 
--- Γ, a generic collection of sentences, and the notions of its consistency and satisfiability (in terms of a model in the metalanguage of Lean's type theory), to be used in the proof of Gödel's completeness theorem
+open Unit
+
+def c4 := unit
+def c3 := unit
+def c1 := unit
+def c2 := unit
+
+mutual
+noncomputable def b1 := (c1 , b3)
+noncomputable def b2 := (b1)
+noncomputable def b3 := (b2 , c3)
+noncomputable def a := (b2, b3, c2, c3)
+end

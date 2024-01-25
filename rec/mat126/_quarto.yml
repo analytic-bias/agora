@@ -13,7 +13,7 @@ citation-location: margin
 
 book:
   search:
-    location: navbar
+    location: sidebar
     type: overlay
     copy-button: true
   title: "MAT 126 Online Notes"
