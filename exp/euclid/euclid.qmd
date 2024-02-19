@@ -1,0 +1,134 @@
+# [Modal Logic and Binary Relations]{.ourblue}
+
+```{=html}
+<table><tbody>
+  <!-- <caption>As described in the section above, Quarto tables are great.</caption> -->
+    <tr><td colspan=4><span data-qmd="[Relation Domain]{.ourblue}"></span></td></tr>
+    <tr>
+        <td></td>
+        <td>total</td>
+        <td><span data-qmd="$\forall x \forall y \mathrm{R} x y$"></span></td>
+        <td>All possible arrows exist.</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>empty</td>
+        <td><span data-qmd="$\forall x \forall y \neg \mathrm{R} x y$"></span></td>
+        <td>There are no arrows.</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>vacuous</td>
+        <td><span data-qmd="$\forall x \forall y(\mathrm{R} x y \rightarrow x=y)$"></span></td>
+        <td>Only loops are arrows.</td>
+    </tr>
+
+    <tr><td colspan=4><span data-qmd="[Serial]{.ourblue}"></span></td></tr>
+    <tr>
+        <td></td>
+        <td>serial (right)</td>
+        <td><span data-qmd="$\forall x \exists y \mathrm{R} x y$"></span></td>
+        <td>Every element is a tail of an arrow.</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>serial (left)</td>
+        <td><span data-qmd="$\forall x \exists y \mathrm{R} y x$"></span></td>
+        <td>Every element is a target of an arrow.</td>
+    </tr>
+
+    <tr><td colspan=4><span data-qmd="[Reflexive]{.ourblue}"></span></td></tr>
+    <tr>
+        <td></td>
+        <td>totally reflexive</td>
+        <td><span data-qmd="$\forall x \mathrm{R} x x$"></span></td>
+        <td>All elements have loops.</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>weakly reflexive</td>
+        <td><span data-qmd="$\forall x[\exists y(\mathrm{R} x y \lor \mathrm{R} y x) \rightarrow \mathrm{R} x x]$"></span></td>
+        <td>Targets and tails have loops.</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>irreflexive</td>
+        <td><span data-qmd="$\forall x \neg \mathrm{R} x x$"></span></td>
+        <td>There aren’t any loops.</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>co-reflexive</td>
+        <td><span data-qmd="$\forall x \forall y(\mathrm{R} x y \rightarrow \mathrm{R} x x)$"></span></td>
+        <td>Any tail has a loop.</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>non-reflexive</td>
+        <td colspan=2>Neither reflexive nor irreflexive</td>
+    </tr>
+
+    <tr><td colspan=4><span data-qmd="[Symmetric]{.ourblue}"></span></td></tr>
+    <tr>
+        <td></td>
+        <td>symmetric</td>
+        <td><span data-qmd="$\forall x \forall y(\mathrm{R} x y \rightarrow \mathrm{R} y x)$"></span></td>
+        <td>All arrows are double arrows.</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>asymetric</td>
+        <td><span data-qmd="$\forall x \forall y(\mathrm{R} x y \rightarrow \neg \mathrm{R} y x)$"></span></td>
+        <td>No arrow is a double arrow.</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>antisymmetric</td>
+        <td><span data-qmd="$\forall x \forall y \forall z(\mathrm{R} x y \land \mathrm{R} y x \rightarrow x=y)$"></span></td>
+        <td>Only loops are double arrows.</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>non-symmetric</td>
+        <td colspan=2>Neither symmetric nor asymmetric</td>
+    </tr>
+
+    <tr><td colspan=4><span data-qmd="[Transitive]{.ourblue}"></span></td></tr>
+    <tr>
+        <td></td>
+        <td>transitive</td>
+        <td><span data-qmd="$\forall x \forall y \forall z(\mathrm{R} x y \land \mathrm{R} y z \rightarrow \mathrm{R} x z)$"></span></td>
+        <td>Any indirect path has a shortcut.</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>intransitive</td>
+        <td><span data-qmd="$\forall x \forall y \forall z(\mathrm{R} x y \land \mathrm{R} y z \rightarrow \neg \mathrm{R} x z))$"></span></td>
+        <td>No indirect path has a shortcut.</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>non-transitive</td>
+        <td colspan=2>Neither transitive nor intransitive</td>
+    </tr>
+
+    <tr><td colspan=4><span data-qmd="[Euclidean]{.ourblue}"></span></td></tr>
+    <tr>
+        <td></td>
+        <td>Euclidean (right)</td>
+        <td><span data-qmd="$\forall x \forall y \forall z(\mathrm{R} x y \land \mathrm{R} x z \rightarrow \mathrm{R} y z)$"></span></td>
+        <td>Anyone’s beloveds love themselves and one another.</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Euclidean (left)</td>
+        <td><span data-qmd="$\forall x \forall y \forall \mathrm{z}(\mathrm{R} y x \land \mathrm{R} z x \rightarrow \mathrm{R} y z)$"></span></td>
+        <td>Anyone’s lovers love themselves and one another</td>
+    </tr>
+</tbody></table>
+```
+
+
+
+
+

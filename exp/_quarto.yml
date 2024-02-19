@@ -34,10 +34,11 @@ book:
   date: "2030-01-01"
   chapters:
     - index.qmd
-    - cons/GC.qmd
+    - euclid/euclid.qmd
+    # - cons/GC.qmd
     # - intro.qmd
     # - test.qmd
-    # - modal/modal.qmd
+    - modal/modal.qmd
     # - retro/retro.qmd
     # - gödel/gödel.qmd
     # - wang/wang.qmd

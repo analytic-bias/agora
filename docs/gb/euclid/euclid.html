@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Gary Mar">
-<meta name="dcterms.date" content="2030-01-01">
 
-<title>Gödelian Explorations</title>
+<title>Gödelian Explorations - 1&nbsp; Modal Logic and Binary Relations</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,23 +23,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./euclid/euclid.html" rel="next">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../modal/modal.html" rel="next">
+<link href="../index.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": true,
@@ -69,8 +68,10 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-sidebar floating">
@@ -82,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Preface</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../euclid/euclid.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">[Modal Logic and Binary Relations]{.ourblue}</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -94,32 +95,32 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Gödelian Explorations</a> 
+      <a href="../">Gödelian Explorations</a> 
     </div>
       </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Preface</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./euclid/euclid.html" class="sidebar-item-text sidebar-link">
+  <a href="../euclid/euclid.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title"><span class="ourblue">Modal Logic and Binary Relations</span></span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./modal/modal.html" class="sidebar-item-text sidebar-link">
+  <a href="../modal/modal.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">‘Must’ and ‘Might’ — The Modal Logic of Necessity and Possibility</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">
+  <a href="../references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
 </li>
@@ -129,39 +130,21 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Gödelian Explorations</h1>
+<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title"><span class="ourblue">Modal Logic and Binary Relations</span></span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Gary Mar </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">January 1, 2030</p>
-    </div>
-  </div>
   
     
   </div>
@@ -171,13 +154,141 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="preface" class="level1 unnumbered">
-<h1 class="unnumbered">Preface</h1>
-<p>This is a Quarto book.</p>
-<p>To learn more about Quarto books visit <a href="https://quarto.org/docs/books" class="uri">https://quarto.org/docs/books</a>.</p>
+<table data-quarto-postprocess="true" class="table">
+<tbody>
+<tr class="odd">
+<td colspan="4"><span class="ourblue">Relation Domain</span></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>total</td>
+<td><span class="math inline">\(\forall x \forall y \mathrm{R} x y\)</span></td>
+<td>All possible arrows exist.</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>empty</td>
+<td><span class="math inline">\(\forall x \forall y \neg \mathrm{R} x y\)</span></td>
+<td>There are no arrows.</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>vacuous</td>
+<td><span class="math inline">\(\forall x \forall y(\mathrm{R} x y \rightarrow x=y)\)</span></td>
+<td>Only loops are arrows.</td>
+</tr>
+<tr class="odd">
+<td colspan="4"><span class="ourblue">Serial</span></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>serial (right)</td>
+<td><span class="math inline">\(\forall x \exists y \mathrm{R} x y\)</span></td>
+<td>Every element is a tail of an arrow.</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>serial (left)</td>
+<td><span class="math inline">\(\forall x \exists y \mathrm{R} y x\)</span></td>
+<td>Every element is a target of an arrow.</td>
+</tr>
+<tr class="even">
+<td colspan="4"><span class="ourblue">Reflexive</span></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>totally reflexive</td>
+<td><span class="math inline">\(\forall x \mathrm{R} x x\)</span></td>
+<td>All elements have loops.</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>weakly reflexive</td>
+<td><span class="math inline">\(\forall x[\exists y(\mathrm{R} x y \lor \mathrm{R} y x) \rightarrow \mathrm{R} x x]\)</span></td>
+<td>Targets and tails have loops.</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>irreflexive</td>
+<td><span class="math inline">\(\forall x \neg \mathrm{R} x x\)</span></td>
+<td>There aren’t any loops.</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>co-reflexive</td>
+<td><span class="math inline">\(\forall x \forall y(\mathrm{R} x y \rightarrow \mathrm{R} x x)\)</span></td>
+<td>Any tail has a loop.</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>non-reflexive</td>
+<td colspan="2">Neither reflexive nor irreflexive</td>
+</tr>
+<tr class="even">
+<td colspan="4"><span class="ourblue">Symmetric</span></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>symmetric</td>
+<td><span class="math inline">\(\forall x \forall y(\mathrm{R} x y \rightarrow \mathrm{R} y x)\)</span></td>
+<td>All arrows are double arrows.</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>asymetric</td>
+<td><span class="math inline">\(\forall x \forall y(\mathrm{R} x y \rightarrow \neg \mathrm{R} y x)\)</span></td>
+<td>No arrow is a double arrow.</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>antisymmetric</td>
+<td><span class="math inline">\(\forall x \forall y \forall z(\mathrm{R} x y \land \mathrm{R} y x \rightarrow x=y)\)</span></td>
+<td>Only loops are double arrows.</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>non-symmetric</td>
+<td colspan="2">Neither symmetric nor asymmetric</td>
+</tr>
+<tr class="odd">
+<td colspan="4"><span class="ourblue">Transitive</span></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>transitive</td>
+<td><span class="math inline">\(\forall x \forall y \forall z(\mathrm{R} x y \land \mathrm{R} y z \rightarrow \mathrm{R} x z)\)</span></td>
+<td>Any indirect path has a shortcut.</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>intransitive</td>
+<td><span class="math inline">\(\forall x \forall y \forall z(\mathrm{R} x y \land \mathrm{R} y z \rightarrow \neg \mathrm{R} x z))\)</span></td>
+<td>No indirect path has a shortcut.</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>non-transitive</td>
+<td colspan="2">Neither transitive nor intransitive</td>
+</tr>
+<tr class="odd">
+<td colspan="4"><span class="ourblue">Euclidean</span></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Euclidean (right)</td>
+<td><span class="math inline">\(\forall x \forall y \forall z(\mathrm{R} x y \land \mathrm{R} x z \rightarrow \mathrm{R} y z)\)</span></td>
+<td>Anyone’s beloveds love themselves and one another.</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Euclidean (left)</td>
+<td><span class="math inline">\(\forall x \forall y \forall \mathrm{z}(\mathrm{R} y x \land \mathrm{R} z x \rightarrow \mathrm{R} y z)\)</span></td>
+<td>Anyone’s lovers love themselves and one another</td>
+</tr>
+</tbody>
+</table>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -579,10 +690,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="../index.html" class="pagination-link  aria-label=" preface"="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Preface</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./euclid/euclid.html" class="pagination-link" aria-label="<span class='chapter-number'>1</span>&nbsp; <span class='chapter-title'>[Modal Logic and Binary Relations]{.ourblue}</span>">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title"><span class="ourblue">Modal Logic and Binary Relations</span></span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../modal/modal.html" class="pagination-link" aria-label="<span class='chapter-number'>2</span>&nbsp; <span class='chapter-title'>‘Must’ and ‘Might’ --- The Modal Logic of Necessity and Possibility</span>">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">‘Must’ and ‘Might’ — The Modal Logic of Necessity and Possibility</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
