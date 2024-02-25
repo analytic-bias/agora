@@ -1,4 +1,4 @@
-myfilename="ModalChapter-2023#"
+myfilename="modal"
 
 pandoc \
 -t markdown_strict \

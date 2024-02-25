@@ -1,0 +1,846 @@
+
+### Exercises
+
+1.  R is the relative possibility or accessibility relation in a modal
+    system. First construct a graphic demonstration to discover the
+    logical key that unlocks the relationship between the validity of an
+    axiom and its corresponding accessibility relation, and then provide
+    rigorous semantic derivation to justify your discovery.
+
+    1.  If R is a serial, then axiom (**D)** is valid.
+
+> 1\. *<s>Show</s>* R is *serial* ⇒ ⊨ (ϕ → ϕ) 3, CD
+>
+> 2\. \_\_\_\_\_\_\_\_\_\_\_\_\_ Assume (CD), Def. *serial*
+>
+> 3\. *<s>Show</s>* ⊨ (ϕ → ϕ) 18, DD
+>
+> 4\. *<s>Show</s>* ∀α∈*W* ⊨<sub>α</sub> (ϕ → ϕ) 5, UD
+>
+> 5\. *<s>Show</s>* ⊨<sub>α</sub> (ϕ → ϕ) 17, DD
+>
+> 6\. *<s>Show</s>* ⊨<sub>α</sub> ϕ ⇒ ⊨<sub>α</sub>ϕ 16, CD
+>
+> 7\. ⊨<sub>α</sub> ϕ Assume (CD)
+>
+> 8\. ∀β∈*W* (Rαβ ⇒ \_\_\_\_\_ ) 7, Truth-Def.
+>
+> 9\. *<s>Show</s>* ⊨<sub>α</sub>ϕ 16, DD
+>
+> 10\. *<s>Show</s>* ∃β∈*W* (Rαβ & \_\_\_\_) 15, DD
+>
+> 11\. Rαγ 2, \_\_\_, \_\_\_
+>
+> 12\. Rαγ ⇒ ⊨<sub>γ</sub> ϕ 8, \_\_\_
+>
+> 13\. ⊨<sub>γ</sub> ϕ 11, 12 \_\_\_
+>
+> 14\. Rαγ & ⊨<sub>γ</sub> ϕ 11, 13 \_\_\_
+>
+> 15\. ∃β∈W (\_\_\_\_\_\_\_\_\_\_\_\_) 14, EG
+>
+> 16\. \_\_\_\_\_\_ 10, Truth-Def. 
+>
+> 17\. \_\_\_\_\_\_\_\_\_\_ 6, Def. \_\_\_\_
+>
+> 18\. ⊨ ϕ → ϕ 4, Def. ⊨ (*logical consequence*)
+
+1.  If R is reflexive, then axiom (**T)** is valid.
+
+> 1\. *<s>Show</s>* R is *reflexive* ⇒ ⊨ (ϕ → ϕ) 3,CD
+>
+> 2\. ∀αRαα Assume (CD), Def. *Reflexive*
+>
+> 3\. *<s>Show</s>* ⊨ (ϕ → ϕ) 14, DD
+>
+> 4\. *<s>Show</s>* ∀α∈ *W* ⊨<sub>α</sub> (ϕ → ϕ) 5, UD
+>
+> 5\. *<s>Show</s>* ⊨<sub>α</sub> (ϕ → ϕ) 13, DD
+>
+> 6\. *<s>Show</s>* ⊨<sub>α</sub> ϕ ⇒ ⊨<sub>α</sub>ϕ 9, CD
+>
+> 7\. ⊨<sub>α</sub> ϕ Assume (CD)
+>
+> 8\. ∀β∈*W* (Rαβ ⇒ ⊨<sub>β</sub> ϕ ) 7, Def. Truth
+>
+> 9\. *<s>Show</s>* ⊨<sub>α</sub> ϕ 12, DD
+>
+> 10\. Rαα ⇒ ⊨<sub>α</sub>ϕ 8, UI
+>
+> 11\. Rαα 2, UI
+>
+> 12\. ⊨<sub>α</sub> ϕ 10, 11 MP
+>
+> 13\. ⊨<sub>α</sub> (ϕ → ϕ) 6, Def. Truth →
+>
+> 14\. ⊨ (ϕ → ϕ) 5, Def. |= (*logical consequence*)
+
+An intriguing philosophical application of R is *symmetric* ⇒ ⊨ (ϕ → ϕ)
+is a modal ontological argument, which we state in a weaker form that is
+possible.
+
+> (G → G) . G ∴ G
+
+Let’s read  is “it is conceivable that” and  as “it is conceptually
+necessary that”. Then the first premise can be translated: “It is
+conceptually necessary that if God exists, then it is necessary that God
+exists.” The intuitive philosophical idea is that God’s existence, like
+the existence of numbers, couldn’t be accidental: if God exists at all,
+then God’s existence is not contingent but necessary. Moreover, this
+conditional itself is a conceptual truth. Then if it is even
+conceivable, i.e., conceptually possible that God exists, then God
+actually exists!
+
+How can it be that purely conceptual premises logically imply the actual
+existence of God? Is there an “intuitionistic” sleight of mind going on
+here? It happens that modal axiom (**B**) is what is required to
+validate this argument. Use a semantic diagram to see why this is the
+case!
+
+1.  *<s>Show</s>* R is *symmetric* ⇒ ⊨ (ϕ → ϕ)
+
+2.  \` \`
+
+3.  *<s>Show</s>* ⊨(ϕ → ϕ)
+
+4.  *<s>Show</s>*
+
+5.  *<s>Show</s>*
+
+6.  *<s>Show</s>* ⊨<sub>α</sub> ϕ ⇒ ⊨<sub>α</sub> ϕ
+
+7.  
+
+8.  *<s>Show</s>*
+
+9.  *<s>Show</s>*
+
+10. *<s>Show</s>* Rαβ ⇒ ⊨<sub>β</sub> ϕ
+
+11. 
+
+12. *<s>Show</s>*
+
+13. *<s>Show</s>*
+
+14. 
+
+15. 
+
+16. Rβα & ⊨<sub>α</sub> ϕ
+
+17. ∃γ ∈*W* (Rβγ & ⊨γ ϕ)
+
+18. ⊨<sub>β</sub> ϕ
+
+19. ⊨<sub>α</sub> ϕ
+
+20. ⊨<sub>α</sub> (ϕ → ϕ)
+
+21. ⊨ ϕ → ϕ
+
+    1.  If R is euclidean, then **E** is valid.
+
+<!-- -->
+
+1.  *<s>Show</s>* R is *euclidean* ⇒ ⊨ (ϕ → ϕ)
+
+2.  
+
+3.  *<s>Show</s>*
+
+4.  *<s>Show</s>* ∀α∈W⊨ <sub>α</sub> (ϕ → ϕ)
+
+> 5\. *<s>Show</s>* ⊨ <sub>α</sub>ϕ → ϕ
+>
+> 6\. *<s>Show</s>* ⊨= <sub>α</sub>ϕ ⇒ ⊨ <sub>α</sub> ϕ
+>
+> 7\.
+>
+> 8\. ∃β∈W(Rαβ & \_\_\_\_\_)
+>
+> 9\. *<s>Show</s>* ⊨ <sub>α</sub> ϕ
+>
+> 10\. *<s>Show</s>* ∀β(Rαβ ⇒ \_\_\_\_\_)
+>
+> 11\. *<s>Show</s>* Rαβ ⇒ ⊨ <sub>β</sub> ϕ
+>
+> 12\.
+>
+> 13\. *<s>Show</s>* ⊨ <sub>β</sub> ϕ
+>
+> 14\. *<s>Show</s>* ∃γ∈W(Rβγ & ⊨<sub>γ</sub> ϕ)
+>
+> 15\. Rαγ′ & ⊨ γ<sub>′</sub> ϕ
+>
+> 16\. Rαβ & Rαγ′
+>
+> 17\.
+>
+> 18\.
+>
+> 19\. Rβγ′ & ⊨ γ<sub>′</sub> ϕ
+>
+> 20\. ∃γ∈W (Rβγ & ⊨<sub>γ</sub> ϕ)
+>
+> 21\. ⊨ <sub>β</sub> ϕ
+>
+> 22\. ⊨ <sub>α</sub> ϕ
+>
+> 23\. ⊨ <sub>α</sub>ϕ → ϕ
+>
+> 24\.                    ⊨ϕ → ϕ
+
+2\. There are different axiomatizations for different philosophical
+conception of time. According to the *tensed theory of time* championed
+by the philosopher C. D. Broad, the past is real and the present moves
+up the tree of possible futures turning the unreal future into the real
+past. Another theory, due to A. N. Prior, known as *presentism*, holds
+that only the present is real and the past and the future are unreal.
+What do the following axioms express about the structure of time?
+
+(D<sub>1</sub>) <sub>F</sub> <sub>F</sub> ϕ → <sub>F</sub> ϕ
+*transitivity* ∀*x* &lt; *t* ∀*y* &lt; *x*: *y* &lt; *t*
+
+(D<sub>2</sub>) <sub>F</sub> ϕ → <sub>G</sub>(<sub>P</sub> ϕ ∨ ϕ ∨
+<sub>F</sub>ϕ) *future-linearity* ∀*x*∀*y*(*y* &lt; *x* → ∀*z*(R*xz* →
+*y* &lt; *z*))
+
+(D<sub>3</sub>) <sub>P</sub> **⊤** *regress into past* ∀*t* ∃*x* *x*
+&lt; *t*
+
+(D<sub>4</sub>) <sub>P</sub> ϕ → <sub>P</sub> ϕ *necessity of the past*
+
+Premise D<sub>2</sub> corresponds to the condition of
+*future-linearity*, namely, that all times future to a moment of time
+are comparable to a past moment of that time. The argument is valid
+because this premise implies the reduction of modality to temporality:
+
+ϕ → (<sub>P</sub> ϕ ∨ ϕ ∨ <sub>F</sub> ϕ) .
+
+What properties of time to the following axioms express?
+
+<sub>F</sub> **⊤**
+
+<sub>P</sub> **⊤**
+
+<sub>F</sub> <sub>F</sub> ϕ → <sub>F</sub> ϕ
+
+<sub>P</sub> <sub>P</sub> ϕ → <sub>P</sub> ϕ
+
+<sub>F</sub> ϕ → <sub>F</sub> <sub>F</sub> ϕ
+
+<sub>P</sub> ϕ → <sub>P</sub> <sub>P</sub> ϕ
+
+ϕ → <sub>F</sub> <sub>H</sub>(ϕ ∨ <sub>F</sub> ϕ)
+
+<sub>F</sub> ϕ ∧ <sub>F</sub> ψ → <sub>F</sub> (ϕ ∧ ψ) ∨ <sub>F</sub> (ϕ
+∧ <sub>F</sub> ψ) ∨ <sub>F</sub> (<sub>F</sub> ϕ ∧ ψ)
+
+<sub>P</sub> ϕ ∧ <sub>P</sub> ψ → <sub>P</sub> (ϕ ∧ ψ) ∨ <sub>P</sub> (ϕ
+∧ <sub>P</sub> ψ) ∨ (<sub>P</sub> (<sub>P</sub> ϕ ∧ ψ)
+
+*unending future* ∀*x*∃*y* *x* &lt; *y*
+
+*past successors* ∀*x*∃*y* *y* &gt; *x*
+
+*future transitivity* ∀*x*∀*y*∀*z* (*x* &lt; *y* &lt; *z* → *x* &lt;
+*z*)
+
+*past transitivity* ∀*x*∀*y*∀*z* (*x* &gt; *y* &gt; *z* → *x* &gt; *z*)
+
+*future* *density* ∀*x*∀*y*(*x* &lt; *y* → ∃*z*(*x* &lt; *z* ∧ *z* &lt;
+*y*))
+
+*past density* ∀*x*∀*y*(*x* &gt; *y* → ∃*z*(*x* &gt; *z* ∧ *z* &gt;
+*y*))
+
+*future discreteness* ∃*y*(*x* &lt; *y* ∧ ∀*z*(*z* &lt; *y* → *z* = *y*
+∨ *z* &lt; *x*))
+
+*linearity* *with respect to the future* ∀*y*∀*z*(*x* &lt; *y* ∧ *x*
+&lt; *z*) → (*y* &lt; *z* ∨ *z* &lt; *y* ∨ *z* = *y*))
+
+*linearity* *with respect to the past* ∀*y*∀*z*(*x* &gt; *y* ∧ *x* &gt;
+*z*) → (*y* &gt; *z* ∨ *z* &gt; *y* ∨ *z* = *y*))
+
+3\. Prior’s axiomatization of temporal logic known as the *Diodorean
+System* consists of **KT4** and the following axiom **Dum** (named after
+the philosopher Michael Dummett, a champion of intuitionism). Give a
+reading of his axiom in temporal logic:
+
+> ((P→P)→P)→ (P →P) .
+
+4\. Demonstrate that the following axioms require the corresponding
+conditions on R.
+
+<table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 16%" />
+<col style="width: 13%" />
+<col style="width: 39%" />
+<col style="width: 19%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><h4 id="dc">D<sup>C</sup></h4></th>
+<th>Converse <strong>D</strong></th>
+<th></th>
+<th>∀α∀β∀γ (Rαβ &amp; Rαγ ⇒ β = γ)</th>
+<th>R is <em>functional</em></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>T</strong></td>
+<td>Necessitation <strong>T</strong></td>
+<td></td>
+<td>∀α∀β(Rαβ ⇒ Rββ)</td>
+<td>R is <em>point reflexive</em></td>
+</tr>
+<tr class="even">
+<td><strong>4<sup>C</sup></strong></td>
+<td>Converse <strong>4</strong></td>
+<td></td>
+<td>∀α∀β[Rαβ ⇒ ∃γ (Rαγ &amp; Rγβ)]</td>
+<td>R is <em>dense</em></td>
+</tr>
+<tr class="odd">
+<td><strong>C</strong></td>
+<td>Convergent</td>
+<td></td>
+<td>∀α∀β∀γ[R αβ &amp; Rαγ ⇒ ∃η(Rαη &amp; R γη)]</td>
+<td>R is <em>convergent</em></td>
+</tr>
+</tbody>
+</table>
+
+Formulate each of the conditions on R in terms of a directed graph. Then
+demonstrate that if each of the axioms is assumed to be invalid, then
+the corresponding condition on R must fails to hold.
+
+5\. An elegant result due to Lemmon and Scott (1977) states a
+correspondence between conditions on R and axioms of the generalized
+form:
+
+*<sup>hi</sup>*ϕ → *<sup>j</sup>**<sup>k</sup>*ϕ .
+
+Here *<sup>m</sup>* and *<sup>n</sup>* represents *m* diamonds and *n*
+boxes in a row, respectively. The corresponding condition on R imposed
+by the generalized axiom is given by
+
+R*<sup>h</sup>*αβ & R*<sup>j</sup>*αγ ⇒ ∃η(R*<sup>i</sup>*βη &
+R*<sup>k</sup>*γη) .
+
+Here the *composition* R ° S of two relations R and S (in symbols, R °
+S) can be defined as
+
+R ° S αβ =<sub>df</sub> ∃γ(Rαγ & Sγβ) .
+
+For example, if R is the relation *being a sister of* and S is the
+relation *being a parent of*, then the composition of the relations R
+<sub>°</sub> S is the relation *being* *an aunt of*, that is
+
+R ° S αβ ↔ ∃γ(Rαγ & Sγβ) .
+
+If R is the relation *being a parent of*, then R <sub>°</sub> R = R
+<sup>2</sup> is the relation *being a grandparent of*, and R
+<sub>°</sub> R <sub>°</sub> R = R<sup>3</sup> is the relation *being a
+great-grandparent of*. R<sup>0</sup> is the *identity relation*, i.e.,
+R<sup>0</sup>αβ if and only if α = β, and R <sup>1</sup> = R.
+
+Verify that the values for *h, i, j, k* as indicated in the chart yield
+the standard axioms, and that the standard condition on R for each of
+the axioms is equivalent to the one specified by the Lemmon-Scott
+Generalized Correspondence theorem:
+
+<table>
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 6%" />
+<col style="width: 20%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td></td>
+<td><em>h</em></td>
+<td><em>i</em></td>
+<td><em>j</em></td>
+<td><em>K</em></td>
+<td colspan="2">Condition on R</td>
+</tr>
+<tr class="even">
+<td><strong>B</strong></td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td><em>Symmetric</em></td>
+<td>∀α∀β(Rαβ ⇒ Rβα)</td>
+</tr>
+<tr class="odd">
+<td><strong>4</strong></td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>0</td>
+<td><em>Transitive</em></td>
+<td>∀α∀β∀γ(Rαβ &amp; Rβγ ⇒ Rαγ)</td>
+</tr>
+<tr class="even">
+<td><strong>5</strong></td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td><em>Euclidean</em></td>
+<td>∀α∀β∀γ (Rαβ &amp; Rαγ ⇒ Rβγ)</td>
+</tr>
+<tr class="odd">
+<td><strong>C</strong></td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td><em>Convergent</em></td>
+<td>Rαβ &amp; Rαγ ⇒ ∃η(Rβη &amp; R γη)</td>
+</tr>
+</tbody>
+</table>
+
+5\. Another interpretation of the ‘’ is provability. The *Gödel-Löb
+Provability System* is the system **K4W,** where the **(W)** axiom (here
+‘W’ stands for “well-ordering”) is as follows:
+
+(**W**) (ϕ → ϕ) → ϕ .
+
+Give an informal argument to show that (**W**) requires the
+accessibility relation to be transitive, irreflexive, and *finite*
+(i.e., indirect paths of R chains terminate in a *finite* number of
+steps.) It is interesting to note that being ‘finite’ cannot be
+expressed in a sentence of first-order logic. This follows from the
+compactness meta-theorem that states that any infinite set of sentences
+that is finitely satisfiable (i.e., any finite subset has a model) must
+also be satisfiable (i.e., there is a model that satisfies the entire
+infinite set).
+
+# <span class="smallcaps">8.</span> <span class="smallcaps">Theorems.</span> 
+
+First we list the *characteristic axioms* for various modal systems.
+
+> T538 P → P Axiom (**D**)
+>
+> T560 P → P Axiom (**T**)
+>
+> T570 P → P Axiom (**B**)
+>
+> T580 P → P Axiom (**4**)
+>
+> T590 P → P Axiom (**5**)
+
+Next we list some theorem common to all the modal systems we have been
+discussing. T501 and T502 state *modal derivation* *principles*. T501,
+known as axiom (K**)** (after Kripke), expresses the principle that
+justifies strict derivation in the form of necessity derivation:
+whatever is entailed by a necessary truth is necessary. T502 is the
+basis for possibility derivation: whatever is logically entailed by
+something possible is itself possible.
+
+> T501 (P → Q) → (P → Q)
+>
+> T502 (P → Q) → (P → Q)
+
+Theorems T503-T506 express the *laws of modal negation*:
+
+> T503 ~ P ↔ ~ P
+>
+> T504 ~ P ↔ ~ P
+>
+> T505 P ↔ ~~P
+>
+> T506 P ↔ ~~ P
+
+In addition to T501 and T502 above, T507-T520 state *laws of modal
+distribution* that are valid in all systems of normal modal logic.
+
+> T507 (P ∨ Q) ↔ P ∨ Q
+>
+> T508 (P ∧ Q) ↔ P ∧ Q
+>
+> T509 (P ∧ Q) → P ∧ Q
+>
+> T510 P ∨ Q → (P ∨ Q)
+>
+> T511 (P → Q) → (P → Q)
+
+T512 (P → Q) → (P → Q)
+
+> T513 (P ↔ Q) → (P ↔ Q)
+
+T514 (P ↔ Q) → (P ↔ Q)
+
+> T515 ~ P → ~ P
+
+T516 (P ∨ Q) → P ∨ Q
+
+> T517 ~P → ~P
+>
+> T518 (P → Q) → (P → Q)
+>
+> T519 (P → Q) → (P → Q)
+
+T520 (P → Q) → (P → Q)
+
+> T521 (~P ∧ Q) → (~P ∧ Q)
+
+The following theorems are modal counterparts to *consequentia
+mirabilis*:
+
+T522 (~P → P) ↔ P
+
+> T523 (~P → P) ↔ P
+>
+> T524 (P → ~P) ↔ ~P
+>
+> T525 (P → ~P) ↔ ~P
+>
+> T526 (P → ~P) ↔ ~P
+>
+> T527 (~P → P) ↔ P
+
+Analogues to theorems T229 and T230 in monadic quantifier logic (which
+we may call the “Drinking Theorems” after a joke by Smullyan) are
+(**T)** theorems despite the nested modal operators:
+
+T529 (P → P)
+
+T530 (P → P)
+
+Corresponding to quantifier theorems T234 − T247 are the modal theorems
+T534 − T547. Theorems T533 and T535 state principles—*transitivity* and
+*strengthening*—that hold for strict implications but which do not hold
+for *counterfactual conditionals* (that is, conditionals of the form,
+*if it were the case that* P*, then it would be the case that* Q).
+
+T533 (P → Q) → (P ∧ R → Q)
+
+T534 \[(P → Q) ∧ (Q→ R) → (P → R)\]
+
+T535 (P → Q) ∧ (Q → R) → (P → R)
+
+T536 (P ↔ Q) ∧ (Q ↔ R) → (P ↔ R)
+
+T537 (P → Q) ∧ (P → R) → (P → Q ∧ R)
+
+T538 P → P
+
+T539 (P ∧ Q) → (P ∧ Q)
+
+T540 (P → Q) ∧ (P ∧ R) → (Q ∧ R)
+
+T541 (P → Q ∨ R) → (P → Q) ∨ (P ∧ R)
+
+Theorems T542 − T547 concern *strict implication*. T544 states the
+equivalence of two characterizations of strict implication.
+
+T542 ~(P → Q) ↔ (P ∧ ~Q)
+
+T543 ~(P ∧ Q) ↔ (P → ~ Q)
+
+T544 (P → Q) ↔ ~(P ∧ ~Q)
+
+T545 ~P ↔ (P → Q) ∧ (P → ~Q)
+
+T546 ~P ∧ ~Q → (P ↔ Q)
+
+T547 (P → Q) ↔ (P → Q)
+
+Although C. I. Lewis’s axioms of *strict implication* were introduced to
+overcome the paradoxes of material implication, theorems T548-T552 are
+corresponding *paradoxes of strict implication*:
+
+T548 ~(P → Q) → P
+
+T549 ~(P → Q) → ~Q
+
+> T550 Q → (P → Q)
+>
+> T551 ~P → (P → Q)
+>
+> T552 (P → Q) ∨ (Q → P)
+
+Next we list theorems for the various modal systems. T538, the
+characteristic axiom for the modal system (**D),** is followed by other
+theorems of that system**.**
+
+T538 P → P
+
+> T553 P ∨ ~P
+>
+> T554 ~(P ∧ ~P)
+>
+> T555 (P → ~Q) → (P → ~Q)
+
+T560, the characteristic axiom for system (**T),** is followed by its
+logical dual T561, other theorems of that system.
+
+T560 P → P
+
+> T561 P → P
+>
+> T562 (P → P)
+>
+> T563 (P → P)
+>
+> T564 P → P
+>
+> T565 P → P
+>
+> T566 P → P
+>
+> T567 P → P
+
+T570, the characteristic axiom for system (**B),** is followed by its
+logical dual T571, other theorems of that system. Theorems T573 and T574
+are valid in **KB**, that is, their proofs do not require NI as an
+inference rule, but only NI and ◊R as admissible strict importation
+rules. Theorems T576 and T577 are related to Anselmian arguments
+discussed in the introduction that can be validated using (**B)**.
+
+T570 P → P
+
+> T571 P → P
+>
+> T572 P → ~~P
+>
+> T573 (P → Q) → (P → Q)
+>
+> T574 (P → Q) → (P → Q)
+>
+> T575 P → P
+
+T576 (P → P) ∧ P → P
+
+T577 (P → P) ∧ P → P
+
+T580, the characteristic theorem of system **S4**, is followed by its
+logical dual T581 and other theorems of system **S4** (also known as
+**KT4**). Theorems T582 − T584 are valid in **K4**, that is, they do not
+require NI as an inference rule but only NI and R as admissible strict
+importation rules. Theorems T585 and T586 are the *modal reductions
+laws* for (**S4)**: one may collapse any string of iterated uniform
+operators to a single occurrence of that operator.
+
+> T580 P → P
+>
+> T581 P → P
+>
+> T582 (P → Q) → (P → Q)
+>
+> T583 (P ∨ Q) → (P ∨ Q)
+>
+> T584 ((P → Q) → R) → ((P→Q) → R)
+>
+> T585 P ↔ P
+>
+> T586 P ↔ P
+
+Theorem T587 established that the (**G)** schema is valid in any normal
+**KB** system. T588 is an alternative basis for (**S4)**.
+
+> T587 P → P
+
+T588 (P → Q) → (P → Q)
+
+Theorems T590−T595 are theorems of the system (**S5)** (also known as
+**KT5**). T590 is the characteristic theorem of the system, and T571 is
+its logical dual. Theorems T592−T598 are valid in **K5**, that is, they
+do not require NI as an inference rule, but they may employ NI, R, and
+◊R as admissible strict importation rules. Theorems T599−T590 are valid
+in any normal **K5** system.
+
+T590 P → P
+
+> T591 P → P
+>
+> T592 P → P
+>
+> T593 P → P
+>
+> T594 P → P
+>
+> T595 P → P
+>
+> T596 P → P
+>
+> T597 (P ∨ Q) → P ∨ Q
+>
+> T598 P ∧ Q → (P ∧ Q)
+
+T599 (P ↔ P)
+
+> T600 (P ↔ P)
+>
+> T601 (P ↔ P)
+>
+> T602 (↔P ↔ P)
+>
+> T603 P ↔ P
+>
+> T604 P ↔ P
+>
+> T605 P ↔ P
+>
+> T606 P ↔ P
+>
+> T607 P ↔ P
+>
+> T608 P ↔ P
+>
+> T609 P ↔ P
+>
+> T610 P ↔ P
+
+Theorems T611−T612 are the additional *modal reduction laws* for **S5**.
+These modal reduction laws together with the modal reduction laws T585
+and T586 for (**S4)**, which also hold in **(S5)**, imply that iterated
+modalities collapse to the innermost operator.
+
+> T611 P ↔ P
+>
+> T612 P ↔ P
+
+### Exercises
+
+1\. Verify the following claims.
+
+1.  **K** is derivable in **T**.
+
+2.  PG is derivable in each of the modal systems **T**, **B**, **S4**,
+    and **S5**.
+
+\(C\) Show that in each of the modal systems if ϕ is a theorem of
+classical sentential logic, then ϕ is derivable (this is known as the
+rule of necessitation **Nec**).
+
+2\. Prove by induction that Interchange of Equivalents (see pp. 362-363
+of KMM) is derivable in each of the modal systems.
+
+3\. Construct **T**-derivations of the following theorems:
+
+> \(A\) T501 (P → Q) → (P → Q)
+>
+> \(B\) T502 (P → Q) → (P → Q)
+>
+> \(C\) T541 P → P
+>
+> \(D\) T542 (P → P)
+>
+> \(E\) T523 (P → Q) ∨ (Q → P)
+
+4\. Construct **B**-derivations for the following theorems:
+
+> \(A\) T550 P → P
+>
+> \(B\) T551 P → P
+>
+> \(C\) T552 (P → Q) → (P → Q)
+>
+> \(D\) T553 (P → Q) → (P → Q)
+>
+> \(E\) T554 P → P
+
+5\. Construct **S4**-derivations for the following theorems:
+
+> \(A\) T560 P → P
+>
+> \(B\) T561 P → P
+>
+> \(C\) T562 (P → Q) → (P → Q)
+>
+> \(D\) T563 (P ∨ Q) → (P ∨ Q)
+>
+> \(E\) T564 ((P → Q) → R) → ((P→Q) → R)
+
+6\. Construct **S5**-derivations for the following theorems:
+
+> \(A\) T571 P → P
+>
+> \(B\) T573 P ∧ Q → (P ∧ Q)
+>
+> \(C\) T574 P → P
+>
+> \(D\) T594 P ↔ P
+>
+> \(E\) T597 P ↔ P
+
+7\. Prove that if a relation R is reflexive, then R is euclidean if and
+only if R is both symmetric and transitive, that is prove the following
+theorem:
+
+∀*x*R*xx* ⇒ (∀*u*∀*t*∀*v*(R*ut* & R*uv* ⇒ R*tv*) ⇔ \[∀*x*∀*y*(R*xy* ⇒
+R*yx*) & ∀*x*∀*y*∀*z*(R*xy* & R*yz* ⇒ R*xz*)\]) .
+
+8\. For each of the following pairs of statements, one is a theorem in
+**T**, but the other is not. If a statement is a theorem, construct a
+**T**-derivation of its conclusion from its premises. If statement is
+not a theorem, provide an invalidating semantic diagram.
+
+> \(A\) (P → Q) → (P → Q) ; (P → Q) → (P → Q)
+>
+> \(B\) (P ∧ Q) → (P ∧ Q) ; (P ∧ Q) → (P ∧ Q)
+
+9\. Construct a semantic diagram and a semantic derivation in our
+metalanguage to show that the axiom
+
+(P → Q) ∨ (Q → P)
+
+is valid in any modal structure in which the accessibility relation R is
+*weakly connected*, i.e.,
+
+∀*x*∀*y*∀*z*(R*xy* & R*xz* ⇒ R*yz* **∨** R*zy*) .
+
+10\. Prove the following theorems about strict implication and strict
+equivalence in system (**T**) to which we add the following deductive
+rules:
+
+*Strict Implication* \[SI\]: From P ⇒ Q to infer (P → Q), and
+conversely.
+
+*Strict Equivalence* \[SE\]: From P ⇔ Q to infer (P ↔ Q), and
+conversely.
+
+\(A\) ~(P ∧ ~Q) ↔ (P ⇒ Q)
+
+\(B\) (P ⇒ Q) ∧ (P ⇒ ~Q) ⇒ Q
+
+\(C\) (~P ∧ ~Q) ⇒ (P ⇔ Q)
+
+\(D\) Q ∴ P ⇒ Q
+
+\(E\) ~P ∴ P ⇒ Q
+
+11\. A statement P is *contingent* if it is neither necessary nor
+impossible. We may define the *contingency operator* ∇ as follows:
+
+∇P ↔ ~(P ∨ ~P) .
+
+Translate the following axioms about contingency into English, and then,
+using the above definition, provide derivations of each of them in
+**S5** in which you may use both Interchange of Equivalences (IE) and
+biconditional derivation (BD).
+
+> \(A\) ∇P ↔ ∇~P
+>
+> \(B\) ~∇(P ↔ Q) → (∇P → ∇Q)
+>
+> \(C\) ∇(P → Q) → (~∇P → P)
+>
+> \(D\) ~∇(P → ∇Q)
+>
+> \(E\) P ↔ (P ∧ ~∇P)

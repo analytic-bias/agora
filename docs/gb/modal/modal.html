@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.526">
+<meta name="generator" content="quarto-1.5.21">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Gödelian Explorations - 2&nbsp; ‘Must’ and ‘Might’ — The Modal Logic of Necessity and Possibility</title>
+<title>Gödelian Explorations – 1&nbsp; ‘Must’ and ‘Might’ — The Modal Logic of Necessity and Possibility</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -51,7 +51,7 @@ div.csl-indent {
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../references.html" rel="next">
-<link href="../euclid/euclid.html" rel="prev">
+<link href="../index.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -92,6 +92,33 @@ div.csl-indent {
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
 <link rel="stylesheet" href="../styles.css">
 </head>
 
@@ -104,7 +131,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../modal/modal.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">‘Must’ and ‘Might’ --- The Modal Logic of Necessity and Possibility</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../modal/modal.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">‘Must’ and ‘Might’ — The Modal Logic of Necessity and Possibility</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -129,14 +156,8 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../euclid/euclid.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title"><span class="ourblue">Modal Logic and Binary Relations</span></span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../modal/modal.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">‘Must’ and ‘Might’ — The Modal Logic of Necessity and Possibility</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">‘Must’ and ‘Might’ — The Modal Logic of Necessity and Possibility</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -155,11 +176,19 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#modes-of-truth-and-modal-logics" id="toc-modes-of-truth-and-modal-logics" class="nav-link active" data-scroll-target="#modes-of-truth-and-modal-logics"><span class="header-section-number">2.1</span> <span class="smallcaps">Modes of Truth and Modal Logics</span></a>
+  <li><a href="#modes-of-truth-and-modal-logics" id="toc-modes-of-truth-and-modal-logics" class="nav-link active" data-scroll-target="#modes-of-truth-and-modal-logics"><span class="header-section-number">1.1</span> <span class="smallcaps">Modes of Truth and Modal Logics</span></a>
   <ul>
   <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">Exercises</a></li>
   </ul></li>
-  <li><a href="#the-symbolic-language-for-modal-propositional-logic" id="toc-the-symbolic-language-for-modal-propositional-logic" class="nav-link" data-scroll-target="#the-symbolic-language-for-modal-propositional-logic"><span class="header-section-number">2.2</span> <span class="smallcaps">The Symbolic Language for Modal Propositional Logic</span></a></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"><span class="header-section-number">1.2</span> </a></li>
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1"><span class="header-section-number">1.3</span> </a></li>
+  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2"><span class="header-section-number">1.4</span> </a></li>
+  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3"><span class="header-section-number">1.5</span> </a></li>
+  <li><a href="#section-4" id="toc-section-4" class="nav-link" data-scroll-target="#section-4"><span class="header-section-number">1.6</span> </a></li>
+  <li><a href="#possible-world-semantics" id="toc-possible-world-semantics" class="nav-link" data-scroll-target="#possible-world-semantics"><span class="header-section-number">1.7</span> <span class="smallcaps">Possible World Semantics</span></a>
+  <ul>
+  <li><a href="#exercises-1" id="toc-exercises-1" class="nav-link" data-scroll-target="#exercises-1">Exercises</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -168,7 +197,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">‘Must’ and ‘Might’ — The Modal Logic of Necessity and Possibility</span></h1>
+<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">‘Must’ and ‘Might’ — The Modal Logic of Necessity and Possibility</span></h1>
 </div>
 
 
@@ -186,12 +215,12 @@ div.csl-indent {
 
 
 
-<div class="no-row-height column-margin column-container"><div class="wabullet">
+<div class="no-row-height column-margin column-container"><div class="wabullet margin-aside">
 <ul>
 <li>The responsive layout on mobile portrait might not be as polished; if content is overlapped thus unintelligible, please rotate device to landscape. <strong>You might also wish to access the <a href="../gb.pdf">pdf version</a> of this book.</strong></li>
 </ul>
-</div></div><section id="modes-of-truth-and-modal-logics" class="level2 page-columns page-full" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="modes-of-truth-and-modal-logics"><span class="header-section-number">2.1</span> <span class="smallcaps">Modes of Truth and Modal Logics</span></h2>
+</div></div><section id="modes-of-truth-and-modal-logics" class="level2 page-columns page-full" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="modes-of-truth-and-modal-logics"><span class="header-section-number">1.1</span> <span class="smallcaps">Modes of Truth and Modal Logics</span></h2>
 <p>Historically, notions like <em>necessity</em>, <em>possibility</em>, <em>impossibility</em>, and <em>contingency</em> were thought of as modes of truth or ways in which a proposition could be true or false. <em>Modal logic</em> began as the study of the logic of these modes of truth.</p>
 <p>Aristotle, in Chapter 9 of <em>De Interpretatione</em>, discusses modality in his famous example of the sea battle. Suppose the sea battle will be fought tomorrow. Then it was true yesterday that it would be fought tomorrow. So if all past truths are necessarily true, then it is necessarily true now that the battle will be fought tomorrow. A similar argument holds on the supposition that the sea battle will not be fought tomorrow. Aristotle proposed solving this problem of <em>logical fatalism</em> by denying that future contingent propositions have definite truth-values.</p>
 <style>
@@ -211,9 +240,9 @@ div.csl-indent {
 \mathrm{P} \to \Box \mathrm{P} \tag*{(\textbf{V})}
 \]</span></span> collapses the notions of truth and necessary truth.</p>
 <p>Medieval philosophers, concerned with such theological issues as articulating the nature of the Trinity, appealed to such modal notions as essence and accident, contingency and necessity in their labyrinthine theological reflections.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> Akin to the problem is logical fatalism is the problem of <em>theological fatalism</em>: the problem of reconciling divine foreknowledge and human freedom. Saint Augustine (354–430) in his treatise <em>On the Free Choice of Will</em> considers an argument for <em>theological fatalism</em> proposed by Evodius. Evodius argued that “God foreknew that man would sin, that which God foreknew must necessarily come to pass.” We may set forth this argument for theological fatalism for a particular case as follows:</p>
-<div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;The theological, if not the political, roots Great Schism of 1054, which can be traced back to a disagreement about the modalities of the Persons of the Trinity. The Nicean Creed (325) uses the term <em>homoousios</em> (from the Greek <em>homo</em> = ‘same‘ and <em>ousios</em> = ‘essence’ or ‘substance’), in contrast to <em>homoiousios</em> (from the Greek <em>homoi</em> = ‘similar’) making the solitary <em>i</em> the jot and tittle of Nicean Creedal Orthodoxy. The Greek Church preferred the latter term since the former had been used by the Syrian Bishop of Antioch to espouse <em>modal monarchism</em>, the heresy that the Heavenly Father, Resurrected Son and Holy Spirit are not three distinct Persons, but are rather different&nbsp;<em>modes</em>&nbsp;or&nbsp;<em>aspects</em>&nbsp;of one monadic God perceived by believers as distinct persons. The Latin Church adopted the former siding with Athanasius against the heretic Arius, who denied that Jesus was co-equal and co-eternal with the Father. The Second Council of Nicea (381), among other changes, inserted the word <em>filioque</em> (from the Latin <em>filio</em> = the son, and <em>que</em> = “and”) into the Nicean-Constantinopolitan Creed and the Latin mass. In Latin theology, the three Persons of the Trinity are logically distinguished by the formal relations of “proceeding from” citing such proof texts as Phil. 1:9, Titus 3:6, Acts 2:33. Orthodox theology, citing the words of Jesus in proof texts such John 15:26, regarded the insertion of <em>filioque</em> into the Nicean-Constantipolitan creed, is as Semi-Sabellianism. The great church historian <span class="citation" data-cites="Pelikan1988melody">Pelikan (<a href="../references.html#ref-Pelikan1988melody" role="doc-biblioref">1988: 90</a>)</span> opined: “If there is a special circle of the inferno described by Dante reserved for historians of theology, the principal homework assigned to that subdivision of Hell for at least the first several eons of eternity may well be a thorough study of all the treatises… devoted to the inquiry: Does the Holy Spirit proceed from the Father only, as Eastern Christendom contends, or from both the Father and the Son as the Latin Church teaches?” In 1989 Pope John Paul II and Patriarch Demetrius knelt together in Rome and recited the Nicene Creed without the <em>filioque</em>.</p><div id="ref-Pelikan1988melody" class="csl-entry" role="listitem">
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;The theological, if not the political, roots Great Schism of 1054, which can be traced back to a disagreement about the modalities of the Persons of the Trinity. The Nicean Creed (325) uses the term <em>homoousios</em> (from the Greek <em>homo</em> = ‘same‘ and <em>ousios</em> = ‘essence’ or ‘substance’), in contrast to <em>homoiousios</em> (from the Greek <em>homoi</em> = ‘similar’) making the solitary <em>i</em> the jot and tittle of Nicean Creedal Orthodoxy. The Greek Church preferred the latter term since the former had been used by the Syrian Bishop of Antioch to espouse <em>modal monarchism</em>, the heresy that the Heavenly Father, Resurrected Son and Holy Spirit are not three distinct Persons, but are rather different&nbsp;<em>modes</em>&nbsp;or&nbsp;<em>aspects</em>&nbsp;of one monadic God perceived by believers as distinct persons. The Latin Church adopted the former siding with Athanasius against the heretic Arius, who denied that Jesus was co-equal and co-eternal with the Father. The Second Council of Nicea (381), among other changes, inserted the word <em>filioque</em> (from the Latin <em>filio</em> = the son, and <em>que</em> = “and”) into the Nicean-Constantinopolitan Creed and the Latin mass. In Latin theology, the three Persons of the Trinity are logically distinguished by the formal relations of “proceeding from” citing such proof texts as Phil. 1:9, Titus 3:6, Acts 2:33. Orthodox theology, citing the words of Jesus in proof texts such John 15:26, regarded the insertion of <em>filioque</em> into the Nicean-Constantipolitan creed, is as Semi-Sabellianism. The great church historian <span class="citation" data-cites="Pelikan1988melody">Pelikan (<a href="../references.html#ref-Pelikan1988melody" role="doc-biblioref">1988: 90</a>)</span> opined: “If there is a special circle of the inferno described by Dante reserved for historians of theology, the principal homework assigned to that subdivision of Hell for at least the first several eons of eternity may well be a thorough study of all the treatises… devoted to the inquiry: Does the Holy Spirit proceed from the Father only, as Eastern Christendom contends, or from both the Father and the Son as the Latin Church teaches?” In 1989 Pope John Paul II and Patriarch Demetrius knelt together in Rome and recited the Nicene Creed without the <em>filioque</em>.</p><div id="ref-Pelikan1988melody" class="csl-entry" role="listitem">
 Pelikan, J. 1988. <em>The melody of theology: A philosophical dictionary</em>. Harvard University Press.
-</div></li></div><div class="nobullet">
+</div></div></div><div class="nobullet">
 <ul>
 <li>If God knew that Adam would sin, then, necessarily Adam sinned.</li>
 <li>God knew that Adam would sin (because God is omniscient).</li>
@@ -246,7 +275,7 @@ Pelikan, J. 1988. <em>The melody of theology: A philosophical dictionary</em>. H
 <p>The question of whether Anselm’s argument is valid became a precise question when various systems of modal logic were proposed and developed in the 1960s.</p>
 <p>Gottlob Frege (1848–1925), the inventor (or discoverer) of modern predicate-quantifier logic, relegated modality to autobiographical information about the speaker, and for many years logicians only investigated extensional logic.</p>
 <p>One of the most puzzling validities, at least to the beginning logical students is known as <em>Lewis’s Dilemma</em>: <span class="math display">\[\mathrm{P}\land\lnot \mathrm{P}\to \mathrm{Q},\]</span> which states <em>“a contradiction implies anything”</em><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. This implication follows from the inference rules of simplification, addition, and <em>modus tollendo ponens</em><a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>, which are themselves not particularly puzzling.</p>
-<div class="no-row-height column-margin column-container"><li id="fn2"><p><sup>2</sup>&nbsp;Or <em>“ex falso quodlibet”</em>, in Latin.</p></li><li id="fn3"><p><sup>3</sup>&nbsp;<em>“mode that denies by affirming”</em></p></li></div><p><img src="b19aa63a56b0763796b01ccf0de48f7a89952148.svg" class="img-fluid" style="display: block; margin: auto; width: 100%;"></p>
+<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;Or <em>“ex falso quodlibet”</em>, in Latin.</p></div><div id="fn3"><p><sup>3</sup>&nbsp;<em>“mode that denies by affirming”</em></p></div></div><p><img src="b19aa63a56b0763796b01ccf0de48f7a89952148.svg" class="img-fluid" style="display: block; margin: auto; width: 100%;"></p>
 <p>The following theorems are known as the <em>paradoxes of material implication</em>:</p>
 <div class="page-columns page-full">
 
@@ -296,13 +325,13 @@ Pelikan, J. 1988. <em>The melody of theology: A philosophical dictionary</em>. H
 <p>The notion of strict implication was characterized by such axioms as:</p>
 <p>The philosopher Leibniz (1646–1716) explicitly invoked that language of possible worlds to explain the difference between necessary and contingent truths. What is logically or necessarily true are those truths truth in <em>all</em> possible worlds, whereas a contingent truth is one that is true in <em>some</em> possible worlds.</p>
 <p>Drawing upon this logical connection between universal and existential quantification and the modal notions of necessity and possibility, we obtain a modal version of the classical Aristotelian Square of Opposition and the duality of modal laws known as the laws of modal negation.</p>
-<div id="fig-modal-aristotelian-diamond-1" class="fullwidth quarto-figure quarto-figure-center anchored page-columns page-full" style="display: block; margin: auto; width: 100%;">
+<div id="fig-modal-aristotelian-diamond-1" class="fullwidth quarto-figure quarto-figure-center quarto-float anchored page-columns page-full" style="display: block; margin: auto; width: 100%;">
 <figure class="quarto-float quarto-float-fig figure page-columns page-full">
 <div aria-describedby="fig-modal-aristotelian-diamond-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca" class="page-columns page-full">
 <p class="page-columns page-full"><img src="d4b4d0178cfadc8c81925a3403484e4cbdf83fd6.svg" class="img-fluid figure-img column-page-right" style="display: block; margin: auto; width: 100%;"></p>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-modal-aristotelian-diamond-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2.1: <span class="smallcaps">An Aristotelian Diamond of Opposition</span>
+Figure&nbsp;1.1: <span class="smallcaps">An Aristotelian Diamond of Opposition</span>
 </figcaption>
 </figure>
 </div>
@@ -409,7 +438,7 @@ div .proof {
 }
 </style>
 
-<div class="no-row-height column-margin column-container"><div class="">
+<div class="no-row-height column-margin column-container"><div class="margin-aside">
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -432,10 +461,10 @@ A Classical Theorem, but in Intuitionism
 <li>If it’s rational, then <span class="math inline">\(x=y=\sqrt{2}\)</span> are both irrational yet <span class="math inline">\(x^y\)</span> is rational.</li>
 <li>If <span class="math inline">\(\sqrt{2}^{\sqrt{2}}\)</span> is irrational, then <span class="math inline">\(x=\sqrt{2}^{\sqrt{2}}\)</span> and <span class="math inline">\(y=\sqrt{2}\)</span> are both irrational and <span class="math inline">\(x^y\)</span> is rational.</li>
 </ul>
-<p>Either way there exist <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> such that <span class="math inline">\(x^y\)</span> is rational. <span style="float: right;"><span class="math inline">\(\Box\)</span></span></p>
+<p>Either way, there exists <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> such that <span class="math inline">\(x^y\)</span> is rational. <span style="float: right;"><span class="math inline">\(\Box\)</span></span></p>
 </div>
 <p>Intuitionists reject this classical argument by separation of cases because it does not actually construct the numbers <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> such that <span class="math inline">\(xy\)</span> is irrational. The idea behind intuitionistic logic is that the connectives are reinterpreted as involving a kind of provability.</p>
-<p>In case you’re curious, it is actually known that <span class="math inline">\(\sqrt{2}^{\sqrt{2}}\)</span> is irrational, due to the <a href="https://en.wikipedia.org/wiki/Gelfond%E2%80%93Schneider_theorem">Gelfond–Schneider theorem</a>.</p>
+<p>In case you’re curious, it is actually known that <span class="math inline">\(\sqrt{2}^{\sqrt{2}}\)</span> is irrational, due to the <a href="https://en.wikipedia.org/wiki/Gelfond%E2%80%93Schneider_theorem">Gelfond–Schneider theorem</a> which verifies that it usually take significantly more effort to convince an intuitionistic mathematicians than a classical one.</p>
 </div>
 </div>
 </div></div><p>According to intuitionism, mathematical objects do not exist as eternal Platonic objects but are constructions in intuition. Intuitionists read the propositional connectives as involving not merely truth, but proof, and so they rejected such classical forms of reasoning as <em>reductio ad absurdum</em> and theorems such as the <em>law of excluded middle.</em> Intuitionists reject the following mathematical proof.</p>
@@ -513,11 +542,352 @@ Van Benthem, Johan. 2010. <em>Modal logic for open minds</em>. Stanford, CA: Cen
 </ol>
 </section>
 </section>
-<section id="the-symbolic-language-for-modal-propositional-logic" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="the-symbolic-language-for-modal-propositional-logic"><span class="header-section-number">2.2</span> <span class="smallcaps">The Symbolic Language for Modal Propositional Logic</span></h2>
+<section id="section" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="section"><span class="header-section-number">1.2</span> </h2>
+</section>
+<section id="section-1" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="section-1"><span class="header-section-number">1.3</span> </h2>
+</section>
+<section id="section-2" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="section-2"><span class="header-section-number">1.4</span> </h2>
+</section>
+<section id="section-3" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="section-3"><span class="header-section-number">1.5</span> </h2>
+</section>
+<section id="section-4" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="section-4"><span class="header-section-number">1.6</span> </h2>
+</section>
+<section id="possible-world-semantics" class="level2 page-columns page-full" data-number="1.7">
+<h2 data-number="1.7" class="anchored" data-anchor-id="possible-world-semantics"><span class="header-section-number">1.7</span> <span class="smallcaps">Possible World Semantics</span></h2>
+<p>The Leibnizian idea of characterizing necessity and possibility in terms of truth in all or some possible worlds was given an elegant formalization by <span class="citation" data-cites="Kripke1959 Kripke1963">(<a href="../references.html#ref-Kripke1959" role="doc-biblioref">Kripke 1959</a>; <a href="../references.html#ref-Kripke1963" role="doc-biblioref">1963</a>)</span> when he was only a teenager. According to Leibniz, a sentence is <em>necessary</em> if it is true in <em>every</em> possible world, and a sentence is <em>possible</em> if it is true is <em>some</em> possible world. Kripke showed that by placing very natural conditions on a relation of <em>relative possibility</em> or <em>accessibility</em> on a set of possible worlds, the various systems of modal logic could be validated.</p>
+<div class="no-row-height column-margin column-container"><div id="ref-Kripke1959" class="csl-entry" role="listitem">
+Kripke, Saul. 1959. A completeness theorem in modal logic. <em>Journal of Symbolic Logic</em> 24(1). 1–14. DOI: https://doi.org/<a href="https://doi.org/10.2307/2964568">10.2307/2964568</a>
+</div><div id="ref-Kripke1963" class="csl-entry" role="listitem">
+Kripke, Saul. 1963. Semantical analysis of modal logic i normal modal propositional calculi. <em>Mathematical Logic Quarterly</em> 9(5-6). 67–96. DOI: https://doi.org/<a href="https://doi.org/10.1002/malq.19630090502">https://doi.org/10.1002/malq.19630090502</a>
+</div><div id="fn4"><p><sup>4</sup>&nbsp;set-theoretic size issues‽</p></div></div><p>Intuitively, a possible world tells us for each sentence letter whether it is true or false in that world. Stripping away inessentials, we can represent a possible world by a subset of sentence letters. A <em>modal structure</em> <span class="math inline">\(\mathbb{M}\)</span> is an ordered triple <span class="math inline">\(\langle W, R,\alpha \rangle\)</span>, where <span class="math inline">\(W\)</span> is a set<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> of possible worlds, <span class="math inline">\(R\subseteq W\times W\)</span> is a relation known as the <em>accessibility relation</em> or the <em>relative possibility relation</em>, and <span class="math inline">\(\alpha\)</span> is a distinguished element of <em>W</em> known as the <em>actual world</em></p>
+<p>We can exhaustively characterize the notion of <span class="math display">\[\beta \vDash \varphi,\]</span> the <em>truth of a sentence in a possible world</em> <span class="math inline">\(\beta\)</span>, by</p>
+<ol start="4" class="example" type="1">
+<li><p>If <span class="math inline">\(\varphi\)</span> is a sentence letter S, then <span class="math display">\[
+\beta\vDash S \iff S\in\beta,
+\]</span> i.e.&nbsp;<span class="math inline">\(S\)</span> is a member of <span class="math inline">\(\beta\)</span>;</p></li>
+<li><p>If <span class="math inline">\(\varphi\)</span> is <span class="math inline">\(\psi\)</span>, then <span class="math display">\[
+\beta\vDash \neg\psi \iff \beta\not\vDash\psi,
+\]</span> i.e., it is not the case that <span class="math inline">\(\beta\vDash\psi\)</span>;</p></li>
+<li><ol type="a">
+<li><p>If <span class="math inline">\(\varphi\)</span> is <span class="math inline">\((\psi\land\chi)\)</span>, then <span class="math display">\[
+\beta\vDash (\psi\land\chi) \iff \beta\vDash\psi \mathrel{\&amp;} \beta\vDash\chi,
+\]</span> i.e., both <span class="math inline">\(\beta\vDash\psi\)</span> and <span class="math inline">\(\beta\vDash\chi\)</span>;</p></li>
+<li><p>If <span class="math inline">\(\varphi\)</span> is <span class="math inline">\((\psi\lor\chi)\)</span>, then <span class="math display">\[
+\beta\vDash (\psi\lor\chi) \iff \beta\vDash\psi \mathrel{\|} \beta\vDash\chi,
+\]</span> i.e., either <span class="math inline">\(\beta\vDash\psi\)</span> or <span class="math inline">\(\beta\vDash\chi\)</span>, or both;</p></li>
+<li><p>If <span class="math inline">\(\varphi\)</span> is <span class="math inline">\((\psi\to\chi)\)</span>, then <span class="math display">\[
+\beta\vDash (\psi\to\chi) \iff \beta\vDash\psi\implies\chi,
+\]</span> i.e., if <span class="math inline">\(\beta\vDash\psi\)</span> then <span class="math inline">\(\beta\vDash\chi\)</span>, or either <span class="math inline">\(\beta\not\vDash\psi\)</span> or <span class="math inline">\(\beta\vDash\chi\)</span> ‽;</p></li>
+<li><p>If <span class="math inline">\(\varphi\)</span> is <span class="math inline">\((\psi\leftrightarrow\chi)\)</span>, then <span class="math display">\[
+\beta\vDash (\psi\leftrightarrow\chi) \iff \beta\vDash\psi\iff\chi,
+\]</span> i.e., <span class="math inline">\(\beta\vDash\psi\)</span> if and only if <span class="math inline">\(\beta\vDash\chi\)</span>;</p></li>
+</ol></li>
+</ol>
+<p>Finally, the law clause gives the Leibnizian truth conditions for necessity and possibility:</p>
+<ol start="7" class="example" type="1">
+<li><ol type="a">
+<li><p>If <span class="math inline">\(\varphi\)</span> is <span class="math inline">\(\Box\psi\)</span>, then <span class="math display">\[
+\beta\vDash \Box\psi \iff \forall \gamma\in W.\, \beta\mathrel{R}\gamma \implies \beta\vDash\psi,
+\]</span> i.e., <span class="math inline">\(\psi\)</span> is true in <em>all</em> possible worlds <span class="math inline">\(\gamma\)</span>, possible-relative to <span class="math inline">\(\beta\)</span>;</p></li>
+<li><p>If <span class="math inline">\(\varphi\)</span> is <span class="math inline">\({\Large\diamond}\psi\)</span>, then <span class="math display">\[
+\beta\vDash {\Large\diamond}\psi \iff \exists \gamma\in W.\, \beta\mathrel{R}\gamma \implies \beta\vDash\psi,
+\]</span> i.e., <span class="math inline">\(\psi\)</span> is true in some possible worlds <span class="math inline">\(\gamma\)</span>, possible-relative to <span class="math inline">\(\beta\)</span>;</p></li>
+</ol></li>
+</ol>
+<p>This completes the definition of truth in a model for modal propositional logic. Using this definition of truth, we can now define what it means for a sentence to be <em>semantically valid</em>: <span class="math display">\[
+\vDash\varphi\text{ (i.e., }\varphi\text{ is semantically valid)} \iff \forall\alpha\in W.\, \alpha\vDash\varphi.
+\]</span></p>
+<p>Next, we obtain different systems of modal logic when various conditions are placed on the accessibility or relative possibility relation R. We say that a relation <span class="math inline">\(R\)</span> is a <em>series</em> if <span class="math inline">\(R\)</span> is serial; <span class="math inline">\(R\)</span> is a <em>reflexivity</em> if <span class="math inline">\(R\)</span> is totally reflexive; <span class="math inline">\(R\)</span> is a <em>similarity</em> if <span class="math inline">\(R\)</span> is totally reflexive and symmetric; <span class="math inline">\(R\)</span> is a <em>partial ordering</em> if <span class="math inline">\(R\)</span> is totally reflexive and transitive; <span class="math inline">\(R\)</span> is an <em>equivalence relation</em> if <span class="math inline">\(R\)</span> is totally reflexive and euclidean. It turns out that the axioms of modal logic discussed above are validated when natural conditions are imposed on the accessibility or relative possibility relation <span class="math inline">\(R\)</span>.</p>
+<div id="tbl-properties-of-accessibility" class="quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-properties-of-accessibility-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1.1: Properties of Accessibility
+</figcaption>
+<div aria-describedby="tbl-properties-of-accessibility-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 50%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><strong>D</strong></td>
+<td><span class="math inline">\({\small\square} \varphi \rightarrow {\Large\diamond} \varphi\)</span></td>
+<td>serial</td>
+<td><span class="math inline">\(\forall \alpha.\,\exists \beta.\, \alpha \mathbin{R} \beta\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>T</strong></td>
+<td><span class="math inline">\({\small\square} \varphi \rightarrow \varphi\)</span></td>
+<td>reflexive</td>
+<td><span class="math inline">\(\forall \alpha.\,\alpha \mathbin{R} \alpha\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>B</strong></td>
+<td><span class="math inline">\(\varphi \rightarrow \square {\Large\diamond} \varphi\)</span></td>
+<td>symmetric</td>
+<td><span class="math inline">\(\forall \alpha.\, \forall \beta.\, (\alpha \mathbin{R} \beta \Rightarrow \beta \mathbin{R} \alpha)\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>4</strong></td>
+<td><span class="math inline">\(\square \varphi \rightarrow \square \square \varphi\)</span></td>
+<td>transitive</td>
+<td><span class="math inline">\(\forall \alpha \forall \beta .\, \forall \gamma.\, (\alpha \mathbin{R} \beta \;\&amp;\; \beta \mathbin{R} \gamma \Rightarrow \alpha \mathbin{R} \gamma)\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>5</strong></td>
+<td><span class="math inline">\({\Large\diamond} \varphi \rightarrow \square {\Large\diamond} \varphi\)</span></td>
+<td>euclidean</td>
+<td><span class="math inline">\(\forall \alpha.\, \forall \beta.\, \forall \gamma.\, (\alpha \mathbin{R} \beta \;\&amp;\; \alpha \mathbin{R} \gamma \Rightarrow \beta \mathbin{R} \gamma)\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>Systems of modal logic are <em>normal</em> when everything derivable from necessary truths is itself necessary. This will be the case if the rule of <em>modus ponens</em> and axiom <a href="#eq-modal-axiom-K-2">(<strong>K</strong>)</a> are valid: <span id="eq-modal-axiom-K-2"><span class="math display">\[
+\Box(\mathrm{P}\to \mathrm{Q})\to(\Box \mathrm{P}\to\Box \mathrm{Q}).\tag*{(\textbf{K})}
+\]</span></span></p>
+<p>Axiom <strong>K</strong> expresses the intuition that <em>necessary truths imply only necessary truths</em>.</p>
+<p>We can conveniently summarize the above systems of modal logic in a chart. The various modal systems can be characterized by the axioms that are valid in them. The smallest normal modal logic system <strong>K</strong> contains axiom <strong>K</strong>. The four most famous modal logics are system (T) named after the Gödel–Feyes–von Wright modal logic to model tautologies, system <strong>S4</strong> and <strong>S5</strong>, named after C. I. Lewis’s axioms for strict implications, and the unduly neglected Brouwersche system <strong>B</strong>, named by Becker after the intuitionist L. E. J. Brouwer due to the characteristic axiom’s similarity to intuitionistic double negation. All these systems contain <strong>K</strong> and <strong>T</strong>. The system <strong>D</strong> is a weaker system than <strong>T</strong>, containing axioms <strong>K</strong> and <strong>D</strong>, is named for deontic logic.</p>
+<p>Notice that relationships of containment among the modal systems follow from the logic of relations. Axiom <strong>B</strong> requires that R be symmetric and <strong>4</strong> requires that R be transitive. System <strong>S5</strong> with axioms <strong>T</strong> and <strong>E</strong> require R to be an equivalence relation (i.e., reflexive, symmetric, and transitive); hence, <strong>S5</strong> could also be specified by requiring axioms <strong>T</strong>, <strong>4</strong>, and <strong>B</strong> to be valid. Therefore, <strong>S5</strong> contains <strong>S4</strong> and <strong>B</strong>, neither of which contains the other. Systems <strong>S5</strong>, <strong>S4</strong> and <strong>B</strong> all contain system <strong>T</strong>, which contains <strong>D</strong>.</p>
+<p>A convenient way of describing these modal logics is by their <em>Lemmon code</em> listing the axioms valid in them. For example, <span class="math inline">\(\mathbf{S5} = \mathbf{KTE} = \mathbf{KT4B} = \mathbf{KD4B}\)</span>. We can represent these containment relations in a diagram in which downward paths represent containment.</p>
+<div id="tbl-modal-axioms-and-accessibility" class="quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-modal-axioms-and-accessibility-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1.2: Modal Axioms and Accessibility
+</figcaption>
+<div aria-describedby="tbl-modal-axioms-and-accessibility-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 23%">
+<col style="width: 10%">
+<col style="width: 23%">
+<col style="width: 10%">
+<col style="width: 23%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><strong>D</strong></td>
+<td>Deontic Logic</td>
+<td style="text-align: center;"><strong>D</strong></td>
+<td><span class="math inline">\({\small\square} P \rightarrow {\Large\diamond} P\)</span></td>
+<td style="text-align: center;"><strong>KD</strong></td>
+<td>seriality</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>T</strong></td>
+<td>Gödel-Feys-von Wright Tautology</td>
+<td style="text-align: center;"><strong>T</strong></td>
+<td><span class="math inline">\({\small\square} P \rightarrow P\)</span></td>
+<td style="text-align: center;"><strong>KT</strong></td>
+<td>reflexivity</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>B</strong></td>
+<td>Brouwersche System</td>
+<td style="text-align: center;"><strong>B</strong></td>
+<td><span class="math inline">\(P \rightarrow \square {\Large\diamond} P\)</span></td>
+<td style="text-align: center;"><strong>KTB</strong></td>
+<td>similarity</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>S4</strong></td>
+<td>Lewis’ Strict Implication System 4</td>
+<td style="text-align: center;"><strong>4</strong></td>
+<td><span class="math inline">\(\square P \rightarrow \square \square P\)</span></td>
+<td style="text-align: center;"><strong>KT4</strong></td>
+<td>partial ordering</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>S5</strong></td>
+<td>Lewis’ Strict Implication System 5</td>
+<td style="text-align: center;"><strong>E</strong></td>
+<td><span class="math inline">\({\Large\diamond} P \rightarrow \square {\Large\diamond} P\)</span></td>
+<td style="text-align: center;"><strong>KTE</strong></td>
+<td>equivalence relation</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div id="fig-logical-containment-of-the-modal-systems" class="quarto-figure quarto-figure-center quarto-float anchored" style="display: block; margin: auto; width: 100%;">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-logical-containment-of-the-modal-systems-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<p><img src="a1aa6cce761cea6d0a8bc1e6ee85e3bd094d5dc9.svg" class="img-fluid figure-img" style="display: block; margin: auto; width: 100%;"></p>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-logical-containment-of-the-modal-systems-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.2: Logical Containment of the Modal Systems
+</figcaption>
+</figure>
+</div></div><p>Various deontic modal systems can also be characterized by their axioms (<em>Lemmon code</em>).</p>
+<div id="tbl-lemmon-codes-for-deontic-modal-systems" class="quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-lemmon-codes-for-deontic-modal-systems-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1.3: Lemmon Codes for Deontic Modal Systems
+</figcaption>
+<div aria-describedby="tbl-lemmon-codes-for-deontic-modal-systems-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 30%">
+<col style="width: 20%">
+<col style="width: 30%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">System <strong>T</strong></td>
+<td><strong>KT</strong></td>
+<td>Deontic <strong>D</strong></td>
+<td><strong>KD</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">System <strong>B</strong></td>
+<td><strong>KTB</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">System <strong>S4</strong></td>
+<td><strong>KT4</strong></td>
+<td>Deontic <strong>S4</strong></td>
+<td><strong>KD4</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">System <strong>S5</strong></td>
+<td><strong>KTE</strong> = <strong>KT4B</strong> = <strong>KD4B</strong></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>The logical relationships among the above systems of modal logic can be set forth in a diagram (due to Krister Segerberg who omits <strong>KD5</strong> and <strong>K45</strong>). As before, a modal logic is included in another if it is connected to it, directly or indirectly, by an upward path. The second diagram is a more elaborate <span class="smallcaps">Picassos’ Electric Chair</span> that includes deontic modal logics.</p>
+<div id="fig-picassos-hasse-diagrams" class="fullwidth column-page-right quarto-figure quarto-figure-center quarto-float anchored" data-fig-pos="H" style="display: block; margin: auto; width: 100%;">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-picassos-hasse-diagrams-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+
+</div>
+<div class="fullwidth quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="becb4b6f90dba6e7b9ba11cb913e86bf19f4d746.svg" class="img-fluid figure-img" style="display: block; margin: auto; width: 100%;"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="8c9cdf2bc4708274af4c6f18832953666a027fdc.svg" class="img-fluid figure-img" style="display: block; margin: auto; width: 100%;"></p>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-picassos-hasse-diagrams-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.3: Hasse–Picassos Diagrams for Systems of Modal Logic
+</figcaption>
+</figure>
+</div>
+<p>One way to visualize how the conditions on the accessibility relation validate their respective axioms is using the definitions of ‘<span class="math inline">\(\small\square\)</span>’ and <span class="math inline">\(\LARGE\diamond\)</span> in terms of possible worlds and use directed graphs from Chapter IV to represent the accessibility relation <span class="math inline">\(\mathbin{R}\)</span>. Here the accessibility relation <span class="math inline">\(\alpha\mathbin{R}\beta\)</span> (read “<span class="math inline">\(\beta\)</span> is possible relative to <span class="math inline">\(\alpha\)</span>”” or “<span class="math inline">\(\beta\)</span> is accessible to <span class="math inline">\(\alpha\)</span>”) is represented by an arrow from a circle representing possible world <span class="math inline">\(\alpha\)</span> to a circle representing possible world <span class="math inline">\(\beta\)</span>.</p>
+
+<div class="no-row-height column-margin column-container"><div id="fig-accessibility-represented-by-directed-graphs" class="quarto-figure quarto-figure-center quarto-float anchored" style="display: block; margin: auto; width: 100%;">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-accessibility-represented-by-directed-graphs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<p><img src="bd366b3b4f44f34c8e8add34c09ad50163e16ffa.svg" class="img-fluid figure-img" style="display: block; margin: auto; width: 100%;"></p>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-accessibility-represented-by-directed-graphs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.4: Accessibility Represented by Directed Graphs
+</figcaption>
+</figure>
+</div></div><p>We can, using the directed graphs from the theory of relations, translate properties of accessibility relations into geometric properties of directed graphs. Symmetry, for example, requires that all accessibility arrows are double arrows. Reflexivity requires that every world be accessible to itself and so every world has a loop, which is a special case of a double arrow. Seriality requires that every world is a tail of an arrow. Transitivity requires that for every indirect path of accessibility from <span class="math inline">\(\alpha\)</span> to <span class="math inline">\(\beta\)</span> and from <span class="math inline">\(\beta\)</span> to <span class="math inline">\(\gamma\)</span>, there is a direct path from <span class="math inline">\(\alpha\)</span> to <span class="math inline">\(\gamma\)</span>. Being euclidean and serial is equivalent to being an equivalence relation, that is, being reflexive, symmetric and transitive. Expressing <span class="math inline">\(\mathbin{R}\)</span> in terms of love and worlds in terms of persons, we have the following intuitive translations:</p>
+<div id="tbl-relational-properties-of-directed-graphs" class="quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-relational-properties-of-directed-graphs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1.4: Relational Properties of Directed Graphs
+</figcaption>
+<div aria-describedby="tbl-relational-properties-of-directed-graphs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 30%">
+<col style="width: 20%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>serial</td>
+<td><span class="math inline">\(\forall \alpha.\,\exists \beta.\, \alpha \mathbin{R} \beta\)</span></td>
+<td>Everyone is a lover.</td>
+</tr>
+<tr class="even">
+<td>reflexive</td>
+<td><span class="math inline">\(\forall \alpha.\,\alpha \mathbin{R} \alpha\)</span></td>
+<td>Everyone is a self-lover.</td>
+</tr>
+<tr class="odd">
+<td>symmetric</td>
+<td><span class="math inline">\(\forall \alpha.\, \forall \beta.\, (\alpha \mathbin{R} \beta \Rightarrow \beta \mathbin{R} \alpha)\)</span></td>
+<td>All love is requited; all love is mutual.</td>
+</tr>
+<tr class="even">
+<td>transitive</td>
+<td><span class="math inline">\(\forall \alpha \forall \beta .\, \forall \gamma.\, (\alpha \mathbin{R} \beta \;\&amp;\; \beta \mathbin{R} \gamma \Rightarrow \alpha \mathbin{R} \gamma)\)</span></td>
+<td>Love is transitive.</td>
+</tr>
+<tr class="odd">
+<td>euclidean</td>
+<td><span class="math inline">\(\forall \alpha.\, \forall \beta.\, \forall \gamma.\, (\alpha \mathbin{R} \beta \;\&amp;\; \alpha \mathbin{R} \gamma \Rightarrow \beta \mathbin{R} \gamma)\)</span></td>
+<td>All beloveds of the same lover, love each other and</td>
+</tr>
+<tr class="even">
+<td>themselves.</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>Using the definition of truth in a modal system set forth above, we can rigorously demonstrate that if R is transitive, then axiom <strong>4</strong> is valid. This demonstration is carried out in the meta-language. We use the symbols ‘<span class="math inline">\(\forall\)</span>’, ‘<span class="math inline">\(\exists\)</span>’, ‘<span class="math inline">\(\&amp;\)</span>’, ‘<span class="math inline">\(\implies\)</span>’ and ‘<span class="math inline">\(\in\)</span>’ in the meta-language for ‘all’, ‘some’, ‘and’, ‘if… then’, and ‘is an element of’, respectively. Once the truth clauses are unpacked, the logical demonstration is no more complicated than a derivation in the theory of relations.</p>
+<div id="lst-kaplan-transitivity-implies-validity-of-axiom-4" class="listing quarto-float" data-fig-pos="H" style="display: block; margin: auto; width: 100%;">
+<figure class="quarto-float quarto-float-lst figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-kaplan-transitivity-implies-validity-of-axiom-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Listing&nbsp;1.1: Kaplan Semantic Derivation of Transitivity Validating Axiom 4
+</figcaption>
+<div aria-describedby="lst-kaplan-transitivity-implies-validity-of-axiom-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<p><img src="e1fe427ffec3011f1f49762e0155052d284573fc.svg" class="img-fluid figure-img" style="display: block; margin: auto; width: 100%;"></p>
+</div>
+</figure>
+</div>
+<p>The above semantic derivation can be visualized graphically to prove the above result contrapositively. We will show that if <span class="math display">\[{\small\square}\varphi\to{\small\square}{\small\square}\varphi\]</span> is false, then the accessibility relation cannot be transitive. Axiom (4) fails when its antecedent <span class="math inline">\(\varphi\)</span> is true but its consequent <span class="math inline">\({\small\square}\varphi\)</span> is false in α. By modal negation, <span class="math inline">\(\neg{\Large\diamond}{\Large\diamond}\varphi\)</span> is equivalent to <span class="math inline">\({\Large\diamond}{\Large\diamond}\neg\varphi\)</span>.</p>
+<p>So both <span class="math inline">\({\small\square}\varphi\)</span> and <span class="math inline">\({\Large\diamond}{\Large\diamond}\neg\varphi\)</span> are true in some possible world <span class="math inline">\(\alpha\)</span>. Eliminating the first <span class="math inline">\({\Large\diamond}\)</span>, we have that in some possible world <span class="math inline">\(\beta\)</span> accessible to <span class="math inline">\(\alpha\)</span> (i.e.&nbsp;<span class="math inline">\(\alpha\mathbin{R}\beta\)</span>), <span class="math inline">\({\Large\diamond}\neg\varphi\)</span> is true. Applying the definition of truth for <span class="math inline">\({\LARGE\diamond}\)</span> again, we have that for some world <span class="math inline">\(\gamma\)</span> accessible to <span class="math inline">\(\beta\)</span> (i.e.&nbsp;<span class="math inline">\(\beta\mathbin{R}\gamma\)</span>), <span class="math inline">\(\neg\varphi\)</span> is true in <span class="math inline">\(\gamma\)</span>. Notice that the transitivity of the accessibility relation <span class="math inline">\(R\)</span> would require that <span class="math inline">\(\gamma\)</span> be accessible to <span class="math inline">\(\alpha\)</span>, which would contradict that <span class="math inline">\({\small\square}\varphi\)</span>. The invalidity of Axiom (<strong>4</strong>) implies the failure of the transitivity of the accessibility relation <span class="math inline">\(R\)</span>. Stating this result contrapositively, if the accessibility relation <span class="math inline">\(R\)</span> is transitive, then axiom (<strong>4</strong>) is valid.</p>
+<div id="fig-modal-kripke-worlds-diagram-transitivity-to-axiom-4" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-pos="H" style="display: block; margin: auto; width: 100%;">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-modal-kripke-worlds-diagram-transitivity-to-axiom-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<p><img src="5ed238651461db20668b3050b4c33e3735b0ab1a.svg" class="img-fluid figure-img" style="display: block; margin: auto; width: 100%;"></p>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-modal-kripke-worlds-diagram-transitivity-to-axiom-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.5: Kripke–Mar Diagram for Transitivity of <span class="math inline">\(R\)</span> Validating Axiom (4)
+</figcaption>
+</figure>
+</div>
+<p>The semantic demonstration together with the graphic proof using directed graphs support one another in building our intuitions for modal logic. The graphic proofs are satisfying because of their simplicity and ability to make the critical step visually perspicuous. On the other hand, the semantic proof is satisfying insofar as the explicit definitions of <span class="math inline">\(\small\square\)</span>, <span class="math inline">\(\LARGE\diamond\)</span>, <span class="math inline">\(\vDash\)</span> are shown to work elegantly and precisely with our natural deduction systems using the quantifier logic with UD, UI, EI, EG and the theory of relations. We will use the directed graphs in the context of discovering new axioms and the semantic proofs in the context of justifying that these axioms correspond to imposing requirements on the accessibility relation.</p>
+<section id="exercises-1" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="exercises-1">Exercises</h3>
+<p>TODO… too many graphics… need some rest today…</p>
 
 
 
+</section>
 </section>
 
 
@@ -601,6 +971,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -635,7 +1023,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -650,27 +1042,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
     stripColumnClz(note)
-    const typesetMath = (el) => {
-      if (window.MathJax) {
-        // MathJax Typeset
-        window.MathJax.typeset([el]);
-      } else if (window.katex) {
-        // KaTeX Render
-        var mathElements = el.getElementsByClassName("math");
-        var macros = [];
-        for (var i = 0; i < mathElements.length; i++) {
-          var texText = mathElements[i].firstChild;
-          if (mathElements[i].tagName == "SPAN") {
-            window.katex.render(texText.data, mathElements[i], {
-              displayMode: mathElements[i].classList.contains('display'),
-              throwOnError: false,
-              macros: macros,
-              fleqn: false
-            });
-          }
-        }
-      }
-    }
     if (id === null || id.startsWith('sec-')) {
       // Special case sections, only their first couple elements
       const container = document.createElement("div");
@@ -685,10 +1056,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             break;
           }
         }
-        typesetMath(container);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
         return container.innerHTML
       } else {
-        typesetMath(note);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
         return note.innerHTML;
       }
     } else {
@@ -697,8 +1072,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (anchorLink) {
         anchorLink.remove();
       }
-      typesetMath(note);
-      return note.innerHTML;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
     }
   }
   for (var i=0; i<xrefs.length; i++) {
@@ -921,8 +1303,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../euclid/euclid.html" class="pagination-link  aria-label=" &lt;span="" logic="" and="" binary="" relations]{.ourblue}&lt;="" span&gt;"="">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title"><span class="ourblue">Modal Logic and Binary Relations</span></span></span>
+      <a href="../index.html" class="pagination-link" aria-label="Preface">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Preface</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

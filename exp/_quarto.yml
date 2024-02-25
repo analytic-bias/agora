@@ -23,6 +23,10 @@ crossref:
       reference-prefix: ""
       key: eqn
       latex-env: eqnc
+    - kind: float
+      reference-prefix: Proof Listing
+      key: plst
+      latex-env: plst
 
 book:
   search:
@@ -34,7 +38,7 @@ book:
   date: "2030-01-01"
   chapters:
     - index.qmd
-    - euclid/euclid.qmd
+    # - euclid/euclid.qmd
     # - cons/GC.qmd
     # - intro.qmd
     # - test.qmd
@@ -59,6 +63,7 @@ format:
     # cite-method: biblatex
     keep-tex: true
     fontfamily: libertinus # TODO: latex font
+    fontsize: 12pt
     colorlinks: true
     documentclass: scrreprt
     classoption: [twoside]

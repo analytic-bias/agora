@@ -1,0 +1,58 @@
+\documentclass[border={10pt 10pt 10pt 10pt}]{standalone}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\usepackage{unicode-math}
+\usepackage{pgfplots}
+\usepackage{relsize}
+\usepackage{tikz}
+\usepackage{frege}
+\usepackage{wrapfig}
+\usepackage{empheq}
+\usepackage{soul}
+\usepackage{quiver}
+\usepackage{array}
+\usetikzlibrary{fit,tikzmark}
+\newenvironment{dummyenv}{}{}
+\begin{document}
+\begin{dummyenv}
+\nopagecolor
+% https://q.uiver.app/#q=WzAsMTUsWzMsNCwiXFxtYXRoYmZ7XFxjb2xvcntyZWR9S30iXSxbNCwzLCJcXG1hdGhiZntLNX0iXSxbMiwzLCJcXG1hdGhiZntEfSJdLFszLDIsIlxcbWF0aGJme0RLNX0iXSxbMiwyLCJcXG1hdGhiZntkUzR9Il0sWzMsMywiXFxtYXRoYmZ7SzR9Il0sWzQsMiwiXFxtYXRoYmZ7SzQ1fSJdLFszLDEsIlxcbWF0aGJme0RTNX0iXSxbMywwLCJcXG1hdGhiZntcXGNvbG9ye3JlZH1TNX09XFxtYXRoYmZ7S1Q1fSJdLFsyLDEsIlxcbWF0aGJme1M0fSJdLFsxLDIsIlxcbWF0aGJme1R9Il0sWzIsMCwiXFxtYXRoYmZ7XFxjb2xvcntyZWR9Qn1cXGNvbG9ye2JsdWV9PVxcbWF0aGJme0tUQn0iXSxbMCwxLCJcXG1hdGhiZntcXGNvbG9ye2JsdWV9S0RCfSJdLFswLDQsIlxcbWF0aGJme1xcY29sb3J7Ymx1ZX1LQn0iXSxbMSwzLCJcXG1hdGhiZntcXGNvbG9ye2JsdWV9SzRCfSJdLFswLDFdLFswLDJdLFsyLDMsIiIsMix7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsxLDMsIiIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs1LDRdLFs0LDddLFs2LDddLFs1LDZdLFszLDcsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs3LDhdLFsxLDZdLFsyLDRdLFswLDVdLFs0LDldLFs5LDhdLFsxMCw5XSxbMiwxMCwiIiwxLHsib2Zmc2V0IjotMX1dLFsxMSw4XSxbMTIsMTEsIiIsMSx7ImNvbG91ciI6WzI0MCw2MCw2MF19XSxbMTMsMTIsIiIsMSx7ImNvbG91ciI6WzI0MCw2MCw2MF19XSxbMCwxMywiIiwxLHsiY29sb3VyIjpbMjQwLDYwLDYwXX1dLFs1LDE0LCIiLDEseyJjb2xvdXIiOlsyNDAsNjAsNjBdfV0sWzYsMTQsIiIsMSx7ImNvbG91ciI6WzMwMCw2MCw2MF19XSxbMTQsOCwiIiwxLHsiY29sb3VyIjpbMjQwLDYwLDYwXX1dLFsxMywxNCwiIiwxLHsiY29sb3VyIjpbMjQwLDYwLDYwXX1dLFsxMCwxMSwiIiwxLHsiY29sb3VyIjpbMzAwLDYwLDYwXX1dLFsyLDEyLCIiLDEseyJvZmZzZXQiOjEsImNvbG91ciI6WzMwMCw2MCw2MF19XV0=
+\begin{tikzcd}[ampersand replacement=\&,row sep=large]
+	\&\& {\mathbf{\color{red}B}\color{blue}=\mathbf{KTB}} \& {\mathbf{\color{red}S5}=\mathbf{KT5}} \\
+	{\mathbf{\color{blue}KDB}} \&\& {\mathbf{S4}} \& {\mathbf{DS5}} \\
+	\& {\mathbf{T}} \& {\mathbf{dS4}} \& {\mathbf{DK5}} \& {\mathbf{K45}} \\
+	\& {\mathbf{\color{blue}K4B}} \& {\mathbf{D}} \& {\mathbf{K4}} \& {\mathbf{K5}} \\
+	{\mathbf{\color{blue}KB}} \&\&\& {\mathbf{\color{red}K}}
+	\arrow[from=5-4, to=4-5]
+	\arrow[from=5-4, to=4-3]
+	\arrow[dashed, from=4-3, to=3-4]
+	\arrow[dashed, from=4-5, to=3-4]
+	\arrow[from=4-4, to=3-3]
+	\arrow[from=3-3, to=2-4]
+	\arrow[from=3-5, to=2-4]
+	\arrow[from=4-4, to=3-5]
+	\arrow[dashed, from=3-4, to=2-4]
+	\arrow[from=2-4, to=1-4]
+	\arrow[from=4-5, to=3-5]
+	\arrow[from=4-3, to=3-3]
+	\arrow[from=5-4, to=4-4]
+	\arrow[from=3-3, to=2-3]
+	\arrow[from=2-3, to=1-4]
+	\arrow[from=3-2, to=2-3]
+	\arrow[shift left, from=4-3, to=3-2]
+	\arrow[from=1-3, to=1-4]
+	\arrow[color={rgb,255:red,92;green,92;blue,214}, from=2-1, to=1-3]
+	\arrow[color={rgb,255:red,92;green,92;blue,214}, from=5-1, to=2-1]
+	\arrow[color={rgb,255:red,92;green,92;blue,214}, from=5-4, to=5-1]
+	\arrow[color={rgb,255:red,92;green,92;blue,214}, from=4-4, to=4-2]
+	\arrow[color={rgb,255:red,214;green,92;blue,214}, from=3-5, to=4-2]
+	\arrow[color={rgb,255:red,92;green,92;blue,214}, from=4-2, to=1-4]
+	\arrow[color={rgb,255:red,92;green,92;blue,214}, from=5-1, to=4-2]
+	\arrow[color={rgb,255:red,214;green,92;blue,214}, from=3-2, to=1-3]
+	\arrow[shift right, color={rgb,255:red,214;green,92;blue,214}, from=4-3, to=2-1]
+\end{tikzcd}
+\end{dummyenv}
+\end{document}
