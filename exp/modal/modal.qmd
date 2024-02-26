@@ -898,9 +898,8 @@ the following intuitive translations:
 |  serial  |  $\forall \alpha.\,\exists \beta.\, \alpha \mathbin{R} \beta$  | Everyone is a lover. |
 |  reflexive  |  $\forall \alpha.\,\alpha \mathbin{R} \alpha$  | Everyone is a self-lover. |
 |  symmetric  |  $\forall \alpha.\, \forall \beta.\, (\alpha \mathbin{R} \beta \Rightarrow \beta \mathbin{R} \alpha)$  | All love is requited; all love is mutual. |
-|  transitive  |  $\forall \alpha \forall \beta .\, \forall \gamma.\, (\alpha \mathbin{R} \beta \;\&\; \beta \mathbin{R} \gamma \Rightarrow \alpha \mathbin{R} \gamma)$  | Love is transitive. |
-|  euclidean  |  $\forall \alpha.\, \forall \beta.\, \forall \gamma.\, (\alpha \mathbin{R} \beta \;\&\; \alpha \mathbin{R} \gamma \Rightarrow \beta \mathbin{R} \gamma)$  | All beloveds of the same lover, love each other and
-themselves. |
+|  transitive  |  $\forall \alpha.\, \forall \beta .\, \forall \gamma.\, (\alpha \mathbin{R} \beta \;\&\; \beta \mathbin{R} \gamma \Rightarrow \alpha \mathbin{R} \gamma)$  | Love is transitive. |
+|  euclidean  |  $\forall \alpha.\, \forall \beta.\, \forall \gamma.\, (\alpha \mathbin{R} \beta \;\&\; \alpha \mathbin{R} \gamma \Rightarrow \beta \mathbin{R} \gamma)$  | All beloveds of the same lover, love each other and themselves. |
 
 : {tbl-colwidths="[20,30,20,30]"}
 
@@ -923,7 +922,7 @@ more complicated than a derivation in the theory of relations.
 \nopagecolor
 \definecolor{ourblue}{HTML}{0070C0}
 $\displaystyle
-\begin{array}{llr}
+\begin{array}{rll}
 1.&\text{\st{Show}}\;R\,\text{is transitive}\implies {\vDash}(\square\varphi\to\square\square\varphi)&3,\,\text{CD}\\
 2.&\tikzmark{start1}\phantom{\text{\st{Show}}\;}\forall\alpha\,\forall\beta\,\forall\gamma\,(\alpha\mathbin{R}\beta\,\;{\&}\;\beta\mathbin{R}\gamma\implies\alpha\mathbin{R}\gamma)&\text{Assume}\,(\text{CD}),\,\text{def. transitive}\\
 3.&\quad\text{\st{Show}}\;{\vDash}(\square\varphi\to\square\square\varphi)&24,\,\text{DD}\\
@@ -954,45 +953,12 @@ $
   \coordinate (end1) at ([xshift=-1.5ex,yshift=-0.5ex]pic cs:end1);
   \node[inner sep=2pt,draw=ourblue,fit=(start1) (end1)] {};
   
-  \coordinate (start2) at ([xshift=1ex,yshift=1.6ex]pic cs:start2);
-  \coordinate (e2) at ([xshift=-1ex,yshift=-0.5ex]pic cs:end2);
-  \path let \p1 = (e2), \p2 = (end1) in coordinate (end2) at (\x2,\y1);
-  \node[inner sep=2pt,draw=ourblue,fit=(start2) (end2)] {};
-  
-  \coordinate (start3) at ([xshift=1ex,yshift=1.6ex]pic cs:start3);
-  \coordinate (e3) at ([xshift=-1ex,yshift=-0.5ex]pic cs:end3);
-  \path let \p1 = (e3), \p2 = (end1) in coordinate (end3) at (\x2,\y1);
-  \node[inner sep=2pt,draw=ourblue,fit=(start3) (end3)] {};
-  
-  \coordinate (start4) at ([xshift=1ex,yshift=1.6ex]pic cs:start4);
-  \coordinate (e4) at ([xshift=-1ex,yshift=-0.5ex]pic cs:end4);
-  \path let \p1 = (e4), \p2 = (end1) in coordinate (end4) at (\x2,\y1);
-  \node[inner sep=2pt,draw=ourblue,fit=(start4) (end4)] {};
-  
-  \coordinate (start5) at ([xshift=1ex,yshift=1.6ex]pic cs:start5);
-  \coordinate (e5) at ([xshift=-1ex,yshift=-0.5ex]pic cs:end5);
-  \path let \p1 = (e5), \p2 = (end1) in coordinate (end5) at (\x2,\y1);
-  \node[inner sep=2pt,draw=ourblue,fit=(start5) (end5)] {};
-  
-  \coordinate (start6) at ([xshift=1ex,yshift=1.6ex]pic cs:start6);
-  \coordinate (e6) at ([xshift=-1ex,yshift=-0.5ex]pic cs:end6);
-  \path let \p1 = (e6), \p2 = (end1) in coordinate (end6) at (\x2,\y1);
-  \node[inner sep=2pt,draw=ourblue,fit=(start6) (end6)] {};
-  
-  \coordinate (start7) at ([xshift=1ex,yshift=1.6ex]pic cs:start7);
-  \coordinate (e7) at ([xshift=-1ex,yshift=-0.5ex]pic cs:end7);
-  \path let \p1 = (e7), \p2 = (end1) in coordinate (end7) at (\x2,\y1);
-  \node[inner sep=2pt,draw=ourblue,fit=(start7) (end7)] {};
-  
-  \coordinate (start8) at ([xshift=1ex,yshift=1.6ex]pic cs:start8);
-  \coordinate (e8) at ([xshift=-1ex,yshift=-0.5ex]pic cs:end8);
-  \path let \p1 = (e8), \p2 = (end1) in coordinate (end8) at (\x2,\y1);
-  \node[inner sep=2pt,draw=ourblue,fit=(start8) (end8)] {};
-  
-  \coordinate (start9) at ([xshift=1ex,yshift=1.6ex]pic cs:start9);
-  \coordinate (e9) at ([xshift=-1ex,yshift=-0.5ex]pic cs:end9);
-  \path let \p1 = (e9), \p2 = (end1) in coordinate (end9) at (\x2,\y1);
-  \node[inner sep=2pt,draw=ourblue,fit=(start9) (end9)] {};
+  \foreach \i in {2,...,9} {
+    \coordinate (start) at ([xshift=1ex,yshift=1.6ex]pic cs:start\i);
+    \coordinate (e\i) at ([xshift=-1ex,yshift=-0.5ex]pic cs:end\i);
+    \path let \p1 = (e\i), \p2 = (end1) in coordinate (end) at (\x2,\y1);
+    \node[inner sep=2pt,draw=ourblue,fit=(start) (end)] {};
+  }
 \end{tikzpicture}
 \end{dummyenv}
 
