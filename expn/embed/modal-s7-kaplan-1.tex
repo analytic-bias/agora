@@ -1,0 +1,63 @@
+\documentclass[border={10pt 10pt 10pt 10pt}]{standalone}
+\usepackage{graphics}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{libertinus}
+\setmathfont{TeX Gyre Termes Math}[range=\smwhtdiamond]
+\setmathfont{LibertinusMath-Regular.otf}[range=]
+\usepackage{mathtools}
+\usepackage{unicode-math}
+\usepackage{pgfplots}
+\usepackage{relsize}
+\usepackage{tikz}
+\usepackage{frege}
+\usepackage{wrapfig}
+\usepackage{soul}
+\usepackage{quiver}
+\usetikzlibrary{fit,tikzmark}
+\begin{document}
+\nopagecolor
+\nopagecolor
+\definecolor{ourblue}{HTML}{0070C0}
+$\displaystyle
+\begin{array}{rll}
+1.&\text{\st{Show}}\;R\,\text{is transitive}\implies {\vDash}(\square\varphi\to\square\square\varphi)&3,\,\text{CD}\\
+2.&\tikzmark{start1}\phantom{\text{\st{Show}}\;}\forall\alpha\,\forall\beta\,\forall\gamma\,(\alpha\mathbin{R}\beta\,\;{\&}\;\beta\mathbin{R}\gamma\implies\alpha\mathbin{R}\gamma)&\text{Assume}\,(\text{CD}),\,\text{def. transitive}\\
+3.&\quad\text{\st{Show}}\;{\vDash}(\square\varphi\to\square\square\varphi)&24,\,\text{DD}\\
+4.&\quad\tikzmark{start2}\quad\text{\st{Show}}\;\forall\alpha\in W.\,({\vDash}_\alpha\square\varphi\implies {\vDash}_\alpha\square\square\varphi)&\tikzmark{end1}5,\,\text{UD}\\
+5.&\quad\quad\tikzmark{start3}\quad\text{\st{Show}}\;{\vDash}_\alpha\square\varphi\implies {\vDash}_\alpha\square\square\varphi&8,\,\text{CD}\\
+6.&\quad\quad\quad\phantom{\text{\st{Show}}\;}{\vDash}_\alpha\square\varphi&\text{Assume (CD)}\\
+7.&\quad\quad\quad\phantom{\text{\st{Show}}\;}{\forall}\beta\in W.\,(\alpha\mathbin{R}\beta\implies {\vDash}_\alpha\varphi)&6,\,\text{truth-def.}\,\square\\
+8.&\quad\quad\quad\quad\text{\st{Show}}\;{\vDash}_\alpha\square\square\varphi&23,\,\text{DD}\\
+9.&\quad\quad\quad\quad\tikzmark{start4}\quad\text{\st{Show}}\;\forall\beta\in W.\,(\alpha\mathbin{R}\beta\implies {\vDash}_\beta\square\varphi)&10,\,\text{UD}\\
+10.&\quad\quad\quad\quad\quad\tikzmark{start5}\quad\text{\st{Show}}\;\alpha\mathbin{R}\beta\implies {\vDash}_\beta\square\varphi&12,\,\text{CD}\\
+11.&\quad\quad\quad\quad\quad\quad\tikzmark{start6}\phantom{\text{\st{Show}}\;}\alpha\mathbin{R}\beta&\text{Assume (CD)}\\
+12.&\quad\quad\quad\quad\quad\quad\quad\text{\st{Show}}\;{\vDash}_\beta\square\varphi&22,\,\text{DD}\\
+13.&\quad\quad\quad\quad\quad\quad\quad\tikzmark{start7}\quad\text{\st{Show}}\;\forall\gamma\in W.\,(\beta\mathbin{R}\gamma\implies {\vDash}_\gamma\varphi)&14,\,\text{UD}\\
+14.&\quad\quad\quad\quad\quad\quad\quad\quad\tikzmark{start8}\quad\text{\st{Show}}\;\beta\mathbin{R}\gamma\implies {\vDash}_\gamma\varphi&16,\,\text{CD}\\
+15.&\quad\quad\quad\quad\quad\quad\quad\quad\quad\phantom{\text{\st{Show}}\;}\beta\mathbin{R}\gamma&\text{Assume CD}\\
+16.&\quad\quad\quad\quad\quad\quad\quad\quad\quad\tikzmark{start9}\quad\text{\st{Show}}\;{\vDash}_\gamma\varphi&22,\,\text{DD}\\
+17.&\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\phantom{\text{\st{Show}}\;}\alpha\mathbin{R}\beta\;\&\;\beta\mathbin{R}\gamma&11,\,15\,\text{ADJ}\\
+19.&\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\phantom{\text{\st{Show}}\;}\alpha\mathbin{R}\gamma&18,\,17\,\text{MP}\\
+20.&\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\phantom{\text{\st{Show}}\;}\alpha\mathbin{R}\gamma\implies {\vDash}_\gamma\varphi&7,\,\text{UI}\\
+21.&\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\phantom{\text{\st{Show}}\;}\phantom{\alpha\mathbin{R}\gamma\implies {}}{\vDash}_\gamma\varphi&\tikzmark{end10}\tikzmark{end9}\tikzmark{end8}\tikzmark{end7}20,\,19\,\text{MP}\\
+22.&\quad\quad\quad\quad\quad\quad\quad\phantom{\text{\st{Show}}\;}{\vDash}_\beta\square\varphi&\tikzmark{end6}\tikzmark{end5}12,\,\text{truth-def.}\,\square\\
+23.&\quad\quad\quad\quad\phantom{\text{\st{Show}}\;}{\vDash}_\alpha\square\square\varphi&\tikzmark{end4}\tikzmark{end3}9,\,\text{truth-def.}\,\square\\
+24.&\quad\phantom{\text{\st{Show}}\;}{\vdash}(\square\varphi\to\square\square\varphi)&\tikzmark{end2}\tikzmark{end1}4,\,\text{def.}\,{\vDash}\,\text{(\textit{logical consequence})}
+\end{array}
+$
+\begin{tikzpicture}[remember picture,overlay]
+  \coordinate (start1) at ([xshift=1ex,yshift=1.6ex]pic cs:start1);
+  \coordinate (end1) at ([xshift=-1.5ex,yshift=-0.5ex]pic cs:end1);
+  \node[inner sep=2pt,draw=ourblue,fit=(start1) (end1)] {};
+  
+  \foreach \i in {2,...,9} {
+    \coordinate (start) at ([xshift=1ex,yshift=1.6ex]pic cs:start\i);
+    \coordinate (e\i) at ([xshift=-1ex,yshift=-0.5ex]pic cs:end\i);
+    \path let \p1 = (e\i), \p2 = (end1) in coordinate (end) at (\x2,\y1);
+    \node[inner sep=2pt,draw=ourblue,fit=(start) (end)] {};
+  }
+\end{tikzpicture}
+\end{document}

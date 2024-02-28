@@ -1,7 +1,7 @@
 project:
   type: book
   post-render:
-  - rm -r ../docs/gb/
+  - rm -rf ../docs/gb/
   - cp -r _book/ ../docs/gb/
   - mv ../docs/gb/Gödelian-Explorations.pdf ../docs/gb/gb.pdf
 filters:

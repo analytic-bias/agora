@@ -1,0 +1,1177 @@
+\hypertarget{must-and-might-the-modal-logic-of-necessity-and-possibility}{%
+\section{`Must' and `Might' --- The Modal Logic of Necessity and
+Possibility}\label{must-and-might-the-modal-logic-of-necessity-and-possibility}}
+
+\begin{itemize}
+\tightlist
+\item
+  The responsive layout on mobile portrait might not be as polished; if
+  content is overlapped thus unintelligible, please rotate device to
+  landscape. \textbf{You might also wish to access the
+  \href{/gb.pdf}{pdf version} of this book.}
+\end{itemize}
+
+\hypertarget{modes-of-truth-and-modal-logics}{%
+\subsection{\texorpdfstring{\textsc{Modes of Truth and Modal
+Logics}}{Modes of Truth and Modal Logics}}\label{modes-of-truth-and-modal-logics}}
+
+Historically, notions like \emph{necessity}, \emph{possibility},
+\emph{impossibility}, and \emph{contingency} were thought of as modes of
+truth or ways in which a proposition could be true or false. \emph{Modal
+logic} began as the study of the logic of these modes of truth.
+
+Aristotle, in Chapter 9 of \emph{De Interpretatione}, discusses modality
+in his famous example of the sea battle. Suppose the sea battle will be
+fought tomorrow. Then it was true yesterday that it would be fought
+tomorrow. So if all past truths are necessarily true, then it is
+necessarily true now that the battle will be fought tomorrow. A similar
+argument holds on the supposition that the sea battle will not be fought
+tomorrow. Aristotle proposed solving this problem of \emph{logical
+fatalism} by denying that future contingent propositions have definite
+truth-values.
+
+Using the `\(\Box\)' for `it is necessary that', the principle that all
+necessary truths are in fact \[
+\Box \mathrm{P}\to \mathrm{P},\tag*{(\textbf{T})}
+\] \{\#eq-modal-axiom-T\} but adding its converse that all truths are
+necessary truths: \[
+\mathrm{P} \to \Box \mathrm{P} \tag*{(\textbf{V})}
+\] \{\#eq-modal-axiom-V\} collapses the notions of truth and necessary
+truth.
+
+Medieval philosophers, concerned with such theological issues as
+articulating the nature of the Trinity, appealed to such modal notions
+as essence and accident, contingency and necessity in their labyrinthine
+theological reflections.\footnote{The theological, if not the political,
+  roots Great Schism of 1054, which can be traced back to a disagreement
+  about the modalities of the Persons of the Trinity. The Nicean Creed
+  (325) uses the term \emph{homoousios} (from the Greek \emph{homo} =
+  `same` and \emph{ousios} = `essence' or `substance'), in contrast to
+  \emph{homoiousios} (from the Greek \emph{homoi} = `similar') making
+  the solitary \emph{i} the jot and tittle of Nicean Creedal Orthodoxy.
+  The Greek Church preferred the latter term since the former had been
+  used by the Syrian Bishop of Antioch to espouse \emph{modal
+  monarchism}, the heresy that the Heavenly Father, Resurrected Son and
+  Holy Spirit are not three distinct Persons, but are rather
+  different~\emph{modes}~or~\emph{aspects}~of one monadic God perceived
+  by believers as distinct persons. The Latin Church adopted the former
+  siding with Athanasius against the heretic Arius, who denied that
+  Jesus was co-equal and co-eternal with the Father. The Second Council
+  of Nicea (381), among other changes, inserted the word \emph{filioque}
+  (from the Latin \emph{filio} = the son, and \emph{que} = ``and'') into
+  the Nicean-Constantinopolitan Creed and the Latin mass. In Latin
+  theology, the three Persons of the Trinity are logically distinguished
+  by the formal relations of ``proceeding from'' citing such proof texts
+  as Phil. 1:9, Titus 3:6, Acts 2:33. Orthodox theology, citing the
+  words of Jesus in proof texts such John 15:26, regarded the insertion
+  of \emph{filioque} into the Nicean-Constantipolitan creed, is as
+  Semi-Sabellianism. The great church historian @Pelikan1988melody
+  {[}p.90{]} opined: ``If there is a special circle of the inferno
+  described by Dante reserved for historians of theology, the principal
+  homework assigned to that subdivision of Hell for at least the first
+  several eons of eternity may well be a thorough study of all the
+  treatises\ldots{} devoted to the inquiry: Does the Holy Spirit proceed
+  from the Father only, as Eastern Christendom contends, or from both
+  the Father and the Son as the Latin Church teaches?'' In 1989 Pope
+  John Paul II and Patriarch Demetrius knelt together in Rome and
+  recited the Nicene Creed without the \emph{filioque}.} Akin to the
+problem is logical fatalism is the problem of \emph{theological
+fatalism}: the problem of reconciling divine foreknowledge and human
+freedom. Saint Augustine (354--430) in his treatise \emph{On the Free
+Choice of Will} considers an argument for \emph{theological fatalism}
+proposed by Evodius. Evodius argued that ``God foreknew that man would
+sin, that which God foreknew must necessarily come to pass.'' We may set
+forth this argument for theological fatalism for a particular case as
+follows:
+
+\renewcommand\labelitemi{}
+
+\begin{itemize}
+\tightlist
+\item
+  If God knew that Adam would sin, then, necessarily Adam sinned.
+\item
+  God knew that Adam would sin (because God is omniscient).
+\item
+  Therefore, Adam necessarily sinned.
+\end{itemize}
+
+St.~Thomas Aquinas (1225--1274) in his \emph{Summa Contra Gentiles}
+(part I, chapter 67) criticized this kind of argument as resting on an
+amphiboly. The critical first premise ``if God knew Adam would sin,
+then, \emph{necessarily}, Adam sinned'' is ambiguous between
+
+\begin{itemize}
+\tightlist
+\item
+  \protect\hypertarget{eq-modal-1a}{}{(1\emph{a})} It is necessarily the
+  case that if God knows that Adam will sin then Adam will sin.
+\item
+  \protect\hypertarget{eq-modal-1b}{}{(1\emph{b})} If God knows that
+  Adam will sin, then it is necessary that Adam will sin.
+\end{itemize}
+
+\renewcommand\labelitemi{\labelitemito}
+
+Aquinas called \protect\hyperlink{eq-modal-1a}{(1\emph{a})} the
+\emph{necessity of the consequence} contrasting it with
+\protect\hyperlink{eq-modal-1b}{(1\emph{b})} the \emph{necessity of the
+consequent}. Using the `\(\Box\)' to abbreviate `it is necessary that',
+the difference between these two can be made more perspicuous with
+symbols: \[
+\Box (\mathrm{P} \to \mathrm{Q}) \tag*{(1\textit{a})}
+\] \{\#eq-modal-symbol-1a\} \[
+(\mathrm{P} \to \Box \mathrm{Q}) \tag*{(1\textit{b})}
+\] \{\#eq-modal-symbol-1b\} Solving the famous theological problem of
+reconciling divine foreknowledge with human freedom may turn on exposing
+ambiguities of this sort.
+
+Perhaps the most famous theological application of modal logic is Saint
+Anselm's modal ontological argument. According to Saint Anselm
+(1033--1109), it follows from God's nature that it is necessary that God
+exists if God exists at all. Moreover, this conditional itself, being a
+conceptual truth, is itself necessarily true. We then have the following
+argument:
+
+\renewcommand\labelitemi{}
+
+\begin{itemize}
+\tightlist
+\item
+  Necessarily, if God exists, then God necessarily exists.
+\item
+  It is possible that God exists.
+\item
+  Therefore, God (actually) exists.
+\end{itemize}
+
+\renewcommand\labelitemi{\labelitemito}
+
+Using `\({\Large\diamond}\)' for `it is possible that', the above
+argument can be symbolized: \[
+\Box(G\to\Box G).\quad{\Large\diamond} G\quad\therefore G\tag*{(2)}
+\] \{\#eq-modal-2\}
+
+The question of whether Anselm's argument is valid became a precise
+question when various systems of modal logic were proposed and developed
+in the 1960s.
+
+Gottlob Frege (1848--1925), the inventor (or discoverer) of modern
+predicate-quantifier logic, relegated modality to autobiographical
+information about the speaker, and for many years logicians only
+investigated extensional logic.
+
+One of the most puzzling validities, at least to the beginning logical
+students is known as \emph{Lewis's Dilemma}:
+\[\mathrm{P}\land\lnot \mathrm{P}\to \mathrm{Q},\] which states
+\emph{``a contradiction implies anything''}\footnote{Or \emph{``ex falso
+  quodlibet''}, in Latin.}. This implication follows from the inference
+rules of simplification, addition, and \emph{modus tollendo
+ponens}\footnote{\emph{``mode that denies by affirming''}}, which are
+themselves not particularly puzzling.
+
+% \begin{dummyenv}
+% \nopagecolor\hspace{2cm}
+% $\displaystyle
+% \begin{array}{lrlr}
+% 1.&\text{\st{\textit{Show}}}&\mathrm{P}\land\lnot\mathrm{P}\to\mathrm{Q}\quad\quad&6,\,\text{CD}\\[1ex]
+% 2.&&\tikzmark{start1}\mathrm{P}\land\lnot\mathrm{P}&\text{Assume}\,(\text{CD})\\
+% 3.&&\mathrm{P}&2,\,\text{S}\\
+% 4.&&\lnot\mathrm{P}&2,\,\text{S}\\
+% 5.&&\mathrm{P}\lor\mathrm{Q}\quad&3,\,\text{ADD}\\
+% 6.&&\mathrm{Q}&\tikzmark{end1}5,\,4\,\text{MTP}
+% \end{array}
+% $
+% \begin{tikzpicture}[remember picture,overlay]
+%   \coordinate (start) at ([xshift=-0.2ex,yshift=1.6ex]pic cs:start1);
+%   \coordinate (end) at ([xshift=-8ex,yshift=-0.5ex]pic cs:end1);
+%   \node[inner sep=2pt,draw=blue,fit=(start) (end)] {};
+% \end{tikzpicture}\hspace{2cm}
+% \end{dummyenv}
+
+The following theorems are known as the \emph{paradoxes of material
+implication}:
+
+\renewcommand\labelitemi{$\oddorevenarrow$}
+
+\hypertarget{almar1}{}
+\begin{itemize}
+\tightlist
+\item
+  law of denying the antecedent
+\end{itemize}
+
+\[
+\class{alref}{\cssId{alref1}{}}\lnot \mathrm{P}\to(\mathrm{P}\to \mathrm{Q})\tag*{(T18)}
+\] \{\#eq-modal-t18\}
+
+\vspace{-2\parskip}
+
+\hypertarget{almar2}{}
+\begin{itemize}
+\tightlist
+\item
+  law of affirming the consequent
+\end{itemize}
+
+\[
+\class{alref}{\cssId{alref2}{}}\mathrm{Q}\to(\mathrm{P}\to \mathrm{Q})\tag*{(T2)}
+\] \{\#eq-modal-t2\}
+
+\vspace{-2\parskip}
+
+\hypertarget{almar3}{}
+\begin{itemize}
+\tightlist
+\item
+  conditional excluded middle
+\end{itemize}
+
+\[
+\class{alref}{\cssId{alref3}{}}(\mathrm{P}\to \mathrm{Q})\lor(\mathrm{Q}\to\lnot \mathrm{Q})\tag*{(T58)}
+\] \{\#eq-modal-t58\}
+
+\vspace{-2\parskip}
+
+\hypertarget{almar4}{}
+\begin{itemize}
+\tightlist
+\item
+  Consequentia Mirabilis, ``admirable consequence'' {[}Cantor's
+  \(\Delta\)?{]}
+\end{itemize}
+
+\[
+\class{alref}{\cssId{alref4}{}}(\lnot \mathrm{P}\to \mathrm{P})\to \mathrm{P}\tag*{(T114)}
+\] \{\#eq-modal-t114\}
+
+\vspace{-1\parskip}
+
+C. I. Lewis investigated modal logic in order to find a stricter form of
+the conditional which would not result in such paradoxes. Lewis defined
+\emph{strict implication} \(\mathrm{P}\Rightarrow \mathrm{Q}\) (read
+``\(\mathrm{P}\) \emph{strictly implies} \(\mathrm{Q}\)'') by combining
+modality with the truth-functional conditional: \[
+\mathrm{P}\Rightarrow \mathrm{Q}\quad:=\quad\Box(\mathrm{P}\land\lnot \mathrm{Q}),
+\] or alternatively, \[
+\mathrm{P}\Rightarrow \mathrm{Q}\quad:=\quad\Box(\mathrm{P}\to \mathrm{Q}).
+\]
+
+The notion of strict implication was characterized by such axioms as:
+
+The philosopher Leibniz (1646--1716) explicitly invoked that language of
+possible worlds to explain the difference between necessary and
+contingent truths. What is logically or necessarily true are those
+truths truth in \emph{all} possible worlds, whereas a contingent truth
+is one that is true in \emph{some} possible worlds.
+
+Drawing upon this logical connection between universal and existential
+quantification and the modal notions of necessity and possibility, we
+obtain a modal version of the classical Aristotelian Square of
+Opposition and the duality of modal laws known as the laws of modal
+negation.
+
+\hypertarget{fig-modal-aristotelian-diamond-1}{}
+% \begin{dummyenv}
+% % https://q.uiver.app/#q=WzAsNixbMSwwLCJcXExhcmdlXFxzdWJzdGFja3t7XFxCb3h9XFxtYXRocm17UH1cXFxcXFx0ZXh0e0l0IGlzIG5lY2Vzc2FyeSB0aGF0IH1cXG1hdGhybXtQfX0iXSxbNSwwLCJcXExhcmdlXFxzdWJzdGFja3tcXEJveFxcbG5vdFxcbWF0aHJte1B9XFxcXFxcdGV4dHtJdCBpcyBpbXBvc3NpYmxlIHRoYXQgfVxcbWF0aHJte1B9fSJdLFs2LDIsIlxcTGFyZ2VcXHN1YnN0YWNre1xcbG5vdFxcbWF0aHJte1B9XFxcXFxcdGV4dHtJdCBpcyBhY3R1YWxseSBub3QgdGhhdCBjYXNlIHRoYXQgfVxcbWF0aHJte1B9fSJdLFs1LDQsIlxcTGFyZ2VcXHN1YnN0YWNre3tcXExhcmdlXFxkaWFtb25kfVxcbG5vdFxcbWF0aHJte1B9XFxcXFxcdGV4dHtJdCBpcyBwb3NzaWJsZSB0aGF0IG5vdCB9XFxtYXRocm17UH19Il0sWzEsNCwiXFxMYXJnZVxcc3Vic3RhY2t7e1xcTGFyZ2VcXGRpYW1vbmR9XFxtYXRocm17UH1cXFxcXFx0ZXh0e0l0IGlzIHBvc3NpYmxlIHRoYXQgfVB9Il0sWzAsMiwiXFxMYXJnZVxcc3Vic3RhY2t7XFxtYXRocm17UH1cXFxcXFx0ZXh0e0l0IGlzIGFjdHVhbGx5IHRoZSBjYXNlIHRoYXQgfVxcbWF0aHJte1B9fSJdLFswLDVdLFs1LDRdLFsxLDJdLFsyLDNdLFswLDQsIlxcdGV4dHtTVUJBTFRFUk59IiwxXSxbMSwzLCJcXHRleHR7U1VCQUxURVJOfSIsMV0sWzAsMSwiXFx0ZXh0e0NPTlRSQVJJRVN9IiwxLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs0LDMsIlxcdGV4dHtTVUJDT05UUkFSSUV9IiwxLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxLDQsIlxccGhhbnRvbXtNTU19IiwxLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFswLDMsIlxcdGV4dHtDT05UUkFESUNUT1JJRVN9IiwxLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ==
+% \begin{tikzcd}[ampersand replacement=\&]
+%     \& {\Large\substack{{\Box}\mathrm{P}\\\text{It is necessary that }\mathrm{P}}} \&\&\&\& {\Large\substack{\Box\lnot\mathrm{P}\\\text{It is impossible that }\mathrm{P}}} \\
+%     \\
+%     {\Large\substack{\mathrm{P}\\\text{It is actually the case that }\mathrm{P}}} \&\&\&\&\&\& {\Large\substack{\lnot\mathrm{P}\\\text{It is actually not that case that }\mathrm{P}}} \\
+%     \\
+%     \& {\Large\substack{{\Large\diamond}\mathrm{P}\\\text{It is possible that }P}} \&\&\&\& {\Large\substack{{\Large\diamond}\lnot\mathrm{P}\\\text{It is possible that not }\mathrm{P}}}
+%     \arrow[from=1-2, to=3-1]
+%     \arrow[from=3-1, to=5-2]
+%     \arrow[from=1-6, to=3-7]
+%     \arrow[from=3-7, to=5-6]
+%     \arrow["{\text{SUBALTERN}}"{description}, from=1-2, to=5-2]
+%     \arrow["{\text{SUBALTERN}}"{description}, from=1-6, to=5-6]
+%     \arrow["{\text{CONTRARIES}}"{description}, no head, from=1-2, to=1-6]
+%     \arrow["{\text{SUBCONTRARIE}}"{description}, no head, from=5-2, to=5-6]
+%     \arrow["{\phantom{MMM}}"{description}, no head, from=1-6, to=5-2]
+%     \arrow["{\text{CONTRADICTORIES}}"{description}, no head, from=1-2, to=5-6]
+% \end{tikzcd}
+% \end{dummyenv}
+
+\textsc{An Aristotelian Diamond of Opposition}
+
+In the modern development of modal logic, logicians noticed that a host
+other phenomena---such as deontic notions of obligation and
+permissibility, epistemic notions of knowledge and belief, as well as
+temporal operators---share these logical relations and hence can be
+represented as modal logics.
+
+In \emph{deontic logic}, \(\Box\) is read ``it is morally obligatory
+that'' and \({\Large\diamond}\) is read ``it is morally permissible
+that''. Kant's maxim that ``ought implies can'', that is, whatever is
+obligatory is permissible, is captured by modal axiom
+\protect\hyperlink{eq-modal-axiom-D}{(\textbf{D})}: \[
+\Box \mathrm{P} \to{\Large\diamond} \mathrm{P}.\tag*{(\textbf{D})}
+\] \{\#eq-modal-axiom-D\}
+
+In \emph{epistemic logic}, \(\Box\) is read for some subject \(S\) ``it
+is known that'' and \({\Large\diamond}\) is read ``it is believed
+that''. Some modal axioms for epistemic logic that have been considered
+include:
+
+\vspace{-2\parskip}
+\renewcommand\labelitemi{$\oddorevenarrow$}
+
+\hypertarget{almar5}{}
+\begin{itemize}
+\tightlist
+\item
+  logical omniscience
+\end{itemize}
+
+\[
+\class{alref}{\cssId{alref5}{}}\Box(\mathrm{P}\to \mathrm{Q})\to(\Box \mathrm{P}\to\Box \mathrm{Q})\tag*{(\textbf{K})}
+\] \{\#eq-modal-axiom-K\}
+
+\vspace{-2\parskip}
+
+\hypertarget{almar6}{}
+\begin{itemize}
+\tightlist
+\item
+  law of affirming the consequent
+\end{itemize}
+
+\[
+\class{alref}{\cssId{alref6}{}}\Box \mathrm{P}\to \mathrm{P}\tag*{(\textbf{T})}
+\] \{\#eq-modal-axiom-T-2\}
+
+\vspace{-2\parskip}
+
+\hypertarget{almar7}{}
+\begin{itemize}
+\tightlist
+\item
+  law of affirming the consequent
+\end{itemize}
+
+\[
+\class{alref}{\cssId{alref7}{}}\Box \mathrm{P}\to\Box\Box \mathrm{P}\tag*{(\textbf{4})}
+\] \{\#eq-modal-axiom-4\}
+
+\vspace{-2\parskip}
+
+\hypertarget{almar8}{}
+\begin{itemize}
+\tightlist
+\item
+  law of affirming the consequent
+\end{itemize}
+
+\[
+\class{alref}{\cssId{alref8}{}}\lnot\Box \mathrm{P}\to\Box\lnot\Box \mathrm{P}\tag*{(\textbf{E})}
+\] \{\#eq-modal-axiom-E\}
+
+\vspace{-1\parskip}
+
+The axiom \protect\hyperlink{eq-modal-axiom-K}{(\textbf{K})} expresses
+logical omniscience insofar as this axiom requires that the knowledge of
+an agent is closed under \emph{modus ponens}; and hence such knowers
+know all the logical consequences of their knowledge.
+
+Axiom \protect\hyperlink{eq-modal-axiom-T-2}{(\textbf{T})} states the
+truism that whatever is known is true. Notice that this axiom would be
+too strong for deontic logic insofar as an action's being obligatory
+doesn't imply that the agent actually performs that action.
+
+Axiom \protect\hyperlink{eq-modal-axiom-4}{(\textbf{4})} expresses a
+high degree of \emph{positive introspective knowledge}: if someone knows
+P, then she knows that she knows that \(\mathrm{P}\). Axiom
+\protect\hyperlink{eq-modal-axiom-E}{(\textbf{E})} on the other hand,
+expresses a high degree of \emph{negative} introspective knowledge: if
+someone doesn't know that \(\mathrm{P}\), then he knows he doesn't know
+\(\mathrm{P}\). This axiom is contrary to the experience of Socrates: as
+the gadfly of Athens, Socrates found through his questioning that many
+of his fellow Athenians did not know what they were talking about but
+also didn't know that they didn't know. The gadfly of Athens believed
+his vocation was to sting his fellow Athenians into the awareness they
+were own ignorance, a service for which they did not always show
+adequate appreciation.
+
+The \emph{temporal logic} or Diodorian temporal logic was studied by the
+logician A. N. Prior (1914--1969). To model temporal language, we
+introduce a pair of modal operators for the future and a pair of modal
+operators for the past.
+
+\begin{longtable}[]{@{}
+  >{\centering\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\caption{\{.borderless tbl-colwidths=``{[}12,88{]}''\}}\tabularnewline
+\toprule\noalign{}
+\endfirsthead
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\(\color{green}\Box\) & It {\color{green} \emph{is always going}}
+{[}i.e., in \emph{all} futures{]} to be the case that \\
+\(\color{green}{\Large\diamond}\) & It {\color{green}
+\emph{will}\textgreater{}} {[}i.e., in \emph{some} future{]} be the case
+that \\
+\(\color{red}\Box\) & It {\color{red} \emph{has always been}} {[}i.e.,
+in \emph{all} pasts{]} the case that \\
+\(\color{red}{\Large\diamond}\) & It {\color{red} \emph{was once}{]}}
+{[}i.e., in \emph{some} past or \emph{``once upon a time''}{]} the case
+that \\
+\end{longtable}
+
+The axioms for minimal tense logic include version of Axiom
+\protect\hyperlink{eq-modal-axiom-K}{(\textbf{K})} for the two necessity
+operators: \begin{align*}
+&{\color{red}\Box}(\varphi\to\psi)\to({\color{red}\Box}\varphi\to{\color{red}\Box}\psi)
+&\begin{aligned}\text{\textit{Whatever has always followed from what always has been,}}\\\text{\textit{always has been.}}\end{aligned}&
+\tag*{(K${\color{red}\Box}$)}\\\\
+&{\color{green}\Box}(\varphi\to\psi)\to({\color{green}\Box}\varphi\to{\color{green}\Box}\psi)
+&\begin{aligned}\text{\textit{Whatever will always follow from what always will be,}}\\\text{\textit{always will be.}}\end{aligned}&
+\tag*{(K${\color{green}\Box}$)}
+\end{align*}
+
+It also contains two axioms concerning the interaction of the past and
+future that has the form of the so-called Brouwersche axiom with
+alternating valences: \begin{align*}
+\tag*{(B${\color{green}\Box}{\color{red}{\Large\diamond}}$)}
+&\varphi\to{\color{green}\Box}{\color{red}{\Large\diamond}}\varphi
+&\text{\textit{What is, will always have been}}\\
+\tag*{(B${\color{red}\Box}{\color{green}{\Large\diamond}}$)}
+&\varphi\to{\color{red}\Box}{\color{green}{\Large\diamond}}\varphi
+&\text{\textit{What is, has always been going to happen}}\\
+\end{align*}
+
+The Brouwersche \protect\hyperlink{eq-modal-axiom-B}{(\textbf{B})} axiom
+was so-named by the logician Oskar Becker {[}@Becker1930Logik{]} after
+the charismatic Dutch mathematician L. E. J. Brouwer (1881--1966), who
+championed a philosophy of mathematics known as \emph{intuitionism}. It
+happens that when the \({\Large\diamond}\) can be paraphrased as
+\({\Large\diamond}\lnot{\Large\diamond}\), the resulting axiom has the
+form of the acceptable form of double negation in intuitionistic logic:
+\[
+\varphi\to\lnot{\Large\diamond}\lnot{\Large\diamond}\varphi\tag*{(\textbf{B})}
+\] \{\#eq-modal-axiom-B\}
+
+\hypertarget{a-classical-theorem-but-in-intuitionism}{%
+\subsection{A Classical Theorem, but in
+Intuitionism}\label{a-classical-theorem-but-in-intuitionism}}
+
+\textbf{Theorem.} There exist two irrational numbers \(x\) and \(y\)
+such that \(x^y\) is irrational.
+
+Consider \[
+\sqrt{2}^{\left(\sqrt{2}^{\sqrt{2}}\right)}
+=\sqrt{2}^{\left(\sqrt{2}\cdot\sqrt{2}\right)}
+=\sqrt{2}^2=2,
+\] which is rational.
+
+\renewcommand\labelitemi{\labelitemito}
+
+The number \(\sqrt{2}^{\sqrt{2}}\) is either rational or irrational.
+
+\begin{itemize}
+\tightlist
+\item
+  If it's rational, then \(x=y=\sqrt{2}\) are both irrational yet
+  \(x^y\) is rational.
+\item
+  If \(\sqrt{2}^{\sqrt{2}}\) is irrational, then
+  \(x=\sqrt{2}^{\sqrt{2}}\) and \(y=\sqrt{2}\) are both irrational and
+  \(x^y\) is rational.
+\end{itemize}
+
+Either way, there exists \(x\) and \(y\) such that \(x^y\) is rational.
+{\(\Box\)}
+
+Intuitionists reject this classical argument by separation of cases
+because it does not actually construct the numbers \(x\) and \(y\) such
+that \(xy\) is irrational. The idea behind intuitionistic logic is that
+the connectives are reinterpreted as involving a kind of provability.
+
+In case you're curious, it is actually known that
+\(\sqrt{2}^{\sqrt{2}}\) is irrational, due to the
+\href{https://en.wikipedia.org/wiki/Gelfond\%E2\%80\%93Schneider_theorem}{Gelfond--Schneider
+theorem} which verifies that it usually take significantly more effort
+to convince an intuitionistic mathematicians than a classical one.
+
+According to intuitionism, mathematical objects do not exist as eternal
+Platonic objects but are constructions in intuition. Intuitionists read
+the propositional connectives as involving not merely truth, but proof,
+and so they rejected such classical forms of reasoning as \emph{reductio
+ad absurdum} and theorems such as the \emph{law of excluded middle.}
+Intuitionists reject the following mathematical proof.
+
+Around the 1970s it was noticed that the famous incompleteness theorems
+{[}@Godel1931Incomepleteness{]} were propositional in character and that
+their logic could be captured in propositional modal logic. These modal
+provability logics added to Axiom
+\protect\hyperlink{eq-modal-axiom-K}{(\textbf{K})} the following axiom,
+known as the Gödel-Löb axiom or also the well-ordering axiom. \[
+\Box(\Box\varphi\to\varphi)\to\Box\varphi\tag*{(\textbf{W})}
+\] \{\#eq-modal-axiom-W\}
+
+\emph{Modal Provability Logics} proliferated from the 1950s--1970s, but
+the genesis of the idea goes back to a short note of @Godel1933 in which
+he noted that intuitionistic truth is defined in terms of proof since
+provability is a kind of necessity. The above axiom can be read as a
+kind of soundness theorem.
+
+\renewcommand\labelitemi{}
+
+\begin{itemize}
+\tightlist
+\item
+  \emph{if it is provable that \(\varphi\) being provable implies it is
+  true, then \(\varphi\) is provable.}
+\end{itemize}
+
+\renewcommand\labelitemi{\labelitemito}
+
+Later we will show how to use a modal provability logic to exhibit the
+propositional logic of key parts of Gödel's First and Second
+Incompleteness Theorems.
+
+In contemporary logic, modal logic has grown beyond these philosophical
+origins and is at the interface of a number of disciplines including the
+studies information flow and dynamics, game theory, and computability.
+
+\hypertarget{exercises}{%
+\paragraph*{Exercises}\label{exercises}}
+\addcontentsline{toc}{paragraph}{Exercises}
+
+\begin{enumerate}
+\def\labelenumi{(\arabic{enumi})}
+\tightlist
+\item
+  Symbolize the following modal arguments.
+
+  \begin{enumerate}
+  \def\labelenumii{(\Alph{enumii})}
+  \tightlist
+  \item
+    Eratosthenes must either be in Syene or Alexandria. Eratosthenes
+    cannot be in Syene. Therefore, Eratosthenes must be in Alexandria.
+  \item
+    Assume that justice can be defined as paying your debts and telling
+    the truth. Then it is \emph{morally obligatory} for Cephalus to
+    comply to a madman's request that Cephalus return a borrowed sword
+    and that Cephalus tell the truth about the whereabouts of a friend
+    whom the madman wants to kill with the sword. However, if this act
+    is \emph{morally obligatory}, then it is \emph{morally permissible}.
+    However, it is \emph{morally impermissible} (or \emph{morally
+    forbidden}) for Cephalus to comply. So it isn't \emph{morally
+    obligatory} for Cephalus to comply. Justice, therefore, cannot be
+    defined as paying your debts and telling the truth.
+  \item
+    It is conceivable that I am having experiences qualitatively
+    identical to those I am having now on the supposition that I am
+    being deceived by an evil genius. If that is conceivable, then I do
+    not have indubitable knowledge that the external world exists.
+  \end{enumerate}
+\item
+  Johan van Benthem {[}@VanBenthem2010, p. 12{]} was asked to symbolize
+  the philosophical claim that ``nothing is absolutely relative''. He
+  came up with the following:
+  \[\lnot\Box({\Large\diamond}\varphi\land{\Large\diamond}\lnot\varphi).\]
+  Use familiar equivalences from propositional logic and the modal
+  negation laws to show that this symbolization is equivalent to
+\end{enumerate}
+
+\renewcommand\labelitemi{$\oddorevenarrow$}
+
+\hypertarget{almar9}{}
+\begin{itemize}
+\tightlist
+\item
+  \emph{McKinsey's Axiom}
+\end{itemize}
+
+\[
+\class{alref}{\cssId{alref9}{}}
+\Box{\Large\diamond}\varphi\to{\Large\diamond}\Box\varphi\tag*{(\textbf{M})}
+\] \{\#eq-modal-axiom-M\}
+
+\renewcommand\labelitemi{\labelitemito}
+
+\begin{enumerate}
+\def\labelenumi{(\arabic{enumi})}
+\setcounter{enumi}{2}
+\item
+  Match the following symbolizations with the best corresponding
+  translation below.
+
+  \begin{longtable}[]{@{}
+    >{\raggedleft\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+    >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+  \caption{\{tbl-colwidths=``{[}25,75{]}''\}}\tabularnewline
+  \toprule\noalign{}
+  \begin{minipage}[b]{\linewidth}\raggedleft
+  symbolization
+  \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+  translation
+  \end{minipage} \\
+  \midrule\noalign{}
+  \endfirsthead
+  \toprule\noalign{}
+  \begin{minipage}[b]{\linewidth}\raggedleft
+  symbolization
+  \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+  translation
+  \end{minipage} \\
+  \midrule\noalign{}
+  \endhead
+  \bottomrule\noalign{}
+  \endlastfoot
+  \({\color{red}{\Large\diamond}\Box}\mathrm{P}\) & \emph{It was always
+  the case that it will sometime be the case that} \(\mathrm{P}\). \\
+  \({\color{green}{\Large\diamond}}\mathrm{P}\to{\color{green}{\Large\diamond}}\mathrm{P}\)
+  & \emph{It will sometime be the case that it was once the case that}
+  \(\mathrm{P}\). \\
+  \({\color{red}\Box}{\color{green}{\Large\diamond}}\mathrm{P}\) &
+  \emph{Whatever will always be, will be.} \\
+  \({\color{green}{\Large\diamond}}{\color{red}{\Large\diamond}}\mathrm{P}\)
+  & \emph{Once upon a time, it was always the case that}
+  \(\mathrm{P}\). \\
+  \end{longtable}
+\end{enumerate}
+
+\renewcommand\caption[1][]{\captionto{#1}}
+
+\hypertarget{section}{%
+\subsection{}\label{section}}
+
+\hypertarget{section-1}{%
+\subsection{}\label{section-1}}
+
+\hypertarget{section-2}{%
+\subsection{}\label{section-2}}
+
+\hypertarget{section-3}{%
+\subsection{}\label{section-3}}
+
+\hypertarget{section-4}{%
+\subsection{}\label{section-4}}
+
+\hypertarget{possible-world-semantics}{%
+\subsection{\texorpdfstring{\textsc{Possible World
+Semantics}}{Possible World Semantics}}\label{possible-world-semantics}}
+
+The Leibnizian idea of characterizing necessity and possibility in terms
+of truth in all or some possible worlds was given an elegant
+formalization by {[}@Kripke1959; @Kripke1963{]} when he was only a
+teenager. According to Leibniz, a sentence is \emph{necessary} if it is
+true in \emph{every} possible world, and a sentence is \emph{possible}
+if it is true is \emph{some} possible world. Kripke showed that by
+placing very natural conditions on a relation of \emph{relative
+possibility} or \emph{accessibility} on a set of possible worlds, the
+various systems of modal logic could be validated.
+
+Intuitively, a possible world tells us for each sentence letter whether
+it is true or false in that world. Stripping away inessentials, we can
+represent a possible world by a subset of sentence letters. A
+\emph{modal structure} \(\mathbb{M}\) is an ordered triple
+\(\langle W, R,\alpha \rangle\), where \(W\) is a set\footnote{set-theoretic
+  size issues‽} of possible worlds, \(R\subseteq W\times W\) is a
+relation known as the \emph{accessibility relation} or the
+\emph{relative possibility relation}, and \(\alpha\) is a distinguished
+element of \emph{W} known as the \emph{actual world}
+
+We can exhaustively characterize the notion of \[\beta \vDash \varphi,\]
+the \emph{truth of a sentence in a possible world} \(\beta\), by
+
+\begin{enumerate}
+\def\labelenumi{(\arabic{enumi})}
+\setcounter{enumi}{3}
+\item
+  If \(\varphi\) is a sentence letter S, then \[
+  \beta\vDash S \iff S\in\beta,
+  \] i.e.~\(S\) is a member of \(\beta\);
+\item
+  If \(\varphi\) is \(\psi\), then \[
+  \beta\vDash \neg\psi \iff \beta\not\vDash\psi,
+  \] i.e., it is not the case that \(\beta\vDash\psi\);
+\item
+  \begin{enumerate}
+  \def\labelenumii{(\alph{enumii})}
+  \item
+    If \(\varphi\) is \((\psi\land\chi)\), then \[
+    \beta\vDash (\psi\land\chi) \iff \beta\vDash\psi \mathrel{\&} \beta\vDash\chi,
+    \] i.e., both \(\beta\vDash\psi\) and \(\beta\vDash\chi\);
+  \item
+    If \(\varphi\) is \((\psi\lor\chi)\), then \[
+    \beta\vDash (\psi\lor\chi) \iff \beta\vDash\psi \mathrel{\|} \beta\vDash\chi,
+    \] i.e., either \(\beta\vDash\psi\) or \(\beta\vDash\chi\), or both;
+  \item
+    If \(\varphi\) is \((\psi\to\chi)\), then \[
+    \beta\vDash (\psi\to\chi) \iff \beta\vDash\psi\implies\chi,
+    \] i.e., if \(\beta\vDash\psi\) then \(\beta\vDash\chi\), or either
+    \(\beta\not\vDash\psi\) or \(\beta\vDash\chi\) ‽;
+  \item
+    If \(\varphi\) is \((\psi\leftrightarrow\chi)\), then \[
+    \beta\vDash (\psi\leftrightarrow\chi) \iff \beta\vDash\psi\iff\chi,
+    \] i.e., \(\beta\vDash\psi\) if and only if \(\beta\vDash\chi\);
+  \end{enumerate}
+\end{enumerate}
+
+Finally, the law clause gives the Leibnizian truth conditions for
+necessity and possibility:
+
+\begin{enumerate}
+\def\labelenumi{(\arabic{enumi})}
+\setcounter{enumi}{6}
+\item
+  \begin{enumerate}
+  \def\labelenumii{(\alph{enumii})}
+  \item
+    If \(\varphi\) is \(\Box\psi\), then \[
+    \beta\vDash \Box\psi \iff \forall \gamma\in W.\, \beta\mathrel{R}\gamma \implies \beta\vDash\psi,
+    \] i.e., \(\psi\) is true in \emph{all} possible worlds \(\gamma\),
+    possible-relative to \(\beta\);
+  \item
+    If \(\varphi\) is \({\Large\diamond}\psi\), then \[
+    \beta\vDash {\Large\diamond}\psi \iff \exists \gamma\in W.\, \beta\mathrel{R}\gamma \implies \beta\vDash\psi,
+    \] i.e., \(\psi\) is true in some possible worlds \(\gamma\),
+    possible-relative to \(\beta\);
+  \end{enumerate}
+\end{enumerate}
+
+This completes the definition of truth in a model for modal
+propositional logic. Using this definition of truth, we can now define
+what it means for a sentence to be \emph{semantically valid}: \[
+\vDash\varphi\text{ (i.e., }\varphi\text{ is semantically valid)} \iff \forall\alpha\in W.\, \alpha\vDash\varphi.
+\]
+
+Next, we obtain different systems of modal logic when various conditions
+are placed on the accessibility or relative possibility relation R. We
+say that a relation \(R\) is a \emph{series} if \(R\) is serial; \(R\)
+is a \emph{reflexivity} if \(R\) is totally reflexive; \(R\) is a
+\emph{similarity} if \(R\) is totally reflexive and symmetric; \(R\) is
+a \emph{partial ordering} if \(R\) is totally reflexive and transitive;
+\(R\) is an \emph{equivalence relation} if \(R\) is totally reflexive
+and euclidean. It turns out that the axioms of modal logic discussed
+above are validated when natural conditions are imposed on the
+accessibility or relative possibility relation \(R\).
+
+\hypertarget{tbl-properties-of-accessibility}{}
+\begin{longtable}[]{@{}
+  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}@{}}
+\caption{\{tbl-colwidths=``{[}10,20,20,50{]}''\}}\tabularnewline
+\toprule\noalign{}
+\endfirsthead
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{D} &
+\({\small\square} \varphi \rightarrow {\Large\diamond} \varphi\) &
+serial &
+\(\forall \alpha.\,\exists \beta.\, \alpha \mathbin{R} \beta\) \\
+\textbf{T} & \({\small\square} \varphi \rightarrow \varphi\) & reflexive
+& \(\forall \alpha.\,\alpha \mathbin{R} \alpha\) \\
+\textbf{B} & \(\varphi \rightarrow \square {\Large\diamond} \varphi\) &
+symmetric &
+\(\forall \alpha.\, \forall \beta.\, (\alpha \mathbin{R} \beta \Rightarrow \beta \mathbin{R} \alpha)\) \\
+\textbf{4} & \(\square \varphi \rightarrow \square \square \varphi\) &
+transitive &
+\(\forall \alpha \forall \beta .\, \forall \gamma.\, (\alpha \mathbin{R} \beta \;\&\; \beta \mathbin{R} \gamma \Rightarrow \alpha \mathbin{R} \gamma)\) \\
+\textbf{5} &
+\({\Large\diamond} \varphi \rightarrow \square {\Large\diamond} \varphi\)
+& euclidean &
+\(\forall \alpha.\, \forall \beta.\, \forall \gamma.\, (\alpha \mathbin{R} \beta \;\&\; \alpha \mathbin{R} \gamma \Rightarrow \beta \mathbin{R} \gamma)\) \\
+\end{longtable}
+
+Properties of Accessibility
+
+Systems of modal logic are \emph{normal} when everything derivable from
+necessary truths is itself necessary. This will be the case if the rule
+of \emph{modus ponens} and axiom
+\protect\hyperlink{eq-modal-axiom-K-2}{(\textbf{K})} are valid: \[
+\Box(\mathrm{P}\to \mathrm{Q})\to(\Box \mathrm{P}\to\Box \mathrm{Q}).\tag*{(\textbf{K})}
+\] \{\#eq-modal-axiom-K-2\}
+
+Axiom \textbf{K} expresses the intuition that \emph{necessary truths
+imply only necessary truths}.
+
+We can conveniently summarize the above systems of modal logic in a
+chart. The various modal systems can be characterized by the axioms that
+are valid in them. The smallest normal modal logic system \textbf{K}
+contains axiom \textbf{K}. The four most famous modal logics are system
+(T) named after the Gödel--Feyes--von Wright modal logic to model
+tautologies, system \textbf{S4} and \textbf{S5}, named after C. I.
+Lewis's axioms for strict implications, and the unduly neglected
+Brouwersche system \textbf{B}, named by Becker after the intuitionist L.
+E. J. Brouwer due to the characteristic axiom's similarity to
+intuitionistic double negation. All these systems contain \textbf{K} and
+\textbf{T}. The system \textbf{D} is a weaker system than \textbf{T},
+containing axioms \textbf{K} and \textbf{D}, is named for deontic logic.
+
+Notice that relationships of containment among the modal systems follow
+from the logic of relations. Axiom \textbf{B} requires that R be
+symmetric and \textbf{4} requires that R be transitive. System
+\textbf{S5} with axioms \textbf{T} and \textbf{E} require R to be an
+equivalence relation (i.e., reflexive, symmetric, and transitive);
+hence, \textbf{S5} could also be specified by requiring axioms
+\textbf{T}, \textbf{4}, and \textbf{B} to be valid. Therefore,
+\textbf{S5} contains \textbf{S4} and \textbf{B}, neither of which
+contains the other. Systems \textbf{S5}, \textbf{S4} and \textbf{B} all
+contain system \textbf{T}, which contains \textbf{D}.
+
+A convenient way of describing these modal logics is by their
+\emph{Lemmon code} listing the axioms valid in them. For example,
+\(\mathbf{S5} = \mathbf{KTE} = \mathbf{KT4B} = \mathbf{KD4B}\). We can
+represent these containment relations in a diagram in which downward
+paths represent containment.
+
+\hypertarget{tbl-modal-axioms-and-accessibility}{}
+\begin{longtable}[]{@{}
+  >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
+  >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
+  >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}@{}}
+\caption{\{tbl-colwidths=``{[}10,23,10,23,10,23{]}''\}}\tabularnewline
+\toprule\noalign{}
+\endfirsthead
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{D} & Deontic Logic & \textbf{D} &
+\({\small\square} P \rightarrow {\Large\diamond} P\) & \textbf{KD} &
+seriality \\
+\textbf{T} & Gödel-Feys-von Wright Tautology & \textbf{T} &
+\({\small\square} P \rightarrow P\) & \textbf{KT} & reflexivity \\
+\textbf{B} & Brouwersche System & \textbf{B} &
+\(P \rightarrow \square {\Large\diamond} P\) & \textbf{KTB} &
+similarity \\
+\textbf{S4} & Lewis' Strict Implication System 4 & \textbf{4} &
+\(\square P \rightarrow \square \square P\) & \textbf{KT4} & partial
+ordering \\
+\textbf{S5} & Lewis' Strict Implication System 5 & \textbf{E} &
+\({\Large\diamond} P \rightarrow \square {\Large\diamond} P\) &
+\textbf{KTE} & equivalence relation \\
+\end{longtable}
+
+Modal Axioms and Accessibility
+
+\hypertarget{fig-logical-containment-of-the-modal-systems}{}
+% \begin{dummyenv}
+% \nopagecolor
+% % https://q.uiver.app/#q=WzAsNSxbMSwwLCJcXG1hdGhiZntTNX0iXSxbMCwxLCJcXG1hdGhiZntCfSJdLFsyLDEsIlxcbWF0aGJme1M0fSJdLFsxLDIsIlxcbWF0aGJme1R9Il0sWzEsMywiXFxtYXRoYmZ7RH0iXSxbMSwwXSxbMiwwXSxbMywxXSxbMywyXSxbMywwXSxbNCwzXV0=
+% \begin{tikzcd}[ampersand replacement=\&]
+%     \& {\mathbf{S5}} \\
+%     {\mathbf{B}} \&\& {\mathbf{S4}} \\
+%     \& {\mathbf{T}} \\
+%     \& {\mathbf{D}}
+%     \arrow[from=2-1, to=1-2]
+%     \arrow[from=2-3, to=1-2]
+%     \arrow[from=3-2, to=2-1]
+%     \arrow[from=3-2, to=2-3]
+%     \arrow[from=3-2, to=1-2]
+%     \arrow[from=4-2, to=3-2]
+% \end{tikzcd}
+% \end{dummyenv}
+
+Logical Containment of the Modal Systems
+
+Various deontic modal systems can also be characterized by their axioms
+(\emph{Lemmon code}).
+
+\hypertarget{tbl-lemmon-codes-for-deontic-modal-systems}{}
+\begin{longtable}[]{@{}clll@{}}
+\caption{\{tbl-colwidths=``{[}20,30,20,30{]}''\}}\tabularnewline
+\toprule\noalign{}
+\endfirsthead
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+System \textbf{T} & \textbf{KT} & Deontic \textbf{D} & \textbf{KD} \\
+System \textbf{B} & \textbf{KTB} & & \\
+System \textbf{S4} & \textbf{KT4} & Deontic \textbf{S4} &
+\textbf{KD4} \\
+System \textbf{S5} & \textbf{KTE} = \textbf{KT4B} = \textbf{KD4B} & & \\
+\end{longtable}
+
+Lemmon Codes for Deontic Modal Systems
+
+The logical relationships among the above systems of modal logic can be
+set forth in a diagram (due to Krister Segerberg who omits \textbf{KD5}
+and \textbf{K45}). As before, a modal logic is included in another if it
+is connected to it, directly or indirectly, by an upward path. The
+second diagram is a more elaborate \textsc{Picassos' Electric Chair}
+that includes deontic modal logics.
+
+\clearpage
+
+\hypertarget{fig-picassos-hasse-diagrams}{}
+% \begin{dummyenv}
+% \nopagecolor
+% % https://q.uiver.app/#q=WzAsMTEsWzIsNCwiXFxtYXRoYmZ7S30iXSxbMywzLCJcXG1hdGhiZntLNX0iXSxbMSwzLCJcXG1hdGhiZntEfSJdLFsyLDJdLFsxLDIsIlxcbWF0aGJme2RTNH0iXSxbMiwzLCJcXG1hdGhiZntLNH0iXSxbMywyXSxbMiwxLCJcXG1hdGhiZntEUzV9Il0sWzIsMCwiXFxtYXRoYmZ7UzV9Il0sWzEsMSwiXFxtYXRoYmZ7UzR9Il0sWzAsMiwiXFxtYXRoYmZ7VH0iXSxbMCwxXSxbMCwyXSxbMiwzLCIiLDIseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMSwzLCIiLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbNSw0XSxbNCw3XSxbNiw3XSxbNSw2XSxbMyw3LCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbNyw4XSxbMSw2XSxbMiw0XSxbMCw1XSxbNCw5XSxbOSw4XSxbMTAsOV0sWzIsMTBdXQ==
+% \begin{tikzcd}[ampersand replacement=\&,column sep=large]
+%     \&\& {\mathbf{S5}} \\
+%     \& {\mathbf{S4}} \& {\mathbf{DS5}} \\
+%     {\mathbf{T}} \& {\mathbf{dS4}} \& {} \& {} \\
+%     \& {\mathbf{D}} \& {\mathbf{K4}} \& {\mathbf{K5}} \\
+%     \&\& {\mathbf{K}}
+%     \arrow[from=5-3, to=4-4]
+%     \arrow[from=5-3, to=4-2]
+%     \arrow[dashed, from=4-2, to=3-3]
+%     \arrow[dashed, from=4-4, to=3-3]
+%     \arrow[from=4-3, to=3-2]
+%     \arrow[from=3-2, to=2-3]
+%     \arrow[from=3-4, to=2-3]
+%     \arrow[from=4-3, to=3-4]
+%     \arrow[dashed, from=3-3, to=2-3]
+%     \arrow[from=2-3, to=1-3]
+%     \arrow[from=4-4, to=3-4]
+%     \arrow[from=4-2, to=3-2]
+%     \arrow[from=5-3, to=4-3]
+%     \arrow[from=3-2, to=2-2]
+%     \arrow[from=2-2, to=1-3]
+%     \arrow[from=3-1, to=2-2]
+%     \arrow[from=4-2, to=3-1]
+% \end{tikzcd}
+% \end{dummyenv}
+
+% \begin{dummyenv}
+% \nopagecolor
+% % https://q.uiver.app/#q=WzAsMTUsWzMsNCwiXFxtYXRoYmZ7XFxjb2xvcntyZWR9S30iXSxbNCwzLCJcXG1hdGhiZntLNX0iXSxbMiwzLCJcXG1hdGhiZntEfSJdLFszLDIsIlxcbWF0aGJme0RLNX0iXSxbMiwyLCJcXG1hdGhiZntkUzR9Il0sWzMsMywiXFxtYXRoYmZ7SzR9Il0sWzQsMiwiXFxtYXRoYmZ7SzQ1fSJdLFszLDEsIlxcbWF0aGJme0RTNX0iXSxbMywwLCJcXG1hdGhiZntcXGNvbG9ye3JlZH1TNX09XFxtYXRoYmZ7S1Q1fSJdLFsyLDEsIlxcbWF0aGJme1M0fSJdLFsxLDIsIlxcbWF0aGJme1R9Il0sWzIsMCwiXFxtYXRoYmZ7XFxjb2xvcntyZWR9Qn1cXGNvbG9ye2JsdWV9PVxcbWF0aGJme0tUQn0iXSxbMCwxLCJcXG1hdGhiZntcXGNvbG9ye2JsdWV9S0RCfSJdLFswLDQsIlxcbWF0aGJme1xcY29sb3J7Ymx1ZX1LQn0iXSxbMSwzLCJcXG1hdGhiZntcXGNvbG9ye2JsdWV9SzRCfSJdLFswLDFdLFswLDJdLFsyLDMsIiIsMix7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsxLDMsIiIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs1LDRdLFs0LDddLFs2LDddLFs1LDZdLFszLDcsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs3LDhdLFsxLDZdLFsyLDRdLFswLDVdLFs0LDldLFs5LDhdLFsxMCw5XSxbMiwxMCwiIiwxLHsib2Zmc2V0IjotMX1dLFsxMSw4XSxbMTIsMTEsIiIsMSx7ImNvbG91ciI6WzI0MCw2MCw2MF19XSxbMTMsMTIsIiIsMSx7ImNvbG91ciI6WzI0MCw2MCw2MF19XSxbMCwxMywiIiwxLHsiY29sb3VyIjpbMjQwLDYwLDYwXX1dLFs1LDE0LCIiLDEseyJjb2xvdXIiOlsyNDAsNjAsNjBdfV0sWzYsMTQsIiIsMSx7ImNvbG91ciI6WzMwMCw2MCw2MF19XSxbMTQsOCwiIiwxLHsiY29sb3VyIjpbMjQwLDYwLDYwXX1dLFsxMywxNCwiIiwxLHsiY29sb3VyIjpbMjQwLDYwLDYwXX1dLFsxMCwxMSwiIiwxLHsiY29sb3VyIjpbMzAwLDYwLDYwXX1dLFsyLDEyLCIiLDEseyJvZmZzZXQiOjEsImNvbG91ciI6WzMwMCw2MCw2MF19XV0=
+% \begin{tikzcd}[ampersand replacement=\&,row sep=large]
+%     \&\& {\mathbf{\color{red}B}\color{blue}=\mathbf{KTB}} \& {\mathbf{\color{red}S5}=\mathbf{KT5}} \\
+%     {\mathbf{\color{blue}KDB}} \&\& {\mathbf{S4}} \& {\mathbf{DS5}} \\
+%     \& {\mathbf{T}} \& {\mathbf{dS4}} \& {\mathbf{DK5}} \& {\mathbf{K45}} \\
+%     \& {\mathbf{\color{blue}K4B}} \& {\mathbf{D}} \& {\mathbf{K4}} \& {\mathbf{K5}} \\
+%     {\mathbf{\color{blue}KB}} \&\&\& {\mathbf{\color{red}K}}
+%     \arrow[from=5-4, to=4-5]
+%     \arrow[from=5-4, to=4-3]
+%     \arrow[dashed, from=4-3, to=3-4]
+%     \arrow[dashed, from=4-5, to=3-4]
+%     \arrow[from=4-4, to=3-3]
+%     \arrow[from=3-3, to=2-4]
+%     \arrow[from=3-5, to=2-4]
+%     \arrow[from=4-4, to=3-5]
+%     \arrow[dashed, from=3-4, to=2-4]
+%     \arrow[from=2-4, to=1-4]
+%     \arrow[from=4-5, to=3-5]
+%     \arrow[from=4-3, to=3-3]
+%     \arrow[from=5-4, to=4-4]
+%     \arrow[from=3-3, to=2-3]
+%     \arrow[from=2-3, to=1-4]
+%     \arrow[from=3-2, to=2-3]
+%     \arrow[shift left, from=4-3, to=3-2]
+%     \arrow[from=1-3, to=1-4]
+%     \arrow[color={rgb,255:red,92;green,92;blue,214}, from=2-1, to=1-3]
+%     \arrow[color={rgb,255:red,92;green,92;blue,214}, from=5-1, to=2-1]
+%     \arrow[color={rgb,255:red,92;green,92;blue,214}, from=5-4, to=5-1]
+%     \arrow[color={rgb,255:red,92;green,92;blue,214}, from=4-4, to=4-2]
+%     \arrow[color={rgb,255:red,214;green,92;blue,214}, from=3-5, to=4-2]
+%     \arrow[color={rgb,255:red,92;green,92;blue,214}, from=4-2, to=1-4]
+%     \arrow[color={rgb,255:red,92;green,92;blue,214}, from=5-1, to=4-2]
+%     \arrow[color={rgb,255:red,214;green,92;blue,214}, from=3-2, to=1-3]
+%     \arrow[shift right, color={rgb,255:red,214;green,92;blue,214}, from=4-3, to=2-1]
+% \end{tikzcd}
+% \end{dummyenv}
+
+Hasse--Picassos Diagrams for Systems of Modal Logic
+
+One way to visualize how the conditions on the accessibility relation
+validate their respective axioms is using the definitions of
+`\(\small\square\)' and \(\LARGE\diamond\) in terms of possible worlds
+and use directed graphs from Chapter IV to represent the accessibility
+relation \(\mathbin{R}\). Here the accessibility relation
+\(\alpha\mathbin{R}\beta\) (read ``\(\beta\) is possible relative to
+\(\alpha\)'''' or ``\(\beta\) is accessible to \(\alpha\)'') is
+represented by an arrow from a circle representing possible world
+\(\alpha\) to a circle representing possible world \(\beta\).
+
+\hypertarget{fig-accessibility-represented-by-directed-graphs}{}
+% \begin{dummyenv}
+% \nopagecolor
+% \begin{tikzpicture}
+%     % Define spacing
+%     \def\spacing{3cm} % Adjust the spacing between circles here
+    
+%     % Draw circles
+%     \node[circle,draw,minimum size=1cm] (A) at (0,0) {$\alpha$};
+%     \node[circle,draw,minimum size=1cm] (B) at (\spacing,0) {$\beta$};
+    
+%     % Draw arrows
+%     \draw[->] (A) -- (B) node[midway, above] {$\alpha \mathbin{R} \beta$};
+% \end{tikzpicture}
+% \end{dummyenv}
+
+Accessibility Represented by Directed Graphs
+
+We can, using the directed graphs from the theory of relations,
+translate properties of accessibility relations into geometric
+properties of directed graphs. Symmetry, for example, requires that all
+accessibility arrows are double arrows. Reflexivity requires that every
+world be accessible to itself and so every world has a loop, which is a
+special case of a double arrow. Seriality requires that every world is a
+tail of an arrow. Transitivity requires that for every indirect path of
+accessibility from \(\alpha\) to \(\beta\) and from \(\beta\) to
+\(\gamma\), there is a direct path from \(\alpha\) to \(\gamma\). Being
+euclidean and serial is equivalent to being an equivalence relation,
+that is, being reflexive, symmetric and transitive. Expressing
+\(\mathbin{R}\) in terms of love and worlds in terms of persons, we have
+the following intuitive translations:
+
+\hypertarget{tbl-relational-properties-of-directed-graphs}{}
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\caption{\{tbl-colwidths=``{[}20,30,20,30{]}''\}}\tabularnewline
+\toprule\noalign{}
+\endfirsthead
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+serial & \(\forall \alpha.\,\exists \beta.\, \alpha \mathbin{R} \beta\)
+& Everyone is a lover. \\
+reflexive & \(\forall \alpha.\,\alpha \mathbin{R} \alpha\) & Everyone is
+a self-lover. \\
+symmetric &
+\(\forall \alpha.\, \forall \beta.\, (\alpha \mathbin{R} \beta \Rightarrow \beta \mathbin{R} \alpha)\)
+& All love is requited; all love is mutual. \\
+transitive &
+\(\forall \alpha.\, \forall \beta .\, \forall \gamma.\, (\alpha \mathbin{R} \beta \;\&\; \beta \mathbin{R} \gamma \Rightarrow \alpha \mathbin{R} \gamma)\)
+& Love is transitive. \\
+euclidean &
+\(\forall \alpha.\, \forall \beta.\, \forall \gamma.\, (\alpha \mathbin{R} \beta \;\&\; \alpha \mathbin{R} \gamma \Rightarrow \beta \mathbin{R} \gamma)\)
+& All beloveds of the same lover, love each other and themselves. \\
+\end{longtable}
+
+Relational Properties of Directed Graphs
+
+Using the definition of truth in a modal system set forth above, we can
+rigorously demonstrate that if R is transitive, then axiom \textbf{4} is
+valid. This demonstration is carried out in the meta-language. We use
+the symbols `\(\forall\)', `\(\exists\)', `\(\&\)', `\(\implies\)' and
+`\(\in\)' in the meta-language for `all', `some', `and', `if\ldots{}
+then', and `is an element of', respectively. Once the truth clauses are
+unpacked, the logical demonstration is no more complicated than a
+derivation in the theory of relations.
+
+\phantom{a}
+
+\hypertarget{lst-kaplan-transitivity-implies-validity-of-axiom-4}{}
+% \begin{dummyenv}
+% \nopagecolor
+% \definecolor{ourblue}{HTML}{0070C0}
+% $\displaystyle
+% \begin{array}{rll}
+% 1.&\text{\st{Show}}\;R\,\text{is transitive}\implies {\vDash}(\square\varphi\to\square\square\varphi)&3,\,\text{CD}\\
+% 2.&\tikzmark{start1}\phantom{\text{\st{Show}}\;}\forall\alpha\,\forall\beta\,\forall\gamma\,(\alpha\mathbin{R}\beta\,\;{\&}\;\beta\mathbin{R}\gamma\implies\alpha\mathbin{R}\gamma)&\text{Assume}\,(\text{CD}),\,\text{def. transitive}\\
+% 3.&\quad\text{\st{Show}}\;{\vDash}(\square\varphi\to\square\square\varphi)&24,\,\text{DD}\\
+% 4.&\quad\tikzmark{start2}\quad\text{\st{Show}}\;\forall\alpha\in W.\,({\vDash}_\alpha\square\varphi\implies {\vDash}_\alpha\square\square\varphi)&\tikzmark{end1}5,\,\text{UD}\\
+% 5.&\quad\quad\tikzmark{start3}\quad\text{\st{Show}}\;{\vDash}_\alpha\square\varphi\implies {\vDash}_\alpha\square\square\varphi&8,\,\text{CD}\\
+% 6.&\quad\quad\quad\phantom{\text{\st{Show}}\;}{\vDash}_\alpha\square\varphi&\text{Assume (CD)}\\
+% 7.&\quad\quad\quad\phantom{\text{\st{Show}}\;}{\forall}\beta\in W.\,(\alpha\mathbin{R}\beta\implies {\vDash}_\alpha\varphi)&6,\,\text{truth-def.}\,\square\\
+% 8.&\quad\quad\quad\quad\text{\st{Show}}\;{\vDash}_\alpha\square\square\varphi&23,\,\text{DD}\\
+% 9.&\quad\quad\quad\quad\tikzmark{start4}\quad\text{\st{Show}}\;\forall\beta\in W.\,(\alpha\mathbin{R}\beta\implies {\vDash}_\beta\square\varphi)&10,\,\text{UD}\\
+% 10.&\quad\quad\quad\quad\quad\tikzmark{start5}\quad\text{\st{Show}}\;\alpha\mathbin{R}\beta\implies {\vDash}_\beta\square\varphi&12,\,\text{CD}\\
+% 11.&\quad\quad\quad\quad\quad\quad\tikzmark{start6}\phantom{\text{\st{Show}}\;}\alpha\mathbin{R}\beta&\text{Assume (CD)}\\
+% 12.&\quad\quad\quad\quad\quad\quad\quad\text{\st{Show}}\;{\vDash}_\beta\square\varphi&22,\,\text{DD}\\
+% 13.&\quad\quad\quad\quad\quad\quad\quad\tikzmark{start7}\quad\text{\st{Show}}\;\forall\gamma\in W.\,(\beta\mathbin{R}\gamma\implies {\vDash}_\gamma\varphi)&14,\,\text{UD}\\
+% 14.&\quad\quad\quad\quad\quad\quad\quad\quad\tikzmark{start8}\quad\text{\st{Show}}\;\beta\mathbin{R}\gamma\implies {\vDash}_\gamma\varphi&16,\,\text{CD}\\
+% 15.&\quad\quad\quad\quad\quad\quad\quad\quad\quad\phantom{\text{\st{Show}}\;}\beta\mathbin{R}\gamma&\text{Assume CD}\\
+% 16.&\quad\quad\quad\quad\quad\quad\quad\quad\quad\tikzmark{start9}\quad\text{\st{Show}}\;{\vDash}_\gamma\varphi&22,\,\text{DD}\\
+% 17.&\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\phantom{\text{\st{Show}}\;}\alpha\mathbin{R}\beta\;\&\;\beta\mathbin{R}\gamma&11,\,15\,\text{ADJ}\\
+% 19.&\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\phantom{\text{\st{Show}}\;}\alpha\mathbin{R}\gamma&18,\,17\,\text{MP}\\
+% 20.&\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\phantom{\text{\st{Show}}\;}\alpha\mathbin{R}\gamma\implies {\vDash}_\gamma\varphi&7,\,\text{UI}\\
+% 21.&\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\phantom{\text{\st{Show}}\;}\phantom{\alpha\mathbin{R}\gamma\implies {}}{\vDash}_\gamma\varphi&\tikzmark{end10}\tikzmark{end9}\tikzmark{end8}\tikzmark{end7}20,\,19\,\text{MP}\\
+% 22.&\quad\quad\quad\quad\quad\quad\quad\phantom{\text{\st{Show}}\;}{\vDash}_\beta\square\varphi&\tikzmark{end6}\tikzmark{end5}12,\,\text{truth-def.}\,\square\\
+% 23.&\quad\quad\quad\quad\phantom{\text{\st{Show}}\;}{\vDash}_\alpha\square\square\varphi&\tikzmark{end4}\tikzmark{end3}9,\,\text{truth-def.}\,\square\\
+% 24.&\quad\phantom{\text{\st{Show}}\;}{\vdash}(\square\varphi\to\square\square\varphi)&\tikzmark{end2}\tikzmark{end1}4,\,\text{def.}\,{\vDash}\,\text{(\textit{logical consequence})}
+% \end{array}
+% $
+% \begin{tikzpicture}[remember picture,overlay]
+%   \coordinate (start1) at ([xshift=1ex,yshift=1.6ex]pic cs:start1);
+%   \coordinate (end1) at ([xshift=-1.5ex,yshift=-0.5ex]pic cs:end1);
+%   \node[inner sep=2pt,draw=ourblue,fit=(start1) (end1)] {};
+  
+%   \foreach \i in {2,...,9} {
+%     \coordinate (start) at ([xshift=1ex,yshift=1.6ex]pic cs:start\i);
+%     \coordinate (e\i) at ([xshift=-1ex,yshift=-0.5ex]pic cs:end\i);
+%     \path let \p1 = (e\i), \p2 = (end1) in coordinate (end) at (\x2,\y1);
+%     \node[inner sep=2pt,draw=ourblue,fit=(start) (end)] {};
+%   }
+% \end{tikzpicture}
+% \end{dummyenv}
+
+Kaplan Semantic Derivation of Transitivity Validating Axiom 4
+
+\phantom{a}
+
+The above semantic derivation can be visualized graphically to prove the
+above result contrapositively. We will show that if
+\[{\small\square}\varphi\to{\small\square}{\small\square}\varphi\] is
+false, then the accessibility relation cannot be transitive. Axiom (4)
+fails when its antecedent \(\varphi\) is true but its consequent
+\({\small\square}\varphi\) is false in α. By modal negation,
+\(\neg{\Large\diamond}{\Large\diamond}\varphi\) is equivalent to
+\({\Large\diamond}{\Large\diamond}\neg\varphi\).
+
+So both \({\small\square}\varphi\) and
+\({\Large\diamond}{\Large\diamond}\neg\varphi\) are true in some
+possible world \(\alpha\). Eliminating the first \({\Large\diamond}\),
+we have that in some possible world \(\beta\) accessible to \(\alpha\)
+(i.e.~\(\alpha\mathbin{R}\beta\)), \({\Large\diamond}\neg\varphi\) is
+true. Applying the definition of truth for \({\LARGE\diamond}\) again,
+we have that for some world \(\gamma\) accessible to \(\beta\)
+(i.e.~\(\beta\mathbin{R}\gamma\)), \(\neg\varphi\) is true in
+\(\gamma\). Notice that the transitivity of the accessibility relation
+\(R\) would require that \(\gamma\) be accessible to \(\alpha\), which
+would contradict that \({\small\square}\varphi\). The invalidity of
+Axiom (\textbf{4}) implies the failure of the transitivity of the
+accessibility relation \(R\). Stating this result contrapositively, if
+the accessibility relation \(R\) is transitive, then axiom (\textbf{4})
+is valid.
+
+\hypertarget{fig-modal-kripke-worlds-diagram-transitivity-to-axiom-4}{}
+% \begin{dummyenv}
+% \nopagecolor
+% \begin{tikzpicture}
+%     % Define spacing
+%     \def\spacing{3cm} % Adjust the spacing between circles here
+    
+%     % Draw circles
+%     \node[circle,draw,minimum size=1cm] (A) at (0,0) {$\begin{aligned}{\small\square}\varphi\\\neg{\small\square}{\small\square}\varphi\\{\Large\diamond}{\Large\diamond}\neg\varphi\end{aligned}$};
+%     \node[circle,draw,minimum size=1cm] (B) at (\spacing,0) {$\begin{aligned}\varphi\\{\Large\diamond}\neg\varphi\end{aligned}$};
+%     \node[circle,draw,minimum size=1cm] (C) at (2*\spacing,0) {$\neg\varphi$};
+    
+%     % Draw arrows
+%     \draw[->] (A) -- (B);
+%     \draw[->] (B) -- (C);
+%     \draw[->,dashed] (A) to[bend left=45] (C);
+    
+%     % Draw labels under each circle
+%     \node at (0,-1.2) {$\alpha$};
+%     \node at (\spacing,-1.2) {$\beta$};
+%     \node at (2*\spacing,-1.2) {$\gamma$};
+% \end{tikzpicture}
+% \end{dummyenv}
+
+Kripke--Mar Diagram for Transitivity of \(R\) Validating Axiom (4)
+
+The semantic demonstration together with the graphic proof using
+directed graphs support one another in building our intuitions for modal
+logic. The graphic proofs are satisfying because of their simplicity and
+ability to make the critical step visually perspicuous. On the other
+hand, the semantic proof is satisfying insofar as the explicit
+definitions of \(\small\square\), \(\LARGE\diamond\), \(\vDash\) are
+shown to work elegantly and precisely with our natural deduction systems
+using the quantifier logic with UD, UI, EI, EG and the theory of
+relations. We will use the directed graphs in the context of discovering
+new axioms and the semantic proofs in the context of justifying that
+these axioms correspond to imposing requirements on the accessibility
+relation.
+
+\hypertarget{exercises-1}{%
+\subsubsection*{Exercises}\label{exercises-1}}
+\addcontentsline{toc}{subsubsection}{Exercises}
+
+TODO\ldots{} too many graphics\ldots{} need some rest today\ldots{}

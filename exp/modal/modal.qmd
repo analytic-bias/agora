@@ -423,7 +423,8 @@ div .proof {
 }
 </style>
 
-::::: {.aside}
+::::: {.column-margin}
+\vspace{-20cm}
 :::: {.callout-tip}
 ## A Classical Theorem, but in Intuitionism
 
@@ -576,7 +577,7 @@ represent a possible world by a subset of sentence letters. A *modal
 structure* $\mathbb{M}$ is an ordered triple $\langle W, R,\alpha \rangle$, where $W$ is a
 set^[set-theoretic size issues‽] of possible worlds, $R\subseteq W\times W$ is a relation known as the
 *accessibility relation* or the *relative possibility relation*, and $\alpha$
-is a distinguished element of *W* known as the *actual world*
+is a distinguished element of *W* known as the *actual world*.
 
 We can exhaustively characterize the notion of
 $$\beta \vDash \varphi,$$
