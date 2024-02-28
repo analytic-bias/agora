@@ -925,9 +925,9 @@ more complicated than a derivation in the theory of relations.
 \definecolor{ourblue}{HTML}{0070C0}
 $\displaystyle
 \begin{array}{rll}
-1.&\text{\st{Show}}\;R\,\text{is transitive}\implies {\vDash}(\square\varphi\to\square\square\varphi)&3,\,\text{CD}\\
+1.&\text{\st{Show}}\;R\,\text{is transitive}\implies{}\vDash{}(\square\varphi\to\square\square\varphi)&3,\,\text{CD}\\
 2.&\tikzmark{start1}\phantom{\text{\st{Show}}\;}\forall\alpha\,\forall\beta\,\forall\gamma\,(\alpha\mathbin{R}\beta\,\;{\&}\;\beta\mathbin{R}\gamma\implies\alpha\mathbin{R}\gamma)&\text{Assume}\,(\text{CD}),\,\text{def. transitive}\\
-3.&\quad\text{\st{Show}}\;{\vDash}(\square\varphi\to\square\square\varphi)&24,\,\text{DD}\\
+3.&\quad\text{\st{Show}}\;{}\vDash{}(\square\varphi\to\square\square\varphi)&24,\,\text{DD}\\
 4.&\quad\tikzmark{start2}\quad\text{\st{Show}}\;\forall\alpha\in W.\,({\vDash}_\alpha\square\varphi\implies {\vDash}_\alpha\square\square\varphi)&\tikzmark{end1}5,\,\text{UD}\\
 5.&\quad\quad\tikzmark{start3}\quad\text{\st{Show}}\;{\vDash}_\alpha\square\varphi\implies {\vDash}_\alpha\square\square\varphi&8,\,\text{CD}\\
 6.&\quad\quad\quad\tikzmark{start10}\phantom{\text{\st{Show}}\;}{\vDash}_\alpha\square\varphi&\text{Assume (CD)}\\
