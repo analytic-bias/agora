@@ -918,7 +918,7 @@ Once the truth clauses are unpacked, the logical demonstration is no
 more complicated than a derivation in the theory of relations.
 
 \phantom{a}
-::: {#lst-kaplan-transitivity-implies-validity-of-axiom-4 fig-pos='H'}
+::: {#lst-montague-transitivity-implies-validity-of-axiom-4 fig-pos='H'}
 
 \begin{dummyenv}
 \nopagecolor
@@ -964,7 +964,7 @@ $
 \end{tikzpicture}
 \end{dummyenv}
 
-Kaplan Semantic Derivation of Transitivity Validating Axiom 4
+Montague-style Semantic Derivation of Transitivity Validating Axiom 4
 
 :::
 \phantom{a}
