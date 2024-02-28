@@ -464,7 +464,7 @@ A Classical Theorem, but in Intuitionism
 <p>Either way, there exists <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> such that <span class="math inline">\(x^y\)</span> is rational. <span style="float: right;"><span class="math inline">\(\Box\)</span></span></p>
 </div>
 <p>Intuitionists reject this classical argument by separation of cases because it does not actually construct the numbers <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> such that <span class="math inline">\(xy\)</span> is irrational. The idea behind intuitionistic logic is that the connectives are reinterpreted as involving a kind of provability.</p>
-<p>In case you’re curious, it is actually known that <span class="math inline">\(\sqrt{2}^{\sqrt{2}}\)</span> is irrational, due to the <a href="https://en.wikipedia.org/wiki/Gelfond%E2%80%93Schneider_theorem">Gelfond–Schneider theorem</a> which verifies that it usually take significantly more effort to convince an intuitionistic mathematicians than a classical one.</p>
+<p>In case you’re curious, it is actually known that <span class="math inline">\(\sqrt{2}^{\sqrt{2}}\)</span> is irrational, due to the <a href="https://en.wikipedia.org/wiki/Gelfond%E2%80%93Schneider_theorem">Gelfond–Schneider theorem</a> which verifies that it usually takes significantly more effort to convince an intuitionistic mathematicians than a classical one.</p>
 </div>
 </div>
 </div></div><p>According to intuitionism, mathematical objects do not exist as eternal Platonic objects but are constructions in intuition. Intuitionists read the propositional connectives as involving not merely truth, but proof, and so they rejected such classical forms of reasoning as <em>reductio ad absurdum</em> and theorems such as the <em>law of excluded middle.</em> Intuitionists reject the following mathematical proof.</p>
@@ -556,6 +556,7 @@ Van Benthem, Johan. 2010. <em>Modal logic for open minds</em>. Stanford, CA: Cen
 </section>
 <section id="section-4" class="level2" data-number="1.6">
 <h2 data-number="1.6" class="anchored" data-anchor-id="section-4"><span class="header-section-number">1.6</span> </h2>
+
 </section>
 <section id="possible-world-semantics" class="level2 page-columns page-full" data-number="1.7">
 <h2 data-number="1.7" class="anchored" data-anchor-id="possible-world-semantics"><span class="header-section-number">1.7</span> <span class="smallcaps">Possible World Semantics</span></h2>
@@ -563,7 +564,7 @@ Van Benthem, Johan. 2010. <em>Modal logic for open minds</em>. Stanford, CA: Cen
 <div class="no-row-height column-margin column-container"><div id="ref-Kripke1959" class="csl-entry" role="listitem">
 Kripke, Saul. 1959. A completeness theorem in modal logic. <em>Journal of Symbolic Logic</em> 24(1). 1–14. DOI: https://doi.org/<a href="https://doi.org/10.2307/2964568">10.2307/2964568</a>
 </div><div id="ref-Kripke1963" class="csl-entry" role="listitem">
-Kripke, Saul. 1963. Semantical analysis of modal logic i normal modal propositional calculi. <em>Mathematical Logic Quarterly</em> 9(5-6). 67–96. DOI: https://doi.org/<a href="https://doi.org/10.1002/malq.19630090502">https://doi.org/10.1002/malq.19630090502</a>
+Kripke, Saul. 1963. Semantical analysis of modal logic i normal modal propositional calculi. <em>Mathematical Logic Quarterly</em> 9(5-6). 67–96. DOI: https://doi.org/<a href="https://doi.org/10.1002/malq.19630090502">10.1002/malq.19630090502</a>
 </div><div id="fn4"><p><sup>4</sup>&nbsp;set-theoretic size issues‽</p></div></div><p>Intuitively, a possible world tells us for each sentence letter whether it is true or false in that world. Stripping away inessentials, we can represent a possible world by a subset of sentence letters. A <em>modal structure</em> <span class="math inline">\(\mathbb{M}\)</span> is an ordered triple <span class="math inline">\(\langle W, R,\alpha \rangle\)</span>, where <span class="math inline">\(W\)</span> is a set<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> of possible worlds, <span class="math inline">\(R\subseteq W\times W\)</span> is a relation known as the <em>accessibility relation</em> or the <em>relative possibility relation</em>, and <span class="math inline">\(\alpha\)</span> is a distinguished element of <em>W</em> known as the <em>actual world</em>.</p>
 <p>We can exhaustively characterize the notion of <span class="math display">\[\beta \vDash \varphi,\]</span> the <em>truth of a sentence in a possible world</em> <span class="math inline">\(\beta\)</span>, by</p>
 <ol start="4" class="example" type="1">
@@ -659,7 +660,17 @@ Table&nbsp;1.1: Properties of Accessibility
 <p>We can conveniently summarize the above systems of modal logic in a chart. The various modal systems can be characterized by the axioms that are valid in them. The smallest normal modal logic system <strong>K</strong> contains axiom <strong>K</strong>. The four most famous modal logics are system (T) named after the Gödel–Feyes–von Wright modal logic to model tautologies, system <strong>S4</strong> and <strong>S5</strong>, named after C. I. Lewis’s axioms for strict implications, and the unduly neglected Brouwersche system <strong>B</strong>, named by Becker after the intuitionist L. E. J. Brouwer due to the characteristic axiom’s similarity to intuitionistic double negation. All these systems contain <strong>K</strong> and <strong>T</strong>. The system <strong>D</strong> is a weaker system than <strong>T</strong>, containing axioms <strong>K</strong> and <strong>D</strong>, is named for deontic logic.</p>
 <p>Notice that relationships of containment among the modal systems follow from the logic of relations. Axiom <strong>B</strong> requires that R be symmetric and <strong>4</strong> requires that R be transitive. System <strong>S5</strong> with axioms <strong>T</strong> and <strong>E</strong> require R to be an equivalence relation (i.e., reflexive, symmetric, and transitive); hence, <strong>S5</strong> could also be specified by requiring axioms <strong>T</strong>, <strong>4</strong>, and <strong>B</strong> to be valid. Therefore, <strong>S5</strong> contains <strong>S4</strong> and <strong>B</strong>, neither of which contains the other. Systems <strong>S5</strong>, <strong>S4</strong> and <strong>B</strong> all contain system <strong>T</strong>, which contains <strong>D</strong>.</p>
 <p>A convenient way of describing these modal logics is by their <em>Lemmon code</em> listing the axioms valid in them. For example, <span class="math inline">\(\mathbf{S5} = \mathbf{KTE} = \mathbf{KT4B} = \mathbf{KD4B}\)</span>. We can represent these containment relations in a diagram in which downward paths represent containment.</p>
-<div id="tbl-modal-axioms-and-accessibility" class="quarto-float anchored">
+
+<div class="no-row-height column-margin column-container"><div id="fig-logical-containment-of-the-modal-systems" class="quarto-figure quarto-figure-center quarto-float anchored" style="display: block; margin: auto; width: 100%;">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-logical-containment-of-the-modal-systems-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<p><img src="a1aa6cce761cea6d0a8bc1e6ee85e3bd094d5dc9.svg" class="img-fluid figure-img" style="display: block; margin: auto; width: 100%;"></p>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-logical-containment-of-the-modal-systems-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.2: Logical Containment of the Modal Systems
+</figcaption>
+</figure>
+</div></div><div id="tbl-modal-axioms-and-accessibility" class="quarto-float anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-modal-axioms-and-accessibility-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;1.2: Modal Axioms and Accessibility
@@ -720,17 +731,7 @@ Table&nbsp;1.2: Modal Axioms and Accessibility
 </div>
 </figure>
 </div>
-
-<div class="no-row-height column-margin column-container"><div id="fig-logical-containment-of-the-modal-systems" class="quarto-figure quarto-figure-center quarto-float anchored" style="display: block; margin: auto; width: 100%;">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-logical-containment-of-the-modal-systems-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<p><img src="a1aa6cce761cea6d0a8bc1e6ee85e3bd094d5dc9.svg" class="img-fluid figure-img" style="display: block; margin: auto; width: 100%;"></p>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-logical-containment-of-the-modal-systems-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1.2: Logical Containment of the Modal Systems
-</figcaption>
-</figure>
-</div></div><p>Various deontic modal systems can also be characterized by their axioms (<em>Lemmon code</em>).</p>
+<p>Various deontic modal systems can also be characterized by their axioms (<em>Lemmon code</em>).</p>
 <div id="tbl-lemmon-codes-for-deontic-modal-systems" class="quarto-float anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-lemmon-codes-for-deontic-modal-systems-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -784,10 +785,10 @@ Table&nbsp;1.3: Lemmon Codes for Deontic Modal Systems
 <div class="fullwidth quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="becb4b6f90dba6e7b9ba11cb913e86bf19f4d746.svg" class="img-fluid figure-img" style="display: block; margin: auto; width: 100%;"></p>
+<p><img src="8c985ca1f2479a81033ae742a2bd321b73186185.svg" class="img-fluid figure-img" style="display: block; margin: auto; width: 100%;"></p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="8c9cdf2bc4708274af4c6f18832953666a027fdc.svg" class="img-fluid figure-img" style="display: block; margin: auto; width: 100%;"></p>
+<p><img src="0754fe3f93b5aa6ece1c13ded6b81c74912e484d.svg" class="img-fluid figure-img" style="display: block; margin: auto; width: 100%;"></p>
 </div>
 </div>
 </div>
@@ -859,7 +860,7 @@ Table&nbsp;1.4: Relational Properties of Directed Graphs
 Listing&nbsp;1.1: Kaplan Semantic Derivation of Transitivity Validating Axiom 4
 </figcaption>
 <div aria-describedby="lst-kaplan-transitivity-implies-validity-of-axiom-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<p><img src="7a1a22f066975e537e0d3785c6b7ea28e2823b0c.svg" class="img-fluid figure-img" style="display: block; margin: auto; width: 100%;"></p>
+<p><img src="c2bf9894439c5ec8267b6d2eb4391a77940005cc.svg" class="img-fluid figure-img" style="display: block; margin: auto; width: 100%;"></p>
 </div>
 </figure>
 </div>

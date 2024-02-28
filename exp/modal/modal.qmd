@@ -193,6 +193,7 @@ $
 The following theorems are known as the *paradoxes of material
 implication*:
 
+\vspace{-2\parskip}
 \renewcommand\labelitemi{$\oddorevenarrow$}
 :::: {}
 ::: {#almar1 .arbullet .column-margin .almar}
@@ -457,7 +458,7 @@ involving a kind of provability.
 
 In case you're curious, it is actually known that $\sqrt{2}^{\sqrt{2}}$ is irrational, due to the
 [Gelfond--Schneider theorem](https://en.wikipedia.org/wiki/Gelfond\%E2\%80\%93Schneider_theorem)
-which verifies that it usually take significantly more effort to convince an intuitionistic mathematicians than a classical one. 
+which verifies that it usually takes significantly more effort to convince an intuitionistic mathematicians than a classical one. 
 ::::
 :::::
 
@@ -560,6 +561,7 @@ $$ {#eq-modal-axiom-M}
 
 ##
 
+\pagebreak
 ## [Possible World Semantics]{.smallcaps}
 
 The Leibnizian idea of characterizing necessity and possibility in terms
@@ -707,22 +709,6 @@ $\mathbf{S5} = \mathbf{KTE} = \mathbf{KT4B} = \mathbf{KD4B}$.
 We can represent these containment relations in a
 diagram in which downward paths represent containment.
 
-::: {#tbl-modal-axioms-and-accessibility}
-
-| | | | | | |
-|:-:|---|:-:|---|:-:|---|
-| **D** | Deontic Logic | **D** | ${\small\square} P \rightarrow {\Large\diamond} P$ | **KD** | seriality |
-| **T** | Gödel-Feys-von Wright Tautology | **T** | ${\small\square} P \rightarrow P$ | **KT** | reflexivity |
-| **B** | Brouwersche System | **B** | $P \rightarrow \square {\Large\diamond} P$ | **KTB** | similarity |
-| **S4** | Lewis' Strict Implication System 4 | **4** | $\square P \rightarrow \square \square P$ | **KT4** | partial ordering |
-| **S5** | Lewis' Strict Implication System 5 | **E** | ${\Large\diamond} P \rightarrow \square {\Large\diamond} P$ | **KTE** | equivalence relation |
-
-: {tbl-colwidths="[10,23,10,23,10,23]"}
-
-Modal Axioms and Accessibility
-
-:::
-
 ::: {#fig-logical-containment-of-the-modal-systems .column-margin}
 
 \begin{dummyenv}
@@ -743,6 +729,22 @@ Modal Axioms and Accessibility
 \end{dummyenv}
 
 Logical Containment of the Modal Systems 
+
+:::
+
+::: {#tbl-modal-axioms-and-accessibility}
+
+| | | | | | |
+|:-:|---|:-:|---|:-:|---|
+| **D** | Deontic Logic | **D** | ${\small\square} P \rightarrow {\Large\diamond} P$ | **KD** | seriality |
+| **T** | Gödel-Feys-von Wright Tautology | **T** | ${\small\square} P \rightarrow P$ | **KT** | reflexivity |
+| **B** | Brouwersche System | **B** | $P \rightarrow \square {\Large\diamond} P$ | **KTB** | similarity |
+| **S4** | Lewis' Strict Implication System 4 | **4** | $\square P \rightarrow \square \square P$ | **KT4** | partial ordering |
+| **S5** | Lewis' Strict Implication System 5 | **E** | ${\Large\diamond} P \rightarrow \square {\Large\diamond} P$ | **KTE** | equivalence relation |
+
+: {tbl-colwidths="[10,23,10,23,10,23]"}
+
+Modal Axioms and Accessibility
 
 :::
 
@@ -771,17 +773,16 @@ connected to it, directly or indirectly, by an upward path.
 The second diagram is a more elaborate <span class="smallcaps">Picassos' Electric
 Chair</span> that includes deontic modal logics.
 
-\clearpage
 :::: {#fig-picassos-hasse-diagrams .fullwidth .column-page-right fig-pos='H'}
 ::: {.fullwidth .column-page-right layout-ncol=2}
 
 \begin{dummyenv}
 \nopagecolor
-% https://q.uiver.app/#q=WzAsMTEsWzIsNCwiXFxtYXRoYmZ7S30iXSxbMywzLCJcXG1hdGhiZntLNX0iXSxbMSwzLCJcXG1hdGhiZntEfSJdLFsyLDJdLFsxLDIsIlxcbWF0aGJme2RTNH0iXSxbMiwzLCJcXG1hdGhiZntLNH0iXSxbMywyXSxbMiwxLCJcXG1hdGhiZntEUzV9Il0sWzIsMCwiXFxtYXRoYmZ7UzV9Il0sWzEsMSwiXFxtYXRoYmZ7UzR9Il0sWzAsMiwiXFxtYXRoYmZ7VH0iXSxbMCwxXSxbMCwyXSxbMiwzLCIiLDIseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMSwzLCIiLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbNSw0XSxbNCw3XSxbNiw3XSxbNSw2XSxbMyw3LCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbNyw4XSxbMSw2XSxbMiw0XSxbMCw1XSxbNCw5XSxbOSw4XSxbMTAsOV0sWzIsMTBdXQ==
+% https://q.uiver.app/#q=WzAsMTEsWzIsNCwiXFxtYXRoYmZ7S30iXSxbMywzLCJcXG1hdGhiZntLNX0iXSxbMSwzLCJcXG1hdGhiZntEfSJdLFsyLDIsIlxcYnVsbGV0Il0sWzEsMiwiXFxtYXRoYmZ7ZFM0fSJdLFsyLDMsIlxcbWF0aGJme0s0fSJdLFszLDIsIlxcYnVsbGV0Il0sWzIsMSwiXFxtYXRoYmZ7RFM1fSJdLFsyLDAsIlxcbWF0aGJme1M1fSJdLFsxLDEsIlxcbWF0aGJme1M0fSJdLFswLDIsIlxcbWF0aGJme1R9Il0sWzAsMV0sWzAsMl0sWzIsMywiIiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzEsMywiIiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzUsNF0sWzQsN10sWzYsN10sWzUsNl0sWzMsNywiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzcsOF0sWzEsNl0sWzIsNF0sWzAsNV0sWzQsOV0sWzksOF0sWzEwLDldLFsyLDEwXV0=
 \begin{tikzcd}[ampersand replacement=\&,column sep=large]
 	\&\& {\mathbf{S5}} \\
 	\& {\mathbf{S4}} \& {\mathbf{DS5}} \\
-	{\mathbf{T}} \& {\mathbf{dS4}} \& {} \& {} \\
+	{\mathbf{T}} \& {\mathbf{dS4}} \& \bullet \& \bullet \\
 	\& {\mathbf{D}} \& {\mathbf{K4}} \& {\mathbf{K5}} \\
 	\&\& {\mathbf{K}}
 	\arrow[from=5-3, to=4-4]
@@ -806,10 +807,10 @@ Chair</span> that includes deontic modal logics.
 
 \begin{dummyenv}
 \nopagecolor
-% https://q.uiver.app/#q=WzAsMTUsWzMsNCwiXFxtYXRoYmZ7XFxjb2xvcntyZWR9S30iXSxbNCwzLCJcXG1hdGhiZntLNX0iXSxbMiwzLCJcXG1hdGhiZntEfSJdLFszLDIsIlxcbWF0aGJme0RLNX0iXSxbMiwyLCJcXG1hdGhiZntkUzR9Il0sWzMsMywiXFxtYXRoYmZ7SzR9Il0sWzQsMiwiXFxtYXRoYmZ7SzQ1fSJdLFszLDEsIlxcbWF0aGJme0RTNX0iXSxbMywwLCJcXG1hdGhiZntcXGNvbG9ye3JlZH1TNX09XFxtYXRoYmZ7S1Q1fSJdLFsyLDEsIlxcbWF0aGJme1M0fSJdLFsxLDIsIlxcbWF0aGJme1R9Il0sWzIsMCwiXFxtYXRoYmZ7XFxjb2xvcntyZWR9Qn1cXGNvbG9ye2JsdWV9PVxcbWF0aGJme0tUQn0iXSxbMCwxLCJcXG1hdGhiZntcXGNvbG9ye2JsdWV9S0RCfSJdLFswLDQsIlxcbWF0aGJme1xcY29sb3J7Ymx1ZX1LQn0iXSxbMSwzLCJcXG1hdGhiZntcXGNvbG9ye2JsdWV9SzRCfSJdLFswLDFdLFswLDJdLFsyLDMsIiIsMix7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsxLDMsIiIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs1LDRdLFs0LDddLFs2LDddLFs1LDZdLFszLDcsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs3LDhdLFsxLDZdLFsyLDRdLFswLDVdLFs0LDldLFs5LDhdLFsxMCw5XSxbMiwxMCwiIiwxLHsib2Zmc2V0IjotMX1dLFsxMSw4XSxbMTIsMTEsIiIsMSx7ImNvbG91ciI6WzI0MCw2MCw2MF19XSxbMTMsMTIsIiIsMSx7ImNvbG91ciI6WzI0MCw2MCw2MF19XSxbMCwxMywiIiwxLHsiY29sb3VyIjpbMjQwLDYwLDYwXX1dLFs1LDE0LCIiLDEseyJjb2xvdXIiOlsyNDAsNjAsNjBdfV0sWzYsMTQsIiIsMSx7ImNvbG91ciI6WzMwMCw2MCw2MF19XSxbMTQsOCwiIiwxLHsiY29sb3VyIjpbMjQwLDYwLDYwXX1dLFsxMywxNCwiIiwxLHsiY29sb3VyIjpbMjQwLDYwLDYwXX1dLFsxMCwxMSwiIiwxLHsiY29sb3VyIjpbMzAwLDYwLDYwXX1dLFsyLDEyLCIiLDEseyJvZmZzZXQiOjEsImNvbG91ciI6WzMwMCw2MCw2MF19XV0=
-\begin{tikzcd}[ampersand replacement=\&,row sep=large]
-	\&\& {\mathbf{\color{red}B}\color{blue}=\mathbf{KTB}} \& {\mathbf{\color{red}S5}=\mathbf{KT5}} \\
-	{\mathbf{\color{blue}KDB}} \&\& {\mathbf{S4}} \& {\mathbf{DS5}} \\
+% https://q.uiver.app/#q=WzAsMTUsWzMsNCwiXFxtYXRoYmZ7XFxjb2xvcntyZWR9S30iXSxbNCwzLCJcXG1hdGhiZntLNX0iXSxbMiwzLCJcXG1hdGhiZntEfSJdLFszLDIsIlxcbWF0aGJme0RLNX0iXSxbMiwyLCJcXG1hdGhiZntkUzR9Il0sWzMsMywiXFxtYXRoYmZ7SzR9Il0sWzQsMiwiXFxtYXRoYmZ7SzQ1fSJdLFszLDEsIlxcbWF0aGJme0RTNX0iXSxbMywwLCJcXG1hdGhiZntcXGNvbG9ye3JlZH1TNX09XFxtYXRoYmZ7S1Q1fSJdLFsyLDEsIlxcbWF0aGJme1M0fSJdLFsxLDIsIlxcbWF0aGJme1R9Il0sWzIsMCwiXFxtYXRoYmZ7XFxjb2xvcntyZWR9Qn1cXGNvbG9ye2JsdWV9PVxcbWF0aGJme0tUQn0iXSxbMCwwLCJcXG1hdGhiZntcXGNvbG9ye2JsdWV9S0RCfSJdLFswLDQsIlxcbWF0aGJme1xcY29sb3J7Ymx1ZX1LQn0iXSxbMSwzLCJcXG1hdGhiZntcXGNvbG9ye2JsdWV9SzRCfSJdLFswLDFdLFswLDJdLFsyLDMsIiIsMix7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsxLDMsIiIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs1LDRdLFs0LDddLFs2LDddLFs1LDZdLFszLDcsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs3LDhdLFsxLDZdLFsyLDRdLFswLDVdLFs0LDldLFs5LDhdLFsxMCw5XSxbMiwxMCwiIiwxLHsib2Zmc2V0IjotMX1dLFsxMSw4XSxbMTIsMTEsIiIsMSx7ImNvbG91ciI6WzI0MCw2MCw2MF19XSxbMTMsMTIsIiIsMSx7ImNvbG91ciI6WzI0MCw2MCw2MF19XSxbMCwxMywiIiwxLHsiY29sb3VyIjpbMjQwLDYwLDYwXX1dLFs1LDE0LCIiLDEseyJjb2xvdXIiOlsyNDAsNjAsNjBdfV0sWzYsMTQsIiIsMSx7ImNvbG91ciI6WzMwMCw2MCw2MF19XSxbMTQsOCwiIiwxLHsiY29sb3VyIjpbMjQwLDYwLDYwXX1dLFsxMywxNCwiIiwxLHsiY29sb3VyIjpbMjQwLDYwLDYwXX1dLFsxMCwxMSwiIiwxLHsiY29sb3VyIjpbMzAwLDYwLDYwXX1dLFsyLDEyLCIiLDEseyJvZmZzZXQiOjEsImNvbG91ciI6WzMwMCw2MCw2MF19XV0=
+\begin{tikzcd}[ampersand replacement=\&,row sep=large,column sep=scriptsize]
+	{\mathbf{\color{blue}KDB}} \&\& {\mathbf{\color{red}B}\color{blue}=\mathbf{KTB}} \& {\mathbf{\color{red}S5}=\mathbf{KT5}} \\
+	\&\& {\mathbf{S4}} \& {\mathbf{DS5}} \\
 	\& {\mathbf{T}} \& {\mathbf{dS4}} \& {\mathbf{DK5}} \& {\mathbf{K45}} \\
 	\& {\mathbf{\color{blue}K4B}} \& {\mathbf{D}} \& {\mathbf{K4}} \& {\mathbf{K5}} \\
 	{\mathbf{\color{blue}KB}} \&\&\& {\mathbf{\color{red}K}}
@@ -831,15 +832,15 @@ Chair</span> that includes deontic modal logics.
 	\arrow[from=3-2, to=2-3]
 	\arrow[shift left, from=4-3, to=3-2]
 	\arrow[from=1-3, to=1-4]
-	\arrow[color={rgb,255:red,92;green,92;blue,214}, from=2-1, to=1-3]
-	\arrow[color={rgb,255:red,92;green,92;blue,214}, from=5-1, to=2-1]
-	\arrow[color={rgb,255:red,92;green,92;blue,214}, from=5-4, to=5-1]
-	\arrow[color={rgb,255:red,92;green,92;blue,214}, from=4-4, to=4-2]
-	\arrow[color={rgb,255:red,214;green,92;blue,214}, from=3-5, to=4-2]
-	\arrow[color={rgb,255:red,92;green,92;blue,214}, from=4-2, to=1-4]
-	\arrow[color={rgb,255:red,92;green,92;blue,214}, from=5-1, to=4-2]
-	\arrow[color={rgb,255:red,214;green,92;blue,214}, from=3-2, to=1-3]
-	\arrow[shift right, color={rgb,255:red,214;green,92;blue,214}, from=4-3, to=2-1]
+	\arrow[draw={rgb,255:red,92;green,92;blue,214}, from=1-1, to=1-3]
+	\arrow[draw={rgb,255:red,92;green,92;blue,214}, from=5-1, to=1-1]
+	\arrow[draw={rgb,255:red,92;green,92;blue,214}, from=5-4, to=5-1]
+	\arrow[draw={rgb,255:red,92;green,92;blue,214}, from=4-4, to=4-2]
+	\arrow[draw={rgb,255:red,214;green,92;blue,214}, from=3-5, to=4-2]
+	\arrow[draw={rgb,255:red,92;green,92;blue,214}, from=4-2, to=1-4]
+	\arrow[draw={rgb,255:red,92;green,92;blue,214}, from=5-1, to=4-2]
+	\arrow[draw={rgb,255:red,214;green,92;blue,214}, from=3-2, to=1-3]
+	\arrow[shift right, draw={rgb,255:red,214;green,92;blue,214}, from=4-3, to=1-1]
 \end{tikzcd}
 \end{dummyenv}
 
@@ -929,7 +930,7 @@ $\displaystyle
 3.&\quad\text{\st{Show}}\;{\vDash}(\square\varphi\to\square\square\varphi)&24,\,\text{DD}\\
 4.&\quad\tikzmark{start2}\quad\text{\st{Show}}\;\forall\alpha\in W.\,({\vDash}_\alpha\square\varphi\implies {\vDash}_\alpha\square\square\varphi)&\tikzmark{end1}5,\,\text{UD}\\
 5.&\quad\quad\tikzmark{start3}\quad\text{\st{Show}}\;{\vDash}_\alpha\square\varphi\implies {\vDash}_\alpha\square\square\varphi&8,\,\text{CD}\\
-6.&\quad\quad\quad\phantom{\text{\st{Show}}\;}{\vDash}_\alpha\square\varphi&\text{Assume (CD)}\\
+6.&\quad\quad\quad\tikzmark{start10}\phantom{\text{\st{Show}}\;}{\vDash}_\alpha\square\varphi&\text{Assume (CD)}\\
 7.&\quad\quad\quad\phantom{\text{\st{Show}}\;}{\forall}\beta\in W.\,(\alpha\mathbin{R}\beta\implies {\vDash}_\alpha\varphi)&6,\,\text{truth-def.}\,\square\\
 8.&\quad\quad\quad\quad\text{\st{Show}}\;{\vDash}_\alpha\square\square\varphi&23,\,\text{DD}\\
 9.&\quad\quad\quad\quad\tikzmark{start4}\quad\text{\st{Show}}\;\forall\beta\in W.\,(\alpha\mathbin{R}\beta\implies {\vDash}_\beta\square\varphi)&10,\,\text{UD}\\
@@ -938,14 +939,14 @@ $\displaystyle
 12.&\quad\quad\quad\quad\quad\quad\quad\text{\st{Show}}\;{\vDash}_\beta\square\varphi&22,\,\text{DD}\\
 13.&\quad\quad\quad\quad\quad\quad\quad\tikzmark{start7}\quad\text{\st{Show}}\;\forall\gamma\in W.\,(\beta\mathbin{R}\gamma\implies {\vDash}_\gamma\varphi)&14,\,\text{UD}\\
 14.&\quad\quad\quad\quad\quad\quad\quad\quad\tikzmark{start8}\quad\text{\st{Show}}\;\beta\mathbin{R}\gamma\implies {\vDash}_\gamma\varphi&16,\,\text{CD}\\
-15.&\quad\quad\quad\quad\quad\quad\quad\quad\quad\phantom{\text{\st{Show}}\;}\beta\mathbin{R}\gamma&\text{Assume CD}\\
-16.&\quad\quad\quad\quad\quad\quad\quad\quad\quad\tikzmark{start9}\quad\text{\st{Show}}\;{\vDash}_\gamma\varphi&22,\,\text{DD}\\
-17.&\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\phantom{\text{\st{Show}}\;}\alpha\mathbin{R}\beta\;\&\;\beta\mathbin{R}\gamma&11,\,15\,\text{ADJ}\\
+15.&\quad\quad\quad\quad\quad\quad\quad\quad\quad\tikzmark{start9}\phantom{\text{\st{Show}}\;}\beta\mathbin{R}\gamma&\text{Assume CD}\\
+16.&\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\text{\st{Show}}\;{\vDash}_\gamma\varphi&22,\,\text{DD}\\
+17.&\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\tikzmark{start11}\phantom{\text{\st{Show}}\;}\alpha\mathbin{R}\beta\;\&\;\beta\mathbin{R}\gamma&11,\,15\,\text{ADJ}\\
 19.&\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\phantom{\text{\st{Show}}\;}\alpha\mathbin{R}\gamma&18,\,17\,\text{MP}\\
 20.&\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\phantom{\text{\st{Show}}\;}\alpha\mathbin{R}\gamma\implies {\vDash}_\gamma\varphi&7,\,\text{UI}\\
-21.&\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\phantom{\text{\st{Show}}\;}\phantom{\alpha\mathbin{R}\gamma\implies {}}{\vDash}_\gamma\varphi&\tikzmark{end10}\tikzmark{end9}\tikzmark{end8}\tikzmark{end7}20,\,19\,\text{MP}\\
+21.&\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\phantom{\text{\st{Show}}\;}\phantom{\alpha\mathbin{R}\gamma\implies {}}{\vDash}_\gamma\varphi&\tikzmark{end11}\tikzmark{end10}\tikzmark{end9}\tikzmark{end8}\tikzmark{end7}20,\,19\,\text{MP}\\
 22.&\quad\quad\quad\quad\quad\quad\quad\phantom{\text{\st{Show}}\;}{\vDash}_\beta\square\varphi&\tikzmark{end6}\tikzmark{end5}12,\,\text{truth-def.}\,\square\\
-23.&\quad\quad\quad\quad\phantom{\text{\st{Show}}\;}{\vDash}_\alpha\square\square\varphi&\tikzmark{end4}\tikzmark{end3}9,\,\text{truth-def.}\,\square\\
+23.&\quad\quad\quad\quad\phantom{\text{\st{Show}}\;}{\vDash}_\alpha\square\square\varphi&\tikzmark{end4}\tikzmark{end3}\tikzmark{end10}9,\,\text{truth-def.}\,\square\\
 24.&\quad\phantom{\text{\st{Show}}\;}{\vdash}(\square\varphi\to\square\square\varphi)&\tikzmark{end2}\tikzmark{end1}4,\,\text{def.}\,{\vDash}\,\text{(\textit{logical consequence})}
 \end{array}
 $
@@ -954,7 +955,7 @@ $
   \coordinate (end1) at ([xshift=-1.5ex,yshift=-0.5ex]pic cs:end1);
   \node[inner sep=2pt,draw=ourblue,fit=(start1) (end1)] {};
   
-  \foreach \i in {2,...,9} {
+  \foreach \i in {2,...,11} {
     \coordinate (start) at ([xshift=1ex,yshift=1.6ex]pic cs:start\i);
     \coordinate (e\i) at ([xshift=-1ex,yshift=-0.5ex]pic cs:end\i);
     \path let \p1 = (e\i), \p2 = (end1) in coordinate (end) at (\x2,\y1);
