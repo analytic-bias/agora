@@ -90,6 +90,36 @@
     ]
   },
   {
+    "objectID": "goedel/goedel.html",
+    "href": "goedel/goedel.html",
+    "title": "2  Chapter 5. Gödel’s Second Incompleteness theorem",
+    "section": "",
+    "text": "2.1 Provability Modal Logics\nBy the fixed-point theorem, \\({\\sim}\\square\\,G\\) is logically equivalent to \\(G\\), so we have \\(\\vdash{}{\\sim}\\square\\,1 = 2 \\to G\\):",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Chapter 5. Gödel’s Second Incompleteness theorem</span>"
+    ]
+  },
+  {
+    "objectID": "goedel/goedel.html#provability-modal-logics",
+    "href": "goedel/goedel.html#provability-modal-logics",
+    "title": "2  Chapter 5. Gödel’s Second Incompleteness theorem",
+    "section": "",
+    "text": "Figure 2.1",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Chapter 5. Gödel’s Second Incompleteness theorem</span>"
+    ]
+  },
+  {
+    "objectID": "goedel/goedel.html#solution-to-problems",
+    "href": "goedel/goedel.html#solution-to-problems",
+    "title": "2  Chapter 5. Gödel’s Second Incompleteness theorem",
+    "section": "2.2 Solution to Problems",
+    "text": "2.2 Solution to Problems\n\n\n\nListing 2.1",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Chapter 5. Gödel’s Second Incompleteness theorem</span>"
+    ]
+  },
+  {
     "objectID": "references.html",
     "href": "references.html",
     "title": "References",

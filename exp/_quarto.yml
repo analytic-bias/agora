@@ -45,6 +45,7 @@ book:
     - modal/modal.qmd
     # - retro/retro.qmd
     # - gödel/gödel.qmd
+    - goedel/goedel.qmd
     # - wang/wang.qmd
     # - frege/frege.qmd
     # - summary.qmd

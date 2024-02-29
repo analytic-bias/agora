@@ -1,0 +1,121 @@
+# Chapter 5. Gödel’s Second Incompleteness theorem
+
+Gödel informally explained his First Incompleteness Theorem noting that
+the analogy to the antinomy of the Liar "leaps to the eye (GCW-I, 149).""
+Whereas the Liar sentence asserts of itself that it is *untrue*, the
+Gödel sentence says of itself that it is *unprovable* in a precisely
+specified formal system such as *Principia Mathematica*:
+
+Gödel further remarks that *any* epistemological antinomy can be used to
+motivate his proof but chooses the Richard Paradox, which we discussed
+in Chapter 1. Gödel’s choice was prescient: the Berry Paradox is a
+simplification of the Richard Paradox, and can be used to elegantly
+prove the First Incompleteness Theorem showing its connection with
+Chaitin’s interpretation Gödel Incompletehes in terms of algorithmic
+randomness.
+
+> [Gödel’s First Incompleteness Theorem]{.smallcaps}:
+> if a formal system is consistent and its axiom system has enough
+> arithmetic so that its theorems can be listed by some mechanical
+> procedure, then there exists an *undecidable* sentence in that formal
+> system, which is therefore *incomplete*.[1]
+
+## Provability Modal Logics
+
+
+By the fixed-point theorem, ${\sim}\square\,G$ is *logically equivalent* to $G$, so we
+have $\vdash{}{\sim}\square\,1 = 2 \to G$:
+
+::: {#fig-goedel-2024-fixed-point-equivalent .column-margin}
+
+\begin{dummyenv}
+\nopagecolor
+\definecolor{ourred}{HTML}{FE0F0F}
+\definecolor{ourblue}{HTML}{7D7DFE}
+% https://q.uiver.app/#q=WzAsMyxbMCwwLCJ7XFxzaW19XFxzcXVhcmVcXCwxPTIiXSxbMSwwLCJ7XFxzaW19XFxzcXVhcmVcXCxHIl0sWzEsMSwiRyJdLFswLDEsIiIsMCx7ImNvbG91ciI6WzI0MCw2MCw2MF19XSxbMSwyLCJcXHRleHR7XFx0ZXh0aXR7XFxjb2xvcntibGFja31maXhlZC1wb2ludCB0aGVvcmVtfX0iLDAseyJjb2xvdXIiOlswLDYwLDYwXSwic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiYXJyb3doZWFkIn19fSxbMCw2MCw2MCwxXV0sWzAsMiwiIiwyLHsiY29sb3VyIjpbMjQwLDYwLDYwXX1dXQ==
+\begin{tikzcd}[ampersand replacement=\&,column sep=large,row sep=2.25em]
+	{{\sim}\square\,1=2} \& {{\sim}\square\,G} \\
+	\& G
+	\arrow[color=ourblue, from=1-1, to=1-2]
+	\arrow["{\text{\textit{\color{black}fixed-point theorem}}}", color=ourred, tail reversed, from=1-2, to=2-2]
+	\arrow[color=ourblue, from=1-1, to=2-2]
+\end{tikzcd}
+\end{dummyenv}
+
+:::
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Solution to Problems
+
+::: {#lst-montague-goedel-2024-solution-to-problems-1 fig-pos='H'}
+
+\begin{dummyenv}
+\nopagecolor
+\definecolor{ourblue}{HTML}{0070C0}
+$\displaystyle
+\begin{array}{rll}
+1.&\text{\textit{\st{Show}}}\;\square\varphi\to\square(\varphi\to(\square(\square\varphi\land\varphi)\to(\square\varphi\land\varphi)))&\text{3, CD}\\
+2.&\tikzmark{start1}\phantom{\text{\textit{\st{Show}}}\;}\square\varphi&\text{Assume (CD)}\\
+3.&\phantom{\text{\textit{\st{Show}}}\;}\square(\square(\square\varphi\land\varphi)\to\square\varphi\land\varphi)\to\square(\square\varphi\land\varphi)&\text{Axiom (L)}\\
+4.&\quad\text{\textit{\st{Show}}}\;\square(\varphi\to(\square(\square\varphi\land\varphi)\to(\square\varphi\land\varphi)))&\text{5, ND}\\
+5.&\quad\tikzmark{start2}\quad\text{\textit{\st{Show}}}\;\varphi\to(\square(\square\varphi\land\varphi)\to(\square\varphi\land\varphi))&\text{7, CD}\\
+6.&\quad\quad\tikzmark{start3}\phantom{\text{\textit{\st{Show}}}\;}\varphi&\text{Assume (CD)}\\
+7.&\quad\quad\quad\text{\textit{\st{Show}}}\;\square(\square\varphi\land\varphi)\to\square\varphi\land\varphi&\text{11, CD}\\
+8.&\quad\quad\tikzmark{start4}\quad\phantom{\text{\textit{\st{Show}}}\;}\square(\square\varphi\land\varphi)&\text{Assume (CD)}\\
+9.&\quad\quad\quad\phantom{\text{\textit{\st{Show}}}\;}\square\square\varphi\land\square\varphi&\text{8, (\textbf{K}), MP}\\
+10.&\quad\quad\quad\phantom{\text{\textit{\st{Show}}}\;}\square\varphi&\text{9, S}\\
+11.&\quad\quad\quad\phantom{\text{\textit{\st{Show}}}\;}\square\varphi\land\varphi&\tikzmark{end4}\tikzmark{end3}\tikzmark{end2}\tikzmark{end1}\text{10, 6 ADJ}
+\end{array}
+$
+\begin{tikzpicture}[remember picture,overlay]
+  \coordinate (start1) at ([xshift=1ex,yshift=1.6ex]pic cs:start1);
+  \coordinate (end1) at ([xshift=-1.5ex,yshift=-0.5ex]pic cs:end1);
+  \node[inner sep=2pt,draw=ourblue,fit=(start1) (end1)] {};
+  
+  \foreach \i in {2,...,4} {
+    \coordinate (start) at ([xshift=1ex,yshift=1.6ex]pic cs:start\i);
+    \coordinate (e\i) at ([xshift=-1ex,yshift=-0.5ex]pic cs:end\i);
+    \path let \p1 = (e\i), \p2 = (end1) in coordinate (end) at (\x2,\y1);
+    \node[inner sep=2pt,draw=ourblue,fit=(start) (end)] {};
+  }
+\end{tikzpicture}
+\end{dummyenv}
+
+:::
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
