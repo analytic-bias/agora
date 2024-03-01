@@ -479,7 +479,7 @@ $$
 $$ {#eq-modal-axiom-W}
 
 *Modal Provability Logics* proliferated from the 1950s--1970s, but the
-genesis of the idea goes back to a short note of @Godel1933 in
+genesis of the idea goes back to a short note of @godel1933o in
 which he noted that intuitionistic truth is defined in terms of proof since
 provability is a kind of necessity. The above axiom can be read as a
 kind of soundness theorem.

@@ -1,10 +1,20 @@
+\raggedbottom
+
 # Chapter 5. Gödel’s Second Incompleteness theorem
 
 Gödel informally explained his First Incompleteness Theorem noting that
 the analogy to the antinomy of the Liar "leaps to the eye (GCW-I, 149).""
 Whereas the Liar sentence asserts of itself that it is *untrue*, the
 Gödel sentence says of itself that it is *unprovable* in a precisely
-specified formal system such as *Principia Mathematica*:
+specified formal system such as *Principia Mathematica*.
+
+:::: {.column-margin}
+::: {.callout-warning}
+## *Principia Mathematica*:
+
+$G:G\,\text{is not provable in system}\,\mathrm{PM}.$
+:::
+::::
 
 Gödel further remarks that *any* epistemological antinomy can be used to
 motivate his proof but chooses the Richard Paradox, which we discussed
@@ -18,45 +28,267 @@ randomness.
 > if a formal system is consistent and its axiom system has enough
 > arithmetic so that its theorems can be listed by some mechanical
 > procedure, then there exists an *undecidable* sentence in that formal
-> system, which is therefore *incomplete*.[1]
+> system, which is therefore *incomplete*.^[The formal system is also essentially incomplete, i.e., one can add the undecidable Gödel sentence as a new axiom and the resulting system will have a new undecidable sentence, which is also undecidable in the original system.]
 
 ## Provability Modal Logics
 
+TODO one diagram left! polish web version!
+
+Elegant proofs of Gödel’s Second Incompleteness Theorem were discovered
+in *modal provability logics,* which emerged from the 1950s-1970s. These
+logics were anticipated by [@Godel1933f] *"An interpretation of
+intuitionistic propositional calculus."* Gödel’s insight was that
+intuitionistic *truth* was characterized in terms of *proof*, which is a
+kind of *necessity*, and so modal axioms could be used to formalize the
+*properties of provability*:
+
+::: {#tbl-goedel-properties-of-provability}
+
+| | | |
+|:-:|---|---|
+| (**T**) | $\square\,P\to P$ | *What is provable is ________________.* |
+| (**K**) | $\square\,(P\to Q)\to(\square\,P\to\square\,Q)$ | *Whatever follows from what is provable is ________________.* |
+| (**4**) | $\square\,P\to\square\square\,P$ | *What is provable is provably ________.*
+
+: {tbl-colwidths="[10,40,50]"}
+
+Properties of Provability
+
+:::
+
+[@Henkin1952] posed the intriguing question whether the
+*positive* Gödelian sentence “I am *provable*” is provable. [@Lob1955] answered Henkin’s question in the affirmative by showing that
+Peano Arithmetic proves a counterpart to Löb’s Axiom:
+
+| | | |
+|:-:|---|---|
+| (**L**) | $\square\,(\square\,P\to P)\to\square\,P$ | *Löb’s Axiom restricts (**T**) to what is provable.* |
+
+: {tbl-colwidths="[10,40,50]"}
+
+\let\labelitemito\labelitemi
+\renewcommand\labelitemi{}
+::: {.nobullet}
+* A *Gödel-Löb modal probability logic* (**GL**) results from adding
+  (**L**) to (**K**) and
+  1.  the rule of *necessitation* or *universal derivation* \[UD\] (*i.e.,* if $\mathbf{GL}\vdash P$ then $\mathbf{GL}\vdash\square\,P$),
+  2.  *modus ponens* \[MP\]
+  3.  a rule for proving all *tautologies* or the KM<sup>2</sup> system of natural deduction.
+:::
+\renewcommand\labelitemi{\labelitemito}
+
+Note: adding axiom (**4**) turns out to be redundant. In 1975 Howard de
+Jongh proved that Axiom (**4**) is derivable from Löb’s axiom and
+(**K**) using the substitution of '($\square\,P\land P$)' for '$P$'.
+
+\let\labelitemito\labelitemi
+\renewcommand\labelitemi{}
+::: {.nobullet}
+* A *provability system* consists minimal modal logic **K** with the additional axiom
+  $$(\mathbf{w})\quad\square\,(\square\,\varphi\to\varphi)\to\square\,\varphi.$$
+:::
+\renewcommand\labelitemi{\labelitemito}
+
+::: {#thm-goedel-de-jongh-1970}
+## Howard de Jongh, 1970s 
+
+[^dejongh]
+Axiom (**4**) holds in the Gödel-Lob Provability Logic.
+:::
+
+[^dejongh]: At the Tenth International Tbilisi Symposium on Language, Logic and Computation in 2013, one of the speakers referred to this theorem as part of the folklore of the field not realizing that de Jongh was in the audience.
+
+::: {.proof}
+Replacing $\varphi$ by $\color{red}(\square\,\varphi\land\varphi)$ in Axiom (**W**) we obtain
+$$\square(\square\,\textcolor{red}{(\square \varphi \land \varphi)} \rightarrow\textcolor{red}{(\square \varphi \land \varphi)}) \rightarrow \square\,\textcolor{red}{(\square \varphi \land \varphi)}.$$
+<span class="content-visible" style="float: right;" when-format="html">$\Box$</span>
+:::
+
+It happens that the lemma 
+$$\square \varphi \rightarrow \square(\square(\square \varphi \wedge \varphi)) \rightarrow \square(\square \varphi \wedge \varphi)$$
+is derivable in minimal modal logic
+**K** (see exercises below).
+
+It therefore follows that
+$$\square \varphi \rightarrow \color{magenta}\square(\square \varphi \wedge \varphi)$$
+and hence by (**T**),
+$$\square \varphi \rightarrow \square \square \varphi .$$
+
+## Exercises
+
+::: {#lst-montague-goedel-exercise-2024-problems-1 fig-pos='H'}
+
+\begin{dummyenv}
+\nopagecolor
+\definecolor{ourblue}{HTML}{0070C0}
+$\displaystyle
+\begin{array}{rll}
+1.&\text{\textit{\st{Show}}}\;\square\varphi\to\square(\varphi\to(\square(\square\varphi\land\varphi)\to(\square\varphi\land\varphi)))&\\
+2.&\tikzmark{start1}\phantom{\text{\textit{\st{Show}}}\;}\square\varphi&\text{Assume (\rule{1cm}{0.15mm})}\\
+3.&\phantom{\text{\textit{\st{Show}}}\;}\square(\square(\square\varphi\land\varphi)\to\square\varphi\land\varphi)\to\square(\square\varphi\land\varphi)&\text{Axiom (L)}\\
+4.&\quad\text{\textit{\st{Show}}}\;\square(\varphi\to(\square(\square\varphi\land\varphi)\to(\square\varphi\land\varphi)))&\text{5, \rule{1cm}{0.15mm}}\\
+5.&\quad\tikzmark{start2}\quad\text{\textit{\st{Show}}}\;\varphi\to(\square(\square\varphi\land\varphi)\to(\square\varphi\land\varphi))&\text{7, \rule{1cm}{0.15mm}}\\
+6.&\quad\quad\tikzmark{start3}\phantom{\text{\textit{\st{Show}}}\;}\varphi&\text{Assume (\rule{1cm}{0.15mm})}\\
+7.&\quad\quad\quad\text{\textit{\st{Show}}}\;\square(\square\varphi\land\varphi)\to\square\varphi\land\varphi&\text{11, \rule{1cm}{0.15mm}}\\
+8.&\quad\quad\tikzmark{start4}\quad\phantom{\text{\textit{\st{Show}}}\;}\square(\square\varphi\land\varphi)&\text{Assume (\rule{1cm}{0.15mm})}\\
+9.&\quad\quad\quad\phantom{\text{\textit{\st{Show}}}\;}\square\square\varphi\land\square\varphi&\text{distribution}\,\square\big/{\land}\\
+10.&\quad\quad\quad\phantom{\text{\textit{\st{Show}}}\;}\square\varphi&\text{9, S}\\
+11.&\quad\quad\quad\phantom{\text{\textit{\st{Show}}}\;}\square\varphi\land\varphi&\tikzmark{end4}\tikzmark{end3}\tikzmark{end2}\tikzmark{end1}\text{10, 6 ADJ}
+\end{array}
+$
+\begin{tikzpicture}[remember picture,overlay]
+  \coordinate (start1) at ([xshift=1ex,yshift=1.6ex]pic cs:start1);
+  \coordinate (end1) at ([xshift=-1.5ex,yshift=-0.5ex]pic cs:end1);
+  \node[inner sep=2pt,draw=ourblue,fit=(start1) (end1)] {};
+  
+  \foreach \i in {2,...,4} {
+    \coordinate (start) at ([xshift=1ex,yshift=1.6ex]pic cs:start\i);
+    \coordinate (e\i) at ([xshift=-1ex,yshift=-0.5ex]pic cs:end\i);
+    \path let \p1 = (e\i), \p2 = (end1) in coordinate (end) at (\x2,\y1);
+    \node[inner sep=2pt,draw=ourblue,fit=(start) (end)] {};
+  }
+\end{tikzpicture}
+\end{dummyenv}
+
+Exercise Lemma
+
+:::
+
+Next comes the Löb-Gödel Theorem, which we shall call the "Magical Modal
+Mystery Tour"^[van Benthan [2010], p. 245 describes this theorem "as a piece of 'magical' modal reasoning that has delighted generations."]:
+
+::: {#lst-montague-goedel-exercise-2024-problems-2 fig-pos='H'}
+
+\begin{dummyenv}
+\nopagecolor
+\definecolor{ourblue}{HTML}{0070C0}
+$\displaystyle
+\begin{array}{rll}
+1.&\vdash\square\,\varphi\to\varphi&\text{Assumption (\textbf{T})}\\
+2.&\vdash\sigma\leftrightarrow(\square\sigma\to\varphi)&\text{G\"odel's Fixed-Point Theorem}\\
+3.&\quad\text{\textit{\st{Show}}}\;\varphi&\text{20, \rule{1cm}{0.15mm}}\\
+4.&\quad\tikzmark{start1}\quad\text{\textit{\st{Show}}}\;\square\sigma&\text{16, \rule{1cm}{0.15mm}}\\
+5.&\quad\quad\tikzmark{start2}\quad\text{\textit{\st{Show}}}\;\square\sigma\to\varphi&\text{14, \rule{1cm}{0.15mm}}\\
+6.&\quad\quad\quad\tikzmark{start3}\phantom{\text{\textit{\st{Show}}}\;}\square\sigma&\text{Assume (\rule{1cm}{0.15mm})}\\
+7.&\quad\quad\quad\quad\text{\textit{\st{Show}}}\;\square\,[\sigma\leftrightarrow(\square\sigma\to\varphi)]&\text{8, \rule{1cm}{0.15mm}}\\
+8.&\quad\quad\quad\quad\tikzmark{start4}\phantom{\text{\textit{\st{Show}}}\;}\sigma\leftrightarrow(\square\sigma\to\varphi)&\tikzmark{end4}\text{2, G\"odel's Fixed-Point Theorem}\\
+9.&\quad\quad\quad\phantom{\text{\textit{\st{Show}}}\;}\square\sigma\to\square(\square\sigma\to\varphi)&\text{7, T81, IE, MD, S, Axiom (K), MP}\\
+10.&\quad\quad\quad\phantom{\text{\textit{\st{Show}}}\;}\square(\square\sigma\to\varphi)&\text{9, 6, \rule{1cm}{0.15mm}}\\
+11.&\quad\quad\quad\phantom{\text{\textit{\st{Show}}}\;}\square\square\sigma\to\square\varphi&\text{10, Axiom (\rule{1cm}{0.15mm}), MP}\\
+12.&\quad\quad\quad\phantom{\text{\textit{\st{Show}}}\;}\square\sigma\to\square\square\sigma&\text{Axiom (\rule{1cm}{0.15mm})}\\
+13.&\quad\quad\quad\phantom{\text{\textit{\st{Show}}}\;}\square\varphi&\tikzmark{end3}\text{12, 6 \rule{1cm}{0.15mm}, 11 \rule{1cm}{0.15mm}}\\
+14.&\quad\quad\quad\phantom{\text{\textit{\st{Show}}}\;\square}\varphi&\text{13, (\rule{1cm}{0.15mm})}\\
+15.&\quad\quad\quad\phantom{\text{\textit{\st{Show}}}\;}(\square\sigma\to\varphi)\to\sigma&\tikzmark{end2}\text{2, \rule{1cm}{0.15mm}}\\
+16.&\quad\quad\quad\phantom{\text{\textit{\st{Show}}}\;}\sigma&\text{15, 5 \rule{1cm}{0.15mm}}\\
+17.&\quad\quad\phantom{\text{\textit{\st{Show}}}\;}\sigma\to(\square\sigma\to\varphi)&\text{2, \rule{1cm}{0.15mm}}\\
+18.&\quad\quad\phantom{\text{\textit{\st{Show}}}\;}\sigma&\text{4, (\rule{1cm}{0.15mm})}\\
+19.&\quad\quad\phantom{\text{\textit{\st{Show}}}\;}\square\sigma\to\varphi&\tikzmark{end1}\text{17, 18 \rule{1cm}{0.15mm}}\\
+20.&\quad\phantom{\text{\textit{\st{Show}}}\;}\varphi&\text{19, 4 \rule{1cm}{0.15mm}}
+\end{array}
+$
+\begin{tikzpicture}[remember picture,overlay]
+  \coordinate (start1) at ([xshift=1.2ex,yshift=1.6ex]pic cs:start1);
+  \coordinate (end1) at ([xshift=-1.5ex,yshift=-0.5ex]pic cs:end1);
+  \node[inner sep=2pt,draw=ourblue,fit=(start1) (end1)] {};
+  
+  \foreach \i in {2,...,4} {
+    \coordinate (start) at ([xshift=1.2ex,yshift=1.6ex]pic cs:start\i);
+    \coordinate (e\i) at ([xshift=-1ex,yshift=-0.5ex]pic cs:end\i);
+    \path let \p1 = (e\i), \p2 = (end1) in coordinate (end) at (\x2,\y1);
+    \node[inner sep=2pt,draw=ourblue,fit=(start) (end)] {};
+  }
+\end{tikzpicture}
+\end{dummyenv}
+
+Exercise "Löb-Gödel Theorem"
+
+:::
+
+Now we may obtain a modal version of Gödel’s First Incompleteness
+Theorem. Gödel’s famous arithmetical version of the Liar G intuitively
+says, "I am not provable":
+$$G\leftrightarrow{}{\sim}\square G.$$
+Note the consistency of Peano Arithmetic may be formulated as: ${\sim}\square\,(1=2)$
+(von Neumann) or ${\sim}\square\,(0\neq 0)$.
+
+We can sketch an elegant proof in modal provability logic of Gödel’s
+Second Incompleteness Theorem. First, we have a modal counterpoint to
+the *fixed-point theorem* that yields the *Gödel sentence*:
+$$\vDash G\leftrightarrow{}{\sim}\square G.$$
+
+In his letter, von Neumann noted that the consistency of Peano Arithmetic
+(PA) can be expressed by the formula that $(1 = 2)$ is not provable:
+$$\textcolor{blue}{{\normalfont\textsc{Cons}}(\mathrm{PA})}:={}\textcolor{red}{{\sim}\square\,(1=2)}.$$
+
+Now the gist of the First Incompleteness Theorem is the demonstration
+that:
+$$\text{if}\,\vdash G\leftrightarrow{}{\sim}\square G,\,\text{then}\,\vdash{}{\sim}\square\,(1=2)\to{}{\sim}\square G.$$
 
 By the fixed-point theorem, ${\sim}\square\,G$ is *logically equivalent* to $G$, so we
 have $\vdash{}{\sim}\square\,1 = 2 \to G$:
 
-::: {#fig-goedel-2024-fixed-point-equivalent .column-margin}
+::: {#fig-goedel-2024-fixed-point-equivalent fig-pos='H'}
 
 \begin{dummyenv}
 \nopagecolor
 \definecolor{ourred}{HTML}{FE0F0F}
 \definecolor{ourblue}{HTML}{7D7DFE}
-% https://q.uiver.app/#q=WzAsMyxbMCwwLCJ7XFxzaW19XFxzcXVhcmVcXCwxPTIiXSxbMSwwLCJ7XFxzaW19XFxzcXVhcmVcXCxHIl0sWzEsMSwiRyJdLFswLDEsIiIsMCx7ImNvbG91ciI6WzI0MCw2MCw2MF19XSxbMSwyLCJcXHRleHR7XFx0ZXh0aXR7XFxjb2xvcntibGFja31maXhlZC1wb2ludCB0aGVvcmVtfX0iLDAseyJjb2xvdXIiOlswLDYwLDYwXSwic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiYXJyb3doZWFkIn19fSxbMCw2MCw2MCwxXV0sWzAsMiwiIiwyLHsiY29sb3VyIjpbMjQwLDYwLDYwXX1dXQ==
+% https://q.uiver.app/#q=WzAsMyxbMCwwLCJ7XFxzaW19XFxzcXVhcmVcXCwxPTIiXSxbMSwwLCJ7XFxzaW19XFxzcXVhcmVcXCxHIl0sWzEsMSwiRyJdLFswLDEsIiIsMCx7ImNvbG91ciI6WzI0MCw2MCw2MF19XSxbMSwyLCJcXHF1YWRcXHF1YWRcXHRleHR7XFx0ZXh0aXR7XFxjb2xvcntibGFja31maXhlZC1wb2ludCB0aGVvcmVtfX0iLDAseyJjb2xvdXIiOlswLDYwLDYwXSwic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiYXJyb3doZWFkIn19fSxbMCw2MCw2MCwxXV0sWzAsMiwiIiwyLHsiY29sb3VyIjpbMjQwLDYwLDYwXX1dXQ==
 \begin{tikzcd}[ampersand replacement=\&,column sep=large,row sep=2.25em]
 	{{\sim}\square\,1=2} \& {{\sim}\square\,G} \\
 	\& G
-	\arrow[color=ourblue, from=1-1, to=1-2]
-	\arrow["{\text{\textit{\color{black}fixed-point theorem}}}", color=ourred, tail reversed, from=1-2, to=2-2]
-	\arrow[color=ourblue, from=1-1, to=2-2]
+	\arrow[color={rgb,255:red,92;green,92;blue,214}, from=1-1, to=1-2]
+	\arrow["{\quad\quad\text{\textit{\color{black}fixed-point theorem}}}", color={rgb,255:red,214;green,92;blue,92}, tail reversed, from=1-2, to=2-2]
+	\arrow[color={rgb,255:red,92;green,92;blue,214}, from=1-1, to=2-2]
 \end{tikzcd}
 \end{dummyenv}
 
 :::
 
+By the rule of necessitation, we may prefix a and then distribute, using
+(**K**), the over the conditional:
+$$\vdash{}\textcolor{blue}{\square}{\sim}\square\,(1=2)\color{blue}\to\square\color{black}G.$$
+According to the First Incompleteness Theorem, the provability of the
+Gödel sentence implies the inconsistency of the system, so:
 
+::: {#fig-goedel-2024-first-incompleteness fig-pos='H'}
 
+\begin{dummyenv}
+\nopagecolor
+\definecolor{ourred}{HTML}{FE0F0F}
+\definecolor{ourblue}{HTML}{7D7DFE}
+% https://q.uiver.app/#q=WzAsMyxbMCwwLCJcXHNxdWFyZXtcXHNpbX1cXHNxdWFyZVxcLDE9MiJdLFsxLDAsIntcXHRleHRjb2xvcntibHVlfVxcc3F1YXJlfVxcLEciXSxbMSwxLCJ7XFx0ZXh0Y29sb3J7cmVkfVxcc3F1YXJlfVxcLDE9MiJdLFswLDEsIiIsMCx7ImNvbG91ciI6WzI0MCw2MCw2MF19XSxbMSwyLCJcXHF1YWRcXHF1YWRcXHRleHR7XFx0ZXh0aXR7XFxjb2xvcntibGFja31GaXJzdCBJbmNvbXBsZXRlbmVzcyBUaGVvcmVtfX0iLDAseyJjb2xvdXIiOlswLDYwLDYwXX0sWzAsNjAsNjAsMV1dLFswLDIsIiIsMix7ImNvbG91ciI6WzI0MCw2MCw2MF19XV0=
+\begin{tikzcd}[ampersand replacement=\&,column sep=large,row sep=2.25em]
+	{\square{\sim}\square\,1=2} \& {{\textcolor{blue}\square}\,G} \\
+	\& {{\textcolor{red}\square}\,1=2}
+	\arrow[color={rgb,255:red,92;green,92;blue,214}, from=1-1, to=1-2]
+	\arrow["{\quad\quad\text{\textit{\color{black}First Incompleteness Theorem}}}", color={rgb,255:red,214;green,92;blue,92}, from=1-2, to=2-2]
+	\arrow[color={rgb,255:red,92;green,92;blue,214}, from=1-1, to=2-2]
+\end{tikzcd}
+\end{dummyenv}
 
+:::
 
+In short, we have
+$$\vdash{}\textcolor{red}{\square}{\sim}\square\,(1=2)\to\textcolor{red}{\square}\,(1=2),$$
+which, by contraposition, yields
+$$\vdash\textcolor{red}{{\sim}\square\,(1=2)}\to{\sim}\square\textcolor{red}{{\sim}\square\,(1=2)}.$$
 
+Since $\textcolor{red}{{\sim}\square{}(1=2)}$, by definition, is $\textcolor{blue}{{\normalfont\textsc{Cons}}(\mathrm{PA})}$, we have
 
-
-
-
-
-
-
-
+> [Gödel’s Second Incompleteness Theorem.]{.smallcaps}
+> $(\textcolor{blue}{{\normalfont\textsc{Cons}}(\mathrm{PA})}\to{\sim}\square\textcolor{blue}{{\normalfont\textsc{Cons}}(\mathrm{PA})})$, *i.e.*, if Peano Arithmetic
+> is *consistent*, then it cannot prove its own *consistency*.
+>
+> In a lecture to a joint meeting of the Mathematical Association of
+> America and the American Mathematical Society, Gödel summarized the
+> significance of his result for Hilbert’s program: the hope of finding
+> *"…a proof for freedom from contradiction undertaken by Hilbert and
+> his disciples" had "vanished entirely in view of some recently
+> discovered facts. It can be shown quite generally that there can exist
+> no proof of the freedom of contradiction of a formal system S which
+> could be expressed in terms of the formal system S itself …."*
+> [@godel1933o, GCW-III, p. 52].
 
 ## Solution to Problems
 
@@ -94,9 +326,56 @@ $
 \end{tikzpicture}
 \end{dummyenv}
 
+Solution to Exercise Lemma
+
 :::
 
+::: {#lst-montague-goedel-2024-solution-to-problems-2 fig-pos='H'}
 
+\begin{dummyenv}
+\nopagecolor
+\definecolor{ourblue}{HTML}{0070C0}
+$\displaystyle
+\begin{array}{rll}
+1.&\vdash\square\,\varphi\to\varphi&\text{Assumption (\textbf{T})}\\
+2.&\vdash\sigma\leftrightarrow(\square\sigma\to\varphi)&\text{G\"odel's Fixed-Point Theorem}\\
+3.&\quad\text{\textit{\st{Show}}}\;\varphi&\text{20, DD}\\
+4.&\quad\tikzmark{start1}\quad\text{\textit{\st{Show}}}\;\square\sigma&\text{16, ND}\\
+5.&\quad\quad\tikzmark{start2}\quad\text{\textit{\st{Show}}}\;\square\sigma\to\varphi&\text{14, CD}\\
+6.&\quad\quad\quad\tikzmark{start3}\phantom{\text{\textit{\st{Show}}}\;}\square\sigma&\text{Assume (CD)}\\
+7.&\quad\quad\quad\quad\text{\textit{\st{Show}}}\;\square\,[\sigma\leftrightarrow(\square\sigma\to\varphi)]&\text{8, ND}\\
+8.&\quad\quad\quad\quad\tikzmark{start4}\phantom{\text{\textit{\st{Show}}}\;}\sigma\leftrightarrow(\square\sigma\to\varphi)&\tikzmark{end4}\text{2, G\"odel's Fixed-Point Theorem}\\
+9.&\quad\quad\quad\phantom{\text{\textit{\st{Show}}}\;}\square\sigma\to\square(\square\sigma\to\varphi)&\text{7, T81, IE, MD, S, Axiom (K), MP}\\
+10.&\quad\quad\quad\phantom{\text{\textit{\st{Show}}}\;}\square(\square\sigma\to\varphi)&\text{9, 6, MP}\\
+11.&\quad\quad\quad\phantom{\text{\textit{\st{Show}}}\;}\square\square\sigma\to\square\varphi&\text{10, Axiom (\textbf{K}), MP}\\
+12.&\quad\quad\quad\phantom{\text{\textit{\st{Show}}}\;}\square\sigma\to\square\square\sigma&\text{Axiom (\textbf{4})}\\
+13.&\quad\quad\quad\phantom{\text{\textit{\st{Show}}}\;}\square\varphi&\tikzmark{end3}\text{12, 6 MP, 11 MP}\\
+14.&\quad\quad\quad\phantom{\text{\textit{\st{Show}}}\;\square}\varphi&\text{13, (\textbf{T})}\\
+15.&\quad\quad\quad\phantom{\text{\textit{\st{Show}}}\;}(\square\sigma\to\varphi)\to\sigma&\tikzmark{end2}\text{2, BC}\\
+16.&\quad\quad\quad\phantom{\text{\textit{\st{Show}}}\;}\sigma&\text{15, 5 MP}\\
+17.&\quad\quad\phantom{\text{\textit{\st{Show}}}\;}\sigma\to(\square\sigma\to\varphi)&\text{2, BC}\\
+18.&\quad\quad\phantom{\text{\textit{\st{Show}}}\;}\sigma&\text{4, (\textbf{T})}\\
+19.&\quad\quad\phantom{\text{\textit{\st{Show}}}\;}\square\sigma\to\varphi&\tikzmark{end1}\text{17, 18 MP}\\
+20.&\quad\phantom{\text{\textit{\st{Show}}}\;}\varphi&\text{19, 4 MP}
+\end{array}
+$
+\begin{tikzpicture}[remember picture,overlay]
+  \coordinate (start1) at ([xshift=1.2ex,yshift=1.6ex]pic cs:start1);
+  \coordinate (end1) at ([xshift=-1.5ex,yshift=-0.5ex]pic cs:end1);
+  \node[inner sep=2pt,draw=ourblue,fit=(start1) (end1)] {};
+  
+  \foreach \i in {2,...,4} {
+    \coordinate (start) at ([xshift=1.2ex,yshift=1.6ex]pic cs:start\i);
+    \coordinate (e\i) at ([xshift=-1ex,yshift=-0.5ex]pic cs:end\i);
+    \path let \p1 = (e\i), \p2 = (end1) in coordinate (end) at (\x2,\y1);
+    \node[inner sep=2pt,draw=ourblue,fit=(start) (end)] {};
+  }
+\end{tikzpicture}
+\end{dummyenv}
+
+Solution to Exercise "Löb-Gödel Theorem"
+
+:::
 
 
 

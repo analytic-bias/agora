@@ -22,26 +22,35 @@
 \definecolor{ourblue}{HTML}{0070C0}
 $\displaystyle
 \begin{array}{rll}
-1.&\text{\textit{\st{Show}}}\;\square\varphi\to\square(\varphi\to(\square(\square\varphi\land\varphi)\to(\square\varphi\land\varphi)))&\text{3, CD}\\
-2.&\tikzmark{start1}\phantom{\text{\textit{\st{Show}}}\;}\square\varphi&\text{Assume (CD)}\\
-3.&\phantom{\text{\textit{\st{Show}}}\;}\square(\square(\square\varphi\land\varphi)\to\square\varphi\land\varphi)\to\square(\square\varphi\land\varphi)&\text{Axiom (L)}\\
-4.&\quad\text{\textit{\st{Show}}}\;\square(\varphi\to(\square(\square\varphi\land\varphi)\to(\square\varphi\land\varphi)))&\text{5, ND}\\
-5.&\quad\tikzmark{start2}\quad\text{\textit{\st{Show}}}\;\varphi\to(\square(\square\varphi\land\varphi)\to(\square\varphi\land\varphi))&\text{7, CD}\\
-6.&\quad\quad\tikzmark{start3}\phantom{\text{\textit{\st{Show}}}\;}\varphi&\text{Assume (CD)}\\
-7.&\quad\quad\quad\text{\textit{\st{Show}}}\;\square(\square\varphi\land\varphi)\to\square\varphi\land\varphi&\text{11, CD}\\
-8.&\quad\quad\tikzmark{start4}\quad\phantom{\text{\textit{\st{Show}}}\;}\square(\square\varphi\land\varphi)&\text{Assume (CD)}\\
-9.&\quad\quad\quad\phantom{\text{\textit{\st{Show}}}\;}\square\square\varphi\land\square\varphi&\text{8, (\textbf{K}), MP}\\
-10.&\quad\quad\quad\phantom{\text{\textit{\st{Show}}}\;}\square\varphi&\text{9, S}\\
-11.&\quad\quad\quad\phantom{\text{\textit{\st{Show}}}\;}\square\varphi\land\varphi&\tikzmark{end4}\tikzmark{end3}\tikzmark{end2}\tikzmark{end1}\text{10, 6 ADJ}
+1.&\vdash\square\,\varphi\to\varphi&\text{Assumption (\textbf{T})}\\
+2.&\vdash\sigma\leftrightarrow(\square\sigma\to\varphi)&\text{G\"odel's Fixed-Point Theorem}\\
+3.&\quad\text{\textit{\st{Show}}}\;\varphi&\text{20, DD}\\
+4.&\quad\tikzmark{start1}\quad\text{\textit{\st{Show}}}\;\square\sigma&\text{16, ND}\\
+5.&\quad\quad\tikzmark{start2}\quad\text{\textit{\st{Show}}}\;\square\sigma\to\varphi&\text{14, CD}\\
+6.&\quad\quad\quad\tikzmark{start3}\phantom{\text{\textit{\st{Show}}}\;}\square\sigma&\text{Assume (CD)}\\
+7.&\quad\quad\quad\quad\text{\textit{\st{Show}}}\;\square\,[\sigma\leftrightarrow(\square\sigma\to\varphi)]&\text{8, ND}\\
+8.&\quad\quad\quad\quad\tikzmark{start4}\phantom{\text{\textit{\st{Show}}}\;}\sigma\leftrightarrow(\square\sigma\to\varphi)&\tikzmark{end4}\text{2, G\"odel's Fixed-Point Theorem}\\
+9.&\quad\quad\quad\phantom{\text{\textit{\st{Show}}}\;}\square\sigma\to\square(\square\sigma\to\varphi)&\text{7, T81, IE, MD, S, Axiom (K), MP}\\
+10.&\quad\quad\quad\phantom{\text{\textit{\st{Show}}}\;}\square(\square\sigma\to\varphi)&\text{9, 6, MP}\\
+11.&\quad\quad\quad\phantom{\text{\textit{\st{Show}}}\;}\square\square\sigma\to\square\varphi&\text{10, Axiom (\textbf{K}), MP}\\
+12.&\quad\quad\quad\phantom{\text{\textit{\st{Show}}}\;}\square\sigma\to\square\square\sigma&\text{Axiom (\textbf{4})}\\
+13.&\quad\quad\quad\phantom{\text{\textit{\st{Show}}}\;}\square\varphi&\tikzmark{end3}\text{12, 6 MP, 11 MP}\\
+14.&\quad\quad\quad\phantom{\text{\textit{\st{Show}}}\;\square}\varphi&\text{13, (\textbf{T})}\\
+15.&\quad\quad\quad\phantom{\text{\textit{\st{Show}}}\;}(\square\sigma\to\varphi)\to\sigma&\tikzmark{end2}\text{2, BC}\\
+16.&\quad\quad\quad\phantom{\text{\textit{\st{Show}}}\;}\sigma&\text{15, 5 MP}\\
+17.&\quad\quad\phantom{\text{\textit{\st{Show}}}\;}\sigma\to(\square\sigma\to\varphi)&\text{2, BC}\\
+18.&\quad\quad\phantom{\text{\textit{\st{Show}}}\;}\sigma&\text{4, (\textbf{T})}\\
+19.&\quad\quad\phantom{\text{\textit{\st{Show}}}\;}\square\sigma\to\varphi&\tikzmark{end1}\text{17, 18 MP}\\
+20.&\quad\phantom{\text{\textit{\st{Show}}}\;}\varphi&\text{19, 4 MP}
 \end{array}
 $
 \begin{tikzpicture}[remember picture,overlay]
-  \coordinate (start1) at ([xshift=1ex,yshift=1.6ex]pic cs:start1);
+  \coordinate (start1) at ([xshift=1.2ex,yshift=1.6ex]pic cs:start1);
   \coordinate (end1) at ([xshift=-1.5ex,yshift=-0.5ex]pic cs:end1);
   \node[inner sep=2pt,draw=ourblue,fit=(start1) (end1)] {};
   
   \foreach \i in {2,...,4} {
-    \coordinate (start) at ([xshift=1ex,yshift=1.6ex]pic cs:start\i);
+    \coordinate (start) at ([xshift=1.2ex,yshift=1.6ex]pic cs:start\i);
     \coordinate (e\i) at ([xshift=-1ex,yshift=-0.5ex]pic cs:end\i);
     \path let \p1 = (e\i), \p2 = (end1) in coordinate (end) at (\x2,\y1);
     \node[inner sep=2pt,draw=ourblue,fit=(start) (end)] {};

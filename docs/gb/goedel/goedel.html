@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -162,7 +182,8 @@ window.Quarto = {
    
   <ul>
   <li><a href="#provability-modal-logics" id="toc-provability-modal-logics" class="nav-link active" data-scroll-target="#provability-modal-logics"><span class="header-section-number">2.1</span> Provability Modal Logics</a></li>
-  <li><a href="#solution-to-problems" id="toc-solution-to-problems" class="nav-link" data-scroll-target="#solution-to-problems"><span class="header-section-number">2.2</span> Solution to Problems</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">2.2</span> Exercises</a></li>
+  <li><a href="#solution-to-problems" id="toc-solution-to-problems" class="nav-link" data-scroll-target="#solution-to-problems"><span class="header-section-number">2.3</span> Solution to Problems</a></li>
   </ul>
 </nav>
     </div>
@@ -188,40 +209,194 @@ window.Quarto = {
 </header>
 
 
-<p>Gödel informally explained his First Incompleteness Theorem noting that the analogy to the antinomy of the Liar “leaps to the eye (GCW-I, 149).”” Whereas the Liar sentence asserts of itself that it is <em>untrue</em>, the Gödel sentence says of itself that it is <em>unprovable</em> in a precisely specified formal system such as <em>Principia Mathematica</em>:</p>
-<p>Gödel further remarks that <em>any</em> epistemological antinomy can be used to motivate his proof but chooses the Richard Paradox, which we discussed in Chapter 1. Gödel’s choice was prescient: the Berry Paradox is a simplification of the Richard Paradox, and can be used to elegantly prove the First Incompleteness Theorem showing its connection with Chaitin’s interpretation Gödel Incompletehes in terms of algorithmic randomness.</p>
-<blockquote class="blockquote">
-<p><span class="smallcaps">Gödel’s First Incompleteness Theorem</span>: if a formal system is consistent and its axiom system has enough arithmetic so that its theorems can be listed by some mechanical procedure, then there exists an <em>undecidable</em> sentence in that formal system, which is therefore <em>incomplete</em>.[1]</p>
-</blockquote>
+<p>Gödel informally explained his First Incompleteness Theorem noting that the analogy to the antinomy of the Liar “leaps to the eye (GCW-I, 149).”” Whereas the Liar sentence asserts of itself that it is <em>untrue</em>, the Gödel sentence says of itself that it is <em>unprovable</em> in a precisely specified formal system such as <em>Principia Mathematica</em>.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<em>Principia Mathematica</em>:
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(G:G\,\text{is not provable in system}\,\mathrm{PM}.\)</span></p>
+</div>
+</div>
+</div></div><p>Gödel further remarks that <em>any</em> epistemological antinomy can be used to motivate his proof but chooses the Richard Paradox, which we discussed in Chapter 1. Gödel’s choice was prescient: the Berry Paradox is a simplification of the Richard Paradox, and can be used to elegantly prove the First Incompleteness Theorem showing its connection with Chaitin’s interpretation Gödel Incompletehes in terms of algorithmic randomness.</p>
+<div class="page-columns page-full"><blockquote class="blockquote">
+<p><span class="smallcaps">Gödel’s First Incompleteness Theorem</span>: if a formal system is consistent and its axiom system has enough arithmetic so that its theorems can be listed by some mechanical procedure, then there exists an <em>undecidable</em> sentence in that formal system, which is therefore <em>incomplete</em>.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+</blockquote><div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;The formal system is also essentially incomplete, i.e., one can add the undecidable Gödel sentence as a new axiom and the resulting system will have a new undecidable sentence, which is also undecidable in the original system.</p></div></div></div>
 <section id="provability-modal-logics" class="level2 page-columns page-full" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="provability-modal-logics"><span class="header-section-number">2.1</span> Provability Modal Logics</h2>
+<p>TODO one diagram left! polish web version!</p>
+<p>Elegant proofs of Gödel’s Second Incompleteness Theorem were discovered in <em>modal provability logics,</em> which emerged from the 1950s-1970s. These logics were anticipated by <span class="citation" data-cites="Godel1933f">(<a href="../references.html#ref-Godel1933f" role="doc-biblioref">Gödel 1933a</a>)</span> <em>“An interpretation of intuitionistic propositional calculus.”</em> Gödel’s insight was that intuitionistic <em>truth</em> was characterized in terms of <em>proof</em>, which is a kind of <em>necessity</em>, and so modal axioms could be used to formalize the <em>properties of provability</em>:</p>
+<div class="no-row-height column-margin column-container"><div id="ref-Godel1933f" class="csl-entry" role="listitem">
+Gödel, Kurt. 1933a. Eine interpretation des intuitionistischen aussagenkalküls. <em>Ergebnisse Eines Mathematischen Kolloquiums</em> 4. 39–40.
+</div></div><div id="tbl-goedel-properties-of-provability" class="quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-goedel-properties-of-provability-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2.1: Properties of Provability
+</figcaption>
+<div aria-describedby="tbl-goedel-properties-of-provability-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 40%">
+<col style="width: 50%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">(<strong>T</strong>)</td>
+<td><span class="math inline">\(\square\,P\to P\)</span></td>
+<td><em>What is provable is ________________.</em></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">(<strong>K</strong>)</td>
+<td><span class="math inline">\(\square\,(P\to Q)\to(\square\,P\to\square\,Q)\)</span></td>
+<td><em>Whatever follows from what is provable is ________________.</em></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">(<strong>4</strong>)</td>
+<td><span class="math inline">\(\square\,P\to\square\square\,P\)</span></td>
+<td><em>What is provable is provably ________.</em></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p><span class="citation" data-cites="Henkin1952">(<a href="../references.html#ref-Henkin1952" role="doc-biblioref">Henkin 1952</a>)</span> posed the intriguing question whether the <em>positive</em> Gödelian sentence “I am <em>provable</em>” is provable. <span class="citation" data-cites="Lob1955">(<a href="../references.html#ref-Lob1955" role="doc-biblioref">Löb 1955</a>)</span> answered Henkin’s question in the affirmative by showing that Peano Arithmetic proves a counterpart to Löb’s Axiom:</p>
+<div class="no-row-height column-margin column-container"><div id="ref-Henkin1952" class="csl-entry" role="listitem">
+Henkin, Leon. 1952. The consistency of the axiom of choice and the generalized continuum-hypothesis with the axioms of set theory. <em>Journal of Symbolic Logic</em> 17(3). 207–208. DOI: https://doi.org/<a href="https://doi.org/10.2307/2267706">10.2307/2267706</a>
+</div><div id="ref-Lob1955" class="csl-entry" role="listitem">
+Löb, M.H. 1955. Solution of a problem of leon henkin. <em>The Journal of Symbolic Logic</em> 20(2). 115–118. Retrieved from <a href="http://www.jstor.org/stable/2266895">http://www.jstor.org/stable/2266895</a>
+</div></div><table class="table">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 40%">
+<col style="width: 50%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">(<strong>L</strong>)</td>
+<td><span class="math inline">\(\square\,(\square\,P\to P)\to\square\,P\)</span></td>
+<td><em>Löb’s Axiom restricts (<strong>T</strong>) to what is provable.</em></td>
+</tr>
+</tbody>
+</table>
+<div class="nobullet">
+<ul>
+<li>A <em>Gödel-Löb modal probability logic</em> (<strong>GL</strong>) results from adding (<strong>L</strong>) to (<strong>K</strong>) and
+<ol type="1">
+<li>the rule of <em>necessitation</em> or <em>universal derivation</em> [UD] (<em>i.e.,</em> if <span class="math inline">\(\mathbf{GL}\vdash P\)</span> then <span class="math inline">\(\mathbf{GL}\vdash\square\,P\)</span>),</li>
+<li><em>modus ponens</em> [MP]</li>
+<li>a rule for proving all <em>tautologies</em> or the KM<sup>2</sup> system of natural deduction.</li>
+</ol></li>
+</ul>
+</div>
+<p>Note: adding axiom (<strong>4</strong>) turns out to be redundant. In 1975 Howard de Jongh proved that Axiom (<strong>4</strong>) is derivable from Löb’s axiom and (<strong>K</strong>) using the substitution of ‘(<span class="math inline">\(\square\,P\land P\)</span>)’ for ‘<span class="math inline">\(P\)</span>’.</p>
+<div class="nobullet">
+<ul>
+<li>A <em>provability system</em> consists minimal modal logic <strong>K</strong> with the additional axiom <span class="math display">\[(\mathbf{w})\quad\square\,(\square\,\varphi\to\varphi)\to\square\,\varphi.\]</span></li>
+</ul>
+</div>
+<div id="thm-goedel-de-jongh-1970" class="theorem page-columns page-full">
+<p><span class="theorem-title"><strong>Theorem 2.1 (Howard de Jongh, 1970s)</strong></span> <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> Axiom (<strong>4</strong>) holds in the Gödel-Lob Provability Logic.</p>
+<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;At the Tenth International Tbilisi Symposium on Language, Logic and Computation in 2013, one of the speakers referred to this theorem as part of the folklore of the field not realizing that de Jongh was in the audience.</p></div></div></div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Replacing <span class="math inline">\(\varphi\)</span> by <span class="math inline">\(\color{red}(\square\,\varphi\land\varphi)\)</span> in Axiom (<strong>W</strong>) we obtain <span class="math display">\[\square(\square\,\textcolor{red}{(\square \varphi \land \varphi)} \rightarrow\textcolor{red}{(\square \varphi \land \varphi)}) \rightarrow \square\,\textcolor{red}{(\square \varphi \land \varphi)}.\]</span> <span style="float: right;"><span class="math inline">\(\Box\)</span></span></p>
+</div>
+<p>It happens that the lemma <span class="math display">\[\square \varphi \rightarrow \square(\square(\square \varphi \wedge \varphi)) \rightarrow \square(\square \varphi \wedge \varphi)\]</span> is derivable in minimal modal logic <strong>K</strong> (see exercises below).</p>
+<p>It therefore follows that <span class="math display">\[\square \varphi \rightarrow \color{magenta}\square(\square \varphi \wedge \varphi)\]</span> and hence by (<strong>T</strong>), <span class="math display">\[\square \varphi \rightarrow \square \square \varphi .\]</span></p>
+</section>
+<section id="exercises" class="level2 page-columns page-full" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="exercises"><span class="header-section-number">2.2</span> Exercises</h2>
+<div id="lst-montague-goedel-exercise-2024-problems-1" class="listing quarto-float" data-fig-pos="H" style="display: block; margin: auto; width: 100%;">
+<figure class="quarto-float quarto-float-lst figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-montague-goedel-exercise-2024-problems-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Listing&nbsp;2.1: Exercise Lemma
+</figcaption>
+<div aria-describedby="lst-montague-goedel-exercise-2024-problems-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<p><img src="e30c7f475c7335c180c3ca38fae1259a478b6b23.svg" class="img-fluid figure-img" style="display: block; margin: auto; width: 100%;"></p>
+</div>
+</figure>
+</div>
+<p>Next comes the Löb-Gödel Theorem, which we shall call the “Magical Modal Mystery Tour”<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>:</p>
+<div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;van Benthan [2010], p.&nbsp;245 describes this theorem “as a piece of ‘magical’ modal reasoning that has delighted generations.”</p></div></div><div id="lst-montague-goedel-exercise-2024-problems-2" class="listing quarto-float" data-fig-pos="H" style="display: block; margin: auto; width: 100%;">
+<figure class="quarto-float quarto-float-lst figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-montague-goedel-exercise-2024-problems-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Listing&nbsp;2.2: Exercise “Löb-Gödel Theorem”
+</figcaption>
+<div aria-describedby="lst-montague-goedel-exercise-2024-problems-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<p><img src="1672c5622aa0334547b78ae124afa124cb90e600.svg" class="img-fluid figure-img" style="display: block; margin: auto; width: 100%;"></p>
+</div>
+</figure>
+</div>
+<p>Now we may obtain a modal version of Gödel’s First Incompleteness Theorem. Gödel’s famous arithmetical version of the Liar G intuitively says, “I am not provable”: <span class="math display">\[G\leftrightarrow{}{\sim}\square G.\]</span> Note the consistency of Peano Arithmetic may be formulated as: <span class="math inline">\({\sim}\square\,(1=2)\)</span> (von Neumann) or <span class="math inline">\({\sim}\square\,(0\neq 0)\)</span>.</p>
+<p>We can sketch an elegant proof in modal provability logic of Gödel’s Second Incompleteness Theorem. First, we have a modal counterpoint to the <em>fixed-point theorem</em> that yields the <em>Gödel sentence</em>: <span class="math display">\[\vDash G\leftrightarrow{}{\sim}\square G.\]</span></p>
+<p>In his letter, von Neumann noted that the consistency of Peano Arithmetic (PA) can be expressed by the formula that <span class="math inline">\((1 = 2)\)</span> is not provable: <span class="math display">\[\textcolor{blue}{{\normalfont\textsc{Cons}}(\mathrm{PA})}:={}\textcolor{red}{{\sim}\square\,(1=2)}.\]</span></p>
+<p>Now the gist of the First Incompleteness Theorem is the demonstration that: <span class="math display">\[\text{if}\,\vdash G\leftrightarrow{}{\sim}\square G,\,\text{then}\,\vdash{}{\sim}\square\,(1=2)\to{}{\sim}\square G.\]</span></p>
 <p>By the fixed-point theorem, <span class="math inline">\({\sim}\square\,G\)</span> is <em>logically equivalent</em> to <span class="math inline">\(G\)</span>, so we have <span class="math inline">\(\vdash{}{\sim}\square\,1 = 2 \to G\)</span>:</p>
-
-<div class="no-row-height column-margin column-container"><div id="fig-goedel-2024-fixed-point-equivalent" class="quarto-figure quarto-figure-center quarto-float anchored" style="display: block; margin: auto; width: 100%;">
+<div id="fig-goedel-2024-fixed-point-equivalent" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-pos="H" style="display: block; margin: auto; width: 100%;">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-goedel-2024-fixed-point-equivalent-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<p><img src="c2e3978d98998117ea4b2dd4643f661ce93a6af8.svg" class="img-fluid figure-img" style="display: block; margin: auto; width: 100%;"></p>
+<p><img src="6b4e43503bf95541f847f29eadfe991df754b0e6.svg" class="img-fluid figure-img" style="display: block; margin: auto; width: 100%;"></p>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-goedel-2024-fixed-point-equivalent-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;2.1
 </figcaption>
 </figure>
-</div></div></section>
-<section id="solution-to-problems" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="solution-to-problems"><span class="header-section-number">2.2</span> Solution to Problems</h2>
+</div>
+<p>By the rule of necessitation, we may prefix a and then distribute, using (<strong>K</strong>), the over the conditional: <span class="math display">\[\vdash{}\textcolor{blue}{\square}{\sim}\square\,(1=2)\color{blue}\to\square\color{black}G.\]</span> According to the First Incompleteness Theorem, the provability of the Gödel sentence implies the inconsistency of the system, so:</p>
+<div id="fig-goedel-2024-first-incompleteness" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-pos="H" style="display: block; margin: auto; width: 100%;">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-goedel-2024-first-incompleteness-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<p><img src="b91cc1f7a9553723413dc561c52fdf2264ad3c93.svg" class="img-fluid figure-img" style="display: block; margin: auto; width: 100%;"></p>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-goedel-2024-first-incompleteness-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.2
+</figcaption>
+</figure>
+</div>
+<p>In short, we have <span class="math display">\[\vdash{}\textcolor{red}{\square}{\sim}\square\,(1=2)\to\textcolor{red}{\square}\,(1=2),\]</span> which, by contraposition, yields <span class="math display">\[\vdash\textcolor{red}{{\sim}\square\,(1=2)}\to{\sim}\square\textcolor{red}{{\sim}\square\,(1=2)}.\]</span></p>
+<p>Since <span class="math inline">\(\textcolor{red}{{\sim}\square{}(1=2)}\)</span>, by definition, is <span class="math inline">\(\textcolor{blue}{{\normalfont\textsc{Cons}}(\mathrm{PA})}\)</span>, we have</p>
+<div class="page-columns page-full"><blockquote class="blockquote">
+<p><span class="smallcaps">Gödel’s Second Incompleteness Theorem.</span> <span class="math inline">\((\textcolor{blue}{{\normalfont\textsc{Cons}}(\mathrm{PA})}\to{\sim}\square\textcolor{blue}{{\normalfont\textsc{Cons}}(\mathrm{PA})})\)</span>, <em>i.e.</em>, if Peano Arithmetic is <em>consistent</em>, then it cannot prove its own <em>consistency</em>.</p>
+<p>In a lecture to a joint meeting of the Mathematical Association of America and the American Mathematical Society, Gödel summarized the significance of his result for Hilbert’s program: the hope of finding <em>“…a proof for freedom from contradiction undertaken by Hilbert and his disciples” had “vanished entirely in view of some recently discovered facts. It can be shown quite generally that there can exist no proof of the freedom of contradiction of a formal system S which could be expressed in terms of the formal system S itself ….”</em> <span class="citation" data-cites="godel1933o">(<a href="../references.html#ref-godel1933o" role="doc-biblioref">Gödel 1933b</a>, GCW-III, p.&nbsp;52)</span>.</p>
+</blockquote><div class="no-row-height column-margin column-container"><div id="ref-godel1933o" class="csl-entry" role="listitem">
+Gödel, Kurt. 1933b. The present situation in the foundations of mathematics. <em>Collected Works</em> 3. 45–53.
+</div></div></div>
+</section>
+<section id="solution-to-problems" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="solution-to-problems"><span class="header-section-number">2.3</span> Solution to Problems</h2>
 <div id="lst-montague-goedel-2024-solution-to-problems-1" class="listing quarto-float" data-fig-pos="H" style="display: block; margin: auto; width: 100%;">
 <figure class="quarto-float quarto-float-lst figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst quarto-uncaptioned" id="lst-montague-goedel-2024-solution-to-problems-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Listing&nbsp;2.1
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-montague-goedel-2024-solution-to-problems-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Listing&nbsp;2.3: Solution to Exercise Lemma
 </figcaption>
 <div aria-describedby="lst-montague-goedel-2024-solution-to-problems-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <p><img src="cd856957e417d2bdae5345298e59c4a79d1a3f84.svg" class="img-fluid figure-img" style="display: block; margin: auto; width: 100%;"></p>
 </div>
 </figure>
 </div>
+<div id="lst-montague-goedel-2024-solution-to-problems-2" class="listing quarto-float" data-fig-pos="H" style="display: block; margin: auto; width: 100%;">
+<figure class="quarto-float quarto-float-lst figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-montague-goedel-2024-solution-to-problems-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Listing&nbsp;2.4: Solution to Exercise “Löb-Gödel Theorem”
+</figcaption>
+<div aria-describedby="lst-montague-goedel-2024-solution-to-problems-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<p><img src="fee77e24e69e47f163c046ffaebaf9cd349e197f.svg" class="img-fluid figure-img" style="display: block; margin: auto; width: 100%;"></p>
+</div>
+</figure>
+</div>
+
 
 
 </section>
+
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
