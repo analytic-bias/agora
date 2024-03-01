@@ -2,6 +2,12 @@
 
 # Chapter 5. Gödel’s Second Incompleteness theorem
 
+:::: {.content-visible when-format="html"}
+::: {.wabullet .aside}
+- The responsive layout on mobile portrait might not be as polished; if content is overlapped thus unintelligible, please rotate device to landscape. **You might also wish to access the [pdf version](/gb.pdf) of this book.**
+:::
+::::
+
 Gödel informally explained his First Incompleteness Theorem noting that
 the analogy to the antinomy of the Liar "leaps to the eye (GCW-I, 149).""
 Whereas the Liar sentence asserts of itself that it is *untrue*, the
