@@ -34,6 +34,30 @@ randomness.
 
 TODO one diagram left! polish web version!
 
+::: {#fig-goedel-intriguing .column-margin fig-pos='H'}
+
+\begin{dummyenv}
+\nopagecolor
+\definecolor{ourblue}{HTML}{0070C0}
+\usetikzlibrary{positioning}
+\begin{tikzpicture}
+  \node (outer) [draw, minimum width=3cm, minimum height=3.5cm, align=center] {
+    $\boxed{P \to Q} \to \boxed{\neg P \to \neg Q}$ \\
+    \textbf{Show Q}
+  };
+  \node (inner1) [draw, minimum width=2.5cm, minimum height=1.5cm, align=center, below=5mm of outer] {
+    \textbf{Show \( P \to Q \)}
+  };
+  \node (inner2) [draw, minimum width=2.5cm, minimum height=1.5cm, align=center, right=5mm of inner1] {
+    \textbf{Show P}
+  };
+  \node at (inner1) [draw, minimum width=2cm, minimum height=1cm] {};
+  \node at (inner2) [draw, minimum width=2cm, minimum height=1cm] {};
+\end{tikzpicture}
+\end{dummyenv}
+
+:::
+
 Elegant proofs of Gödel’s Second Incompleteness Theorem were discovered
 in *modal provability logics,* which emerged from the 1950s-1970s. These
 logics were anticipated by [@Godel1933f] *"An interpretation of
