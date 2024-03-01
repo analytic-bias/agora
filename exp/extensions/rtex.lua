@@ -5,7 +5,7 @@ local fun = require 'fun'
 local inspect = require 'inspect'
 
 local html_template = [[
-\documentclass[border={10pt 10pt 10pt 10pt}]{standalone}
+\documentclass[border={10pt 10pt 10pt 10pt},12pt]{standalone}
 \usepackage{graphics}
 \usepackage{xcolor}
 \usepackage{amsmath}
@@ -22,6 +22,7 @@ local html_template = [[
 \usepackage{quiver}
 \usetikzlibrary{fit,tikzmark}
 \newenvironment{dummyenv}{}{}
+\newenvironment{natdummyenv}{}{}
 \begin{document}
 \nopagecolor
 %s
@@ -29,7 +30,7 @@ local html_template = [[
 ]]
 
 local tex_template = [[
-\documentclass[border={10pt 10pt 10pt 10pt}]{standalone}
+\documentclass[border={10pt 10pt 10pt 10pt},12pt]{standalone}
 \usepackage{graphics}
 \usepackage{xcolor}
 \usepackage{amsmath}
@@ -49,6 +50,7 @@ local tex_template = [[
 \usepackage{quiver}
 \usetikzlibrary{fit,tikzmark}
 \newenvironment{dummyenv}{}{}
+\newenvironment{natdummyenv}{}{}
 \begin{document}
 \nopagecolor
 %s
@@ -92,7 +94,8 @@ end
 local triggers = {
   '\\begin{tikzpicture}',
   '\\begin{tikzcd}',
-  '\\begin{dummyenv}'
+  '\\begin{dummyenv}',
+  '\\begin{natdummyenv}'
 }
 
 function RawBlock(el)
@@ -110,9 +113,15 @@ function RawBlock(el)
       img.attributes.style = 'display: block; margin: auto; width: 100%;'
       return pandoc.Para({img})
     else
-      local img = pandoc.Image({}, fbasename .. '.pdf')
-      img.attributes.style = 'display: block; margin: auto; width: 100%;'
-      return pandoc.Para({img})
+      -- local img = pandoc.Image({}, fbasename .. '.pdf')
+      -- img.attributes.style = 'display: block; margin: auto;'
+      -- return pandoc.Para({img})
+      if starts_with('\\begin{natdummyenv}', el.text) then
+        print('natdummyenv')
+        return pandoc.RawInline('latex', '\\includegraphics[width=\\ginnatwidth,height=\\ginnatheight]{' .. fbasename .. '.pdf' .. '}')
+      else
+        return pandoc.RawInline('latex', '\\includegraphics{' .. fbasename .. '.pdf' .. '}')
+      end
     end
   else
     return el
