@@ -64,6 +64,7 @@ format:
       hypothesis: 
         theme: clean
         showHighlights: whenSidebarOpen
+        openSidebar: true
       giscus:
         repo: analytic-bias/analytic-bias-comment
         repo-id: R_kgDOJt9yig
