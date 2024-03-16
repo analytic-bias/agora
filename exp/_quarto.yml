@@ -60,6 +60,19 @@ format:
     theme: cosmo # TODO: html theme and fonts
     grid: 
         margin-width: 300pt
+    comments:
+      hypothesis: 
+        theme: clean
+        showHighlights: whenSidebarOpen
+      giscus:
+        repo: analytic-bias/analytic-bias-comment
+        repo-id: R_kgDOJt9yig
+        category: Gödelian Explorations Comments
+        category-id: DIC_kwDOJt9yis4CeBQx
+        mapping: url
+        # strict: true
+        reactions-enabled: true
+        input-position: top
   pdf:
     # cite-method: biblatex
     keep-tex: true

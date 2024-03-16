@@ -1,3 +1,24 @@
+---
+include-in-header:
+  - text: |
+      <script>
+        MathJax = {
+          tex: {
+            macros: {
+              textsc: ['\\style{font-variant-caps: small-caps}{\\text{#1}}\\,', 1],
+              normalfont: ['', 0]
+            }
+          },
+          chtml: {
+            mtextFont: "serif"
+          },
+          svg: {
+            mtextFont: "serif"
+          }
+        }
+      </script>
+---
+
 \raggedbottom
 
 # Gödel’s Second Incompleteness theorem
