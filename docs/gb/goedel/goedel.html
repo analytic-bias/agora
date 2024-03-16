@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Gödelian Explorations – 2&nbsp; Chapter 5. Gödel’s Second Incompleteness theorem</title>
+<title>Gödelian Explorations – 3&nbsp; Gödel’s Second Incompleteness theorem</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -130,7 +130,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../goedel/goedel.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Chapter 5. Gödel’s Second Incompleteness theorem</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../goedel/goedel.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Gödel’s Second Incompleteness theorem</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -155,14 +155,20 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../euclid/euclid.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title"><span class="ourblue">Modal Logic and Binary Relations</span></span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../modal/modal.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">‘Must’ and ‘Might’ — The Modal Logic of Necessity and Possibility</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">‘Must’ and ‘Might’ — The Modal Logic of Necessity and Possibility</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../goedel/goedel.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Chapter 5. Gödel’s Second Incompleteness theorem</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Gödel’s Second Incompleteness theorem</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -181,9 +187,9 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#provability-modal-logics" id="toc-provability-modal-logics" class="nav-link active" data-scroll-target="#provability-modal-logics"><span class="header-section-number">2.1</span> Provability Modal Logics</a></li>
-  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">2.2</span> Exercises</a></li>
-  <li><a href="#solution-to-problems" id="toc-solution-to-problems" class="nav-link" data-scroll-target="#solution-to-problems"><span class="header-section-number">2.3</span> Solution to Problems</a></li>
+  <li><a href="#provability-modal-logics" id="toc-provability-modal-logics" class="nav-link active" data-scroll-target="#provability-modal-logics"><span class="header-section-number">3.1</span> Provability Modal Logics</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">3.2</span> Exercises</a></li>
+  <li><a href="#solution-to-problems" id="toc-solution-to-problems" class="nav-link" data-scroll-target="#solution-to-problems"><span class="header-section-number">3.3</span> Solution to Problems</a></li>
   </ul>
 </nav>
     </div>
@@ -192,7 +198,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Chapter 5. Gödel’s Second Incompleteness theorem</span></h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Gödel’s Second Incompleteness theorem</span></h1>
 </div>
 
 
@@ -234,17 +240,17 @@ window.Quarto = {
 <div class="page-columns page-full"><blockquote class="blockquote">
 <p><span class="smallcaps">Gödel’s First Incompleteness Theorem</span>: if a formal system is consistent and its axiom system has enough arithmetic so that its theorems can be listed by some mechanical procedure, then there exists an <em>undecidable</em> sentence in that formal system, which is therefore <em>incomplete</em>.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 </blockquote><div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;The formal system is also essentially incomplete, i.e., one can add the undecidable Gödel sentence as a new axiom and the resulting system will have a new undecidable sentence, which is also undecidable in the original system.</p></div></div></div>
-<section id="provability-modal-logics" class="level2 page-columns page-full" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="provability-modal-logics"><span class="header-section-number">2.1</span> Provability Modal Logics</h2>
+<section id="provability-modal-logics" class="level2 page-columns page-full" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="provability-modal-logics"><span class="header-section-number">3.1</span> Provability Modal Logics</h2>
 <p>TODO one diagram left! polish web version!</p>
 
 <div class="no-row-height column-margin column-container"><div id="fig-goedel-intriguing" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-pos="H" style="display: block; margin: auto; width: 100%;">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-goedel-intriguing-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<p><img src="18467742db17795e3f621bac0f4c26b2939b1074.svg" class="img-fluid figure-img" style="display: block; margin: auto; width: 100%;"></p>
+<p><img src="54763644b7bec184162a232f22c138a16d5aa8b3.svg" class="img-fluid figure-img" style="display: block; margin: auto; width: 100%;"></p>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-goedel-intriguing-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2.1
+Figure&nbsp;3.1
 </figcaption>
 </figure>
 </div><div id="ref-Godel1933f" class="csl-entry" role="listitem">
@@ -253,7 +259,7 @@ Gödel, Kurt. 1933a. Eine interpretation des intuitionistischen aussagenkalküls
 <div id="tbl-goedel-properties-of-provability" class="quarto-float anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-goedel-properties-of-provability-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;2.1: Properties of Provability
+Table&nbsp;3.1: Properties of Provability
 </figcaption>
 <div aria-describedby="tbl-goedel-properties-of-provability-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="table">
@@ -319,7 +325,7 @@ Löb, M.H. 1955. Solution of a problem of leon henkin. <em>The Journal of Symbol
 </ul>
 </div>
 <div id="thm-goedel-de-jongh-1970" class="theorem page-columns page-full">
-<p><span class="theorem-title"><strong>Theorem 2.1 (Howard de Jongh, 1970s)</strong></span> <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> Axiom (<strong>4</strong>) holds in the Gödel-Lob Provability Logic.</p>
+<p><span class="theorem-title"><strong>Theorem 3.1 (Howard de Jongh, 1970s)</strong></span> <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> Axiom (<strong>4</strong>) holds in the Gödel-Lob Provability Logic.</p>
 <div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;At the Tenth International Tbilisi Symposium on Language, Logic and Computation in 2013, one of the speakers referred to this theorem as part of the folklore of the field not realizing that de Jongh was in the audience.</p></div></div></div>
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>Replacing <span class="math inline">\(\varphi\)</span> by <span class="math inline">\(\color{red}(\square\,\varphi\land\varphi)\)</span> in Axiom (<strong>W</strong>) we obtain <span class="math display">\[\square(\square\,\textcolor{red}{(\square \varphi \land \varphi)} \rightarrow\textcolor{red}{(\square \varphi \land \varphi)}) \rightarrow \square\,\textcolor{red}{(\square \varphi \land \varphi)}.\]</span> <span style="float: right;"><span class="math inline">\(\Box\)</span></span></p>
@@ -327,12 +333,12 @@ Löb, M.H. 1955. Solution of a problem of leon henkin. <em>The Journal of Symbol
 <p>It happens that the lemma <span class="math display">\[\square \varphi \rightarrow \square(\square(\square \varphi \wedge \varphi)) \rightarrow \square(\square \varphi \wedge \varphi)\]</span> is derivable in minimal modal logic <strong>K</strong> (see exercises below).</p>
 <p>It therefore follows that <span class="math display">\[\square \varphi \rightarrow \color{magenta}\square(\square \varphi \wedge \varphi)\]</span> and hence by (<strong>T</strong>), <span class="math display">\[\square \varphi \rightarrow \square \square \varphi .\]</span></p>
 </section>
-<section id="exercises" class="level2 page-columns page-full" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="exercises"><span class="header-section-number">2.2</span> Exercises</h2>
+<section id="exercises" class="level2 page-columns page-full" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="exercises"><span class="header-section-number">3.2</span> Exercises</h2>
 <div id="lst-montague-goedel-exercise-2024-problems-1" class="listing quarto-float" data-fig-pos="H" style="display: block; margin: auto; width: 100%;">
 <figure class="quarto-float quarto-float-lst figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-montague-goedel-exercise-2024-problems-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Listing&nbsp;2.1: Exercise Lemma
+Listing&nbsp;3.1: Exercise Lemma
 </figcaption>
 <div aria-describedby="lst-montague-goedel-exercise-2024-problems-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <p><img src="e30c7f475c7335c180c3ca38fae1259a478b6b23.svg" class="img-fluid figure-img" style="display: block; margin: auto; width: 100%;"></p>
@@ -343,7 +349,7 @@ Listing&nbsp;2.1: Exercise Lemma
 <div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;van Benthan [2010], p.&nbsp;245 describes this theorem “as a piece of ‘magical’ modal reasoning that has delighted generations.”</p></div></div><div id="lst-montague-goedel-exercise-2024-problems-2" class="listing quarto-float" data-fig-pos="H" style="display: block; margin: auto; width: 100%;">
 <figure class="quarto-float quarto-float-lst figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-montague-goedel-exercise-2024-problems-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Listing&nbsp;2.2: Exercise “Löb-Gödel Theorem”
+Listing&nbsp;3.2: Exercise “Löb-Gödel Theorem”
 </figcaption>
 <div aria-describedby="lst-montague-goedel-exercise-2024-problems-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <p><img src="1672c5622aa0334547b78ae124afa124cb90e600.svg" class="img-fluid figure-img" style="display: block; margin: auto; width: 100%;"></p>
@@ -361,7 +367,7 @@ Listing&nbsp;2.2: Exercise “Löb-Gödel Theorem”
 <p><img src="6b4e43503bf95541f847f29eadfe991df754b0e6.svg" class="img-fluid figure-img" style="display: block; margin: auto; width: 100%;"></p>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-goedel-2024-fixed-point-equivalent-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2.2
+Figure&nbsp;3.2
 </figcaption>
 </figure>
 </div>
@@ -372,7 +378,7 @@ Figure&nbsp;2.2
 <p><img src="b91cc1f7a9553723413dc561c52fdf2264ad3c93.svg" class="img-fluid figure-img" style="display: block; margin: auto; width: 100%;"></p>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-goedel-2024-first-incompleteness-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2.3
+Figure&nbsp;3.3
 </figcaption>
 </figure>
 </div>
@@ -385,12 +391,12 @@ Figure&nbsp;2.3
 Gödel, Kurt. 1933b. The present situation in the foundations of mathematics. <em>Collected Works</em> 3. 45–53.
 </div></div></div>
 </section>
-<section id="solution-to-problems" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="solution-to-problems"><span class="header-section-number">2.3</span> Solution to Problems</h2>
+<section id="solution-to-problems" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="solution-to-problems"><span class="header-section-number">3.3</span> Solution to Problems</h2>
 <div id="lst-montague-goedel-2024-solution-to-problems-1" class="listing quarto-float" data-fig-pos="H" style="display: block; margin: auto; width: 100%;">
 <figure class="quarto-float quarto-float-lst figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-montague-goedel-2024-solution-to-problems-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Listing&nbsp;2.3: Solution to Exercise Lemma
+Listing&nbsp;3.3: Solution to Exercise Lemma
 </figcaption>
 <div aria-describedby="lst-montague-goedel-2024-solution-to-problems-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <p><img src="cd856957e417d2bdae5345298e59c4a79d1a3f84.svg" class="img-fluid figure-img" style="display: block; margin: auto; width: 100%;"></p>
@@ -400,7 +406,7 @@ Listing&nbsp;2.3: Solution to Exercise Lemma
 <div id="lst-montague-goedel-2024-solution-to-problems-2" class="listing quarto-float" data-fig-pos="H" style="display: block; margin: auto; width: 100%;">
 <figure class="quarto-float quarto-float-lst figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-montague-goedel-2024-solution-to-problems-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Listing&nbsp;2.4: Solution to Exercise “Löb-Gödel Theorem”
+Listing&nbsp;3.4: Solution to Exercise “Löb-Gödel Theorem”
 </figcaption>
 <div aria-describedby="lst-montague-goedel-2024-solution-to-problems-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <p><img src="fee77e24e69e47f163c046ffaebaf9cd349e197f.svg" class="img-fluid figure-img" style="display: block; margin: auto; width: 100%;"></p>
@@ -826,7 +832,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../modal/modal.html" class="pagination-link" aria-label="‘Must' and ‘Might' --- The Modal Logic of Necessity and Possibility">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">‘Must’ and ‘Might’ — The Modal Logic of Necessity and Possibility</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">‘Must’ and ‘Might’ — The Modal Logic of Necessity and Possibility</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

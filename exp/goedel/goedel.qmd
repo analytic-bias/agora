@@ -1,6 +1,6 @@
 \raggedbottom
 
-# Chapter 5. Gödel’s Second Incompleteness theorem
+# Gödel’s Second Incompleteness theorem
 
 :::: {.content-visible when-format="html"}
 ::: {.wabullet .aside}
@@ -47,18 +47,21 @@ TODO one diagram left! polish web version!
 \definecolor{ourblue}{HTML}{0070C0}
 \usetikzlibrary{positioning}
 \begin{tikzpicture}
-  \node (outer) [draw, minimum width=3cm, minimum height=3.5cm, align=center] {
-    $\boxed{P \to Q} \to \boxed{\neg P \to \neg Q}$ \\
-    \textbf{Show Q}
+  \node (outer) [align=center] {
+    $\square(P \to Q) \to (\square P \to \square Q)$ 
   };
-  \node (inner1) [draw, minimum width=2.5cm, minimum height=1.5cm, align=center, below=5mm of outer] {
-    \textbf{Show \( P \to Q \)}
+  \node (show) [align=center, below=1mm of outer] {
+    \textit{\st{Show Q}}
   };
-  \node (inner2) [draw, minimum width=2.5cm, minimum height=1.5cm, align=center, right=5mm of inner1] {
-    \textbf{Show P}
+  \node (outerbox) [color=ourblue, draw, minimum width=6cm, minimum height=4cm, align=center, below=.1mm of show] {};
+  \node (innerbox1) [color=ourblue, draw, minimum width=2cm, minimum height=2cm, align=center, left=-25mm of outerbox] {};
+  \node (innerbox2) [color=ourblue, draw, minimum width=2cm, minimum height=2cm, align=center, right=-25mm of outerbox] {};
+  \node (inner1) [align=center, above=1mm of innerbox1] {
+    \textit{\st{Show}} \( P \to Q \)
   };
-  \node at (inner1) [draw, minimum width=2cm, minimum height=1cm] {};
-  \node at (inner2) [draw, minimum width=2cm, minimum height=1cm] {};
+  \node (inner2) [align=center, above=1mm of innerbox2] {
+    \textit{\st{Show}} \( P \)
+  };
 \end{tikzpicture}
 \end{dummyenv}
 
