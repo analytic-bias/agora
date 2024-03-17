@@ -39,7 +39,7 @@ specified formal system such as *Principia Mathematica*.
 ::: {.callout-warning}
 ## *Principia Mathematica*:
 
-$G:G\,\text{is not provable in system}\,\mathrm{PM}.$
+$G:G\;\text{is not provable in system}\,\mathrm{PM}.$
 :::
 ::::
 
