@@ -30,7 +30,7 @@ include-in-header:
 ::::
 
 Gödel informally explained his First Incompleteness Theorem noting that
-the analogy to the antinomy of the Liar "leaps to the eye (GCW-I, 149).""
+the analogy to the antinomy of the Liar "leaps to the eye (GCW-I, 149)".
 Whereas the Liar sentence asserts of itself that it is *untrue*, the
 Gödel sentence says of itself that it is *unprovable* in a precisely
 specified formal system such as *Principia Mathematica*.
@@ -58,8 +58,6 @@ randomness.
 > system, which is therefore *incomplete*.^[The formal system is also essentially incomplete, i.e., one can add the undecidable Gödel sentence as a new axiom and the resulting system will have a new undecidable sentence, which is also undecidable in the original system.]
 
 ## Provability Modal Logics
-
-TODO one diagram left! polish web version!
 
 ::: {#fig-goedel-intriguing .column-margin fig-pos='H'}
 
