@@ -170,9 +170,9 @@ $$\square \varphi \rightarrow \square \square \varphi .$$
 
 ## Exercises
 
-::: {#lst-montague-goedel-exercise-2024-problems-1 fig-pos='H'}
+::: {#lst-montague-goedel-exercise-2024-problems-1 fig-pos='H' fig-align="left"}
 
-\begin{dummyenv}
+\begin{natdummyenv}
 \nopagecolor
 \definecolor{ourblue}{HTML}{0070C0}
 $\displaystyle
@@ -202,7 +202,7 @@ $
     \node[inner sep=2pt,draw=ourblue,fit=(start) (end)] {};
   }
 \end{tikzpicture}
-\end{dummyenv}
+\end{natdummyenv}
 
 Exercise Lemma
 
@@ -211,9 +211,9 @@ Exercise Lemma
 Next comes the Löb-Gödel Theorem, which we shall call the "Magical Modal
 Mystery Tour"^[van Benthan [2010], p. 245 describes this theorem "as a piece of 'magical' modal reasoning that has delighted generations."]:
 
-::: {#lst-montague-goedel-exercise-2024-problems-2 fig-pos='H'}
+::: {#lst-montague-goedel-exercise-2024-problems-2 fig-pos='H' fig-align="left"}
 
-\begin{dummyenv}
+\begin{natdummyenv}
 \nopagecolor
 \definecolor{ourblue}{HTML}{0070C0}
 $\displaystyle
@@ -252,7 +252,7 @@ $
     \node[inner sep=2pt,draw=ourblue,fit=(start) (end)] {};
   }
 \end{tikzpicture}
-\end{dummyenv}
+\end{natdummyenv}
 
 Exercise "Löb-Gödel Theorem"
 
@@ -346,9 +346,9 @@ Since $\textcolor{red}{{\sim}\square{}(1=2)}$, by definition, is $\textcolor{blu
 
 ## Solution to Problems
 
-::: {#lst-montague-goedel-2024-solution-to-problems-1 fig-pos='H'}
+::: {#lst-montague-goedel-2024-solution-to-problems-1 fig-pos='H' fig-align="left"}
 
-\begin{dummyenv}
+\begin{natdummyenv}
 \nopagecolor
 \definecolor{ourblue}{HTML}{0070C0}
 $\displaystyle
@@ -378,15 +378,15 @@ $
     \node[inner sep=2pt,draw=ourblue,fit=(start) (end)] {};
   }
 \end{tikzpicture}
-\end{dummyenv}
+\end{natdummyenv}
 
 Solution to Exercise Lemma
 
 :::
 
-::: {#lst-montague-goedel-2024-solution-to-problems-2 fig-pos='H'}
+::: {#lst-montague-goedel-2024-solution-to-problems-2 fig-pos='H' fig-align="left"}
 
-\begin{dummyenv}
+\begin{natdummyenv}
 \nopagecolor
 \definecolor{ourblue}{HTML}{0070C0}
 $\displaystyle
@@ -425,7 +425,7 @@ $
     \node[inner sep=2pt,draw=ourblue,fit=(start) (end)] {};
   }
 \end{tikzpicture}
-\end{dummyenv}
+\end{natdummyenv}
 
 Solution to Exercise "Löb-Gödel Theorem"
 
