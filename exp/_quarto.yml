@@ -30,7 +30,7 @@ crossref:
 
 book:
   search:
-    location: navbar
+    location: sidebar
     type: overlay
     copy-button: true
   title: "Gödelian Explorations"
