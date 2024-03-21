@@ -1,0 +1,434 @@
+# Appendix {.unnumbered}
+
+:::: {.content-visible when-format="html"}
+::: {.wabullet .aside}
+- The responsive layout on mobile portrait might not be as polished; if content is overlapped thus unintelligible, please rotate device to landscape. **You might also wish to access the [pdf version](/gb.pdf) of this book.**
+:::
+::::
+
+## *Sachertorte* at Café Reichsrat
+
+:::: {.content-visible when-format="html"}
+::: {.opbullet .aside}
+- This webpage supports public and private annotations and comments (provided by [Hypothesis](https://hypothes.is/) and [Giscus](https://giscus.app/)). Feel free to share your work on it with the seminar!
+:::
+::::
+
+Classically, logic has been thought of as the study of *deductive proof*
+or *derivations*. In the last few decades, however, a more dynamic view
+of logical reasoning has emerged. Rational agents perform many cognitive
+reasoning tasks other than making deductions from a given set of
+premises. Common sense reasoning includes reasoning about the beliefs,
+knowledge, and logical reasoning of other agents. Reasoning is not just
+the construction of static derivations but dynamical events involving
+the flow of information based on public statements and inferences that
+can be made on the basis of what others know or don’t know. The
+following puzzle illustrates this usefulness of this kind of dynamic
+meta-epistemological reasoning.
+
+The date was August 26, 1930. Rudolf Carnap, Herbert Feigl and Friedrich
+Waismann met with Gödel for *Sachertore* and Viennese coffee at Café
+Reichsrat. Gödel was excited to share with his friends his discovery.
+This meeting a the café was about one month before the Second *Tagung
+for Erkentnishlehre der exackten Wissenschaften* to be held in
+Konigsberg in September, where Gödel would make the first public
+announcement of his revolutionary result, the (First) Incompleteness
+Theorem.
+
+::: {.column-margin}
+
+![](image1.png)
+
+:::
+
+Although his associates from the Vienna Circle—Rudolf, Herbert, and
+Friedrich—could sense an undercurrent of excitement in Kurt’s manner,
+his cautious and measured remarks were deeper than they could, or were
+willing, to grasp, at that time. Rudolf decided to change the subject.
+"When is your birthday, Kurt?" he inquired. Gödel thought for a moment
+and wrote down a napkin a list of 10 dates for all to see:
+
+::: {}
+
+| | | |
+|:-:|:-:|:-:|
+| January 14 | January 15 | January 18 |
+| March 14 | March 23 | |
+| April 18 | April 28 | |
+| May 15 | May 22 | May 28 |
+
+: {tbl-colwidths="[33,33,33]"}
+
+:::
+
+Kurt said, "My birthday is one of these." Then taking a couple more
+napkins, he jotted down the *month* of his birthday and gave it to
+Herbert. On the other he jotted down the *date* of his birthday and gave
+it to Friedrich. Neither Herbert nor Friedrich could see what was
+written on each other’s napkin.
+
+"Can you prove when my birthday is?" Kurt asked Herbert. The following
+conversation ensued.
+
+::: {}
+
+| | |
+|--:|:--|
+| [Herbert]{.smallcaps}: | I *don’t* *know* when your birthday is, but I *know* Friedrich *doesn’t know* either. |
+| [Friedrich]{.smallcaps}: | I *didn’t know* at first, but now I *do know*! |
+| [Herbert]{.smallcaps}: | Then I also *know* when Kurt’s birthday is! |
+
+: {tbl-colwidths="[10,90]"}
+
+:::
+
+[Rudolf]{.smallcaps}, who heard the exchange, correctly deduced Kurt’s birthday. How
+did he do this? You may assume everyone is an *ideal logician*: they are
+not lying or confused and are capable of making logically accurate
+inferences on the basis of the information disclosed.
+
+### Solution to the *Sachertore* at Café Reichsrat Puzzle
+
+First arrange the list of possible birthdays in a matrix by month and by
+day:
+
+```{=html}
+<table class="bordered">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+</colgroup>
+<tbody>
+<tr>
+<td rowspan="5" style="text-align: center; vertical-align: middle; color: #FF0000"><span class="smallcaps" style="color: #FF0000">Herbert</span></td>
+<td></td>
+<td colspan="6" style="text-align: center; color: #000090"><span class="smallcaps" style="">Friedrich</span></td>
+</tr>
+<tr>
+<td>January</td>
+<td>14</td>
+<td>15</td>
+<td>18</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>March</td>
+<td>14</td>
+<td></td>
+<td></td>
+<td></td>
+<td>23</td>
+<td></td>
+</tr>
+<tr>
+<td>April</td>
+<td></td>
+<td></td>
+<td>18</td>
+<td></td>
+<td></td>
+<td>28</td>
+</tr>
+<tr>
+<td>May</td>
+<td></td>
+<td>15</td>
+<td></td>
+<td>22</td>
+<td></td>
+<td>28</td>
+</tr>
+</tbody>
+</table>
+```
+
+Our first clue is that:
+
+> [Herbert]{.smallcaps} said, "I don’t know when your birthday is, but I know [Friedrich]{.smallcaps} doesn’t know either."
+
+[Herbert]{.smallcaps}, of course, doesn’t know since he’s only been given the month.
+However, Hebert’s *publicly announcing* that he *knows* that [Friedrich]{.smallcaps}
+doesn’t *know* gives everyone some new information.
+
+Rudolf *deduces* that Hebert has been given neither the months of March
+nor May. Why? Because each those months have unique dates, namely, 22
+and 23. If [Friedrich]{.smallcaps} had been given either of these dates, he would have
+been able immediately to deduce Kurt’s birthday. Since [Herbert]{.smallcaps} says he
+*knows* this is not the case, Rudolf can deduce that [Herbert]{.smallcaps} has *not*
+been given either March or May.
+
+```{=html}
+<table class="bordered">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+</colgroup>
+<tbody>
+<tr>
+<td rowspan="5" style="text-align: center; vertical-align: middle; color: #FF0000"><span class="smallcaps" style="color: #FF0000">Herbert</span></td>
+<td></td>
+<td colspan="6" style="text-align: center; color: #000090"><span class="smallcaps" style="">Friedrich</span></td>
+</tr>
+<tr>
+<td>January</td>
+<td>14</td>
+<td>15</td>
+<td>18</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="background-color: #E5B9B7">March</td>
+<td>14</td>
+<td></td>
+<td></td>
+<td></td>
+<td style="background-color: #E5B9B7">23</td>
+<td></td>
+</tr>
+<tr>
+<td>April</td>
+<td></td>
+<td></td>
+<td>18</td>
+<td></td>
+<td></td>
+<td>28</td>
+</tr>
+<tr>
+<td style="background-color: #E5B9B7">May</td>
+<td></td>
+<td>15</td>
+<td></td>
+<td style="background-color: #E5B9B7">22</td>
+<td></td>
+<td>28</td>
+</tr>
+</tbody>
+</table>
+```
+
+Our second clue is that:
+
+> [Friedrich]{.smallcaps} said, "I didn’t know originally, but now I do!"
+
+Since Friedrich says he now *knows* Kurt’s birthday, Rudolf may deduce
+that Friedrich has *not* been given the date of the 18<sup>th</sup>, the
+date is common to the months not yet been eliminated—January and April.
+
+```{=html}
+<table class="bordered">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+</colgroup>
+<tbody>
+<tr>
+<td rowspan="5" style="text-align: center; vertical-align: middle; color: #FF0000"><span class="smallcaps" style="color: #FF0000">Herbert</span></td>
+<td></td>
+<td colspan="6" style="text-align: center; color: #000090"><span class="smallcaps" style="">Friedrich</span></td>
+</tr>
+<tr>
+<td>January</td>
+<td>14</td>
+<td>15</td>
+<td style="background-color: #FABF8F">18</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="background-color: #E5B9B7">March</td>
+<td>14</td>
+<td></td>
+<td></td>
+<td></td>
+<td style="background-color: #E5B9B7">23</td>
+<td></td>
+</tr>
+<tr>
+<td>April</td>
+<td></td>
+<td></td>
+<td style="background-color: #FABF8F">18</td>
+<td></td>
+<td></td>
+<td>28</td>
+</tr>
+<tr>
+<td style="background-color: #E5B9B7">May</td>
+<td></td>
+<td>15</td>
+<td></td>
+<td style="background-color: #E5B9B7">22</td>
+<td></td>
+<td>28</td>
+</tr>
+</tbody>
+</table>
+```
+
+The last clue is that:
+
+> [Herbert]{.smallcaps} said, "Then I also know when Kurt’s birthday is!""
+
+Since Herbert now *knows* when Kurt’s birthday is too, the month given
+to Herbert cannot be January since in that case, *two* possible dates
+would been remaining *after* the 18th was eliminated.
+
+```{=html}
+<table class="bordered">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+</colgroup>
+<tbody>
+<tr>
+<td rowspan="5" style="text-align: center; vertical-align: middle; color: #FF0000"><span class="smallcaps" style="color: #FF0000">Herbert</span></td>
+<td></td>
+<td colspan="6" style="text-align: center; color: #000090"><span class="smallcaps" style="">Friedrich</span></td>
+</tr>
+<tr>
+<td style="background-color: #E5DFEC">January</td>
+<td>14</td>
+<td>15</td>
+<td style="background-color: #FABF8F">18</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="background-color: #E5B9B7">March</td>
+<td>14</td>
+<td></td>
+<td></td>
+<td></td>
+<td style="background-color: #E5B9B7">23</td>
+<td></td>
+</tr>
+<tr>
+<td>April</td>
+<td></td>
+<td></td>
+<td style="background-color: #FABF8F">18</td>
+<td></td>
+<td></td>
+<td>28</td>
+</tr>
+<tr>
+<td style="background-color: #E5B9B7">May</td>
+<td></td>
+<td>15</td>
+<td></td>
+<td style="background-color: #E5B9B7">22</td>
+<td></td>
+<td>28</td>
+</tr>
+</tbody>
+</table>
+```
+
+Having eliminated the months of May and June, and then the date of the
+18th and then the month of January, Rudolf deduces that Kurt’s birthday
+is April 28<sup>th</sup>.
+
+```{=html}
+<table class="bordered">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+</colgroup>
+<tbody>
+<tr>
+<td rowspan="5" style="text-align: center; vertical-align: middle; color: #FF0000"><span class="smallcaps" style="color: #FF0000">Herbert</span></td>
+<td></td>
+<td colspan="6" style="text-align: center; color: #000090"><span class="smallcaps" style="">Friedrich</span></td>
+</tr>
+<tr>
+<td style="background-color: #E5DFEC">January</td>
+<td>14</td>
+<td>15</td>
+<td style="background-color: #FABF8F">18</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="background-color: #E5B9B7">March</td>
+<td>14</td>
+<td></td>
+<td></td>
+<td></td>
+<td style="background-color: #E5B9B7">23</td>
+<td></td>
+</tr>
+<tr>
+<td style="background-color: #EBF1DD">April</td>
+<td></td>
+<td></td>
+<td style="background-color: #FABF8F">18</td>
+<td></td>
+<td></td>
+<td style="background-color: #EBF1DD">28</td>
+</tr>
+<tr>
+<td style="background-color: #E5B9B7">May</td>
+<td></td>
+<td>15</td>
+<td></td>
+<td style="background-color: #E5B9B7">22</td>
+<td></td>
+<td>28</td>
+</tr>
+</tbody>
+</table>
+```
+
+:::: {.column-margin}
+::: {.callout-tip}
+
+## N.B.
+
+Gödel’s birthday is actually April 28<sup>th</sup> (1906), and the
+date of his death is January 14<sup>th</sup> (1978). Einstein’s birthday
+is on March 14<sup>th</sup> (1879), a date which will be important for
+the beginning of the public recognition of Gödel’s achievements, and the
+date of his death is April 18<sup>th</sup> (1955), a date that will mark
+the beginning of Gödel’s increasing intellectual isolation at IAS. This
+puzzle is based on one published in the [*New York Times*](https://www.nytimes.com/2015/04/15/science/a-math-problem-from-singapore-goes-viral-when-is-cheryls-birthday.html).
+
+:::
+::::

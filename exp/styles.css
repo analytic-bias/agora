@@ -12,7 +12,7 @@
 
 .opbullet li::before {
     content: "✓";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
-    color: blue; /* Change the color */
+    color: green; /* Change the color */
     font-weight: bold; /* If you want it to be bold */
     display: inline-block; /* Needed to add space between the bullet and the text */
     width: 1.2em; /* Also needed for space (tweak if needed) */
