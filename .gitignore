@@ -5,3 +5,6 @@ exp/Gödelian-Explorations.tex
 exp/index.fdb_latexmk
 exp/**/*.svg
 expa/**
+exp/**/*.fdb_latexmk
+exp/**/*.fls
+exp/**/*.synctex.gz

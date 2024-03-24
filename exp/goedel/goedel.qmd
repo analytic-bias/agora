@@ -175,13 +175,13 @@ $$\square \varphi \rightarrow \square \square \varphi .$$
 \definecolor{ourblue}{HTML}{0070C0}
 $\displaystyle
 \begin{array}{rll}
-1.&\text{\textit{\st{Show}}}\;\square\varphi\to\square(\varphi\to(\square(\square\varphi\land\varphi)\to(\square\varphi\land\varphi)))&\\
+1.&\text{\textit{\st{Show}}}\;\square\varphi\to\square(\varphi\to(\square(\square\varphi\land\varphi)\to(\square\varphi\land\varphi)))&\\[\medskipamount]
 2.&\tikzmark{start1}\phantom{\text{\textit{\st{Show}}}\;}\square\varphi&\text{Assume (\rule{1cm}{0.15mm})}\\
 3.&\phantom{\text{\textit{\st{Show}}}\;}\square(\square(\square\varphi\land\varphi)\to\square\varphi\land\varphi)\to\square(\square\varphi\land\varphi)&\text{Axiom (L)}\\
-4.&\quad\text{\textit{\st{Show}}}\;\square(\varphi\to(\square(\square\varphi\land\varphi)\to(\square\varphi\land\varphi)))&\text{5, \rule{1cm}{0.15mm}}\\
-5.&\quad\tikzmark{start2}\quad\text{\textit{\st{Show}}}\;\varphi\to(\square(\square\varphi\land\varphi)\to(\square\varphi\land\varphi))&\text{7, \rule{1cm}{0.15mm}}\\
+4.&\quad\text{\textit{\st{Show}}}\;\square(\varphi\to(\square(\square\varphi\land\varphi)\to(\square\varphi\land\varphi)))&\text{5, \rule{1cm}{0.15mm}}\\[\medskipamount]
+5.&\quad\tikzmark{start2}\quad\text{\textit{\st{Show}}}\;\varphi\to(\square(\square\varphi\land\varphi)\to(\square\varphi\land\varphi))&\text{7, \rule{1cm}{0.15mm}}\\[\medskipamount]
 6.&\quad\quad\tikzmark{start3}\phantom{\text{\textit{\st{Show}}}\;}\varphi&\text{Assume (\rule{1cm}{0.15mm})}\\
-7.&\quad\quad\quad\text{\textit{\st{Show}}}\;\square(\square\varphi\land\varphi)\to\square\varphi\land\varphi&\text{11, \rule{1cm}{0.15mm}}\\
+7.&\quad\quad\quad\text{\textit{\st{Show}}}\;\square(\square\varphi\land\varphi)\to\square\varphi\land\varphi&\text{11, \rule{1cm}{0.15mm}}\\[\medskipamount]
 8.&\quad\quad\tikzmark{start4}\quad\phantom{\text{\textit{\st{Show}}}\;}\square(\square\varphi\land\varphi)&\text{Assume (\rule{1cm}{0.15mm})}\\
 9.&\quad\quad\quad\phantom{\text{\textit{\st{Show}}}\;}\square\square\varphi\land\square\varphi&\text{distribution}\,\square\big/{\land}\\
 10.&\quad\quad\quad\phantom{\text{\textit{\st{Show}}}\;}\square\varphi&\text{9, S}\\
@@ -218,11 +218,11 @@ $\displaystyle
 \begin{array}{rll}
 1.&\vdash\square\,\varphi\to\varphi&\text{Assumption (\textbf{T})}\\
 2.&\vdash\sigma\leftrightarrow(\square\sigma\to\varphi)&\text{G\"odel's Fixed-Point Theorem}\\
-3.&\quad\text{\textit{\st{Show}}}\;\varphi&\text{20, \rule{1cm}{0.15mm}}\\
-4.&\quad\tikzmark{start1}\quad\text{\textit{\st{Show}}}\;\square\sigma&\text{16, \rule{1cm}{0.15mm}}\\
-5.&\quad\quad\tikzmark{start2}\quad\text{\textit{\st{Show}}}\;\square\sigma\to\varphi&\text{14, \rule{1cm}{0.15mm}}\\
+3.&\quad\text{\textit{\st{Show}}}\;\varphi&\text{20, \rule{1cm}{0.15mm}}\\[\medskipamount]
+4.&\quad\tikzmark{start1}\quad\text{\textit{\st{Show}}}\;\square\sigma&\text{16, \rule{1cm}{0.15mm}}\\[\medskipamount]
+5.&\quad\quad\tikzmark{start2}\quad\text{\textit{\st{Show}}}\;\square\sigma\to\varphi&\text{14, \rule{1cm}{0.15mm}}\\[\medskipamount]
 6.&\quad\quad\quad\tikzmark{start3}\phantom{\text{\textit{\st{Show}}}\;}\square\sigma&\text{Assume (\rule{1cm}{0.15mm})}\\
-7.&\quad\quad\quad\quad\text{\textit{\st{Show}}}\;\square\,[\sigma\leftrightarrow(\square\sigma\to\varphi)]&\text{8, \rule{1cm}{0.15mm}}\\
+7.&\quad\quad\quad\quad\text{\textit{\st{Show}}}\;\square\,[\sigma\leftrightarrow(\square\sigma\to\varphi)]&\text{8, \rule{1cm}{0.15mm}}\\[\medskipamount]
 8.&\quad\quad\quad\quad\tikzmark{start4}\phantom{\text{\textit{\st{Show}}}\;}\sigma\leftrightarrow(\square\sigma\to\varphi)&\tikzmark{end4}\text{2, G\"odel's Fixed-Point Theorem}\\
 9.&\quad\quad\quad\phantom{\text{\textit{\st{Show}}}\;}\square\sigma\to\square(\square\sigma\to\varphi)&\text{7, T81, IE, MD, S, Axiom (K), MP}\\
 10.&\quad\quad\quad\phantom{\text{\textit{\st{Show}}}\;}\square(\square\sigma\to\varphi)&\text{9, 6, \rule{1cm}{0.15mm}}\\
@@ -351,13 +351,13 @@ Since $\textcolor{red}{{\sim}\square{}(1=2)}$, by definition, is $\textcolor{blu
 \definecolor{ourblue}{HTML}{0070C0}
 $\displaystyle
 \begin{array}{rll}
-1.&\text{\textit{\st{Show}}}\;\square\varphi\to\square(\varphi\to(\square(\square\varphi\land\varphi)\to(\square\varphi\land\varphi)))&\text{3, CD}\\
+1.&\text{\textit{\st{Show}}}\;\square\varphi\to\square(\varphi\to(\square(\square\varphi\land\varphi)\to(\square\varphi\land\varphi)))&\text{3, CD}\\[\medskipamount]
 2.&\tikzmark{start1}\phantom{\text{\textit{\st{Show}}}\;}\square\varphi&\text{Assume (CD)}\\
 3.&\phantom{\text{\textit{\st{Show}}}\;}\square(\square(\square\varphi\land\varphi)\to\square\varphi\land\varphi)\to\square(\square\varphi\land\varphi)&\text{Axiom (L)}\\
-4.&\quad\text{\textit{\st{Show}}}\;\square(\varphi\to(\square(\square\varphi\land\varphi)\to(\square\varphi\land\varphi)))&\text{5, ND}\\
-5.&\quad\tikzmark{start2}\quad\text{\textit{\st{Show}}}\;\varphi\to(\square(\square\varphi\land\varphi)\to(\square\varphi\land\varphi))&\text{7, CD}\\
+4.&\quad\text{\textit{\st{Show}}}\;\square(\varphi\to(\square(\square\varphi\land\varphi)\to(\square\varphi\land\varphi)))&\text{5, ND}\\[\medskipamount]
+5.&\quad\tikzmark{start2}\quad\text{\textit{\st{Show}}}\;\varphi\to(\square(\square\varphi\land\varphi)\to(\square\varphi\land\varphi))&\text{7, CD}\\[\medskipamount]
 6.&\quad\quad\tikzmark{start3}\phantom{\text{\textit{\st{Show}}}\;}\varphi&\text{Assume (CD)}\\
-7.&\quad\quad\quad\text{\textit{\st{Show}}}\;\square(\square\varphi\land\varphi)\to\square\varphi\land\varphi&\text{11, CD}\\
+7.&\quad\quad\quad\text{\textit{\st{Show}}}\;\square(\square\varphi\land\varphi)\to\square\varphi\land\varphi&\text{11, CD}\\[\medskipamount]
 8.&\quad\quad\tikzmark{start4}\quad\phantom{\text{\textit{\st{Show}}}\;}\square(\square\varphi\land\varphi)&\text{Assume (CD)}\\
 9.&\quad\quad\quad\phantom{\text{\textit{\st{Show}}}\;}\square\square\varphi\land\square\varphi&\text{8, (\textbf{K}), MP}\\
 10.&\quad\quad\quad\phantom{\text{\textit{\st{Show}}}\;}\square\varphi&\text{9, S}\\
@@ -391,11 +391,11 @@ $\displaystyle
 \begin{array}{rll}
 1.&\vdash\square\,\varphi\to\varphi&\text{Assumption (\textbf{T})}\\
 2.&\vdash\sigma\leftrightarrow(\square\sigma\to\varphi)&\text{G\"odel's Fixed-Point Theorem}\\
-3.&\quad\text{\textit{\st{Show}}}\;\varphi&\text{20, DD}\\
-4.&\quad\tikzmark{start1}\quad\text{\textit{\st{Show}}}\;\square\sigma&\text{16, ND}\\
-5.&\quad\quad\tikzmark{start2}\quad\text{\textit{\st{Show}}}\;\square\sigma\to\varphi&\text{14, CD}\\
+3.&\quad\text{\textit{\st{Show}}}\;\varphi&\text{20, DD}\\[\medskipamount]
+4.&\quad\tikzmark{start1}\quad\text{\textit{\st{Show}}}\;\square\sigma&\text{16, ND}\\[\medskipamount]
+5.&\quad\quad\tikzmark{start2}\quad\text{\textit{\st{Show}}}\;\square\sigma\to\varphi&\text{14, CD}\\[\medskipamount]
 6.&\quad\quad\quad\tikzmark{start3}\phantom{\text{\textit{\st{Show}}}\;}\square\sigma&\text{Assume (CD)}\\
-7.&\quad\quad\quad\quad\text{\textit{\st{Show}}}\;\square\,[\sigma\leftrightarrow(\square\sigma\to\varphi)]&\text{8, ND}\\
+7.&\quad\quad\quad\quad\text{\textit{\st{Show}}}\;\square\,[\sigma\leftrightarrow(\square\sigma\to\varphi)]&\text{8, ND}\\[\medskipamount]
 8.&\quad\quad\quad\quad\tikzmark{start4}\phantom{\text{\textit{\st{Show}}}\;}\sigma\leftrightarrow(\square\sigma\to\varphi)&\tikzmark{end4}\text{2, G\"odel's Fixed-Point Theorem}\\
 9.&\quad\quad\quad\phantom{\text{\textit{\st{Show}}}\;}\square\sigma\to\square(\square\sigma\to\varphi)&\text{7, T81, IE, MD, S, Axiom (K), MP}\\
 10.&\quad\quad\quad\phantom{\text{\textit{\st{Show}}}\;}\square(\square\sigma\to\varphi)&\text{9, 6, MP}\\
