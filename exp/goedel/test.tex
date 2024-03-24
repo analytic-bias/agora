@@ -20,20 +20,32 @@
 \begin{dummyenv}
 \nopagecolor
 \definecolor{ourblue}{HTML}{0070C0}
-\usetikzlibrary{positioning}
-\begin{tikzpicture}
-  \node (outer) [draw, minimum width=3cm, minimum height=3.5cm, align=center] {
-    $\boxed{P \to Q} \to \boxed{\neg P \to \neg Q}$ \\
-    \textbf{Show Q}
-  };
-  \node (inner1) [draw, minimum width=2.5cm, minimum height=1.5cm, align=center, below=5mm of outer] {
-    \textbf{Show \( P \to Q \)}
-  };
-  \node (inner2) [draw, minimum width=2.5cm, minimum height=1.5cm, align=center, right=5mm of inner1] {
-    \textbf{Show P}
-  };
-  \node at (inner1) [draw, minimum width=2cm, minimum height=1cm] {};
-  \node at (inner2) [draw, minimum width=2cm, minimum height=1cm] {};
+$\displaystyle
+\begin{array}{rll}
+1.&\text{\textit{\st{Show}}}\;\square\varphi\to\square(\varphi\to(\square(\square\varphi\land\varphi)\to(\square\varphi\land\varphi)))&\\[\medskipamount]
+2.&\tikzmark{start1}\phantom{\text{\textit{\st{Show}}}\;}\square\varphi&\text{Assume (\rule{1cm}{0.15mm})}\\
+3.&\phantom{\text{\textit{\st{Show}}}\;}\square(\square(\square\varphi\land\varphi)\to\square\varphi\land\varphi)\to\square(\square\varphi\land\varphi)&\text{Axiom (L)}\\
+4.&\quad\text{\textit{\st{Show}}}\;\square(\varphi\to(\square(\square\varphi\land\varphi)\to(\square\varphi\land\varphi)))&\text{5, \rule{1cm}{0.15mm}}\\[\medskipamount]
+5.&\quad\tikzmark{start2}\quad\text{\textit{\st{Show}}}\;\varphi\to(\square(\square\varphi\land\varphi)\to(\square\varphi\land\varphi))&\text{7, \rule{1cm}{0.15mm}}\\[\medskipamount]
+6.&\quad\quad\tikzmark{start3}\phantom{\text{\textit{\st{Show}}}\;}\varphi&\text{Assume (\rule{1cm}{0.15mm})}\\
+7.&\quad\quad\quad\text{\textit{\st{Show}}}\;\square(\square\varphi\land\varphi)\to\square\varphi\land\varphi&\text{11, \rule{1cm}{0.15mm}}\\[\medskipamount]
+8.&\quad\quad\tikzmark{start4}\quad\phantom{\text{\textit{\st{Show}}}\;}\square(\square\varphi\land\varphi)&\text{Assume (\rule{1cm}{0.15mm})}\\
+9.&\quad\quad\quad\phantom{\text{\textit{\st{Show}}}\;}\square\square\varphi\land\square\varphi&\text{distribution}\,\square\big/{\land}\\
+10.&\quad\quad\quad\phantom{\text{\textit{\st{Show}}}\;}\square\varphi&\text{9, S}\\
+11.&\quad\quad\quad\phantom{\text{\textit{\st{Show}}}\;}\square\varphi\land\varphi&\tikzmark{end4}\tikzmark{end3}\tikzmark{end2}\tikzmark{end1}\text{10, 6 ADJ}
+\end{array}
+$
+\begin{tikzpicture}[remember picture,overlay]
+  \coordinate (start1) at ([xshift=1ex,yshift=1.6ex]pic cs:start1);
+  \coordinate (end1) at ([xshift=-1.5ex,yshift=-0.5ex]pic cs:end1);
+  \node[inner sep=2pt,draw=ourblue,fit=(start1) (end1)] {};
+  
+  \foreach \i in {2,...,4} {
+    \coordinate (start) at ([xshift=1ex,yshift=1.6ex]pic cs:start\i);
+    \coordinate (e\i) at ([xshift=-1ex,yshift=-0.5ex]pic cs:end\i);
+    \path let \p1 = (e\i), \p2 = (end1) in coordinate (end) at (\x2,\y1);
+    \node[inner sep=2pt,draw=ourblue,fit=(start) (end)] {};
+  }
 \end{tikzpicture}
 \end{dummyenv}
 \end{document}
