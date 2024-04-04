@@ -11,7 +11,7 @@ filters:
   - extensions/after.lua
 bibliography:
   - references.bib
-  - /home/hypatia/Workspace/Library/zotero.bib
+  # - /home/hypatia/Workspace/Library/zotero.bib
 csl: glossa.csl
 pdf-engine: xelatex
 reference-location: margin

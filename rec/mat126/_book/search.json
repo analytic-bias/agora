@@ -40,11 +40,21 @@
     ]
   },
   {
+    "objectID": "w13t14.html",
+    "href": "w13t14.html",
+    "title": "1  Week 13–14",
+    "section": "",
+    "text": "1.1 HW 10.7 - SCalcCC5 6.2.014.\nConsider the solid obtained by rotating the region bounded by the given curves about the line \\(y = 3\\). \\[y=\\underbrace{3x}_{\\substack{f_1(x)\\\\\\uparrow\\\\\\text{outer}}}\\quad y=\\underbrace{3\\sqrt{x}}_{\\substack{f_2(x)\\\\\\uparrow\\\\\\text{inner}}}\\] Find the volume V of this solid.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Week 13--14</span>"
+    ]
+  },
+  {
     "objectID": "w13t14.html#sec-hw10d7",
     "href": "w13t14.html#sec-hw10d7",
     "title": "1  Week 13–14",
-    "section": "1.1 HW 10.7 - SCalcCC5 6.2.014.",
-    "text": "1.1 HW 10.7 - SCalcCC5 6.2.014.\nConsider the solid obtained by rotating the region bounded by the given curves about the line \\(y = 3\\). \\[y=\\underbrace{3x}_{\\substack{f_1(x)\\\\\\uparrow\\\\\\text{outer}}}\\quad y=\\underbrace{3\\sqrt{x}}_{\\substack{f_2(x)\\\\\\uparrow\\\\\\text{inner}}}\\] Find the volume V of this solid.\n\n1.1.1 Solution\nRecall that the area of the annulus at \\(x\\) (where \\(0\\leq x\\leq1\\)) is \\[A(x)=\\pi\\big[f_1(x)-y_0\\big]^2-\\pi\\big[f_2(x)-y_0\\big]^2\\] and that the volume is \\[V=\\int_a^bA(x)\\,\\mathrm{d}x,\\] which in our case are\n\n\\[\n\\begin{aligned}\nA(x)&=\\pi(3 x-3)^2-\\pi(3 \\sqrt{x}-3)^2 \\\\\n& =9 \\pi\\left[\\left(1-2 x+x^2\\right)-(1-2 \\sqrt{x}+x)\\right] \\\\\n& =9 \\pi\\left(-3 x+x^2+2 \\sqrt{x}\\right)\\text{; and}\\\\\\\\\nV&=\\int_0^{1} A(x)\\,\\mathrm{d}x\\class{alref}{\\cssId{alref1}{}}\\\\\n&=9 \\pi \\int_0^1\\left(-3 x+x^2+2 \\sqrt{x}\\right)\\,\\mathrm{d}x\\\\\n& =9 \\pi\\left[-\\frac{3}{2} x^2+\\frac{1}{3} x^3+\\frac{4}{3} x^{3 / 2}\\right]_0^1\\\\\n&=9 \\pi\\left(-\\frac{3}{2}+\\frac{5}{3}\\right)=\\frac{3}{2} \\pi.\n\\end{aligned}\n\\]\n\n\n\nWebAssign’s solution has a typo on this line.\n\n\n\n\n\n1.1.2 Sketch\nSketch the region, the solid, and a typical disk or washer. (Do this on paper. Your instructor may ask you to turn in this work.) Mathematicians usually call them annuli (sing. annulus), not washers.\n\n\n\n\n\n\n                                                \n\n\n\n\n\n\n\nPlot of \\(y=3x\\) and \\(y=3\\sqrt{x}\\) with area between curves from \\(x=0\\) to \\(x=1\\)\n\n\n\n\n\n\n\nFigure 1.1: Figures for HW 10.7 - SCalcCC5 6.2.014.",
+    "section": "",
+    "text": "1.1.1 Solution\nRecall that the area of the annulus at \\(x\\) (where \\(0\\leq x\\leq1\\)) is \\[A(x)=\\pi\\big[f_1(x)-y_0\\big]^2-\\pi\\big[f_2(x)-y_0\\big]^2\\] and that the volume is \\[V=\\int_a^bA(x)\\,\\mathrm{d}x,\\] which in our case are\n\n\\[\n\\begin{aligned}\nA(x)&=\\pi(3 x-3)^2-\\pi(3 \\sqrt{x}-3)^2 \\\\\n& =9 \\pi\\left[\\left(1-2 x+x^2\\right)-(1-2 \\sqrt{x}+x)\\right] \\\\\n& =9 \\pi\\left(-3 x+x^2+2 \\sqrt{x}\\right)\\text{; and}\\\\\\\\\nV&=\\int_0^{1} A(x)\\,\\mathrm{d}x\\class{alref}{\\cssId{alref1}{}}\\\\\n&=9 \\pi \\int_0^1\\left(-3 x+x^2+2 \\sqrt{x}\\right)\\,\\mathrm{d}x\\\\\n& =9 \\pi\\left[-\\frac{3}{2} x^2+\\frac{1}{3} x^3+\\frac{4}{3} x^{3 / 2}\\right]_0^1\\\\\n&=9 \\pi\\left(-\\frac{3}{2}+\\frac{5}{3}\\right)=\\frac{3}{2} \\pi.\n\\end{aligned}\n\\]\n\n\n\nWebAssign’s solution has a typo on this line.\n\n\n\n\n\n1.1.2 Sketch\nSketch the region, the solid, and a typical disk or washer. (Do this on paper. Your instructor may ask you to turn in this work.) Mathematicians usually call them annuli (sing. annulus), not washers.\n\n\n\n\n\n\n                                                \n\n\n\n\n&lt;&gt;:19: SyntaxWarning:\n\ninvalid escape sequence '\\s'\n\n&lt;&gt;:19: SyntaxWarning:\n\ninvalid escape sequence '\\s'\n\n/var/folders/c0/4qrqlv397jv6hb07vk8nx63r0000gn/T/ipykernel_19859/3307894159.py:19: SyntaxWarning:\n\ninvalid escape sequence '\\s'\n\n\n\n\n\n\nPlot of \\(y=3x\\) and \\(y=3\\sqrt{x}\\) with area between curves from \\(x=0\\) to \\(x=1\\)\n\n\n\n\n\n\n\nFigure 1.1: Figures for HW 10.7 - SCalcCC5 6.2.014.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Week 13--14</span>"
     ]
@@ -54,7 +64,7 @@
     "href": "w13t14.html#sec-hw10d10",
     "title": "1  Week 13–14",
     "section": "1.2 HW 10.10 - SCalcCC5 6.3.025.",
-    "text": "1.2 HW 10.10 - SCalcCC5 6.3.025.\n\nConsider the following. \\[\nx=4 \\sqrt{\\sin (y)}, \\quad 0 \\leq y \\leq \\pi, \\quad x=0;\\quad \\text { about } y=4\n\\]\n\n1.2.1 (a)\nSet up an integral for the volume of the solid obtained by rotating the region bounded by the given curve about the specified axis.\n\n1.2.1.1 Solution\n\n\\[\n\\begin{aligned}\n\\class{alref}{\\cssId{alref2}{\\phantom{.}}}\nA(y)&=\\underbrace{2\\pi(4-y)}_{\\text{circumference}} \\cdot \\underbrace{4\\sqrt{\\sin (y)}}_{\\text{height}},\\,\\text{and thus}\\\\\nV&=\\int_0^{\\pi} 2 \\pi(4-y) 4 \\sqrt{\\sin (y)}\\,\\mathrm{d}y.\\\\\\\\\n\\end{aligned}\n\\]\n\n\n\\(\\leftarrow\\) area of the red cylinder at y\n\nWhen to use cylindrical shells or annuli?\n\nthe line around which the region is rotated is parallel to the axis of the independent variable \\(\\rightarrow\\) annuli (Section 1.1);\nthe line is orthogonal to the axis \\(\\rightarrow\\) cylinders (Section 1.2).\n\n\n\n\n\n\n\n\n\n                                                \n\n\n\n\n\n\n\nPlot of \\(x=4\\sqrt{\\sin y}\\) and \\(y=4\\) with area between curves from \\(y=0\\) to \\(y=\\pi\\)\n\n\n\n\n\n\n\nFigure 1.2: Figures for HW 10.10 - SCalcCC5 6.3.025.\n\n\n\n\n\n\n1.2.2 (b)\nUse technology to evaluate the integral. (Round your answer to four decimal places.)\n\n1.2.2.1 Solution\nFor the numerical integration, we can use scipy:\n\n\n\nThe anti-derivative is non-elementary. If you’re really curious, you can start from here; you may notice that it will be much more complicated than the \\(x^n\\tan x\\) some of you asked a while ago.\n\n\nimport numpy\nimport scipy\nround(scipy.integrate.quad(lambda y:\n  2 * numpy.pi * (4 - y) *\n    4 * numpy.sqrt(numpy.sin(y)),\n  0, numpy.pi)[0],\n4)\n\n146.299\n\n\nor whatever “technology” you’d prefer.",
+    "text": "1.2 HW 10.10 - SCalcCC5 6.3.025.\n\nConsider the following. \\[\nx=4 \\sqrt{\\sin (y)}, \\quad 0 \\leq y \\leq \\pi, \\quad x=0;\\quad \\text { about } y=4\n\\]\n\n1.2.1 (a)\nSet up an integral for the volume of the solid obtained by rotating the region bounded by the given curve about the specified axis.\n\n1.2.1.1 Solution\n\n\\[\n\\begin{aligned}\n\\class{alref}{\\cssId{alref2}{\\phantom{.}}}\nA(y)&=\\underbrace{2\\pi(4-y)}_{\\text{circumference}} \\cdot \\underbrace{4\\sqrt{\\sin (y)}}_{\\text{height}},\\,\\text{and thus}\\\\\nV&=\\int_0^{\\pi} 2 \\pi(4-y) 4 \\sqrt{\\sin (y)}\\,\\mathrm{d}y.\\\\\\\\\n\\end{aligned}\n\\]\n\n\n\\(\\leftarrow\\) area of the red cylinder at y\n\nWhen to use cylindrical shells or annuli?\n\nthe line around which the region is rotated is parallel to the axis of the independent variable \\(\\rightarrow\\) annuli (Section 1.1);\nthe line is orthogonal to the axis \\(\\rightarrow\\) cylinders (Section 1.2).\n\n\n\n\n\n\n\n\n\n                                                \n\n\n\n\n&lt;&gt;:19: SyntaxWarning:\n\ninvalid escape sequence '\\s'\n\n&lt;&gt;:19: SyntaxWarning:\n\ninvalid escape sequence '\\s'\n\n/var/folders/c0/4qrqlv397jv6hb07vk8nx63r0000gn/T/ipykernel_19859/3086083812.py:19: SyntaxWarning:\n\ninvalid escape sequence '\\s'\n\n\n\n\n\n\nPlot of \\(x=4\\sqrt{\\sin y}\\) and \\(y=4\\) with area between curves from \\(y=0\\) to \\(y=\\pi\\)\n\n\n\n\n\n\n\nFigure 1.2: Figures for HW 10.10 - SCalcCC5 6.3.025.\n\n\n\n\n\n\n1.2.2 (b)\nUse technology to evaluate the integral. (Round your answer to four decimal places.)\n\n1.2.2.1 Solution\nFor the numerical integration, we can use scipy:\n\n\n\nThe anti-derivative is non-elementary. If you’re really curious, you can start from here; you may notice that it will be much more complicated than the \\(x^n\\tan x\\) some of you asked a while ago.\n\n\nimport numpy\nimport scipy\nround(scipy.integrate.quad(lambda y:\n  2 * numpy.pi * (4 - y) *\n    4 * numpy.sqrt(numpy.sin(y)),\n  0, numpy.pi)[0],\n4)\n\n146.299\n\n\nor whatever “technology” you’d prefer.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Week 13--14</span>"
     ]
@@ -100,11 +110,21 @@
     ]
   },
   {
+    "objectID": "w15.html",
+    "href": "w15.html",
+    "title": "2  Week 15",
+    "section": "",
+    "text": "2.1 HW12.4 - SCalcCC5 1.6.010.\nConsider the parametric equations below. \\[\nx = t^2,\\quad y = t^5\n\\]",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Week 15</span>"
+    ]
+  },
+  {
     "objectID": "w15.html#hw12.4---scalccc5-1.6.010.",
     "href": "w15.html#hw12.4---scalccc5-1.6.010.",
     "title": "2  Week 15",
-    "section": "2.1 HW12.4 - SCalcCC5 1.6.010.",
-    "text": "2.1 HW12.4 - SCalcCC5 1.6.010.\nConsider the parametric equations below. \\[\nx = t^2,\\quad y = t^5\n\\]\n\n2.1.1 (a)\nSketch the curve by using the parametric equations to plot points. Indicate with an arrow the direction in which the curve is traced as t increases.\n\n\n\nTo help with sketching, you might want to observe that the tangent line at a point on the parametric curve where \\(t=t_0\\) is determined by its tangent vector, i.e. a line passing through the points \\(\\big(x(t_0),y(t_0)\\big)\\) and \\(\\big(x(t_0)+x'(t_0),y(t_0)+y'(t_0)\\big)\\).\n\n\n2.1.1.1 Solution\nThe left plot is animated.\n\n\n\n\n\n\n                                                \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 2.1: Plot of algebraic curve given by \\(x=t^2\\) and \\(y=t^5\\) from \\(t=-1\\) to \\(t=1\\)\n\n\n\n\n\n\n2.1.2 (b)\nEliminate the parameter to find a Cartesian equation of the curve.\n\n2.1.2.1 Solution\n\n\\[\n\\begin{aligned}\n&y=t^5 \\Rightarrow t=\\sqrt[5]{y}=y^{1/5}\\\\\n\\Rightarrow\\,&x=t^2=(y^{1/5})^2=y^{2 / 5}\n\\end{aligned}\n\\]\n\n\n\nYou might (or might not…) want to know that the singularity at \\((0,0)\\) is called a cusp, or even read a bit more on algebraic curves.",
+    "section": "",
+    "text": "2.1.1 (a)\nSketch the curve by using the parametric equations to plot points. Indicate with an arrow the direction in which the curve is traced as t increases.\n\n\n\nTo help with sketching, you might want to observe that the tangent line at a point on the parametric curve where \\(t=t_0\\) is determined by its tangent vector, i.e. a line passing through the points \\(\\big(x(t_0),y(t_0)\\big)\\) and \\(\\big(x(t_0)+x'(t_0),y(t_0)+y'(t_0)\\big)\\).\n\n\n2.1.1.1 Solution\nThe left plot is animated.\n\n\n\n\n\n\n                                                \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 2.1: Plot of algebraic curve given by \\(x=t^2\\) and \\(y=t^5\\) from \\(t=-1\\) to \\(t=1\\)\n\n\n\n\n\n\n2.1.2 (b)\nEliminate the parameter to find a Cartesian equation of the curve.\n\n2.1.2.1 Solution\n\n\\[\n\\begin{aligned}\n&y=t^5 \\Rightarrow t=\\sqrt[5]{y}=y^{1/5}\\\\\n\\Rightarrow\\,&x=t^2=(y^{1/5})^2=y^{2 / 5}\n\\end{aligned}\n\\]\n\n\n\nYou might (or might not…) want to know that the singularity at \\((0,0)\\) is called a cusp, or even read a bit more on algebraic curves.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Week 15</span>"
     ]
@@ -150,11 +170,21 @@
     ]
   },
   {
+    "objectID": "w16.html",
+    "href": "w16.html",
+    "title": "3  Week 16",
+    "section": "",
+    "text": "3.1 Riemann Sum and Arc Length of Polar Curves [In Progress]\nLast time I wasn’t able to answer this so let’s try again this time.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Week 16</span>"
+    ]
+  },
+  {
     "objectID": "w16.html#riemann-sum-and-arc-length-of-polar-curves-in-progress",
     "href": "w16.html#riemann-sum-and-arc-length-of-polar-curves-in-progress",
     "title": "3  Week 16",
-    "section": "3.1 Riemann Sum and Arc Length of Polar Curves [In Progress]",
-    "text": "3.1 Riemann Sum and Arc Length of Polar Curves [In Progress]\nLast time I wasn’t able to answer this so let’s try again this time.\n\n\n\n\n\n\n\n\n\n\n\n\\[\n\\begin{aligned}\nL&=\\int_a^b \\sqrt{r^2+\\left(\\frac{d r}{d \\theta}\\right)^2}\\,\\mathrm{d}\\theta\\\\\n&=\\lim_{n\\to\\infty}\\sum_{i=1}^n\\left(\\sqrt{r(\\theta_i)^2+r'(\\theta_i)^2}\\cdot\\Delta\\theta\\right)\n\\end{aligned}\n\\]\nTODO",
+    "section": "",
+    "text": "\\[\n\\begin{aligned}\nL&=\\int_a^b \\sqrt{r^2+\\left(\\frac{d r}{d \\theta}\\right)^2}\\,\\mathrm{d}\\theta\\\\\n&=\\lim_{n\\to\\infty}\\sum_{i=1}^n\\left(\\sqrt{r(\\theta_i)^2+r'(\\theta_i)^2}\\cdot\\Delta\\theta\\right)\n\\end{aligned}\n\\]\nTODO",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Week 16</span>"
     ]
@@ -164,7 +194,7 @@
     "href": "w16.html#hw14.3---wacalctutbanklt1-7.5.003c.tut.",
     "title": "3  Week 16",
     "section": "3.2 HW14.3 - WACalcTutBankLT1 7.5.003c.Tut.",
-    "text": "3.2 HW14.3 - WACalcTutBankLT1 7.5.003c.Tut.\nCompute the surface area obtained by rotating the curve \\(y = \\sqrt[3]{x}\\), for \\(x\\in [1, 125]\\) about the y-axis.\n\n3.2.1 Solution\nSince the function is bijective within the domain, let us consider again \\[\\left\\{\\begin{aligned}\ny &= \\sqrt[3]{x}\\\\\nx &\\in [1, 125]\n\\end{aligned}\\right.\\;\\implies\\;\\left\\{\\begin{aligned}\nx&=y^3\\\\\ny&\\in [1,5]\n\\end{aligned}\\right.\\] by taking the inverse (i.e. swapping the variable \\(x\\) and \\(y\\) as before).\n\n\n\nSection 4.3\n\nNow one may use the integral\n\n\\[\n\\begin{aligned}\nA&=\\int_1^5 \\underbrace{2\\pi x(y)}_{\\text{circumference}} \\cdot \\underbrace{\\sqrt{1+x'(y)^2}}_{\\text{\\color{orange}height}\\class{alref}{\\cssId{alref1}{}}}\\,\\mathrm{d}y\\\\\n&=\\cdots=\\frac{(-10 \\sqrt{10} + 5626 \\sqrt{5626}) \\cdot \\pi}{27},\n\\end{aligned}\n\\]\n\n\n\nIf you’re curious about the height part being an arc length, or that the band in the widget is a cone section instead of a cylinder, recall the discussion we had about Schwarz’s Lantern in Section 1.6.1.\n\n\nas demonstrated by the plot and widget below.",
+    "text": "3.2 HW14.3 - WACalcTutBankLT1 7.5.003c.Tut.\nCompute the surface area obtained by rotating the curve \\(y = \\sqrt[3]{x}\\), for \\(x\\in [1, 125]\\) about the y-axis.\n\n3.2.1 Solution\nSince the function is bijective within the domain, let us consider again \\[\\left\\{\\begin{aligned}\ny &= \\sqrt[3]{x}\\\\\nx &\\in [1, 125]\n\\end{aligned}\\right.\\;\\implies\\;\\left\\{\\begin{aligned}\nx&=y^3\\\\\ny&\\in [1,5]\n\\end{aligned}\\right.\\] by taking the inverse (i.e. swapping the variable \\(x\\) and \\(y\\) as before).\n\n\n\nSection 4.3\n\nNow one may use the integral\n\n\\[\n\\begin{aligned}\nA&=\\int_1^5 \\underbrace{2\\pi x(y)}_{\\text{circumference}} \\cdot \\underbrace{\\sqrt{1+x'(y)^2}}_{\\text{\\color{orange}height}\\class{alref}{\\cssId{alref1}{}}}\\,\\mathrm{d}y\\\\\n&=\\cdots=\\frac{(-10 \\sqrt{10} + 5626 \\sqrt{5626}) \\cdot \\pi}{27},\n\\end{aligned}\n\\]\n\n\n\nIf you’re curious about the height part being an arc length, or that the band in the widget is a cone section instead of a cylinder, recall the discussion we had about Schwarz’s Lantern in Section 1.6.1.\n\n\nas demonstrated by the plot and widget below.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Week 16</span>"
     ]
@@ -174,17 +204,27 @@
     "href": "w16.html#bijective-functions-inverses-and-change-of-coordinate-system",
     "title": "3  Week 16",
     "section": "3.3 Bijective Functions, Inverses, and Change of Coordinate System",
-    "text": "3.3 Bijective Functions, Inverses, and Change of Coordinate System\nThis was asked multiple times in my MLC, so I’d also like to discuss a bit about it: Section 4.3.",
+    "text": "3.3 Bijective Functions, Inverses, and Change of Coordinate System\nThis was asked multiple times in my MLC, so I’d also like to discuss a bit about it: Section 4.3.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Week 16</span>"
+    ]
+  },
+  {
+    "objectID": "ex.html",
+    "href": "ex.html",
+    "title": "4  Optional Excursions",
+    "section": "",
+    "text": "4.1 Euler’s Formula and Trigonometric Identities\nRecall Euler’s formula 1 \\[\ne^{i x}=\\cos x+i \\sin x\n\\] where \\(i=\\sqrt{-1}\\).\nSo for example, to derive the double-angle formula for cosine used above, redefine 2 \\[\n\\cos (x)=\\frac{e^{i x}+e^{-i x}}{2}\n\\] with the Euler’s formula, and write \\[\n\\cos ^2(\\theta)=\\frac{e^{2 i \\theta}+2+e^{-2 i \\theta}}{4}\\quad\\text{and}\\quad\\cos (2 \\theta)=\\frac{e^{2 i \\theta}+e^{-2 i \\theta}}{2};\n\\] which, via algebraic manipulations, gives \\[\\cos (2 \\theta)=2 \\cos ^2 \\theta-1,\\] as desired.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Optional Excursions</span>"
     ]
   },
   {
     "objectID": "ex.html#sec-exeulertrigid",
     "href": "ex.html#sec-exeulertrigid",
     "title": "4  Optional Excursions",
-    "section": "4.1 Euler’s Formula and Trigonometric Identities",
-    "text": "4.1 Euler’s Formula and Trigonometric Identities\nRecall Euler’s formula 1 \\[\ne^{i x}=\\cos x+i \\sin x\n\\] where \\(i=\\sqrt{-1}\\).\n1 The reason this formula makes sense amounts to the analytic continuation of the exponential function, which is definitely not a required topic of calculus courses; you can refer to common complex analysis textbooks if so interested. The main ingredient of the proof is the power series expansion of the exponential function.2 Recall that \\[\\operatorname{Re}(z)=\\frac{z+\\bar{z}}{2} \\quad \\text { and } \\quad \\operatorname{Im}(z)=\\frac{z-\\bar{z}}{2 i},\\] where \\(\\bar{z}\\) denotes the complex conjugate of \\(z\\).So for example, to derive the double-angle formula for cosine used above, redefine 2 \\[\n\\cos (x)=\\frac{e^{i x}+e^{-i x}}{2}\n\\] with the Euler’s formula, and write \\[\n\\cos ^2(\\theta)=\\frac{e^{2 i \\theta}+2+e^{-2 i \\theta}}{4}\\quad\\text{and}\\quad\\cos (2 \\theta)=\\frac{e^{2 i \\theta}+e^{-2 i \\theta}}{2};\n\\] which, via algebraic manipulations, gives \\[\\cos (2 \\theta)=2 \\cos ^2 \\theta-1,\\] as desired.",
+    "section": "",
+    "text": "1 The reason this formula makes sense amounts to the analytic continuation of the exponential function, which is definitely not a required topic of calculus courses; you can refer to common complex analysis textbooks if so interested. The main ingredient of the proof is the power series expansion of the exponential function.2 Recall that \\[\\operatorname{Re}(z)=\\frac{z+\\bar{z}}{2} \\quad \\text { and } \\quad \\operatorname{Im}(z)=\\frac{z-\\bar{z}}{2 i},\\] where \\(\\bar{z}\\) denotes the complex conjugate of \\(z\\).",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Optional Excursions</span>"
     ]
