@@ -8,3 +8,5 @@ expa/**
 exp/**/*.fdb_latexmk
 exp/**/*.fls
 exp/**/*.synctex.gz
+**/.DS_Store
+**/~$*

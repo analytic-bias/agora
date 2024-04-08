@@ -1,0 +1,409 @@
+# Euler’s Elegant Identity $e^{i\pi}+1=0$ --- a mathematical mystery tour
+
+## The Elegance of Euler’s Identity
+
+In 1749 Euler set forth in his *Introduction in Analysis Infinitorum* an
+identity considered to be among the most elegant in all of mathematics:
+$$e^{i\pi}+1=0.$$
+Euler’s equations, succinctly and elegantly combines five of the most
+fundamental constants of mathematics.
+```{=html}
+<table class="borderless" style="border: none;"><tbody>
+  <!-- <caption>As described in the section above, Quarto tables are great.</caption> -->
+    <tr>
+        <td><span data-qmd="$0$"></span></td>
+        <td rowspan=2 style="vertical-align: middle;"><span data-qmd="$\Big\}$"></span></td>
+        <td rowspan=2><span data-qmd="The two *natural numbers* essential for arithmetic the *identity elements* for *addition* and *multiplication*,"></span></td>
+    </tr>
+    <tr>
+        <td><span data-qmd="$1$"></span></td>
+    </tr>
+    <tr>
+        <td><span data-qmd="$\pi$"></span></td>
+        <td rowspan=2 style="vertical-align: middle;"><span data-qmd="$\Big\}$"></span></td>
+        <td rowspan=2><span data-qmd="Two ubiquitous *real numbers* $\pi$ and $e$, the ratio of the circumference of a circle to its diameter and the base of an exponentiation function whose rate of change is identical to itself, real, numbers that are not only *irrational* but *transcendental*,"></span></td>
+    </tr>
+    <tr>
+        <td><span data-qmd="$e$"></span></td>
+    </tr>
+    <tr>
+        <td><span data-qmd="$i$"></span></td>
+        <td><span data-qmd="$\big\}$"></span></td>
+        <td><span data-qmd="The mysterious square root of $-1$, the basis of the *imaginary* or *complex numbers*."></span></td>
+    </tr>
+</tbody></table>
+```
+Euler’s equation conceptually links numbers from three different number
+systems (the natural, real, and complex numbers) using three of the most
+fundamental arithmetic operations (addition, multiplication, and
+exponentiation.) Carl Friedrich Gauss (1777 - 1855), the "Prince of
+Mathematicians," reportedly said that anyone to whom Euler’s identity
+was not immediately apparent would never become a first-class
+mathematician.
+
+## Demystifying Euler’s Equation
+
+> *"An ordinary genius is a fellow that you and I would be just as good
+> as, if we were only many times better. There is no mystery as to how
+> his mind works. Once we understand what he has done, we feel certain
+> that we, too, could have done it. It is different with magicians...
+> the working of their minds is for all intents and purpose
+> incomprehensible. Even after we understand what they have done, the
+> process by which they have done it is completely dark."*
+> 
+> ---[Mark Kac]{.smallcaps} (1914-1984) (quoted in Nahim, p. 9)
+
+Euler’s identity, it must be admitted, appears to be the work of a
+magician. However, whether or not one aspires to become a first-class
+mathematician, it is not immediately apparent how Euler’s equation even
+makes sense.
+
+*Exponentiation* is typically explained in terms of a repeated
+multiplication. For example, the number 2 raised to the exponent 3 is
+defined as the product of 2 multiplied by itself three times:
+$$2^3=2\times2\times2=8.$$
+
+Euler’s identity uses transcendental numbers with exponentiation. The
+transcendental number $\pi$ is defined as the ratio of the circumference to
+the diameter of a circle. Like the irrational number the $\sqrt{2}$, it is
+represented by an infinite non-periodic decimal; however, unlike, such
+*algebraic* irrational numbers, π is not the solution or root of any
+polynomial such as $x^2-2=0$. The transcendental number
+*e* is defined as the base of an exponential function whose rate of
+change, or derivative, is equal to itself. In other words,
+$e^x$ is the unique function such that it is its own
+derivative.
+
+Now the transcendental numbers *e* and π are numbers in the neighborhood
+of the natural numbers 2 and 3, respectively, so it makes sense to think
+of exponentiation as purely numerical functions. (To remember the digits
+of π remember the question: *"May I have a large container of coffee
+right now?"* and "*To express $e$ remember to remember a sentence to
+remember this".*) Thinking of exponentiation as a function of real
+numbers, we can compute:
+$${2.7182818284\cdots}^{3.141592653\cdots} = 23.14069262\cdots.$$
+
+However, Euler’s identity also includes an exponential factor of the
+imaginary number $i$, where $i$ is defined to be the positive square
+root of – 1. Now $i$ called *imaginary* number because no real number
+can be the root of a negative number. Real numbers are either positive
+or negative, and a positive number times a positive is positive and a
+negative number times a negative is also positive. Euler in his
+*Algebra* (1770) wrote:
+
+> All such expressions as $\sqrt{-1},\ \sqrt{-2}$, etc., are
+> consequently impossible or imaginary numbers, since they represent
+> roots of negative quantities, and of such numbers we may truly assert
+> that they are neither nothing, nor greater than nothing, nor less than
+> nothing, which necessarily constitutes them imaginary or impossible.
+
+Obviously, there must be some meaningful mathematical way of thinking of
+exponentiation other than as a real-valued function.
+
+The Nobel physicist Richard P. Feynman called Euler’s equation "our
+jewel" and "the most remarkable formula in mathematics."
+^[http://en.wikipedia.org/wiki/Euler%27s_formula#cite_note-2]
+Feynman recounts how he, as a young boy, was fascinated and in his
+notebooks figured out for himself, rather than taking it on authority,
+the mystery of why Euler’s identity was true. In Feynman’s spirit of
+discovery, let’s take a mathematical journey in which we figure out the
+meaning of Euler’s remarkable identity for ourselves—not being content
+with mere proofs but instead taking the time to demystify the elements
+of Euler’s beautiful equation.
+
+The remarkable beauty of Euler’s derivation of his identity derives not
+only from its deep *connections* of five fundamental mathematical
+constants, but also how it illustrates the *cognitive* strategies
+mathematicians deploy they are creating or discovering mathematical
+truths. The last phrase "creating or discovering mathematical truths"
+poses an important philosophical question: do mathematicians discover
+mathematical truths or do they creatively construct them?
+
+On this magical mystery tour, we will discover that mathematics is more
+than merely crunching numbers, that it is more than presenting formal
+proofs, and that mathematics involves such creative discoveries as:
+
+-   *constructing* new number systems to solve previously impossible
+    equations;
+-   *discovering* in geometric representations higher-level
+    *symmetries*;
+-   *transforming* anomalous *singularities* into *systematic closure
+    properties*;
+-   *generalizing* arithmetic operations by *expanding* their
+    mathematical meanings;
+-   *unifying* conceptual domains by making bold conjectural
+    *identifications*.
+
+In demystifying Euler’s equation, our goal is not to dispel its beauty.
+Indeed, by taking the time to understand how mathematicians create, we
+will finally come to appreciate—in a mathematically precise rather than
+a mystically vague way—the true beauty of Euler’s equation.
+
+## A Concise, but Conceptually Incomplete, Proof
+
+> *"It \[Euler’s identity\] is absolutely paradoxical; we cannot
+> understand it, and we don't know what it means, but we have proved it,
+> and therefore we know it must be the truth."*
+>
+> ---[Benjamin Peirce (1809-1880)]{.smallcaps}
+
+The Harvard mathematician Benjamin Peirce, father of the pragmatist
+philosopher C. S. Peirce (1839-1914), is reported to have made the above
+remark after proving Euler’s identity. This quotation reminds me of a
+joke told by Raymond Smullyan. A mathematics professor, teaching a class
+of mystified undergraduates, is writing a proof on the board and claims
+that the theorem is "trivial." A brave student asks why the proof is
+trivial. The professor turns back to the board and is lost in thought
+for five minutes, and then announces, "aha, yes, it is trivial!" Too
+often in a typical mathematics class, the lectures consist of presenting
+proofs to silent, of silenced, students
+^["Lecturing is the process of the transfer of knowledge from the notepad of the instructor to the notepads of the students, without ever touching the brains of either; that's atrocious." ---Chas, M. (2023)]
+are left on their own to figure
+out what is going on mathematically by doing exercises.
+
+Perhaps the students are silent because they are afraid to "look stupid"
+or perhaps they have learned that asking questions can be dangerous.
+When some student asks the professor to explain some step of the proof,
+perhaps the professor "explains" the proof by merely repeating the same
+words, maybe talking more slowly or perhaps by filling in a few details.
+But the students can follow the steps but they still don’t understand the
+mathematical ideas. This pedagogical impasse is created by the
+assumption that teaching mathematics is communicating formal structure
+or proofs. However, often understanding the mathematical ideas requires
+going behind the formal structure of proofs. Teaching is not merely
+proving theorems but communicating the mathematical ideas so that the
+truth of the theorem can be not only followed, but understood or
+comprehended, in a deeper, more intuitive, way.
+
+So we have reason to be skeptical about Peirce’s pronouncement:
+
+> *"It \[Euler’s identity\] is absolutely paradoxical; we cannot
+> understand it, and we don't know what it means, but we have proved it,
+> and therefore we know it must be the truth."*
+
+Here’s how Euler, in his *Introduction in Analysis Infinitorum*, derived
+his equation from the following trigonometric identity:
+$$e^{ \pm i x}=\cos (x) \pm \sin (x).$$
+Here if we simply substitute π for the variable $x$, we have we have:
+$$e^{i \pi}=-1+0,$$
+from which Euler’s identity immediately follows. This proof, while
+concise, is conceptually incomplete.
+
+Beginning the proof with a puzzling *complex* trigonometric equation
+begs the conceptual question: what does exponentiation have to do with
+trigonometry? After all, both the *sine* and *cosine* functions are
+*periodic* and *bounded*, but the *exponential* function is
+*non-periodic* and *unbounded*. How then can an exponential function
+like $e^x$ which rapidly expands to positive infinity be
+defined in terms of periodic trigonometric functions whose values are
+confined to the interval from $1$ to $-1$?
+
+## Expanding Exponentiation: From Powers of Numbers to Power Series
+
+The answer to this question involves thinking of exponentiation not
+merely as a *power function* that produces a number but as a *power
+series.* We have already encountered infinite series when discussing
+Zeno’s paradoxes. For example, Zeno’s dichotomy paradox involved the
+*geometric* series
+$$\sum_{n=1}^{\infty} \frac{1}{2^n}=\frac{1}{2}+\frac{1}{4}+\frac{1}{8}+\frac{1}{16}+\frac{1}{32}+\frac{1}{64}+\cdots+\frac{1}{2^n}+\cdots.$$
+Figuring out the sum of such an infinite geometric series depended on
+the observation that multiplying the series by the common factor of ½
+results in truncating the first term:
+$$\begin{aligned}
+X&{}=\frac{1}{2}+\frac{1}{4}+\frac{1}{8}+\frac{1}{16}+\frac{1}{32}+\frac{1}{64}+\cdots+\frac{1}{2^n}+\cdots\\
+\frac{1}{2} X&{}={}\phantom{\frac{1}{2}+{}}\frac{1}{4}+\frac{1}{8}+\frac{1}{16}+\frac{1}{32}+\frac{1}{64}+\cdots+\frac{1}{2^n}+\cdots.
+\end{aligned}$$
+So by subtracting half the series from the entire series, we simply
+have:
+$$X=1$$
+Another way of seeing this result geometrically is the following "proof
+without words":
+<!-- 
+TODO
+
+<img src="./attachments/euler2/media/image1.jpeg"
+style="width:2.42361in;height:2.34028in" alt="zeno-08.jpg" /> -->
+$$X={\color{red}\frac{1}{2}}+{\color{blue}\frac{1}{4}}+{\color{green}\frac{1}{8}}+{\color{orange}\frac{1}{16}}+{\color{red}\frac{1}{32}}+{\color{blue}\frac{1}{64}}+\cdots+\frac{1}{2^n}+\cdots.$$
+The same idea for summing an infinite geometric series works, not only
+for $r=\frac{1}{2}$, but for any $r$ whose absolute value is $<1$. In general,
+the infinite sum exists when $\lvert r\rvert<1$,
+$$\sum_{n=0}^{\infty} \frac{a}{r^n}=a+\frac{a}{r}+\frac{a}{r^2}+\frac{a}{r^3}+\frac{a}{r^4}+\frac{a}{r^5}+\ldots+\frac{a}{2^n}+\cdots=\frac{a}{1-r}.$$
+
+Now the idea of *power series* comes about by replacing *numbers* with
+a variable resulting in the sum of an infinite series of *power
+functions*. Generally, a power series is of the form
+$$\sum_{n=0}^{\infty} a_n z^n=a_0+a_1 z+a_2 z^2+a_3 z^3+\cdots+a_n z^n+\cdots,$$
+where $a_0,a_1,\dots,a_n,\dots$ is some sequence of numbers.
+The reason for representing a function as a
+power series is that it is easy to compute the derivative of such a
+series term by term using the fact that the derivative of
+$$f(x)=a_n x^n$$
+is
+$$f^{\prime}(x)=(n-1) a_n x^{n-1}.$$
+
+Now remember that the defining characteristic of the exponential
+function is that the derivative of $e^x$ is just
+$e^x$. How can we create a power series in which the
+derivative of the series, taken term by term, results in the very same
+series?
+
+$$\sum_{n=0}^{\infty} \frac{x^n}{n !}=1+x+\frac{x^2}{2 !}+\frac{x^3}{3 !}+\frac{x^4}{4 !}+\frac{x^5}{5 !}+\cdots+\frac{x^n}{n !}+\cdots$$
+
+\renewcommand\labelitemi{}
+::: {.nobullet}
+* The derivative of $1 = 0$;
+  The derivative of $x = 1$;
+  The derivative of $\frac{x^2}{2 !}=\frac{2 x}{2}=x$;
+  The derivative of $\frac{x^3}{3 !}=\frac{3 x}{3 \times 2 \times 1}=\frac{x^2}{2 !}$;
+  The derivative of $\frac{x^{2}}{2!}$ = $\frac{2x}{2} = x$;
+  The derivative of $\frac{x^3}{3 !}=\frac{3 x}{3 \times 2 \times 1}=\frac{x^2}{2 !}$;
+  The derivative of $\frac{x^{n+1}}{(n+1) !}=\frac{(n+1) x^n}{(n+1) n !}=\frac{x^n}{n !}$.
+:::
+\renewcommand\labelitemi{\labelitemito}
+
+So taking the term-wise derivative is the infinite series itself!
+Now this is precisely the defining feature of the exponential function:
+$$e^x=1+x+\frac{x^2}{2 !}+\frac{x^3}{3 !}+\frac{x^4}{4 !}+\frac{x^5}{5 !}+\cdots+\frac{x^n}{n !}+\cdots;$$
+this power series can be used to estimate the value of $e$.
+
+The following spreadsheet, computing the value of $e$ for the first $12$
+terms, gives an approximation accurate to the first $9$ decimal places.
+
+```{=html}
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 40%" />
+<col style="width: 40%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th colspan="2"><strong>Power Series Approximation of
+<em>e</em></strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td><span data-qmd="$1$"/></td>
+<td><span data-qmd="$1$"/></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td><span data-qmd="$1$"/></td>
+<td><span data-qmd="$2$"/></td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td><span data-qmd="$0.5$"/></td>
+<td><span data-qmd="$2.5$"/></td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td><span data-qmd="$0.166666667$"/></td>
+<td><span data-qmd="$2.6666666667$"/></td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td><span data-qmd="$0.041666667$"/></td>
+<td><span data-qmd="$2.7083333333$"/></td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td><span data-qmd="$0.008333333$"/></td>
+<td><span data-qmd="$2.7166666667$"/></td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td><span data-qmd="$0.001388889$"/></td>
+<td><span data-qmd="$2.7180555556$"/></td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td><span data-qmd="$0.000198413$"/></td>
+<td><span data-qmd="$2.7182539683$"/></td>
+</tr>
+<tr class="odd">
+<td>8</td>
+<td><span data-qmd="$2.48016\text{e-}05$"/></td>
+<td><span data-qmd="$2.7182787698$"/></td>
+</tr>
+<tr class="even">
+<td>9</td>
+<td><span data-qmd="$2.75573\text{e-}06$"/></td>
+<td><span data-qmd="$2.7182815256$"/></td>
+</tr>
+<tr class="odd">
+<td>10</td>
+<td><span data-qmd="$2.75573\text{e-}07$"/></td>
+<td><span data-qmd="$2.7182818011$"/></td>
+</tr>
+<tr class="even">
+<td>11</td>
+<td><span data-qmd="$2.50521\text{e-}08$"/></td>
+<td><span data-qmd="$2.7182818262$"/></td>
+</tr>
+<tr class="odd">
+<td>12</td>
+<td><span data-qmd="$2.08768\text{e-}09$"/></td>
+<td><span data-qmd="$2.7182818283$"/></td>
+</tr>
+</tbody>
+</table>
+```
+
+Euler’s power series gives a quick and accurate estimate of the value of
+*e* because the factorials in the denominator grow quickly diminishing
+the contribution of the successive terms, which quickly approaches zero.
+However, the value of power series does not necessarily lie in computing
+approximate values.
+
+Leibniz was proud of his discovery (1674) of the quadrature or
+Leibniz--Gregory series (Gregory discovered the series in 1671):
+$${\color{green}\frac{\pi}{4}=1-\frac{1}{3}+\frac{1}{5}-\frac{1}{7}+\frac{1}{9}-\frac{1}{11}+\cdots}$$
+In an infinitely-approximating way, Leibniz’s series provides a
+"solution" to the classic geometrical problem of squaring the circle.
+But Leibniz’s series is practically useless in calculating the digits of
+π. Not only does it converge extremely slowly but it does not yield
+digits that are *stable*. For example, if you compute the first five
+terms of the series then the partial sum is $0.8349206$, which is within
+$\frac{1}{11}$ of the true value of $\frac{\pi}{4}$, but not a single digit of the partial sum
+is correct!
+
+Similarly, the mathematical value of the exponential power series lies
+not so much as its usefulness in *calculating* the digits of $e$, but in
+itself providing *conceptual* insight into how to generalize exponentiation
+to unify two formerly distinct mathematical domains. The catalyst for
+the intuitive leap is the curious way in which the power series for the
+trigonometric functions of sine and cosine appear to be "contained" in
+the exponential power series:
+$$e^x={\color{red}1}+{\color{green}x}+{\color{red}\frac{x^2}{2 !}}+{\color{green}\frac{x^3}{3 !}}+{\color{red}\frac{x^4}{4 !}}+{\color{green}\frac{x^5}{5 !}}+{\color{red}\frac{x^6}{6 !}}+\cdots+\frac{x^n}{n !}+\cdots,$$
+$${\color{green}\sin (x)=x-\frac{x^3}{3 !}+\frac{x^5}{5 !}-\frac{x^7}{7 !}+\frac{x^9}{9 !}-\frac{x^{11}}{11 !}+\cdots},$$
+$${\color{red}\cos (x)=1-\frac{x^2}{2 !}+\frac{x^4}{4 !}-\frac{x^6}{6 !}+\frac{x^8}{8 !}-\frac{x^{10}}{10 !}+\cdots}.$$
+
+The terms of the *sine* power series are the *odd* powers and the terms
+of the *cosine* power series are the even powers. The question is how
+to account for the alternation of $+$ and $-$ signs. And to repeat, the
+*sine* and *cosine* functions are *periodic* and *bounded*, but the
+*exponential* function is *non-periodic* and *unbounded*. How then can
+an exponential function like $e^x$ which rapidly expands to
+positive infinity be defined in terms of periodic trigonometric
+functions whose values are confined to the interval from $1$ to $-1$?
+
+To solve this part of the puzzle we need to explore the undue prejudice
+directed against imaginary numbers.
+
+## A Tale of Two Negatives: From Negative to Imaginary Numbers
+
+## A Conceptual Unification: Understanding Euler’s Identity 
+
+## From Truth Values to Truth Vectors.
+
+::: {.fullwidth .column-page-right}
+
+<iframe src="https://www.geogebra.org/calculator/cqdmgrf9?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
+<!-- https://www.geogebra.org/m/sehv2qc9 -->
+
+:::
+

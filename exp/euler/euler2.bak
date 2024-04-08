@@ -1,0 +1,641 @@
+
+*Minus times minus is plus.*
+
+*The reason for this we need not discuss.*
+
+— W. H. <span class="smallcaps">Auden</span>
+
+Skepticism about the negative numbers persisted until the 18th century.
+Negative numbers are often explained in terms of debt. If Abe owes
+Beatrice $3 dollars and Calliope $7, but he has only $5, then Abe is in
+debt $5 or he has, so to speak, a negative $5. Now if Abe is in debt for
+$5 five times over, then Abe has, so to speak, a negative $25 dollars.
+This way of think raises a puzzle: suppose Abe is in debt $5 and
+negative five times. How does it make sense to say that Abe is now out
+of debt and in fact has a positive profit of $25?
+
+Euler himself in his *Algebra* (1770), used the analogy of debt, but did
+not fall into the usually mistake of trying to explain that the product
+of two debts must be positive. Instead, Euler gave a negative
+"explanation" of why "minus times minus is plus" by considering
+logically exhaustive cases: *– a × – b* cannot be *– ab* since this what
+is given by *– a × b* and the change in sign of *b* should give a change
+in sign of the answer. Therefore, Euler argued, *– a × – b* must *ab.*
+Notice that Euler’s argument doesn’t give an *explanation* of why a
+negative times a negative is a positive, but instead gives a
+*systematic* argument for why the product of two negative can’t be
+assigned a negative.
+
+Where do negative numbers come about conceptually in mathematics? They
+come from wanting to have solutions to equations such as
+
+*x* + 1 = 0 .
+
+A skeptical argument about *negative* numbers goes like this. The
+left-hand side of the equation is the *successor* of the number *x*. The
+right-hand side is zero. However, according to Peano’s postulates, zero
+is not the successor of any natural number.
+
+The logicist answers this skeptical conservatism about negative numbers
+by *logical construction.* The logicist constructs negative numbers as a
+set of ordered pairs of natural numbers. First, one defines an
+equivalence relation between ordered pairs of natural numbers as
+follows:
+
+(*a*, *b*) ≈ (*c*, *d*) ↔ *a* + *d* = *b* + *c*
+
+The integers are then defined as the equivalence classes induced by this
+relation. One can define the operations of addition and multiplication
+for integers in terms of the corresponding operations for natural
+numbers.
+
+(*a*, *b*) ⊕ (*c*, *d*) ↔ (*a* + *c, b + d*)
+
+(*a*, *b*) ⊗ (*c*, *d*) ↔ (*ac + bd, ad + bc*)
+
+The integers have the satisfying property, lacking in the natural
+numbers, of being closed under the operation of *subtraction*.
+
+Negative numbers can be obtained from the positive numbers by
+multiplying by −1. Geometrically speaking, this is a rotation of 180
+degrees along the number line for the natural numbers, which are now
+extended in the negative direction.
+
+The puzzle about justifying the law that a "negative times a negative is
+a positive" by finding an interpretation for multiplying debts is based
+on an inadequate conception of a negative number. A more general way of
+thinking about negative numbers is that multiplying by – 1 indicates
+changing direction on the number line. To add – 5 and – 6 is to continue
+on the number line from the origin in the negative direction for a total
+of 11 units. To multiply – 5 by 6 to go 5 × 6 = 30 units in the negative
+direction. However, to multiply – 5 by – 6 is to multiply 5 by 6
+changing directions twice and ending up on the positive direction.
+Skepticism towards negative numbers can now be dismissed as
+philosophical confusion of thinking of negative numbers too literally in
+terms of debt.
+
+The construction of imaginary numbers from real numbers can be done in a
+way that is completely analogous to the construction of negative numbers
+from natural numbers.
+
+*Imaginary i times i is minus one.*
+
+*Rotation is how this can be done!*
+
+Similar conceptual puzzles arise from thinking of the imaginary number
+$i = \sqrt{- 1}$ as a quantity. Where does the imaginary number
+$\sqrt{- 1}$ come about conceptually in mathematics? The number from
+wanting to have solutions to equations such as
+
+*x<sup>2</sup>* + 1 = 0 .
+
+The imaginary number *i* is defined to be $\sqrt{- 1}$. The question
+arises whether $\sqrt{- 1}$ is *really* a number. Leibniz waxed mystical
+when it came to this question: "The Divine Spirit found a sublime outlet
+in that wonder of analysis, that portent of the ideal world, the
+amphibian between being and not-being, which we call the imaginary root
+of negative unity."[1]
+
+A skeptical argument comes from the axioms for real numbers. The skeptic
+about *imaginary* numbers can argue that this equation can have no real
+solutions: the square of any real number, positive or negative, is
+positive. Therefore, first term of (2) can never be equal to −1 and so
+there are no real solutions to the equation. Euler in his *Algebra*
+(1770) expressed his skepticism as follows:
+
+> All such expressions as $\sqrt{- 1\\},\\\sqrt{- 2\\}$, etc., are
+> consequently impossible or imaginary numbers, since they represent
+> roots of negative quantities, and of such numbers we may truly assert
+> that they are neither nothing, nor greater than nothing, nor less than
+> nothing, which necessarily constitutes them imaginary or impossible.
+
+The logicist answers this skeptical conservatism about imaginary numbers
+by *logical construction.* The logicist constructs imaginary numbers as
+a set of ordered pairs of real numbers. One can define the operations of
+addition and multiplication for complex numbers in terms of the
+corresponding operations for natural numbers.
+
+(*a*, *b*) ⊕ (*c*, *d*) ↔ (*a* + *c, b + d*)
+
+(*a*, *b*) ⊗ (*c*, *d*) ↔ (*ac* − *bd, ad + bc*)
+
+Note that these definitions for addition and multiplication of complex
+numbers are formally identical to the above definitions for addition of
+multiplication of integers except for the negative sign (here indicated
+in red).
+
+By convention a complex number is expressed as *a* + *ib*, where *a* is
+the real component and *b* the imaginary component of the complex
+number. *Notice that the plus sign doesn’t really signify addition.* The
+plus sign is merely used to separate the real and imaginary components,
+and so it may be less confusing to simply use an ordered pair of real
+numbers to represent a complex number.
+
+What does *i* *x* *i*=  − 1 mean in terms of rotation? If multiplying by
+−1 is a rotation of 180 degrees or π radians, then, geometrically
+speaking, multiplication by *i* is represented by that rotation such
+that two successive rotations is equal to −1. In other words, a rotation
+by *i* can be represented by a rotation of 90 degrees or π/2 radians.
+
+Complex numbers are conventionally plotted on the Argand plane. The real
+component of a complex number is plotted along the *x*-axis and the
+imaginary component is plotted along the *y*-axis. As we have seen,
+multiplying −1, is, by geometrically speaking, a rotation of 180 degrees
+or π radians. To geometrically represent *i*, we need a transformation
+which when applied to itself result in a multiplication by −1 or a
+rotation of π radians. By convention, a counterclockwise) rotation
+(CCW)of 90 degrees or π/2 radians is a natural way to represent this
+transformation. Repeated CCW rotations of 90 degrees of π/2 result in
+the cycle of values *i<sup>1</sup>* = *i*, *i<sup>2</sup>* = −1,
+*i<sup>3</sup> =* −*i*, *i<sup>0</sup>* = *i<sup>4</sup> =* 1. This
+cycle of values is the conceptual clue to why the imaginary number *i*
+in the exponent of Euler’s equation is related to rotation in the
+geometric representation of complex numbers.
+
+We still need to find the conceptual connection between imaginary
+numbers a trigonometry. The values for trigonometric functions are
+proportional for all similar triangles, so it is convenient to represent
+these values within a circle of radius 1. Rather than using a pair of
+*Cartesian coordinates* to specify a point (*x*, *y*), it is more
+natural to use *polar coordinates* specified by a central angle θ and a
+radius *r* = $\sqrt{x^{2} + \\y^{2}}.\\$ When confining our attention to
+the unit circle, the trigonometric functions are defined in terms of θ.
+The Pythagorean theorem, for example, can be expressed by the
+trigonometric equation:
+
+1 = cos<sup>2</sup>(θ) + sin<sup>2</sup>(θ) .
+
+The values of cos(θ) are read on the *x*-axis and the values of sin(θ)
+are read on the *y*-axis for a right triangle whose right angle is
+formed perpendicular to the *x*-axis and whose hypotenuse is a radius
+from the origin to the unit circle.
+
+*sin*(θ)
+
+θ
+
+−1 0 *cos*(θ) 1
+
+One of the unsymmetrical properties of real numbers is that positive
+numbers have two square roots, whereas negative numbers have none. All
+real numbers have exactly one cube root, fifth root, and so on. One of
+the elegant properties of working in context of the complex numbers, as
+opposed to real numbers, is that every arithmetic equation or polynomial
+has a solution—in fact, within the complex numbers every *n*-degree
+polynomial has exactly *n* roots.
+
+The formula that connects complex number with trigonometry is *De
+Moive’s formula*
+
+(cos *x* + *i*sin *x*)<sup>*n*</sup>= cos (*n**x*)+ *i* *s**i**n*(*n**x*)
+.
+
+De Moive’s formula follows from Euler’s trigonometric equation
+
+*e*<sup>*i**x*</sup> = cos (*x*)+ *i*sin (*x*).
+
+for a complex exponent *z* = *x* + *iy*:
+
+*e*<sup>*z*</sup>= *e*<sup>*x* + *i**y*</sup>= *e*<sup>*x*</sup> *e*<sup>*i**y*</sup>= *e*<sup>*x*</sup> (cos *y* + *i*sin *y*)  .
+
+As real-valued functions, exponentiation and trigonometry are
+*incompatible*, but here they are *unified* within the complex numbers.
+Since exponential functions have the property that
+
+(*e*<sup>*i**π*</sup>)<sup>*n*</sup>= *e*<sup>*n**i**π*</sup>
+
+we also have *De Moivre’s theorem*:
+
+(*cos* θ + *i sin* θ)*<sup>n</sup>* = *cos*(*n*θ) + *i sin*(*n*θ) .
+
+This theorem overcomes the anomaly within the real numbers that, for
+example, $\sqrt{1\\}\\$has two roots <u>+</u>1, whereas all *negative*
+numbers have no roots but all positive real numbers have exactly one
+cube root, exactly one fifth root, etc. for all the *odd* roots. This
+irregular behavior is, to the mathematical mind, inelegant. De Moivre’s
+theorem states, for example, the roots of $\sqrt{- 1\\}$ are solutions
+to:
+
+(*cos* θ + *i sin* θ)*<sup>2</sup>* = *cos*(2θ) + *i sin*(2θ) = −1 .
+
+Geometrically becomes the question: which angles, when doubled, give
+−1 or an angle of π = 180 degrees? The two angles are π/2 = 90 degrees
+and 3π/2 = − *π*/<!-- -->2 = 270 degrees, which correspond to
+respectively to *i* and –*i*.
+
+In general, there will be exactly *n* roots for the *n*th root of –1
+because the unit circle can be equally divided into *n* evenly spaced
+parts. Here is a diagram for the eight roots of –1 which divide the unit
+circle in two eight arcs of π/4.
+
+*i*
+
+$\frac{1}{\sqrt{2}}( - 1 + i)\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\frac{1}{\sqrt{2}}(1 + i)$
+
+−1 1
+
+$$\frac{1}{\sqrt{2}}( - 1 - i)\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\frac{1}{\sqrt{2}}(1 - i)$$
+
+*–i*
+
+It happens there is only one natural way to extend the real-valued
+functions to the complex numbers.
+
+*e*<sup>*x* + *i**y*</sup> = *e*<sup>*x*</sup>*e*<sup>*i**y*</sup> = *e*<sup>*x*</sup>\[(*c**o**s*(*y*)+ *i* *s**i**n*(*y*)\]
+
+This formula tells us that complex numbers have two geometric
+representations—a point with Cartesian coordinates (*x, y*) and point
+with radius *e<sup>x</sup>* = *r* = $\sqrt{x^{2} + y^{2}}$and central
+angle θ which is the angle *x + iy* makes with the *x*-axis.
+
+A convenient way to multiply vectors is to use *polar coordinates*
+instead of Cartesian coordinates, a method that will yield *geometric*
+insight into the mathematical connections with *chaos.* The polar
+coordinates of a point (*x*, *y*) in the Cartesian coordinate plane is
+given by (***r***, θ), where radial distance *r* = |*z*| =
+$\sqrt{x^{2} + \\y^{2}}$ and θ is the central angle. We have the
+following trigonometric identities:
+
+*z* = *x* + *iy* = (*r cos*θ + *r* *i sin*θ) = *r*(*cos*θ + *i sin*θ)
+=|*z*|(*cos*θ + *i sin*θ) .
+
+<img src="./attachments/euler2/media/image2.gif"
+style="width:2.19167in;height:2in"
+alt="Macintosh HD:Users:gary:Desktop:addtrig.gif" />
+
+Given polar coordinates is easy to *multiply* two vectors:
+
+*z* = |*z*|(*cos*θ + *i sin*θ)
+
+*w* = |*w*|(*cos*φ + *i sin*φ)
+
+by simply *multiplying* their radial distances and *adding* their
+angles:
+
+*z* × *w* = |*z*| × |*w*| \[*cos*(θ + φ) + *i sin*(θ + φ)\] .
+
+**Fig**. **9.** Polar coordinates provide geometric insight into the
+connection
+
+between trigonometric squaring, angle doubling and chaos.
+
+We suggest terminology of *versimilitude* for the *length* of the truth
+vector *r* = |*z*| = $\sqrt{x^{2} + \\y^{2}}$ and the *spin* for the
+clockwise or counter-clockwise *direction* of its central angle θ.
+
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Cartesian Coordinates</th>
+<th>Polar Coordinates</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><em>veridicality</em></td>
+<td><em>magnitude</em></td>
+</tr>
+<tr class="even">
+<td><em>skew</em></td>
+<td><em>spin</em></td>
+</tr>
+</tbody>
+</table>
+
+Whereas *skew* is a *linear* dimension along the *y*-axis, *spin* is an
+*angular rotation* in either the CW or CCW direction.[2]
+
+In summary, we have show how the equations
+
+*x* + 1 = 0
+
+and
+
+*x<sup>2</sup>* + 1 = 0 .
+
+give rise to the negative and imaginary numbers, respectively. Now we
+may return to the equation
+
+*e*<sup>*i**π*</sup> + 1 = 0
+
+and show it gives rise to the unification of trigonometry and complex
+exponentiation.
+
+# 5.6. A Conceptual Unification: Understanding Euler’s Identity 
+
+Euler’s equation is creative, not as an identity of quantities, but as a
+bold conceptual conjecture that unifies previously separate mathematical
+domains—the domain of trigonometry and the domain of complex or
+imaginary numbers—by a meaningful expansion of exponentiation into the
+realm of imaginary numbers. Euler’s discovery is the result of creating
+a mathematical context which satisfies mathematical desiderata that
+every *n*-degree polynomial has exactly *n* roots. In fact the extension
+to the complex numbers provides a unification that is not apparent when
+restricted to the real numbers.
+
+Recall that we noticed that the infinite trigonometric power series:
+
+$$\sin{(x)} = x - \\\frac{x^{3}}{3!} + \\\\\frac{x^{5}}{5!} - \\\frac{x^{7}}{7!}\\\\ + \\\frac{x^{9}}{9!} - \\\frac{x^{11}}{11!} + \ldots$$
+
+$$\cos{(x)} = 1 - \\\frac{x^{2}}{2!} + \\\\\frac{x^{4}}{4!} - \\\frac{x^{6}}{6!} + \frac{x^{8}}{8!} - \frac{x^{10}}{10!} + \ldots$$
+
+correspond to the odd and even summands in the power series for the
+exponential function. We can in fact show this to be precisely the case
+by introducing *imaginary* exponentiation:
+
+$$e^{ix} = 1 + ix + \\\frac{{(ix)}^{2}}{2!} + \\\frac{({ix)}^{3}}{3!} + \\\frac{{(ix)}^{4}}{4!} + \\\frac{{(ix)}^{5}}{5!} + \frac{{(ix)}^{6}}{6!}\\ + \ldots + \frac{{(ix)}^{n}}{n!} + \ldots$$
+
+$$e^{ix} = \left( 1 - \\\frac{x^{2}}{2!} + \\\\\frac{x^{4}}{4!} - \\\frac{x^{6}}{6!} + \frac{x^{8}}{8!} - \frac{x^{10}}{10!} + \ldots \right) + i\left( x - \\\frac{x^{3}}{3!} + \\\\\frac{x^{5}}{5!} - \\\frac{x^{7}}{7!}\\\\ + \\\frac{x^{9}}{9!} - \\\frac{x^{11}}{11!} + \ldots \right)$$
+
+*e*<sup>*i**x*</sup> = cos (*x*)+ *i* *s**i**n*(*x*)
+
+Finally, for *x* = π, *cos*(π) = −<!-- -->1 and *sin*(π) = 0, so we have
+derived Euler’s elegant equation:
+
+*e*<sup>*i**π*</sup> + 1 = 0 .
+
+This beautiful equation connects the ideas of *imaginary numbers* *i*
+and *rotations* in terms of π to *imaginary* *exponentiation* in a way
+that unifies *complex numbers, trigonometry,* and, as we shall see,
+*computation*.
+
+# 5.7. From Truth Values to Truth Vectors.
+
+# 
+
+Rather than thinking of truth as measured *linearly* (as in done in
+Tarski’s and Rescher’s schemas) as its absolute distance from 1 within
+the interval \[0, 1\], we can think of measuring truth in terms of *two*
+*dimensions*: its *degree* of *veridicality* or *accuracy* and its
+*skew* or *spin*. The natural mathematical representation of such an
+entity not a single *truth* *value* but a two-dimensional *truth*
+*vector **c*** = ***v*** + *i**s***.
+
+First, we extend the range of values for ***v*** from the real-valued
+interval \[1, 0\] representing *degrees of truth* to the real-valued
+interval \[1, −1\] representing *degrees of accuracy* or inaccuracy. In
+ordinary language, to be *inaccurate* is more than merely *lacking
+accuracy* but to be positively misleading. Here the value ***v*** ranges
+from ***v*** = 1 for complete accuracy and ***v*** = −1 for complete
+inaccuracy.
+
+Secondly, we include a scale for measuring skew ranging from *i* to
+–*i*. (One way of thinking about the *imaginary value* *i* =
+$\sqrt{- 1}$, is to use Zedah’s proposed reading as "*fairly (CCW)
+skewed.*") From a mathematical point of view, we have *truth vectors*
+***c*** = ***v*** + *i**s***, where the value ***v*** stands for the
+degree of *veridicality* or *accuracy* and the value ***s*** stands for
+the degree of *skew*. These vectors can be combined by the standard
+rules for vector addition and multiplication.
+
+Thirdly, to make our graphs more intuitive, we shall sometimes plot the
+degree of veridicality along the *vertical* axis and the degree of skew
+along the *horizontal* axis. Other times we use the standard
+conventions.
+
+*completely accurate*
+
+1
+
+*–i* *i*
+
+*completely skewed to the left completely skewed to the right*
+
+*–*1
+
+*completely inaccurate*
+
+The unit circle for two-dimensional truth vectors
+
+Functions involving imaginary number often involve rotation and produce
+waves and so have proved, in terms of applications in physics, to be
+quite useful.
+
+*Example 1.* *Vector addition.* Suppose we have three media outlets
+measured by two-dimensional vectors with a parameter ***v*** for
+veridicality or accuracy and another parameter ***s*** for skew. Suppose
+a random poll measures the accuracy and skew of the political views of
+MSNBC viewers and FOX viewers and finds them to be as follows:
+
+-   MSNBC viewers have beliefs that are 40% accurate and 50% skewed a
+    *liberal* direction.
+
+-   FOX viewers have views that are 80% *inaccurate* and 80% skewed in
+    the *conservative* direction.
+
+-   Polling reveals that the public’s political views are 50% accurate
+    with a conservative skew of 20%.
+
+Assume that truth vector for public opinion results from the vector
+*sum* of the truth vectors for these three media outlets. Calculate the
+truth vector (i.e., the *accuracy* and *skew*) of NPR.
+
+*Solution*: NPR’s coverage is estimated to be 90% accurate with a
+liberal spin of 10%.
+
+<table>
+<colgroup>
+<col style="width: 38%" />
+<col style="width: 30%" />
+<col style="width: 30%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th><strong>Accuracy</strong></th>
+<th><strong>Skew</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>MSNBC</td>
+<td>0.40</td>
+<td>0.50</td>
+</tr>
+<tr class="even">
+<td>FOX</td>
+<td>−0.80</td>
+<td>−0.80</td>
+</tr>
+<tr class="odd">
+<td>NPR</td>
+<td>0.90</td>
+<td>0.10</td>
+</tr>
+<tr class="even">
+<td>SUM</td>
+<td>0.50</td>
+<td>−0.20</td>
+</tr>
+</tbody>
+</table>
+
+*Example 2. A Fixed-Point Theorem for Truth Vectors*
+
+Suppose that there are two media outlets—a blue station espousing a
+liberal point of view and a red station espousing a conservative point
+of view. Using a unit circle we can plot the dynamic states of truth
+vectors operating on, or influencing, the state of public opinion. We
+can plot the state of public opinion using a vert*i*cal axis for
+*veridicality* and a *horizontal* axis for political *spin*. The
+veridicality axis ranges from
+
+*i* (completely *accurate* information) to –*i* (completely inac*c*urate
+misinformation). The horizontal axis ranges from –1 (complete liberal or
+*left*-wing politics) to 1 (complete conservative *right*-wing
+politics).
+
+*i* = completely accurate
+
+*–* 1 = completely liberal (left) 1 = completely conservative (right)
+
+*–i* = completely inaccurate
+
+The state of public opinion can be represented by a vector, for example,
+by the vector whose coordinates are say - 0.4 for accurate information
+and 0.3 for political spin in the conservative direction.
+
+Given this, or any state of public opinion, and assuming the blue
+station aims at completely liberal broadcasting and the red station aims
+at completely conservative broadcasting, what additional broadcasting to
+the blue station and what additional broadcasting to the red station is
+required so that the balance of opinion as computed by the midpoint
+between the vectors of influence of the media outlets results in a state
+of public information which is approximately close to completely
+accurate information?
+
+We can prove a fixed-point theorem that answers this question. First, we
+illustrate this fixed-point theorem with a classic puzzle due to George
+Gamow that demonstrates the power of complex numbers.
+
+<span class="smallcaps">Imagining Gamow’s Treasure</span>. There is
+hidden treasure on an island on which there are two palm trees. To find
+the hidden treasure, Captain Jack Sparrow must count his paces from the
+grave of Davey Jones to the palm tree on the left, turn 90 degrees
+clockwise, pace the same distance, and then plant a flag. Returning to
+the grave, Captain Jack must count his paces to the palm tree on the
+right, turn 90 degrees counterclockwise, pace the same distance, and
+then plant a second flag. The treasure is to be found midway between the
+two flags. The problem is that the location grave of Davey Jones is
+unknown. How can Captain Jack Sparrow still find the hidden treasure?
+
+*Solution*: Assign coordinates to the palm trees. The palm tree on the
+left is assigned (–1,0) and the palm tree on the right is assigned
+(1,0). We will show that no matter where the grave is, the treasure is
+buried at (0, 1).
+
+In the diagram below, the vector G from the Davey Jones’s Grave ☠ to the
+origin is yellow. The vector from the Grave ☠ to the palm tree at (-1,
+0) is blue. The vector to from the Grave ☠ to the palm tree at (1, 0) is
+red.
+
+(−<!-- -->1,0) *G* (1,0)
+
+☠
+
+The usefulness of imaginary numbers is this: the multiplication by *i*
+of a vector in the complex plane results in a 90 degree
+counter-clockwise (CCW) turn, and multiplication by – *i* results in a
+90 degrees clockwise (CW) turn.
+
+To plot where the first flag is planted, we first translate to blue
+vector to an origin at (–1, 0) and multiply the transformed vector by
+–*i*. Notice that the transplanted vector ends up at \[(G – 1 ) – 1\],
+and so the location of the first flag is –*i* \[(G – 1 ) – 1\]:
+
+🏳 −*i*\[(*G* − 1) − 1)\]
+
+\[(*G* − 1) − 1)\]
+
+90<sup>∘</sup>*C**W*=  × −*i*
+
+(−<!-- -->1,0) (1,0)
+
+*G*
+
+☠
+
+Similarly, we translate the red vector to \[(*G* + 1) + 1\] with an
+origin at (1, 0) and then multiply by *i* to determine where the second
+flag is planted.
+
+🏳 −*i*\[(*G* − 1) − 1)\]
+
+🏳 *i*\[(*G* + 1) + 1\]
+
+\[(*G* − 1) − 1)\]
+
+90<sup>∘</sup>*C**W*=  × −*i* 90<sup>∘</sup> *C**C**W* = ×*i*
+
+(-1,0) (1,0)
+
+*G*
+
+☠
+
+Now we can find the buried treasure by plotting the *midpoint* of the
+line between the two flags:
+
+🏳 −*i*\[(*G* − 1) − 1)\]
+
+🏳*i* \[(*G* + 1) + 1\]
+
+\[(*G* − 1) − 1)\]
+
+90<sup>∘</sup>*C**W*=  × −*i* 90<sup>∘</sup> *C**C**W* = ×*i*
+
+(-1,0) (1,0)
+
+*G*
+
+☠
+
+Now the *midpoint* between the two flags can be computed as the
+*average* of the locations:
+
+$$\frac{- i\left\lbrack (G - 1) - 1 \right\rbrack + i\lbrack\left( G + 1) + 1 \right)\rbrack}{2} = \frac{iG - iG + 2i}{2} = \frac{2i}{2} = i$$
+
+Notice that the vector G drops out of the equation. Therefore the
+position of Davey Jones’s grave is irrelevant: we have a fixed-point
+theorem. The treasure lies buried on the perpendicular bisector directly
+above the origin at a distance of one half the distance between the two
+palm trees.
+
+Returning to our original problem, let’s define the *liberal
+aspirational vector* to be the vector from the current state of public
+opinion to (– 1, 0), which is pure liberalism, and define the
+*conservative aspirational vector* to be the vector from the current
+state of public opinion to (1, 0), which is pure conservatism.
+
+*Fixed-Point Theorem*: Given any state of public opinion, if the liberal
+and conservative media outlets are approximately achieving their
+aspirational vectors, then the solution to moving the public towards
+accurate information is to supplement media influence by vectors equal
+to multiplying the liberal aspirational vector by – *i* and the
+conservative aspirational vector by *i*.
+
+In the next chapter, we use this geometric interpretation of imaginary
+numbers as *rotation* unify logic with complex numbers, providing
+insight into mathematical properties of chaos.
+
+[1] Félix Klein, *Elementary Mathematics From an Advanced Standpoint:
+Arithmetic, Algebra, Analysis* (1924), 56.
+
+[2] *Verisimilitude* was a philosophical term, coined by Karl Popper
+\[1976\] to capture the notion of the *deductive power* of a scientific
+theory. How can one explain the paradox that *truth* is the aim of
+scientific inquiry although even the greatest scientific theories in the
+history of science are, strictly speaking, *false*? Popper wanted to
+acknowledge the intuitive belief that, for example, Newtonian mechanics
+is "closer to the truth" than Aristotelian physics even though both
+theories are *false*. Popper proposed distinguishing between the *truth*
+of a scientific hypothesis and its *content* in terms of the
+truth-content of its logical *consequences*. Popper never succeeded in
+giving a satisfactory formal account. Here we use the same term for a
+different account: our *two-dimensional* proposal of truth vectors is
+not, like Popper’s theory, committed to giving a *one-dimensional*
+measure of "closeness to the truth."

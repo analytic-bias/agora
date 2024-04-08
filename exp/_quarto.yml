@@ -38,6 +38,7 @@ book:
   date: "2030-01-01"
   chapters:
     - index.qmd
+    - euler/euler2.qmd
     - euclid/euclid.qmd
     # - cons/GC.qmd
     # - intro.qmd

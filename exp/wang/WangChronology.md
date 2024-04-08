@@ -59,7 +59,7 @@ and Great Britain ($31.4 billion).</p></td>
 <tr class="odd">
 <td>1941</td>
 <td></td>
-<td><img src="./attachments/WangChronology/media/image1.jpeg"
+<td><img src="./attachments/media/image1.jpeg"
 style="width:1.71181in;height:2.47153in" alt="Hao 1 9 (1).jpeg" />Wang
 marries Yenking (Sophie), with whom he had three children: San-You
 (became a doctor/research scientist), Yi-Ming (became an
@@ -414,7 +414,7 @@ individuals.</td>
 <td rowspan="6"><p>The Tiananmen Square protests (1989) known as the
 June Fourth Incident (六四事件) or '89 Democracy Movement (八九民运) in
 China.</p>
-<p><img src="./attachments/WangChronology/media/image2.jpeg"
+<p><img src="./attachments/media/image2.jpeg"
 style="width:2.025in;height:1.81111in" alt="Hao 1 2.jpeg" /></p>
 <p>Hao and Hanne visit China 1992</p>
 <p>The 1997 transfer of sovereignty over Hong Kong from the United
@@ -459,8 +459,7 @@ months before Wang’s death, is published posthumously.</td>
 <p>Nov 10<sup>th</sup></p></td>
 <td>Hanne Tierney in collaboration with Wang’s daughter Jane Wang create
 and perform “How Wang-Fo Was Saved.”</td>
-<td rowspan="2"><p><img
-src="./attachments/WangChronology/media/image3.jpeg"
+<td rowspan="2"><p><img src="./attachments/media/image3.jpeg"
 style="width:1.04097in;height:1.56111in" alt="Hao 1 6 (1).jpeg" /></p>
 <p>Hao Wang (王浩 <em>Wáng Hào</em>)</p>
 <p>1921 – 1995</p></td>
