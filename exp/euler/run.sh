@@ -1,7 +1,7 @@
-myfilename="euler2"
+myfilename="euler"
 
 pandoc \
 -t markdown_strict \
 --extract-media="./attachments/$myfilename" \
 $myfilename.docx \
--o $myfilename.md
+-o $myfilename.bak

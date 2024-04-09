@@ -1,5 +1,11 @@
 # Euler’s Elegant Identity $e^{i\pi}+1=0$ --- a mathematical mystery tour
 
+:::: {.content-visible when-format="html"}
+::: {.wabullet .aside}
+- The responsive layout on mobile portrait might not be as polished; if content is overlapped thus unintelligible, please rotate device to landscape. **You might also wish to access the [pdf version](/gb.pdf) of this book.**
+:::
+::::
+
 ## The Elegance of Euler’s Identity
 
 In 1749 Euler set forth in his *Introduction in Analysis Infinitorum* an
@@ -198,7 +204,326 @@ like $e^x$ which rapidly expands to positive infinity be
 defined in terms of periodic trigonometric functions whose values are
 confined to the interval from $1$ to $-1$?
 
-## Expanding Exponentiation: From Powers of Numbers to Power Series
+## Making Connections/Creating Mathematics
+
+### Connection: From Negativity to Complexity
+
+::: {.aside}
+
+TODO Grothendieck construction diagrams
+
+:::
+
+How does negativity, in particular $-1$, come about conceptually in
+mathematics? The negative integers are added to ("logically constructed
+from") the natural numbers when we want to have solutions to equations
+such as
+$$x+1=0.$$
+No natural number can be a solution to this equation. (Proof: the left
+hand side of the equation is the successor of $x$, and according to
+Peano’s third postulate, zero is not equal to the successor of any
+natural number.) By embedding the natural numbers in the richer context
+of integers with positive and negative numbers, there is a solution to
+every arithmetic equation involving subtraction, the inverse operation
+of addition.
+
+When multiplication by $-1$ is represented geometrically in terms
+of the number line, the negative sign not only creates new *numbers*,
+but also adds the concept of *direction* on the number line. A minus
+sign indicates a change of direction—a *rotation* of 180 degrees—on the
+number line. Understood in these terms, it is perfectly understandable
+that a change of direction followed by another change of direction
+cancel each other out:
+
+:::: {layout="[ 50, 50 ]"}
+$$-1\;\times\;-1=1.$$
+
+\begin{natdummyenv}
+\nopagecolor
+\begin{tikzpicture}
+  \draw (0,0) circle (1cm);
+  \draw (-2,0) -- (2,0);
+  \node at (-1,0) [below left] {$-1$};
+  \node at (1,0) [below right] {$1$}; %
+\end{tikzpicture}
+\end{natdummyenv}
+
+::::
+
+The puzzle about justifying the law that a "negative times a negative is
+a positive" by finding an interpretation for multiplying debts is based
+on an inadequate conception of a negative number. A better way to think
+about multiplying by $-1$ is as a sign that indicates changing directions
+on the number line. To add $-5$ and $-6$ is to continue on the number line
+from the origin in the negative direction for a total of $11$ units, and
+to multiply $-5$ by $6$ to go $5\times6=30$ units in the negative direction.
+However, to multiply $-5$ by $-6$ is to multiply $5$ by $6$ changing
+directions twice and ending up on the positive direction.
+
+The construction of imaginary numbers from real numbers can be done in a
+way that is completely analogous to the construction of negative numbers
+from natural numbers.
+
+:::: {.fullwidth .column-page-right layout="[ 50, 50 ]"}
+
+::: {#first-column}
+#### Negative Numbers: A Tale of Two Minuses
+
+> *Minus times minus is plus.*  
+> *The reason for this we need not discuss.*
+>
+> ---W. H. Auden
+
+There was skepticism about the negative numbers up until the
+18<sup>th</sup> century. Negative numbers were introduced to have
+solutions to equations such as
+$$x+1=0.$$
+No natural number can be a solution to this equation. According to one
+of Peano's postulates, $0$ is not the successor of any natural number. We
+can expand the natural numbers by adding the negative integers. Negative
+numbers can, for example, be introduced to make it easy to calculate
+debts. If you owe $5$ dollars to Abe and $10$ dollars to Beatrice, but you
+only have $2$ dollars, then you owe a total of $13$ dollars---you have, so to
+speak, $−13$ dollars. If you owe five dollars five times over, then your
+total debt is $5\times(-5)=-25$.
+However, does it make sense to ask how much you own if you owe $5$ dollars
+a *negative* $5$ times over?
+
+Negative numbers can be modeled by a pair of natural numbers that obey
+the following laws for addition and multiplication:
+$$\begin{aligned}
+(a,b)+ (c,d) &= (a+c,b+d)\\
+(a,b)\times(c,d) &= (ac+bd,ad+bc).
+\end{aligned}$$
+Even the great mathematician Euler commented (incorrectly) upon the
+perplexing law, which we now take for granted:
+$$
+(−1)\times(-1)=1.
+$$
+Prove the above law that a minus times a minus is a plus follows from the
+*distributive law*
+$$
+a(b+c)=ab+ac,
+$$
+together with the facts
+$$
+1+(−1)=0 \quad (−1)\times0=0 \quad (−1)\times0=0.
+$$
+Extending the natural number line to the left, one generates the
+negative integers by multiplying the natural numbers by $−1$. Geometrically
+speaking, multiplication by $−1$ is a rotation of $180$ degrees. The
+initially puzzling fact that $(-1)\times(-1)=1$ corresponds to the geometric
+fact that two $180$ degree rotations bring you back to the beginning. The
+integers are constructed as equivalence classes of ordered pairs of
+natural numbers and the negative integers are geometrically generated by
+multiplication by $−1$.
+:::
+
+::: {#second-column}
+#### Complex Numbers: An Imaginary Journey
+
+> *Imaginary $i$ times $i$ is minus one.*  
+> *Let me tell you why it can be done!*
+
+There has also been widespread skepticism about imaginary numbers even
+up to the present day. Imaginary numbers were introduced to have
+solutions to equations such as
+$$
+x^2+1=0.
+$$
+No real number $r$ can be a solution to this equation. A real number is
+either positive or negative, but a positive times a positive is a
+positive, and a negative times a negative is also a positive and so
+$r\times r\neq1$. Negative numbers can be seen as involving a rotation
+of 180 degrees. Complex numbers can be introduced to make it easier to
+calculate rotations without tedious trigonometry.
+
+What does $i\times i=-1$ mean in terms of rotation?
+Multiplying by $–1$ is a rotation of 180 degrees. Geometrically speaking,
+multiplication by *$i$ is a counter-clockwise rotation of $90$ degrees or
+$\frac{\pi}{2}$ radians. Two successive rotations $i\times i$ equal to $–1$.
+
+Complex numbers can be modeled by a pair of real numbers that obey the
+following laws for addition and multiplication:
+$$\begin{aligned}
+(a,b)+ (c,d) &= (a+c,b+d)\\
+(a,b)\times(c,d) &= (ac-bd,ad+bc).
+\end{aligned}$$
+Euler wrote "All such expressions $\sqrt{-1}$,\ $\sqrt{-2}$, etc. are
+consequently impossible or imaginary numbers…." (*Algebra*, 1770). We
+have the following cycle of facts:
+$$i^1=i\quad i^2=-1\quad i^3=-i\quad i^4=1.$$
+If $c=a+ib$, then the *modulus* of $c$ is
+$\sqrt{a^2+b^2}$. By the Pythagorean theorem, this is the
+distance from the origin to the point $(a,b)$. The *argument* of a
+complex number $c=a+ib$ is the *angle* formed by the positive
+real $x$-axis and the line from $(0, 0)$ to $(a,b)$.
+
+Every complex number can be represented by a modulus and an argument
+using polar coordinates. Multiplication of complex numbers in this form
+$$
+\begin{aligned}
+& c=r[\cos (\theta)+i \sin (\theta)] \\
+& d=s[\cos (\rho)+i \sin (\rho)]
+\end{aligned}
+$$
+amounts to this: (1) the *modulus* of the product is the *product* of
+the moduli; and (2) the *argument* of the product is the *sum* of the
+*arguments, i.e,*
+$$c \times d=r \times s[\cos (\theta+\rho)+i \sin (\theta+\rho)] .$$
+Multiplication by a unit length is equivalent to pure rotation.
+
+:::
+
+::::
+
+### From $-1$ in Cartesian Coordinates to $\sqrt{-1}$ in Polar Coordinates
+
+<!-- FIXME this section is repeated -->
+
+### From the Derivative to Infinite Series
+
+Consider Zeno's arrow paradox. If you look at the arrow in flight at an
+instant---or indivisible moment of time---it is indistinguishable from the
+arrow at rest. However, the flight of the arrow is just an infinite
+collection of moments of time. How can an infinite collection of
+motionless arrows become the arrow in motion? One way to begin to
+unravel Zeno’s paradox is to develop the concept of
+*instantaneous velocity*.
+In order to distinguish the arrow in motion from the arrow at
+rest, we need to look at what is happening in the interval of time
+surrounding that instant of time. The notion of a non-zero
+*instantaneous velocity* is what is needed to solve Zeno's paradox of
+the arrow. This concept is captured by the mathematical concept of the
+derivative.
+
+The derivative is one of the two fundamental ideas of calculus. The
+derivative is a mathematical model of change. Given a real-valued
+function $f(x)$, the derivative of $f$ is the function $f'(x)$ which
+is the rate of change of $f$.
+
+Conceptually, the derivative of a function is the rate of change of that
+function at a point in time. The *derivative of a function $f(x)$ is
+the limit of the function in the interval of $\mathrm{d}x$ around $x$ as $\mathrm{d}x$
+goes to zero:
+$$\lim _{d x \rightarrow 0}\left(\frac{f(x+d x)-f(x)}{d x}\right)$$
+Geometrically, the derivative of a function $f(x)$ is the slope of the
+tangent line to its graph. In graphical terms, if we have the graph of
+$$y=f(x),$$
+then $f'(x)$ is the slope of the line which is tangent to the graph of
+$f(x)$ at the point $x$ is the derivative. We can write this using
+Leibniz’s notation:
+$$\frac{\mathrm{d}x}{\mathrm{d}y}=f'(x).$$
+In our example, the derivative of $f(x)=x^2$ is computed
+as follows:
+$$\lim _{d x \rightarrow 0}\left(\frac{(x+d x)^2-x^2}{d x}\right)=\frac{x^2+2 x d x-x^2}{d x}=2 x \mathrm{d}x.$$
+So the derivative, or rate of change, of the function $f(x)=x^2$ is the function $f(x)=2x$.
+
+:::: {.aside}
+
+The Harvard mathematician and satirical songwriter Tom Lehrer put
+the definition of the derivative to music to a tune
+
+::: {.callout-tip .text-center collapse="true"}
+
+## There'll Be Some Changes Made.
+      
+You take a function of $x$ and you call it $y$,  
+Take any $x_0$ that you care to try.  
+You make a little change and call it $\delta x$,  
+The corresponding change in $y$ is what you find nex',  
+And then you take the quotient, and now carefully  
+Send $\delta x$ to zero and I think you'll see  
+That what the limit gives us, if our work all checks,
+Is what we call $\frac{\mathrm{d}y}{\mathrm{d}x}$. Is jus$\frac{\mathrm{d}y}{\mathrm{d}x}$!
+
+:::
+
+::: {.callout-tip .text-center collapse="true"}
+      
+## Derived Functor Rap
+
+This is a new rap on the oldest of stories---  
+Functors on abelian categories.  
+If the functor is left exact  
+You can derive it and that's a fact.  
+But first you must have enough injective  
+Objects in the category to stay active.  
+If that's the case no time to lose;  
+Resolve injectively any way you choose.  
+Apply the functor and don't be sore---  
+The sequence ain't exact no more.  
+Here comes the part that is the most fun, Sir,  
+Take homology to get the answer.  
+On resolution it don't depend:  
+All are chain homotopy equivalent.  
+Hey, Mama, when your algebra shows a gap  
+Go over this Derived Functor Rap.
+
+---P. Bressler, *Derived Functor Rap*, 1988
+
+:::
+
+::::
+
+Here’s a chart of some common derivatives:
+<!-- TODO -->
+
+```{=html}
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><em><strong>Function</strong></em></th>
+<th><em><strong>Derivative</strong></em></th>
+<th><em><strong>Comment</strong></em></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><p><span data-qmd="$c$"/></p>
+<p>(<em>any constant number</em>)</p></td>
+<td>0</td>
+<td>A constant, by definition, doesn’t change.</td>
+</tr>
+<tr class="even">
+<td><em>x<sup>n</sup></em></td>
+<td><em>nx<sup>n-1</sup></em></td>
+<td>The iterated derivative of x<em><sup>n</sup></em> is related to
+<em>n</em>!</td>
+</tr>
+<tr class="odd">
+<td><em>e<sup>x</sup></em></td>
+<td><em>e<sup>x</sup></em></td>
+<td>The base <em>e</em> of the natural exponential function is chosen to
+be such that the rate of change of the function is equal to itself.</td>
+</tr>
+<tr class="even">
+<td>ln(<em>x</em>)</td>
+<td>1/<em>x</em></td>
+<td>The natural logarithm is the inverse of the exponential
+function.</td>
+</tr>
+<tr class="odd">
+<td><em>sin</em>(<em>x</em>)</td>
+<td><em>cos</em>(<em>x</em>)</td>
+<td>The derivative of <em>sin</em>(<em>x</em>) is
+<em>cos</em>(<em>x</em>)</td>
+</tr>
+<tr class="even">
+<td><em>cos</em>(<em>x</em>)</td>
+<td>–<em>sin</em>(<em>x</em>)</td>
+<td>The derivative of <em>cos</em>(<em>x</em>) is – <em>sin</em>(x)</td>
+</tr>
+</tbody>
+</table>
+```
+
+### From Infinite Series to Power Series
 
 The answer to this question involves thinking of exponentiation not
 merely as a *power function* that produces a number but as a *power
@@ -252,12 +577,12 @@ $$\sum_{n=0}^{\infty} \frac{x^n}{n !}=1+x+\frac{x^2}{2 !}+\frac{x^3}{3 !}+\frac{
 \renewcommand\labelitemi{}
 ::: {.nobullet}
 * The derivative of $1 = 0$;
-  The derivative of $x = 1$;
-  The derivative of $\frac{x^2}{2 !}=\frac{2 x}{2}=x$;
-  The derivative of $\frac{x^3}{3 !}=\frac{3 x}{3 \times 2 \times 1}=\frac{x^2}{2 !}$;
-  The derivative of $\frac{x^{2}}{2!}$ = $\frac{2x}{2} = x$;
-  The derivative of $\frac{x^3}{3 !}=\frac{3 x}{3 \times 2 \times 1}=\frac{x^2}{2 !}$;
-  The derivative of $\frac{x^{n+1}}{(n+1) !}=\frac{(n+1) x^n}{(n+1) n !}=\frac{x^n}{n !}$.
+* The derivative of $x = 1$;
+* The derivative of $\frac{x^2}{2 !}=\frac{2 x}{2}=x$;
+* The derivative of $\frac{x^3}{3 !}=\frac{3 x}{3 \times 2\times 1}=\frac{x^2}{2 !}$;
+* The derivative of $\frac{x^{2}}{2!}$ = $\frac{2x}{2} = x$;
+* The derivative of $\frac{x^3}{3 !}=\frac{3 x}{3 \times 2 \times 1}=\frac{x^2}{2 !}$;
+*The derivative of $\frac{x^{n+1}}{(n+1) !}=\frac{(n+1) x^n}{(n+1) n !}=\frac{x^n}{n !}$.
 :::
 \renewcommand\labelitemi{\labelitemito}
 
@@ -394,16 +719,29 @@ functions whose values are confined to the interval from $1$ to $-1$?
 To solve this part of the puzzle we need to explore the undue prejudice
 directed against imaginary numbers.
 
-## A Tale of Two Negatives: From Negative to Imaginary Numbers
-
 ## A Conceptual Unification: Understanding Euler’s Identity 
 
 ## From Truth Values to Truth Vectors.
 
-::: {.fullwidth .column-page-right}
+::: {#lst-geogebra-euler2gamow1 when-format="html"}
 
-<iframe src="https://www.geogebra.org/calculator/cqdmgrf9?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
-<!-- https://www.geogebra.org/m/sehv2qc9 -->
+<script src="https://www.geogebra.org/apps/deployggb.js"></script>
+<div id="ggb-element" style="width: 100%"></div> 
+<script>  
+    let w = document.getElementById("lst-geogebra-euler2gamow1").getBoundingClientRect().width;
+    let params = {"perspective": "G", "width": w, "height": w, "material_id": "cqdmgrf9", "showToolBar": false, "enableRightClick": false, "showAlgebraInput": false, "showMenuBar": false, "preventFocus": true, "showFullscreenButton": true, "rounding": "2", "showKeyboardOnFocus": false, appletOnLoad(api) {
+        api.setPerspective("G");
+        api.showResetIcon(true);
+    }};
+    let applet = new GGBApplet(params, true);
+    window.addEventListener("load", function() { 
+        applet.inject('ggb-element');
+    });
+</script>
 
 :::
+
+## From Euler's Equation to the Riemann Zeta Function
+
+## From the Riemann Zeta Function to Places Yet Unknown
 

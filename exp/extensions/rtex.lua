@@ -110,7 +110,11 @@ function RawBlock(el)
     if starts_with('html', FORMAT) then
       print(fbasename .. '.svg')
       local img = pandoc.Image({}, fbasename .. '.svg')
-      img.attributes.style = 'display: block; margin: auto; width: 100%;'
+      if starts_with('\\begin{natdummyenv}', el.text) then
+        img.attributes.style = 'display: block; margin: auto;'
+      else
+        img.attributes.style = 'display: block; margin: auto; width: 100%;'
+      end
       return pandoc.Para({img})
     else
       -- local img = pandoc.Image({}, fbasename .. '.pdf')

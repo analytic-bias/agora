@@ -70,8 +70,7 @@ ul.task-list li input[type="checkbox"] {
 <script type="application/json" class="js-hypothesis-config">
 {
   "theme": "clean",
-  "showHighlights": "whenSidebarOpen",
-  "openSidebar": true
+  "showHighlights": "always"
 }
 </script>
 <script async="" src="https://hypothes.is/embed.js"></script>
@@ -195,10 +194,17 @@ window.Quarto = {
   <li><a href="#the-elegance-of-eulers-identity" id="toc-the-elegance-of-eulers-identity" class="nav-link active" data-scroll-target="#the-elegance-of-eulers-identity"><span class="header-section-number">1.1</span> The Elegance of Euler’s Identity</a></li>
   <li><a href="#demystifying-eulers-equation" id="toc-demystifying-eulers-equation" class="nav-link" data-scroll-target="#demystifying-eulers-equation"><span class="header-section-number">1.2</span> Demystifying Euler’s Equation</a></li>
   <li><a href="#a-concise-but-conceptually-incomplete-proof" id="toc-a-concise-but-conceptually-incomplete-proof" class="nav-link" data-scroll-target="#a-concise-but-conceptually-incomplete-proof"><span class="header-section-number">1.3</span> A Concise, but Conceptually Incomplete, Proof</a></li>
-  <li><a href="#expanding-exponentiation-from-powers-of-numbers-to-power-series" id="toc-expanding-exponentiation-from-powers-of-numbers-to-power-series" class="nav-link" data-scroll-target="#expanding-exponentiation-from-powers-of-numbers-to-power-series"><span class="header-section-number">1.4</span> Expanding Exponentiation: From Powers of Numbers to Power Series</a></li>
-  <li><a href="#a-tale-of-two-negatives-from-negative-to-imaginary-numbers" id="toc-a-tale-of-two-negatives-from-negative-to-imaginary-numbers" class="nav-link" data-scroll-target="#a-tale-of-two-negatives-from-negative-to-imaginary-numbers"><span class="header-section-number">1.5</span> A Tale of Two Negatives: From Negative to Imaginary Numbers</a></li>
-  <li><a href="#a-conceptual-unification-understanding-eulers-identity" id="toc-a-conceptual-unification-understanding-eulers-identity" class="nav-link" data-scroll-target="#a-conceptual-unification-understanding-eulers-identity"><span class="header-section-number">1.6</span> A Conceptual Unification: Understanding Euler’s Identity</a></li>
-  <li><a href="#from-truth-values-to-truth-vectors." id="toc-from-truth-values-to-truth-vectors." class="nav-link" data-scroll-target="#from-truth-values-to-truth-vectors."><span class="header-section-number">1.7</span> From Truth Values to Truth Vectors.</a></li>
+  <li><a href="#making-connectionscreating-mathematics" id="toc-making-connectionscreating-mathematics" class="nav-link" data-scroll-target="#making-connectionscreating-mathematics"><span class="header-section-number">1.4</span> Making Connections/Creating Mathematics</a>
+  <ul>
+  <li><a href="#connection-from-negativity-to-complexity" id="toc-connection-from-negativity-to-complexity" class="nav-link" data-scroll-target="#connection-from-negativity-to-complexity"><span class="header-section-number">1.4.1</span> Connection: From Negativity to Complexity</a></li>
+  <li><a href="#from--1-in-cartesian-coordinates-to-sqrt-1-in-polar-coordinates" id="toc-from--1-in-cartesian-coordinates-to-sqrt-1-in-polar-coordinates" class="nav-link" data-scroll-target="#from--1-in-cartesian-coordinates-to-sqrt-1-in-polar-coordinates"><span class="header-section-number">1.4.2</span> From <span class="math inline">\(-1\)</span> in Cartesian Coordinates to <span class="math inline">\(\sqrt{-1}\)</span> in Polar Coordinates</a></li>
+  <li><a href="#from-the-derivative-to-infinite-series" id="toc-from-the-derivative-to-infinite-series" class="nav-link" data-scroll-target="#from-the-derivative-to-infinite-series"><span class="header-section-number">1.4.3</span> From the Derivative to Infinite Series</a></li>
+  <li><a href="#from-infinite-series-to-power-series" id="toc-from-infinite-series-to-power-series" class="nav-link" data-scroll-target="#from-infinite-series-to-power-series"><span class="header-section-number">1.4.4</span> From Infinite Series to Power Series</a></li>
+  </ul></li>
+  <li><a href="#a-conceptual-unification-understanding-eulers-identity" id="toc-a-conceptual-unification-understanding-eulers-identity" class="nav-link" data-scroll-target="#a-conceptual-unification-understanding-eulers-identity"><span class="header-section-number">1.5</span> A Conceptual Unification: Understanding Euler’s Identity</a></li>
+  <li><a href="#from-truth-values-to-truth-vectors." id="toc-from-truth-values-to-truth-vectors." class="nav-link" data-scroll-target="#from-truth-values-to-truth-vectors."><span class="header-section-number">1.6</span> From Truth Values to Truth Vectors.</a></li>
+  <li><a href="#from-eulers-equation-to-the-riemann-zeta-function" id="toc-from-eulers-equation-to-the-riemann-zeta-function" class="nav-link" data-scroll-target="#from-eulers-equation-to-the-riemann-zeta-function"><span class="header-section-number">1.7</span> From Euler’s Equation to the Riemann Zeta Function</a></li>
+  <li><a href="#from-the-riemann-zeta-function-to-places-yet-unknown" id="toc-from-the-riemann-zeta-function-to-places-yet-unknown" class="nav-link" data-scroll-target="#from-the-riemann-zeta-function-to-places-yet-unknown"><span class="header-section-number">1.8</span> From the Riemann Zeta Function to Places Yet Unknown</a></li>
   </ul>
 </nav>
     </div>
@@ -224,7 +230,12 @@ window.Quarto = {
 </header>
 
 
-<section id="the-elegance-of-eulers-identity" class="level2" data-number="1.1">
+
+<div class="no-row-height column-margin column-container"><div class="wabullet margin-aside">
+<ul>
+<li>The responsive layout on mobile portrait might not be as polished; if content is overlapped thus unintelligible, please rotate device to landscape. <strong>You might also wish to access the <a href="../gb.pdf">pdf version</a> of this book.</strong></li>
+</ul>
+</div></div><section id="the-elegance-of-eulers-identity" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="the-elegance-of-eulers-identity"><span class="header-section-number">1.1</span> The Elegance of Euler’s Identity</h2>
 <p>In 1749 Euler set forth in his <em>Introduction in Analysis Infinitorum</em> an identity considered to be among the most elegant in all of mathematics: <span class="math display">\[e^{i\pi}+1=0.\]</span> Euler’s equations, succinctly and elegantly combines five of the most fundamental constants of mathematics.</p>
 <div>
@@ -298,8 +309,201 @@ window.Quarto = {
 <p>Here’s how Euler, in his <em>Introduction in Analysis Infinitorum</em>, derived his equation from the following trigonometric identity: <span class="math display">\[e^{ \pm i x}=\cos (x) \pm \sin (x).\]</span> Here if we simply substitute π for the variable <span class="math inline">\(x\)</span>, we have we have: <span class="math display">\[e^{i \pi}=-1+0,\]</span> from which Euler’s identity immediately follows. This proof, while concise, is conceptually incomplete.</p>
 <p>Beginning the proof with a puzzling <em>complex</em> trigonometric equation begs the conceptual question: what does exponentiation have to do with trigonometry? After all, both the <em>sine</em> and <em>cosine</em> functions are <em>periodic</em> and <em>bounded</em>, but the <em>exponential</em> function is <em>non-periodic</em> and <em>unbounded</em>. How then can an exponential function like <span class="math inline">\(e^x\)</span> which rapidly expands to positive infinity be defined in terms of periodic trigonometric functions whose values are confined to the interval from <span class="math inline">\(1\)</span> to <span class="math inline">\(-1\)</span>?</p>
 </section>
-<section id="expanding-exponentiation-from-powers-of-numbers-to-power-series" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="expanding-exponentiation-from-powers-of-numbers-to-power-series"><span class="header-section-number">1.4</span> Expanding Exponentiation: From Powers of Numbers to Power Series</h2>
+<section id="making-connectionscreating-mathematics" class="level2 page-columns page-full" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="making-connectionscreating-mathematics"><span class="header-section-number">1.4</span> Making Connections/Creating Mathematics</h2>
+<section id="connection-from-negativity-to-complexity" class="level3 page-columns page-full" data-number="1.4.1">
+<h3 data-number="1.4.1" class="anchored" data-anchor-id="connection-from-negativity-to-complexity"><span class="header-section-number">1.4.1</span> Connection: From Negativity to Complexity</h3>
+
+<div class="no-row-height column-margin column-container"><div class="margin-aside">
+<p>TODO Grothendieck construction diagrams</p>
+</div></div><p>How does negativity, in particular <span class="math inline">\(-1\)</span>, come about conceptually in mathematics? The negative integers are added to (“logically constructed from”) the natural numbers when we want to have solutions to equations such as <span class="math display">\[x+1=0.\]</span> No natural number can be a solution to this equation. (Proof: the left hand side of the equation is the successor of <span class="math inline">\(x\)</span>, and according to Peano’s third postulate, zero is not equal to the successor of any natural number.) By embedding the natural numbers in the richer context of integers with positive and negative numbers, there is a solution to every arithmetic equation involving subtraction, the inverse operation of addition.</p>
+<p>When multiplication by <span class="math inline">\(-1\)</span> is represented geometrically in terms of the number line, the negative sign not only creates new <em>numbers</em>, but also adds the concept of <em>direction</em> on the number line. A minus sign indicates a change of direction—a <em>rotation</em> of 180 degrees—on the number line. Understood in these terms, it is perfectly understandable that a change of direction followed by another change of direction cancel each other out:</p>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[ 50, 50 ]">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<p><span class="math display">\[-1\;\times\;-1=1.\]</span></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="b9d3f2596957a23f3d1a0785b5f5f65bb05938f8.svg" class="img-fluid" style="display: block; margin: auto;"></p>
+</div>
+</div>
+</div>
+<p>The puzzle about justifying the law that a “negative times a negative is a positive” by finding an interpretation for multiplying debts is based on an inadequate conception of a negative number. A better way to think about multiplying by <span class="math inline">\(-1\)</span> is as a sign that indicates changing directions on the number line. To add <span class="math inline">\(-5\)</span> and <span class="math inline">\(-6\)</span> is to continue on the number line from the origin in the negative direction for a total of <span class="math inline">\(11\)</span> units, and to multiply <span class="math inline">\(-5\)</span> by <span class="math inline">\(6\)</span> to go <span class="math inline">\(5\times6=30\)</span> units in the negative direction. However, to multiply <span class="math inline">\(-5\)</span> by <span class="math inline">\(-6\)</span> is to multiply <span class="math inline">\(5\)</span> by <span class="math inline">\(6\)</span> changing directions twice and ending up on the positive direction.</p>
+<p>The construction of imaginary numbers from real numbers can be done in a way that is completely analogous to the construction of negative numbers from natural numbers.</p>
+<div>
+
+</div>
+<div class="fullwidth column-page-right quarto-layout-panel" data-layout="[ 50, 50 ]">
+<div class="quarto-layout-row">
+<div id="first-column" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<section id="negative-numbers-a-tale-of-two-minuses" class="level4" data-number="1.4.1.1">
+<h4 data-number="1.4.1.1" class="anchored" data-anchor-id="negative-numbers-a-tale-of-two-minuses"><span class="header-section-number">1.4.1.1</span> Negative Numbers: A Tale of Two Minuses</h4>
+<blockquote class="blockquote">
+<p><em>Minus times minus is plus.</em><br>
+<em>The reason for this we need not discuss.</em></p>
+<p>—W. H. Auden</p>
+</blockquote>
+<p>There was skepticism about the negative numbers up until the 18<sup>th</sup> century. Negative numbers were introduced to have solutions to equations such as <span class="math display">\[x+1=0.\]</span> No natural number can be a solution to this equation. According to one of Peano’s postulates, <span class="math inline">\(0\)</span> is not the successor of any natural number. We can expand the natural numbers by adding the negative integers. Negative numbers can, for example, be introduced to make it easy to calculate debts. If you owe <span class="math inline">\(5\)</span> dollars to Abe and <span class="math inline">\(10\)</span> dollars to Beatrice, but you only have <span class="math inline">\(2\)</span> dollars, then you owe a total of <span class="math inline">\(13\)</span> dollars—you have, so to speak, <span class="math inline">\(−13\)</span> dollars. If you owe five dollars five times over, then your total debt is <span class="math inline">\(5\times(-5)=-25\)</span>. However, does it make sense to ask how much you own if you owe <span class="math inline">\(5\)</span> dollars a <em>negative</em> <span class="math inline">\(5\)</span> times over?</p>
+<p>Negative numbers can be modeled by a pair of natural numbers that obey the following laws for addition and multiplication: <span class="math display">\[\begin{aligned}
+(a,b)+&nbsp;(c,d) &amp;= (a+c,b+d)\\
+(a,b)\times(c,d) &amp;= (ac+bd,ad+bc).
+\end{aligned}\]</span> Even the great mathematician Euler commented (incorrectly) upon the perplexing law, which we now take for granted: <span class="math display">\[
+(−1)\times(-1)=1.
+\]</span> Prove the above law that a minus times a minus is a plus follows from the <em>distributive law</em> <span class="math display">\[
+a(b+c)=ab+ac,
+\]</span> together with the facts <span class="math display">\[
+1+(−1)=0 \quad (−1)\times0=0 \quad (−1)\times0=0.
+\]</span> Extending the natural number line to the left, one generates the negative integers by multiplying the natural numbers by <span class="math inline">\(−1\)</span>. Geometrically speaking, multiplication by <span class="math inline">\(−1\)</span>&nbsp;is a rotation of <span class="math inline">\(180\)</span> degrees. The initially puzzling fact that <span class="math inline">\((-1)\times(-1)=1\)</span> corresponds to the geometric fact that two <span class="math inline">\(180\)</span> degree rotations bring you back to the beginning. The integers are constructed as equivalence classes of ordered pairs of natural numbers and the negative integers are geometrically generated by multiplication by <span class="math inline">\(−1\)</span>.</p>
+</section>
+</div>
+<div id="second-column" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<section id="complex-numbers-an-imaginary-journey" class="level4" data-number="1.4.1.2">
+<h4 data-number="1.4.1.2" class="anchored" data-anchor-id="complex-numbers-an-imaginary-journey"><span class="header-section-number">1.4.1.2</span> Complex Numbers: An Imaginary Journey</h4>
+<blockquote class="blockquote">
+<p><em>Imaginary <span class="math inline">\(i\)</span> times <span class="math inline">\(i\)</span> is minus one.</em><br>
+<em>Let me tell you why it can be done!</em></p>
+</blockquote>
+<p>There has also been widespread skepticism about imaginary numbers even up to the present day. Imaginary numbers were introduced to have solutions to equations such as <span class="math display">\[
+x^2+1=0.
+\]</span> No real number <span class="math inline">\(r\)</span> can be a solution to this equation. A real number is either positive or negative, but a positive times a positive is a positive, and a negative times a negative is also a positive and so <span class="math inline">\(r\times r\neq1\)</span>. Negative numbers can be seen as involving a rotation of 180 degrees. Complex numbers can be introduced to make it easier to calculate rotations without tedious trigonometry.</p>
+<p>What does <span class="math inline">\(i\times i=-1\)</span>&nbsp;mean in terms of rotation? Multiplying by <span class="math inline">\(–1\)</span> is a rotation of 180 degrees. Geometrically speaking, multiplication by *<span class="math inline">\(i\)</span> is a counter-clockwise rotation of <span class="math inline">\(90\)</span> degrees or <span class="math inline">\(\frac{\pi}{2}\)</span> radians. Two successive rotations <span class="math inline">\(i\times i\)</span> equal to <span class="math inline">\(–1\)</span>.</p>
+<p>Complex numbers can be modeled by a pair of real numbers that obey the following laws for addition and multiplication: <span class="math display">\[\begin{aligned}
+(a,b)+&nbsp;(c,d) &amp;= (a+c,b+d)\\
+(a,b)\times(c,d) &amp;= (ac-bd,ad+bc).
+\end{aligned}\]</span> Euler wrote “All such expressions <span class="math inline">\(\sqrt{-1}\)</span>,&nbsp;<span class="math inline">\(\sqrt{-2}\)</span>, etc. are consequently impossible or imaginary numbers….” (<em>Algebra</em>, 1770). We have the following cycle of facts: <span class="math display">\[i^1=i\quad i^2=-1\quad i^3=-i\quad i^4=1.\]</span> If <span class="math inline">\(c=a+ib\)</span>, then the <em>modulus</em> of <span class="math inline">\(c\)</span> is <span class="math inline">\(\sqrt{a^2+b^2}\)</span>. By the Pythagorean theorem, this is the distance from the origin to the point <span class="math inline">\((a,b)\)</span>. The <em>argument</em> of a complex number <span class="math inline">\(c=a+ib\)</span> is the <em>angle</em> formed by the positive real <span class="math inline">\(x\)</span>-axis and the line from <span class="math inline">\((0, 0)\)</span> to <span class="math inline">\((a,b)\)</span>.</p>
+<p>Every complex number can be represented by a modulus and an argument using polar coordinates. Multiplication of complex numbers in this form <span class="math display">\[
+\begin{aligned}
+&amp; c=r[\cos (\theta)+i \sin (\theta)] \\
+&amp; d=s[\cos (\rho)+i \sin (\rho)]
+\end{aligned}
+\]</span> amounts to this: (1) the <em>modulus</em> of the product is the <em>product</em> of the moduli; and (2) the <em>argument</em> of the product is the <em>sum</em> of the <em>arguments, i.e,</em> <span class="math display">\[c \times d=r \times s[\cos (\theta+\rho)+i \sin (\theta+\rho)] .\]</span> Multiplication by a unit length is equivalent to pure rotation.</p>
+</section>
+</div>
+</div>
+</div>
+</section>
+<section id="from--1-in-cartesian-coordinates-to-sqrt-1-in-polar-coordinates" class="level3" data-number="1.4.2">
+<h3 data-number="1.4.2" class="anchored" data-anchor-id="from--1-in-cartesian-coordinates-to-sqrt-1-in-polar-coordinates"><span class="header-section-number">1.4.2</span> From <span class="math inline">\(-1\)</span> in Cartesian Coordinates to <span class="math inline">\(\sqrt{-1}\)</span> in Polar Coordinates</h3>
+<!-- FIXME this section is repeated -->
+</section>
+<section id="from-the-derivative-to-infinite-series" class="level3 page-columns page-full" data-number="1.4.3">
+<h3 data-number="1.4.3" class="anchored" data-anchor-id="from-the-derivative-to-infinite-series"><span class="header-section-number">1.4.3</span> From the Derivative to Infinite Series</h3>
+<p>Consider Zeno’s arrow paradox. If you look at the arrow in flight at an instant—or indivisible moment of time—it is indistinguishable from the arrow at rest. However, the flight of the arrow is just an infinite collection of moments of time. How can an infinite collection of motionless arrows become the arrow in motion? One way to begin to unravel Zeno’s paradox is to develop the concept of <em>instantaneous velocity</em>. In order to distinguish the arrow in motion from the arrow at rest, we need to look at what is happening in the interval of time surrounding that instant of time. The notion of a non-zero <em>instantaneous velocity</em> is what is needed to solve Zeno’s paradox of the arrow. This concept is captured by the mathematical concept of the derivative.</p>
+<p>The derivative is one of the two fundamental ideas of calculus. The derivative is a mathematical model of change. Given a real-valued function <span class="math inline">\(f(x)\)</span>, the derivative of <span class="math inline">\(f\)</span> is the function <span class="math inline">\(f'(x)\)</span> which is the rate of change of <span class="math inline">\(f\)</span>.</p>
+<p>Conceptually, the derivative of a function is the rate of change of that function at a point in time. The *derivative of a function <span class="math inline">\(f(x)\)</span> is the limit of the function in the interval of <span class="math inline">\(\mathrm{d}x\)</span> around <span class="math inline">\(x\)</span> as <span class="math inline">\(\mathrm{d}x\)</span> goes to zero: <span class="math display">\[\lim _{d x \rightarrow 0}\left(\frac{f(x+d x)-f(x)}{d x}\right)\]</span> Geometrically, the derivative of a function <span class="math inline">\(f(x)\)</span> is the slope of the tangent line to its graph. In graphical terms, if we have the graph of <span class="math display">\[y=f(x),\]</span> then <span class="math inline">\(f'(x)\)</span> is the slope of the line which is tangent to the graph of <span class="math inline">\(f(x)\)</span> at the point <span class="math inline">\(x\)</span> is the derivative. We can write this using Leibniz’s notation: <span class="math display">\[\frac{\mathrm{d}x}{\mathrm{d}y}=f'(x).\]</span> In our example, the derivative of <span class="math inline">\(f(x)=x^2\)</span> is computed as follows: <span class="math display">\[\lim _{d x \rightarrow 0}\left(\frac{(x+d x)^2-x^2}{d x}\right)=\frac{x^2+2 x d x-x^2}{d x}=2 x \mathrm{d}x.\]</span> So the derivative, or rate of change, of the function <span class="math inline">\(f(x)=x^2\)</span> is the function <span class="math inline">\(f(x)=2x\)</span>.</p>
+
+<div class="no-row-height column-margin column-container"><div class="margin-aside">
+<p>The Harvard mathematician and satirical songwriter Tom Lehrer put the definition of the derivative to music to a tune</p>
+<div class="text-center callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+There’ll Be Some Changes Made.
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>You take a function of <span class="math inline">\(x\)</span> and you call it <span class="math inline">\(y\)</span>,<br>
+Take any <span class="math inline">\(x_0\)</span> that you care to try.<br>
+You make a little change and call it <span class="math inline">\(\delta x\)</span>,<br>
+The corresponding change in <span class="math inline">\(y\)</span> is what you find nex’,<br>
+And then you take the quotient, and now carefully<br>
+Send <span class="math inline">\(\delta x\)</span> to zero and I think you’ll see<br>
+That what the limit gives us, if our work all checks, Is what we call <span class="math inline">\(\frac{\mathrm{d}y}{\mathrm{d}x}\)</span>. Is jus<span class="math inline">\(\frac{\mathrm{d}y}{\mathrm{d}x}\)</span>!</p>
+</div>
+</div>
+</div>
+<div class="text-center callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Derived Functor Rap
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>This is a new rap on the oldest of stories—<br>
+Functors on abelian categories.<br>
+If the functor is left exact<br>
+You can derive it and that’s a fact.<br>
+But first you must have enough injective<br>
+Objects in the category to stay active.<br>
+If that’s the case no time to lose;<br>
+Resolve injectively any way you choose.<br>
+Apply the functor and don’t be sore—<br>
+The sequence ain’t exact no more.<br>
+Here comes the part that is the most fun, Sir,<br>
+Take homology to get the answer.<br>
+On resolution it don’t depend:<br>
+All are chain homotopy equivalent.<br>
+Hey, Mama, when your algebra shows a gap<br>
+Go over this Derived Functor Rap.</p>
+<p>—P. Bressler, <em>Derived Functor Rap</em>, 1988</p>
+</div>
+</div>
+</div>
+</div></div><p>Here’s a chart of some common derivatives: <!-- TODO --></p>
+<div>
+<table data-quarto-postprocess="true" class="table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"><em><strong>Function</strong></em></th>
+<th data-quarto-table-cell-role="th"><em><strong>Derivative</strong></em></th>
+<th data-quarto-table-cell-role="th"><em><strong>Comment</strong></em></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><p><span class="math inline">\(c\)</span></p>
+<p>(<em>any constant number</em>)</p></td>
+<td>0</td>
+<td>A constant, by definition, doesn’t change.</td>
+</tr>
+<tr class="even">
+<td><em>x<sup>n</sup></em></td>
+<td><em>nx<sup>n-1</sup></em></td>
+<td>The iterated derivative of x<em><sup>n</sup></em> is related to <em>n</em>!</td>
+</tr>
+<tr class="odd">
+<td><em>e<sup>x</sup></em></td>
+<td><em>e<sup>x</sup></em></td>
+<td>The base <em>e</em> of the natural exponential function is chosen to be such that the rate of change of the function is equal to itself.</td>
+</tr>
+<tr class="even">
+<td>ln(<em>x</em>)</td>
+<td>1/<em>x</em></td>
+<td>The natural logarithm is the inverse of the exponential function.</td>
+</tr>
+<tr class="odd">
+<td><em>sin</em>(<em>x</em>)</td>
+<td><em>cos</em>(<em>x</em>)</td>
+<td>The derivative of <em>sin</em>(<em>x</em>) is <em>cos</em>(<em>x</em>)</td>
+</tr>
+<tr class="even">
+<td><em>cos</em>(<em>x</em>)</td>
+<td>–<em>sin</em>(<em>x</em>)</td>
+<td>The derivative of <em>cos</em>(<em>x</em>) is – <em>sin</em>(x)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="from-infinite-series-to-power-series" class="level3" data-number="1.4.4">
+<h3 data-number="1.4.4" class="anchored" data-anchor-id="from-infinite-series-to-power-series"><span class="header-section-number">1.4.4</span> From Infinite Series to Power Series</h3>
 <p>The answer to this question involves thinking of exponentiation not merely as a <em>power function</em> that produces a number but as a <em>power series.</em> We have already encountered infinite series when discussing Zeno’s paradoxes. For example, Zeno’s dichotomy paradox involved the <em>geometric</em> series <span class="math display">\[\sum_{n=1}^{\infty} \frac{1}{2^n}=\frac{1}{2}+\frac{1}{4}+\frac{1}{8}+\frac{1}{16}+\frac{1}{32}+\frac{1}{64}+\cdots+\frac{1}{2^n}+\cdots.\]</span> Figuring out the sum of such an infinite geometric series depended on the observation that multiplying the series by the common factor of ½ results in truncating the first term: <span class="math display">\[\begin{aligned}
 X&amp;{}=\frac{1}{2}+\frac{1}{4}+\frac{1}{8}+\frac{1}{16}+\frac{1}{32}+\frac{1}{64}+\cdots+\frac{1}{2^n}+\cdots\\
 \frac{1}{2} X&amp;{}={}\phantom{\frac{1}{2}+{}}\frac{1}{4}+\frac{1}{8}+\frac{1}{16}+\frac{1}{32}+\frac{1}{64}+\cdots+\frac{1}{2^n}+\cdots.
@@ -313,7 +517,12 @@ style="width:2.42361in;height:2.34028in" alt="zeno-08.jpg" /> --> <span class="m
 <p><span class="math display">\[\sum_{n=0}^{\infty} \frac{x^n}{n !}=1+x+\frac{x^2}{2 !}+\frac{x^3}{3 !}+\frac{x^4}{4 !}+\frac{x^5}{5 !}+\cdots+\frac{x^n}{n !}+\cdots\]</span></p>
 <div class="nobullet">
 <ul>
-<li>The derivative of <span class="math inline">\(1 = 0\)</span>; The derivative of <span class="math inline">\(x = 1\)</span>; The derivative of <span class="math inline">\(\frac{x^2}{2 !}=\frac{2 x}{2}=x\)</span>; The derivative of <span class="math inline">\(\frac{x^3}{3 !}=\frac{3 x}{3 \times 2 \times 1}=\frac{x^2}{2 !}\)</span>; The derivative of <span class="math inline">\(\frac{x^{2}}{2!}\)</span> = <span class="math inline">\(\frac{2x}{2} = x\)</span>; The derivative of <span class="math inline">\(\frac{x^3}{3 !}=\frac{3 x}{3 \times 2 \times 1}=\frac{x^2}{2 !}\)</span>; The derivative of <span class="math inline">\(\frac{x^{n+1}}{(n+1) !}=\frac{(n+1) x^n}{(n+1) n !}=\frac{x^n}{n !}\)</span>.</li>
+<li>The derivative of <span class="math inline">\(1 = 0\)</span>;</li>
+<li>The derivative of <span class="math inline">\(x = 1\)</span>;</li>
+<li>The derivative of <span class="math inline">\(\frac{x^2}{2 !}=\frac{2 x}{2}=x\)</span>;</li>
+<li>The derivative of <span class="math inline">\(\frac{x^3}{3 !}=\frac{3 x}{3 \times 2\times 1}=\frac{x^2}{2 !}\)</span>;</li>
+<li>The derivative of <span class="math inline">\(\frac{x^{2}}{2!}\)</span> = <span class="math inline">\(\frac{2x}{2} = x\)</span>;</li>
+<li>The derivative of <span class="math inline">\(\frac{x^3}{3 !}=\frac{3 x}{3 \times 2 \times 1}=\frac{x^2}{2 !}\)</span>; *The derivative of <span class="math inline">\(\frac{x^{n+1}}{(n+1) !}=\frac{(n+1) x^n}{(n+1) n !}=\frac{x^n}{n !}\)</span>.</li>
 </ul>
 </div>
 <p>So taking the term-wise derivative is the infinite series itself! Now this is precisely the defining feature of the exponential function: <span class="math display">\[e^x=1+x+\frac{x^2}{2 !}+\frac{x^3}{3 !}+\frac{x^4}{4 !}+\frac{x^5}{5 !}+\cdots+\frac{x^n}{n !}+\cdots;\]</span> this power series can be used to estimate the value of <span class="math inline">\(e\)</span>.</p>
@@ -406,19 +615,42 @@ style="width:2.42361in;height:2.34028in" alt="zeno-08.jpg" /> --> <span class="m
 <p>The terms of the <em>sine</em> power series are the <em>odd</em> powers and the terms of the <em>cosine</em> power series are the even powers. The question is how to account for the alternation of <span class="math inline">\(+\)</span> and <span class="math inline">\(-\)</span> signs. And to repeat, the <em>sine</em> and <em>cosine</em> functions are <em>periodic</em> and <em>bounded</em>, but the <em>exponential</em> function is <em>non-periodic</em> and <em>unbounded</em>. How then can an exponential function like <span class="math inline">\(e^x\)</span> which rapidly expands to positive infinity be defined in terms of periodic trigonometric functions whose values are confined to the interval from <span class="math inline">\(1\)</span> to <span class="math inline">\(-1\)</span>?</p>
 <p>To solve this part of the puzzle we need to explore the undue prejudice directed against imaginary numbers.</p>
 </section>
-<section id="a-tale-of-two-negatives-from-negative-to-imaginary-numbers" class="level2" data-number="1.5">
-<h2 data-number="1.5" class="anchored" data-anchor-id="a-tale-of-two-negatives-from-negative-to-imaginary-numbers"><span class="header-section-number">1.5</span> A Tale of Two Negatives: From Negative to Imaginary Numbers</h2>
 </section>
-<section id="a-conceptual-unification-understanding-eulers-identity" class="level2" data-number="1.6">
-<h2 data-number="1.6" class="anchored" data-anchor-id="a-conceptual-unification-understanding-eulers-identity"><span class="header-section-number">1.6</span> A Conceptual Unification: Understanding Euler’s Identity</h2>
+<section id="a-conceptual-unification-understanding-eulers-identity" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="a-conceptual-unification-understanding-eulers-identity"><span class="header-section-number">1.5</span> A Conceptual Unification: Understanding Euler’s Identity</h2>
 </section>
-<section id="from-truth-values-to-truth-vectors." class="level2 page-columns page-full" data-number="1.7">
-<h2 data-number="1.7" class="anchored" data-anchor-id="from-truth-values-to-truth-vectors."><span class="header-section-number">1.7</span> From Truth Values to Truth Vectors.</h2>
-<div class="fullwidth column-page-right">
-<iframe src="https://www.geogebra.org/calculator/cqdmgrf9?embed" width="800" height="600" allowfullscreen="" style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0">
-</iframe>
-<!-- https://www.geogebra.org/m/sehv2qc9 -->
+<section id="from-truth-values-to-truth-vectors." class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="from-truth-values-to-truth-vectors."><span class="header-section-number">1.6</span> From Truth Values to Truth Vectors.</h2>
+<div id="lst-geogebra-euler2gamow1" class="listing quarto-float" data-when-format="html">
+<figure class="quarto-float quarto-float-lst figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst quarto-uncaptioned" id="lst-geogebra-euler2gamow1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Listing&nbsp;1.1
+</figcaption>
+<div aria-describedby="lst-geogebra-euler2gamow1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<script src="https://www.geogebra.org/apps/deployggb.js"></script>
+<div id="ggb-element" style="width: 100%">
+
 </div>
+<script>  
+    let w = document.getElementById("lst-geogebra-euler2gamow1").getBoundingClientRect().width;
+    let params = {"perspective": "G", "width": w, "height": w, "material_id": "cqdmgrf9", "showToolBar": false, "enableRightClick": false, "showAlgebraInput": false, "showMenuBar": false, "preventFocus": true, "showFullscreenButton": true, "rounding": "2", "showKeyboardOnFocus": false, appletOnLoad(api) {
+        api.setPerspective("G");
+        api.showResetIcon(true);
+    }};
+    let applet = new GGBApplet(params, true);
+    window.addEventListener("load", function() { 
+        applet.inject('ggb-element');
+    });
+</script>
+</div>
+</figure>
+</div>
+</section>
+<section id="from-eulers-equation-to-the-riemann-zeta-function" class="level2" data-number="1.7">
+<h2 data-number="1.7" class="anchored" data-anchor-id="from-eulers-equation-to-the-riemann-zeta-function"><span class="header-section-number">1.7</span> From Euler’s Equation to the Riemann Zeta Function</h2>
+</section>
+<section id="from-the-riemann-zeta-function-to-places-yet-unknown" class="level2" data-number="1.8">
+<h2 data-number="1.8" class="anchored" data-anchor-id="from-the-riemann-zeta-function-to-places-yet-unknown"><span class="header-section-number">1.8</span> From the Riemann Zeta Function to Places Yet Unknown</h2>
 
 
 </section>

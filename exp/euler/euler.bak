@@ -1,0 +1,1628 @@
+A Mathematical Meditation on Euler’s Elegant Equation
+
+*e<sup>i</sup>*<sup>π</sup> + 1 = 0
+
+# 
+
+[5.1. The Elegance of Euler’s Identity
+[1](#the-elegance-of-eulers-identity)](#the-elegance-of-eulers-identity)
+
+[5.2. Demystifying Euler’s Equation
+[2](#demystifying-eulers-equation)](#demystifying-eulers-equation)
+
+[5.3. A Concise, but Conceptually Incomplete, Proof
+[5](#a-concise-but-conceptually-incomplete-proof)](#a-concise-but-conceptually-incomplete-proof)
+
+[5.4. Making Connections/Creating Mathematics
+[6](#making-connectionscreating-mathematics)](#making-connectionscreating-mathematics)
+
+[Connection 1. From Negativity to Complexity
+[6](#connection-1.-from-negativity-to-complexity)](#connection-1.-from-negativity-to-complexity)
+
+[Connection 2. From −**1** in Cartesian Coordinates to −**1**  in Polar
+Coordinates
+[8](#connection-2.-from-mathbf--1-in-cartesian-coordinates-to-sqrtmathbf--1-in-polar-coordinates)](#connection-2.-from-mathbf--1-in-cartesian-coordinates-to-sqrtmathbf--1-in-polar-coordinates)
+
+[Connection 3. From the Derivative to Infinite Series
+[10](#connection-3.-from-the-derivative-to-infinite-series)](#connection-3.-from-the-derivative-to-infinite-series)
+
+[Connection 4. The Derivative to the Natural Exponential Function
+[12](#connection-4.-the-derivative-to-the-natural-exponential-function)](#connection-4.-the-derivative-to-the-natural-exponential-function)
+
+[Connection 5. From Infinite Series to Power Series
+[14](#connection-5.-from-infinite-series-to-power-series)](#connection-5.-from-infinite-series-to-power-series)
+
+[Connection 6. Interlacing the Power Series for Sin(*x*), Cos(*x*) and
+*e<sup>x</sup>*
+[18](#connection-6.-interlacing-the-power-series-for-sinx-cosx-and-ex)](#connection-6.-interlacing-the-power-series-for-sinx-cosx-and-ex)
+
+[Connection 7. Deriving Euler’s Equation from Interlacing Power Series
+[19](#connection-7.-deriving-eulers-equation-from-interlacing-power-series)](#connection-7.-deriving-eulers-equation-from-interlacing-power-series)
+
+[5.5. From Euler’s Equation to the Riemann Zeta Function
+[22](#from-eulers-equation-to-the-riemann-zeta-function)](#from-eulers-equation-to-the-riemann-zeta-function)
+
+[5.7. From the Riemann Zeta Function to Places Yet Unknown
+[24](#from-the-riemann-zeta-function-to-places-yet-unknown)](#from-the-riemann-zeta-function-to-places-yet-unknown)
+
+# 5.1. The Elegance of Euler’s Identity
+
+In 1749 Euler published in his *Introductio in Analysis Infinitorum* an
+equation considered by many to be the most beautiful in all of
+mathematics:
+
+*e*<sup>*i**π*</sup>+ 1 = 0.
+
+Euler’s equation is succinct in its elegance and depth. Euler’s identity
+uses the three basic arithmetic operations of addition, multiplication,
+and exponentiation to conceptually link three number systems connecting
+five of the most fundamental constants of mathematics.
+
+}
+
+0 The two *natural numbers* essential for arithmetic,
+
+1
+
+π The two ubiquitous *transcendental numbers* π and *e,*
+
+} }
+
+*e*
+
+*i* The square root of –1, the basis of the *imaginary or complex
+numbers*.
+
+Carl Friedrich Gauss, the “Prince of Mathematicians,” reported said that
+anyone to whom Euler’s identity was not immediately apparent would never
+become a first-class mathematician. Whether or not one wishes to become
+a first-class mathematician, our goal is to demystify Euler’s equation
+and to explain the mathematical ideas in Euler’s beautiful equation in a
+way accessible to those with a minimal mathematical education. The
+remarkable beauty of Euler’s derivation of his equation derives not only
+from its deep *connections* of five fundamental mathematical constants,
+but also in its masterful illustration of the *cognitive* strategies
+mathematicians deploy they are creating new mathematical discoveries.
+This last phrase “creating… mathematical discoveries” may seem
+paradoxical: do mathematicians discover mathematical truths or
+creatively construct them?
+
+As we shall see in this case study, the answer is ‘yes’. Mathematical
+thinking includes:
+
+-   creating new number systems by constructing solutions to equations;
+
+-   studying geometric representations as new mathematical objects;
+
+-   turning anomalous singularities into higher-level symmetries;
+
+-   generalizing equations by expanding the domain of mathematical
+    objects;
+
+-   unifying conceptual domains by making bold conjectural
+    identifications.
+
+# 5.2. Demystifying Euler’s Equation
+
+> *“An ordinary genius is a fellow that you and I would be just as good
+> as, if we were only many times better. There is no mystery as to how
+> his mind works. Once we understand what he has done, we feel certain
+> that we, too, could have done it. It is different with magicians...
+> the working of their minds is for all intents and purpose
+> incomprehensible. Even after we understand what they have done, the
+> process by which they have done it is completely dark.”*
+
+—<span class="smallcaps">Mark Kac</span> (1914-1984) (quoted in Nahim,
+p. 9)
+
+In this quotation, Mark Kac distinguishes ordinary geniuses from
+mathematical magicians. Euler’s equation, it must be admitted, appears
+to be the work of a magician. Let’s enumerate some of the mysteries of
+Euler’s equation, which can be expressed:
+
+*e*<sup>*i**π*</sup> = − 1 .
+
+ 
+
+First, there is the mystery of *negative numbers* whose existence was
+considered dubious by mathematicians even up to the 18<sup>th</sup>
+century. One intuitive way to motivate negative numbers is to use the
+analogy with debt. This analogy makes sense with addition of credits and
+debits, but breaks down when one tries to continue the analogy and work
+out what the product of two debts might be.[1] Euler himself in his
+*Algebra* (1770), used the analogy of debt, but did not fall into the
+usually mistake of trying to explain that the product of two debts must
+be positive. Instead, Euler gave a negative “explanation” of why “minus
+times minus is plus” by considering logically exhaustive cases: *– a × –
+b* cannot be *– ab* since this what is given by *– a × b* and the change
+in sign of *b* should give a change in sign of the answer. Therefore,
+Euler argued, *– a × – b* must *ab.* Notice that Euler’s argument
+doesn’t give an *explanation* of why a negative times a negative is a
+positive, but instead gives a *systematic* argument for why the product
+of two negative can’t be assigned a negative. But negativity isn’t all
+that’s mystifying about Euler’s formula.
+
+Secondly, there is the mystery of the *exponential function*:
+
+*e*<sup>*i**π*</sup> = − 1 .
+
+As our math teacher taught us exponentiation, the meaning of
+2<sup>3</sup> is that you take the *base* 2 and multiply itself the
+number of times indicated the *exponent* 3. In other words,
+
+2<sup>3</sup> = 2 × 2 × 2 = 8 .
+
+In Euler’s formula instead of integers like 2 and 3, we have the
+*transcendental* *real* numbers *e* and *π* and the *imaginary* number
+*i*. The real numbers π and *e* are not only *irrational* numbers—that
+is, they are *not* expressible as the *ratio* of integers (e.g.,
+$\sqrt{2}$ is irrational and so has a non-repeating decimal
+representation), but they are also *non-algebraic*—that is, they are not
+the solutions or roots of any polynomial with integer coefficients. The
+transcendental number π is the ratio of the circumference to the
+diameter of a circle and is non-repeating decimal which begins with
+3.1415926… (to remember the digits of π you can count the letters of the
+words in the sentence *“may I have a large container of coffee”.* The
+transcendental number *e* is defined as the base of an exponential
+function such that its rate of change, or derivative, is equal to itself
+(to remember the digits of e you can count the letters in the words in
+the sentence “*to express e remember to remember a sentence to remember
+this”*). We we round these transcendental numbers doesn to the near
+integer, then *e*<sup>*π*</sup> is similar to the number 2<sup>3</sup>.
+
+Thirdly, there is the mystery of the *imaginary component* in the
+exponent of the exponential function.
+
+*e*<sup>*i**π*</sup> = − 1 .
+
+If negative numbers and the fact that –1 × –1 = +1 can be mystifying,
+then the real possibility of the imaginary number $i = \\\sqrt{- 1}$ is
+even more mystifying. Since the square of any real number—negative or
+positive—must be positive, no real number can be the square root of a
+negative number. Euler himself in his *Algebra* (1770) wrote:
+
+> *“All such expressions as* $\sqrt{- 1\\},\\\sqrt{- 2\\}$*, etc., are
+> consequently impossible or imaginary numbers, since they represent
+> roots of negative quantities, and of such numbers we may truly assert
+> that they are neither nothing, nor greater than nothing, nor less than
+> nothing, which necessarily constitutes them imaginary or impossible.”*
+
+Fourthly, there is the question of the nature of the identity in Euler’s
+equation:
+
+*e*<sup>*i**π*</sup>+ 1 = 0
+
+Identities, equations, equivalences are used in various ways in
+mathematics. In the equation
+
+*x* + 7 = 12 ,
+
+the identity sign is used to equate two ways of expressing the name
+number and the variable *x* stands for an specific unknown number. In
+the following equation
+
+(*x* + *y*) × (*x* – *y*) = *x*<sup>2</sup> – *y*<sup>2</sup>
+
+the identity is used to express a law known as the *difference of two
+squares* and the variables are used to stand generality for any
+integers.
+
+Another mathematical use of the identity sign in mathematics is for
+stating *equivalence relations*. When the integers are logically
+constructed from the natural numbers, an equivalence relation = is
+defined on ordered pairs of natural numbers using the previously defined
+realtion of addition + on natural numbers:
+
+(*a* – *b*) = (*c* – *d*)
+
+if and only if
+
+*a* + *d* = *b* + *c* .
+
+The former relation is proven to be an *equivalence relation* by showing
+that the relation is reflexive, symmetric and transitive.
+
+Still another use of the identity sign is to define the operations of
+addition + and multiplication × on the equivalence classes of ordered
+pairs of natural numbers and the previous relations of addition + and
+multiplication × on natural numbers.
+
+   (*a*, *b*)+ (*c*, *d*) = (*a* + *c*, *b* + *d*)
+
+(*a*, *b*) × (*c*, *d*) = ((*a* × *c*) + (*b* × *d*),  (*a* × *d*) + (**b** × **c**))
+
+Finally, identities can be used to make *bold conjectures*—a proposed
+identification which organizes ideas from previously separate cognitive
+domains into a new paradigm. Perhaps the most famous identity of this
+sort is Einstein’s equation proposing the mass-energy equivalence in his
+famous 1905 paper, *“Does the inertia of a body depend on its
+energy-content?”*
+
+*E* = *m**c*<sup>2</sup> .
+
+In this equivalence, the total internal energy *E* of a body at rest is
+equal to the product of its rest mass *m* and a suitable conversion
+factor, here expressed in terms of the square of the speed of light, to
+transform units of mass to units of energy. Einstein was not the first
+to propose the mass-energy equivalence, but he rightly is given the
+credit for proposing that this identity in the contexts of a new
+paradigm created by the theory of relativity.
+
+Stringing these mysteries together, we have in Euler’s equation the
+identification of a transcendental number raised to an exponent which is
+the product of a transcendental number and an imaginary number with the
+negative number − 1. It is easy to understand why the Nobel physicist
+Richard P. Feynman called Euler’s formula “one of the most remarkable
+formulas in mathematics.” Feynman was known for figuring things out for
+himself rather than taking things on authority and his youthful
+notebooks have the workings out of Euler’s equation. In Feynman’s
+spirit, let’s take a mathematical journey in which we figure out the
+meaning of Euler’s remarkable identity for ourselves—not being content
+with mere proofs but instead taking the time to demystify the elements
+of Euler’s beautiful equation.
+
+In demystifying Euler’s equation, our goal is not to not dispel its
+beauty, but perhaps by taking the time to explain how mathematicians
+create, we will finally come to appreciate—in a mathematically precise
+rather than a mystically vague way—the beauty of Euler’s equation.
+
+# 5.3. A Concise, but Conceptually Incomplete, Proof
+
+> *“It \[Euler’s identity\] is absolutely paradoxical; we cannot
+> understand it, and we don't know what it means, but we have proved it,
+> and therefore we know it must be the truth."*
+>
+> —<span class="smallcaps">Benjamin Peirce (1809-1880)</span>
+
+The 19<sup>th</sup> century Harvard mathematician Benjamin
+Peirce--father of logician and pragmatist philosopher C. S. Peirce
+(1839-1914)—is reported to have made the above remark after proving
+Euler’s identity. The quotation underscores a fact overlooked on a
+pedagogy of mathematics that is based on reproducing proofs: proofs by
+themselves need not yield any deep conceptual understanding of the
+mathematics underlying the proof.
+
+In his above mentioned *Introductio in Analysis Infinitorum* Euler
+derived his equation from the following trigonometric equation:
+
+*e*<sup>±*i**x*</sup> = cos (*x*) ± *i* sin (*x*) .
+
+Here we simply substitute π for the variable *x*. Since
+*cos*(π) = −1 and *sin*(π) = 0, we have
+
+*e<sup>i</sup>*<sup>π</sup> = − 1 + 0 
+
+from which we can immediately deduce Euler’s equation:
+*e*<sup>π*ι*</sup> + 1 = 0 .
+
+The proof given here, while concise, is not conceptually illuminating.
+Beginning the proof with a puzzling complex trigonometric equation as
+the first premise begs the conceptual question of what exponentiation
+has to do with trigonometry. How can an exponential function like
+*e<sup>x</sup>* which rapidly expands to positive infinity be defined in
+terms of periodic trigonometric functions whose values are confined to
+interval from 1 to −<!-- -->1?
+
+# 5.4. Making Connections/Creating Mathematics
+
+## Connection 1. From Negativity to Complexity
+
+*e*<sup>*π**i*</sup>=  − 1
+
+How does negativity, in particular −1, come about conceptually in
+mathematics? The negative integers are added to (“logically constructed
+from” ) the natural numbers when we want to have solutions to equations
+such as
+
+*x* + 1 = 0 .
+
+No natural number can be a solution to this equation. (Proof: the left
+hand side of the equation is the successor of *x*, and according to
+Peano’s third postulate, zero is not equal to the successor of any
+natural number.) By embedding the natural numbers in the richer context
+of integers with positive and negative numbers, there is a solution to
+every arithmetic equation involving subtraction, the inverse operation
+of addition.
+
+When multiplication by −<!-- -->1 is represented geometrically in terms
+of the number line, the negative sign not only creates new *numbers*,
+but also adds the concept of *direction* on the number line. A minus
+sign indicates a change of direction—a *rotation* of 180 degrees—on the
+number line. Understood in these terms, it is perfectly understandable
+that a change of direction followed by another change of direction
+cancel each other out:
+
+−1 ×  − 1 = 1  .
+
+−<!-- -->1 l
+
+The puzzle about justifying the law that a “negative times a negative is
+a positive” by finding an interpretation for multiplying debts is based
+on an inadequate conception of a negative number. A better way to think
+about multiplying by – 1 is as a sign that indicates changing directions
+on the number line. To add – 5 and – 6 is to continue on the number line
+from the origin in the negative direction for a total of 11 units, and
+to multiply – 5 by 6 to go 5 × 6 = 30 units in the negative direction.
+However, to multiply – 5 by – 6 is to multiply 5 by 6 changing
+directions twice and ending up on the positive direction.
+
+The construction of imaginary numbers from real numbers can be done in a
+way that is completely analogous to the construction of negative numbers
+from natural numbers.
+
+Negative Numbers: A Tale of Two Minuses
+
+*Minus times minus is plus.*
+
+*The reason for this we need not discuss.*
+
+— W. H. Auden
+
+There was skepticism about the negative numbers up until the
+18<sup>th</sup> century. Negative numbers were introduced to have
+solutions to equations such as
+
+*x* + 1 = 0  .
+
+No natural number can be a solution to this equation. According to one
+of Peano’s postulates, 0 is not the successor of any natural number. We
+can expand the natural numbers by adding the negative integers. Negative
+numbers can, for example, be introduced to make it easy to calculate
+debts. If you owe 5 dollars to Abe and 10 dollars to Beatrice, but you
+only have 2 dollars, then you owe a total of 13 dollars—you have, so to
+speak, −13 dollars. If you owe five dollars five times over, then your
+total debt is 5 ×  − 5 = −25 .
+
+However, does it make sense to ask how much you own if you owe 5 dollars
+a *negative* 5 times over?
+
+Negative numbers can be modeled by a pair of natural numbers that obey
+the following laws for addition and multiplication:
+
+(*a*, *b*)+ (*c*, *d*) = (*a* + *c*, *b* + *d*)
+
+(*a*, *b*) × (*c*, *d*) = (*a**c* + *b**d*, *a**d* + *b**c*) .
+
+Even the great mathematician Euler commented (incorrectly) upon the
+perplexing law, which we now take for granted:
+
+−1 ×  − 1 = 1  .
+
+Prove the above law that a minus times a minus is plus follows from the
+*distributive law*
+
+*a*(*b* + *c*)= *a**b* + *a**c*  ,
+
+together with the following facts:
+
+1 + (−1)= 0 ; (−1) × 0 = 0 ; (−1) × 0 = 0
+
+Extending the natural number line to the left, one generates the
+negative integers by multiply the natural numbers by −1. Geometrically
+speaking, multiplication by −1 is a rotation of 180 degrees. The
+initially puzzling fact that −1 ×  − 1 = 1 corresponds to the geometric
+fact that two 180 degree rotations brings you back to the beginning. The
+integers are constructed as equivalence classes of ordered pairs of
+natural numbers and the negative integers are geometrically generated by
+multiplication by −1.  
+Complex Numbers: An Imaginary Journey
+
+*Imaginary i times i is minus one.*
+
+*Let me tell you why it can be done!*
+
+There has also been widespread skepticism about imaginary numbers even
+up to the present day. Imaginary numbers were introduced to have
+solutions to equations such as
+
+*x*<sup>2</sup>+ 1  = 0  .
+
+No real number r can be a solution to this equation. A real number is
+either positive or negative; but a positive times a positive is a
+positive, and a negative times a negative is also a positive and so
+*r*  × *r* ≠ − 1. Negative numbers can be seen as involving a rotation
+of 180 degrees. Complex numbers can be introduced to make it easier to
+calculate rotations without tedious trigonometry.
+
+What does *i*  × *i* = − 1 mean in terms of rotation?
+
+Multiplying by –1 is a rotation of 180 degrees. Geometrically speaking,
+multiplication by *i* is a counter-clockwise rotation of 90 degrees or
+π/2 radians. Two successive rotations *i*  × *i* is equal to –1.
+
+Complex numbers can be modeled by a pair of real numbers that obey the
+following laws for addition and multiplication:
+
+(*a*, *b*)+ (*c*, *d*) = (*a* + *c*, *b* + *d*)
+
+(*a*, *b*) × (*c*, *d*) = (*a**c***−***b**d*, *a**d* + *b**c*) .
+
+Euler wrote “All such expressions $\sqrt{- 1}$, $\sqrt{- 2}$, etc. are
+consequently impossible or imaginary numbers….” (*Algebra*, 1770). We
+have the following cycle of facts:
+
+*i*<sup>1</sup>= *i* ; *i*<sup>2</sup>=  − 1; *i*<sup>3</sup>=  − *i* ;
+*i*<sup>4</sup>= 1 .
+
+If *c* = *a* + i*b*, then the *modulus* of *c* is
+$\sqrt{a^{2\\} + \\b^{2}}.$ By the Pythagorean theorem. this is the
+distance from the origin to the point (*a, b*). The *argument* of a
+complex number *c* = *a* + i*b* is the *angle* formed by the positive
+real *x*-axis and the line from (0, 0) to (*a, b*).
+
+Every complex number can be represented by a modulus and an argument
+using polar coordinates. Multiplication of complex numbers in this form
+
+*c* = *r*\[cos(θ) + *i*sin(θ)\]
+
+*d* = *s*\[cos(ρ) + *i*sin(ρ)\]
+
+amounts to this: (1) the *modulus* of the product is the *product* of
+the moduli; and (2) the *argument* of the product is the *sum* of the
+*arguments, i.e,*
+
+*c*  × *d* = *r* × *s*\[cos (*θ* + *ρ*)+ *i*sin (*θ* + *ρ*)\] .
+
+Multiplication by a unit length is equivalent to pure rotation.
+
+## Connection 2. From **−****1** in Cartesian Coordinates to $\sqrt{\mathbf{- 1\\}}$ in Polar Coordinates
+
+> *“All such expressions as* $\sqrt{- 1\\},\\\sqrt{- 2\\}$*, etc., are
+> consequently impossible or imaginary numbers, since they represent
+> roots of negative quantities, and of such numbers we may truly assert
+> that they are neither nothing, nor greater than nothing, nor less than
+> nothing, which necessarily constitutes them imaginary or impossible.”*
+
+-   Euler, *Algebra* (1770)
+
+*x*<sup>2</sup>+ 1  = 0  .
+
+No real number r can be a solution to this equation. A real number is
+either positive or negative; but a positive times a positive is a
+positive, and a negative times a negative is also a positive and so
+*r*  × *r* ≠ − 1. Negative numbers can be seen as involving a rotation
+of 180 degrees. Complex numbers can be introduced to make it easier to
+calculate rotations without tedious trigonometry.
+
+What does *i*  × *i* = − 1 mean in terms of rotation?
+
+Multiplying by –1 is a rotation of 180 degrees. Geometrically speaking,
+multiplication by *i* is a counter-clockwise rotation of 90 degrees or
+π/2 radians. Two successive rotations *i*  × *i* is equal to –1.
+
+Complex numbers can be modeled by a pair of real numbers that obey the
+following laws for addition and multiplication:
+
+(*a*, *b*)+ (*c*, *d*) = (*a* + *c*, *b* + *d*)
+
+(*a*, *b*) × (*c*, *d*) = (*a**c***−***b**d*, *a**d* + *b**c*) .
+
+Adding complex numbers to the real numbers, leads to the elegant result
+that every polynomial of degree *n* will have *n* solutions or roots.
+For example, the above polynomial of degree 2 has 2 solutions, namely,
+*i* and *–i*.
+
+By convention a complex number is expressed as *a* + *ib*, where *a* is
+the real component and *b* the imaginary component of the complex
+number. *Notice that the plus sign doesn’t really signify addition.* The
+plus sign is merely used to separate the real and imaginary components,
+and so we can less confusingly used an ordered pair of real numbers to
+represent a complex number.
+
+Given the ordered pair (*a, b*) it is natural to represent the complex
+number on the Cartesian coordinate plane. The *x*-axis is the real
+component and the *y*-axis is the imaginary component of the complex
+number.
+
+As we have seen a rotation of 180 degrees or π radians is equivalent to
+multiplying by −1. To geometrically represent *i*, we need a
+transformation which when applied to itself result in a multiplication
+by −1 or a rotation of π radians. A rotation of 90 degrees or π/2
+radians is a natural way to represent this transformation. The rotations
+of π result in −1 and + 1 along the horizontal *x*-axis, and rotations
+of π/2 result in the cycle of values *i*, −1, −*i*, 1 with *i* and –*i*
+along the vertical *y*-axis at the values of θ equal to π/2 and 3π/2,
+respectively. This is the third clue linking the representation of the
+imaginary number *i* in terms of rotation in the geometric
+representation of complex numbers.
+
+*i*
+
+*–*1 l
+
+*–i*
+
+To summarize our steps so far, we have a conceptual connection between
+−1 as multiplication and rotation of 180 degrees or π radians, and the
+trigonometric functions cos(θ) and sin(θ) within the unit circle. To
+geometrically represent the imaginary unit *i* such that *i* x *i* = −1,
+we need a rotation which when applied twice is equal to a rotation of
+180 degrees or π radians. This requirement is satisfied by a rotation of
+90 degrees or π/2 radians. This rotation results in the cycle of
+repeating values *i<sup>0</sup>* = 1, *i<sup>1</sup>* = *i*,
+*i<sup>2</sup>=* −1, *i<sup>3</sup>=* −*i*, *i<sup>4</sup>=* 1,
+*i<sup>5</sup>* = *i*, *i<sup>6</sup>=* −1, *i<sup>7</sup>=* −*i*,
+*i<sup>8</sup>=* 1, … The next conceptual link to be forged is with the
+transcendental number *e* and the exponential function with base *e*.
+
+To obtain the *Cartesian coordinate plane* to represent ordered pairs
+(*x, y*) we place another copy of the number line for the integers (the
+*y*-axis), perpendicular or at 90 degrees to the original number line
+(the *x*-axis). In this way the ordered pairs in the equivalence classes
+constructing the integers can be modeled as ordered pairs on the lines
+parallel to the line *x* = *y.*
+
+The same Cartesian coordinate plane can be used to represent rational
+numbers. When *x* and *y* take on integer values with *y* ≠ 0, the line
+determined by the origin and the point (*x, y*) passes through all the
+ordered pairs equal to the rational number *x/y.* All such lines whose
+rays in the first quadrant form an angle with the *x*-axis less than 45
+degrees represent all the rational larger than 1 and the lines whose
+rays in the first quadrant lie between 45 degrees and 90 degrees
+represent the rational numbers less than 1.
+
+*e*<sup>*π**i*</sup>=  − 1
+
+Next we need to find the conceptual link is between −1 and the imaginary
+number $i = \sqrt{- 1}$
+
+The problem with thinking of the imaginary unit $i = \sqrt{- 1}$ as a
+quantity is that it can’t be any real number. As we have seen it, like
+the number −<!-- -->1, is a rotation.
+
+Cartesian coordinate plane for the real numbers when *x* and *y* can
+take on any real numbered values such as the values for the
+trigonometric functions sine and cosine. However, since the values of
+these trigonometric functions are proportional for all similar
+triangles, it is convenient to represent these values within a circle of
+radius 1.
+
+Therefore, rather than using a pair of *Cartesian coordinates* to
+specify a point (*x*, *y*), it is more natural to use *polar
+coordinates* specified by a central angle θ and a radius *r* =
+$\sqrt{x^{2} + \\y^{2}}.\\$ When confining our attention to the unit
+circle, the trigonometric functions are defined in terms of θ. The
+Pythagorean theorem, for example, can be expressed by the trigonometric
+equation:
+
+1 = cos<sup>2</sup>(θ) + sin<sup>2</sup>(θ) .
+
+The values of cos(θ) are read on the *x*-axis and the values of sin(θ)
+are read on the *y*-axis for a right triangle whose right angle is
+formed perpendicular to the *x*-axis and whose hypotenuse is a radius
+from the origin to the unit circle.
+
+sin(θ)
+
+θ
+
+−1 0 cos(θ) 1
+
+Using polar coordinates, a rotation of 180 degrees can be expressed as a
+rotation of π radians, and rotation of 2π brings us back to the starting
+point. Notice that at the value of θ = π, *cos*(θ) = −1 and *sin*(θ) =
+0. This is the second clue linking −1, or a rotation of π radians, to
+the trigonometric functions *cos*(θ) and *sin*(θ) for the value θ = π.
+
+## Connection 3. From the Derivative to Infinite Series
+
+Consider Zeno’s arrow paradox. If you look at the arrow in flight at an
+instant—or indivisible moment of time—it is indistinguishable from the
+arrow at rest. However, the flight of the arrow is just the infinite
+collection of moments of time. How can an infinite collection of
+motionless arrows become the arrow in motion? One way to begin to
+unravel Zeno’s paradox is to develop the concept of *instantaneous
+velocity.* In order to distinguish the arrow in motion from the arrow at
+rest, we need to look at what is happening in the interval of time
+surrounding that instant of time. The notion of a non-zero
+*instantaneous velocity* is what is needed to solve Zeno’s paradox of
+the arrow. This concept is captured by the mathematical concept of the
+derivative.
+
+The derivative is one of the two fundamental ideas of calculus. The
+derivative is a mathematical model of change. Given a real-valued
+function *f*(*x*), the derivative of *f* is the function *f’*(*x*) which
+is the rate of change of *f*.
+
+Conceptually, the derivative of a function is the rate of change of that
+function at a point in time. The *derivative of a function f*(*x*) is
+the limit of the function in the interval of *dx* around *x* as *dx*
+goes to zero:
+
+$$\lim\_{dx \rightarrow 0}\left( \frac{f(x + dx) - f(x)}{dx} \right)^{}$$
+
+Geometrically, the derivative of a function *f*(*x*) is the slope of the
+tangent line to its graph. In graphical terms, if we have the graph of
+
+*y* = *f*(*x*) ,
+
+then *f*’(*x*) is the slope of the line which is tangent to the graph of
+*f*(*x*) at the point *x* is the derivative.[2] We can write this using
+Leibniz’s notation:
+
+$\frac{dx}{dy}$ = *f’*(*x*) .
+
+In our example, the derivative of *f*(*x*) = *x<sup>2</sup>* is computed
+as follows:
+
+$$\lim\_{dx \rightarrow 0}{\left( \frac{{(x + dx)}^{2} - x^{2}}{dx} \right) = \frac{x^{2} + \\2xdx - x^{2}}{dx} = 2xdx}^{}$$
+
+So the derivative, or rate of change, of the function *f*(*x*) =
+*x<sup>2</sup>* is the function *f*(*x*) = 2*x.*
+
+Here’s a chart of some common derivatives:
+
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 22%" />
+<col style="width: 52%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><em><strong>Function</strong></em></th>
+<th><em><strong>Derivative</strong></em></th>
+<th><em><strong>Comment</strong></em></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><p><em>c</em></p>
+<p>(<em>any constant number</em>)</p></td>
+<td>0</td>
+<td>A constant, by definition, doesn’t change.</td>
+</tr>
+<tr class="even">
+<td><em>x<sup>n</sup></em></td>
+<td><em>nx<sup>n-1</sup></em></td>
+<td>The iterated derivative of x<em><sup>n</sup></em> is related to
+<em>n</em>!</td>
+</tr>
+<tr class="odd">
+<td><em>e<sup>x</sup></em></td>
+<td><em>e<sup>x</sup></em></td>
+<td>The base <em>e</em> of the natural exponential function is chosen to
+be such that the rate of change of the function is equal to itself.</td>
+</tr>
+<tr class="even">
+<td>ln(<em>x</em>)</td>
+<td>1/<em>x</em></td>
+<td>The natural logarithm is the inverse of the exponential
+function.</td>
+</tr>
+<tr class="odd">
+<td><em>sin</em>(<em>x</em>)</td>
+<td><em>cos</em>(<em>x</em>)</td>
+<td>The derivative of <em>sin</em>(<em>x</em>) is
+<em>cos</em>(<em>x</em>)</td>
+</tr>
+<tr class="even">
+<td><em>cos</em>(<em>x</em>)</td>
+<td>–<em>sin</em>(<em>x</em>)</td>
+<td>The derivative of <em>cos</em>(<em>x</em>) is – <em>sin</em>(x)</td>
+</tr>
+</tbody>
+</table>
+
+## Connection 4. The Derivative to the Natural Exponential Function
+
+*e*<sup>*π**i*</sup>=  − 1
+
+How can *e* both a transcendental number calculated to be approximately
+2.7182818284… and the base for an exponential function *e<sup>x</sup>*
+whose rate of change is equal to itself?
+
+Recall the fundamental idea of exponentiation and its relationship to
+multiplication and addition. We can compute the product of two numbers
+with the same base, say 2<sup>3</sup> and 2<sup>7</sup>, by simply
+adding their exponents 2<sup>3</sup> x 2<sup>7</sup> = 2<sup>3+7</sup> .
+A standard table of logarithms with a base of 10 expresses numbers as
+exponents, and so multiplying two numbers is equivalent to adding their
+exponents and then using the table of logarithms backwards to compute
+their product. This is how a slide rule works: it has two logarithmic
+scales to compute products by adding logarithms. Just as 10 is not the
+most mathematically natural base for the number system, logarithms based
+on powers of 10 is not the most natural base for logarithms. In general,
+an *exponential function* with base *a* is a function of the form *y* =
+*a<sup>x</sup>*, where *a* &gt; 1.
+
+The defining property of the exponential function *e<sup>x</sup>* is
+that its rate of change is equal to itself. You may remember memorizing
+in calculus classes that the derivative of *e<sup>x\ </sup>*is
+*e<sup>x</sup>*. When the value of *x* = 1, the value of the function
+*e<sup>x</sup>* is simply the value of *e*. According to a mathematical
+characterization: *e<sup>x</sup>* is an exponential function whose
+*derivative* is equal to itself.
+
+Many processes in the natural and financial worlds have this property.
+Euler’s antediluvian example in his *Introduction to the Analysis of the
+Infinite* (1784, published 1988, with an English translation by John
+Blanton, Springer-Verlag, New York, p. 92) is population growth:
+
+> “Since after the Flood all men descended from a population of six, if
+> we suppose that the population after two hundred years was 1,000,000,
+> we would like to find the annual rate of growth.”
+
+A more worldly example, also studied by Euler, is the growth rate of
+*compounded interest*. In 1683 Jacob Bernoulli (1654-1705) arrived at
+the number *e* by modeling compounded interest. If a principal amount of
+earns interest at an annual rate of *x* compounded monthly, then the
+interest earned each month is *x*/12 times the current value, so each
+month the total value is multiplied by (1 + *x*/12) and the value at the
+end of the year is (1 + *x*/12)<sup>12</sup>. If interest is compounded
+daily, we have (1 + *x*/365)<sup>365</sup>. If the time intervals per
+year increase, the limit of this function is the exponential function.
+This is Euler’s formula for *e<sup>x</sup>* as continuous interest:
+
+$$e^{x} = \\\lim\_{x \rightarrow \infty}\left( 1 + \frac{1}{x} \right)^{x}$$
+
+It is possible to derive Euler’s definition of the exponential function
+using the concept of the *derivative*.[3]
+
+Geometrically, the derivative of a function *f*(*x*) is the slope of the
+tangent line to its graph computed by taking the limit as the interval
+around the *x* value is smaller and smaller:
+
+$$\lim\_{dx \rightarrow 0}\left( \frac{f(x + dx) - f(x)}{dx} \right)^{}$$
+
+Substituting for the function *f(x)* an exponential function with base
+*b*, we obtain
+
+$$\lim\_{dx \rightarrow 0}\left( \frac{b^{x + dx} - b^{x}}{dx} \right)^{}$$
+
+Exponential was introduced to make multiplication easier. The basic idea
+is that multiplication of numbers expressed as powers with the same base
+is equivalent to addition of exponents. Using the idea that
+exponentiation turns multiplication into addition, we have the crucial
+step:
+
+$$\lim\_{dx \rightarrow 0}\left( \frac{b^{x}b^{dx} - b^{x}}{dx} \right)^{}$$
+
+Now factoring out the *b<sup>x</sup>*, we obtain:
+
+$$\lim\_{dx \rightarrow 0}\left( \frac{b^{x}{(b}^{dx} - {1)}^{}}{dx} \right)^{}$$
+
+Now to solve for *e*, the base of the exponential function whose rate of
+change, *derivative*, is equal to itself, we set the limit equal to *b*.
+
+$$\lim\_{dx \rightarrow 0}{\left( \frac{b^{x}{(b}^{dx} - {1)}^{}}{dx} \right) = b}^{}$$
+
+The value when *x* = 1 of the function *b<sup>x</sup>*, by convention,
+is the constant base *b*, which can be brought out the limit expression.
+
+$${b\\\lim\_{dx \rightarrow 0}}\left( \frac{b^{dx} - 1^{}}{dx} \right)^{} = b$$
+
+Cancelling out common factor of *b* from both side and multiplying both
+sides of the equation by *dx,* we have
+
+>  lim<sub>*d**x* → 0</sub>(*b*<sup>*d**x*</sup> − 1)= *d**x*
+
+Dropping the limit notation temporarily, we can solve for
+*b<sup>dx</sup>*:
+
+*b* *<sup>dx</sup>* = 1 + *dx*
+
+Now *dx* going to zero is equivalent to 1/*x* going to zero as *x* goes
+to infinity. Expressed in this form, we can element exponent by raising
+both sides to the power *n.*
+
+$$b\underset{\\\\\\\\\\\\\\x \rightarrow \infty}{= \\lim}{(1 + \frac{1}{x})}^{x}$$
+
+But the exponential function whose base *b* is such that the function
+grows proportional to itself is just the definition of *e<sup>x</sup>*
+and so we obtain Euler’s famous formula noted above:
+
+$${e^{x}\underset{\\\\\\\\\\\\\\x \rightarrow \infty}{= \\lim}}{(1 + \frac{1}{x})}^{x}$$
+
+## Connection 5. From Infinite Series to Power Series
+
+Zeno’s paradoxes involved an infinite series such that each term is the
+series was a number. For example, the dichotomy involved the *geometric*
+series
+
+$$\sum\_{n = 0}^{\infty}{\frac{1}{2^{n\\}} = 1 + \\\frac{1}{2}} + \\\frac{1}{4} + \\\frac{1}{8} + \\\frac{1}{16} + \\\frac{1}{32} + \ldots + \\\frac{1}{2^{n}} + \\\ldots$$
+
+The infinite sum is defined as the limit of the finite sums
+S<sub>n</sub> of the first *n* terms. So consider
+
+$$S\_{n} = 1 + \\\frac{1}{2} + \\\frac{1}{4} + \\\frac{1}{8} + \\\frac{1}{16} + \\\ldots\\ + \\\frac{1}{2^{n}}$$
+
+Multiplying both sides by a factor of 1/2 we obtain a series:
+
+$$\frac{1}{2}S\_{n} = \\\frac{1}{2} + \\\frac{1}{4} + \\\frac{1}{8} + \\\frac{1}{16} + \\\ldots\\ + \\\frac{1}{2^{n + 1}}$$
+
+Subtracting the latter from the former, we have:
+
+$$S\_{n} - \\\frac{1}{2}S\_{n} = \\1 - \\\frac{1}{2^{n - 1}}$$
+
+and so
+
+$${\left( 1 - \\\frac{1}{2} \right)(S}\_{n} - \\\frac{1}{2}S\_{n}) = \\1 - \\\frac{1}{2^{n - 1}}$$
+
+$$S\_{n} = \\\frac{1 - \\\frac{1}{2^{n + 1}}}{1 - \frac{1}{2}}$$
+
+So the limit as *n* goes to infinity is:
+
+$${\lim\_{n\\ \rightarrow \infty}S}\_{n} = \\\frac{1 - \\\frac{1}{2^{n + 1}}}{1 - \frac{1}{2}} = \\\frac{1}{1 - \\\frac{1}{2}}$$
+
+<img src="./attachments/euler/media/image1.jpeg"
+style="width:6.50417in;height:3.41667in" alt="zeno-08.jpg" />
+
+The same proof for summing a geometric series works, not only for *r* =
+½, but for any *r* whose absolute value is &lt; 1. The infinite sum,
+this particular case, turned out to be 2. In general, the infinite sum
+exists when |*r*| &lt; 1,
+
+$$\sum\_{n = 0}^{\infty}{\frac{a}{r^{n\\}} = a + \\\frac{a}{r}} + \\\frac{a}{r^{2}} + \\\frac{a}{r^{3}} + \\\frac{a}{r^{4}} + \\\frac{a}{r^{5}} + \ldots + \\\frac{a}{r^{n}} + \\\ldots = \\\frac{a}{1 - r}$$
+
+What happens at a = 1 and r = 1? The *harmonic series* is the infinite
+sum of the reciprocal of all the natural numbers:
+
+1 + 1/2 + 1/3 + 1/4 + 1/5 + 1/6 + 1/7 + 1/8 +…. + 1/*n* + ….
+
+The proof of that the harmonic series diverges is to compare the series
+in blocks of powers of 2 to the clearly divergent series 1 + ½ + ½ + ½ +
+….:
+
+1 + <span class="mark">1/2</span> + (<span class="mark">1/3 +
+1/4</span>) + (<span class="mark">1/5 + 1/6 + 1/7 + 1/8</span>) +
+(<span class="mark">1/9 + 1/10 + 1/11 + 1/12 + 1/13 + 1/14 + 1/15 +
+1/16</span>) +….
+
+1 + <span class="mark">1/2</span> + (<span class="mark">1/4 +
+1/4</span>) + (<span class="mark">1/8 + 1/8 + 1/8 + 1/8</span>) +
+(<span class="mark">1/16 + 1/16 + 1/16 + 1/16 + 1/16 + 1/16 + 1/16 +
+1/16</span>) + …
+
+Each term in the harmonic series is greater than or equal to the
+corresponding term in the new series which diverges to infinity.
+
+Now the idea of a *power series* comes about by replacing numbers with a
+variable resulting in the sum of an infinite series of functions.
+Generally, a power series is of the form
+
+$$\sum\_{n = 0}^{\infty}{a\_{n}z^{n} = a\_{0} + \\a\_{1}z} + \\a\_{2}z^{2} + a\_{3}z^{3} + \\a\_{4}z^{4} + \\a\_{5}z^{5} + \ldots + \\a\_{n}z^{n} + \\\ldots$$
+
+where *a<sub>0</sub>*, *a<sub>1</sub>*, *a<sub>2</sub>*,
+*a<sub>3</sub>*, *a<sub>4</sub>*, *a<sub>5</sub>*,…, *a<sub>n</sub>*,…
+is some sequence of numbers. The reason for representing a function as a
+power series is that it is easy to compute the derivative of such a
+series term by term using the fact that the derivative of
+
+*f*(*x*)= *a*<sub>*n*</sub>*x*<sup>*n*</sup>
+
+is
+
+*f*<sup>′</sup>(*x*) = (*n* − 1)*a*<sub>*n*</sub>*x*<sup>*n* − 1</sup> .
+
+Euler also discovered a power series expansion for *e<sup>x</sup>*. In
+his fast and loose manner, he took the term-wise derivative of each term
+this expansion:
+
+$$1 + x + \\\frac{x^{2}}{2!} + \\\frac{x^{3}}{3!} + \\\frac{x^{4}}{4!} + \\\frac{x^{5}}{5!} + \\\frac{x^{6}}{6!\\} + \\\frac{x^{7}}{7!} + \\\ldots + \\\frac{x^{n}}{n!} + \\\ldots$$
+
+The derivative of 1 = 0
+
+The derivative of *x* = 1
+
+The derivative of $\frac{x^{2}}{2!}$ = $\frac{2x}{2} = x$
+
+The derivative of $\frac{x^{3}}{3!}$ =
+$\frac{3x}{3\\x\\2\\x\\1} = \frac{x^{2}}{2!}$
+
+The derivative of $\frac{x^{n + 1}}{(n + 1)!}$ =
+$\frac{(n{+ 1)x}^{n}}{(n + 1)n!} = \frac{x^{n}}{n!}$
+
+Euler noticed that the result of taking the term-wise derivative is the
+infinite series itself! Now this is precisely the defining feature of
+the exponential function, so
+
+$$e^{x} = \\\sum\_{n = 0}^{\infty}\frac{1}{n!} = 1 + x + \\\frac{x^{2}}{2!} + \\\frac{x^{3}}{3!} + \\\frac{x^{4}}{4!} + \\\frac{x^{5}}{5!} + \\\frac{x^{6}}{6!\\} + \\\frac{x^{7}}{7!} + \\\ldots + \\\frac{x^{n}}{n!} + \\\ldots$$
+
+This infinite series has a dual nature as either an object or an
+operation, a number or an infinite sum or operation. To compute the
+value of the number *e*, we can set the exponent *x* = 1, and compute
+the first 12 terms.
+
+$$e^{1} \approx \\1 + 1 + \\\frac{1}{2!} + \\\frac{1}{3!} + \\\frac{1}{4!} + \\\frac{1}{5!} + \\\frac{1}{6!\\} + \\\frac{1}{7!} + \\\ldots + \\\frac{1}{10!}$$
+
+As you can see from the following spreadsheet, computing the value of
+*e* for the first 12 sums gives an approximation accurate to the first 9
+decimal places.
+
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 37%" />
+<col style="width: 41%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th colspan="2"><strong>Power Series Approximation of
+<em>e</em></strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>0.5</td>
+<td>2.5</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>0.166666667</td>
+<td>2.6666666667</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>0.041666667</td>
+<td>2.7083333333</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>0.008333333</td>
+<td>2.7166666667</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td>0.001388889</td>
+<td>2.7180555556</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td>0.000198413</td>
+<td>2.7182539683</td>
+</tr>
+<tr class="odd">
+<td>8</td>
+<td>2.48016E-05</td>
+<td>2.7182787698</td>
+</tr>
+<tr class="even">
+<td>9</td>
+<td>2.75573E-06</td>
+<td>2.7182815256</td>
+</tr>
+<tr class="odd">
+<td>10</td>
+<td>2.75573E-07</td>
+<td>2.7182818011</td>
+</tr>
+<tr class="even">
+<td>11</td>
+<td>2.50521E-08</td>
+<td>2.7182818262</td>
+</tr>
+<tr class="odd">
+<td>12</td>
+<td>2.08768E-09</td>
+<td>2.7182818283</td>
+</tr>
+</tbody>
+</table>
+
+Euler’s formula gives a quick and accurate estimate of the value of *e*
+because the factorials in the denominator grows quickly diminishing the
+contribution of the successive terms which quickly approach zero.[4]
+
+## Connection 6. Interlacing the Power Series for Sin(*x*), Cos(*x*) and *e<sup>x</sup>* 
+
+Let’s discover the power series for
+
+sin (*z*) = *a*<sub>0</sub>+ *a*<sub>1</sub>*z*+ *a*<sub>2</sub>*z*<sup>2</sup> + *a*<sub>3</sub>*z*<sup>3</sup>+ *a*<sub>4</sub>*z*<sup>4</sup>+ *a*<sub>5</sub>*z*<sup>5</sup> + …+ *a*<sub>*n*</sub>*z*<sup>*n*</sup>+ …
+
+If we set *z* = 0, then all the terms except the first disappear. There
+sin(0) = *a<sub>0\ </sub>* but since sin(0) = 0, *a<sub>0\ </sub>*= 0.
+Recall that the derivative of *a*<sub>*n*</sub>*x*<sup>*n*</sup> is
+
+(*n* − 1)*a*<sub>*n*</sub>*x*<sup>*n* − 1</sup>
+
+We may compute the derivative of the power series term by term:
+
+*s**i**n*′(*z*) = cos (*z*) = *a*<sub>1</sub>+ 2*a*<sub>2</sub>*z* + 3*a*<sub>3</sub>*z*<sup>2</sup>+ 4*a*<sub>4</sub>*z*<sup>3</sup>+ 5*a*<sub>5</sub>*z*<sup>4</sup> + …+ (*n* − 1)*a*<sub>*n*</sub>*z*<sup>*n* − 1</sup>+ …
+
+If we set *z* = 0, then all the terms except the first disappear. There
+cos(0) = 1 = *a<sub>1.</sub>*
+
+Next take the derivative of the power series again:
+
+cos ′(*z*) = −*s**i**n*(*z*) = 2*a*<sub>2</sub> + (3 × 2)*a*<sub>3</sub>*z*+ (4  × *a*<sub>4</sub>*z*<sup>3</sup>+ 5*a*<sub>5</sub>*z*<sup>4</sup> + …+ (*n* − 1)*a*<sub>*n*</sub>*z*<sup>*n* − 1</sup>+ …
+
+If we set *z* = 0, then all the terms except the first disappear. There
+−*s**i**n*′(0) = 0= 2*a*<sub>2</sub> so *a<sub>2</sub>* = 0.
+
+Taking the derivative of the power series again:
+
+−sin<sup>′</sup>(*z*)= − cos (*z*)= (3 × 2)*a*<sub>3</sub>+ (4  × 3  × 2)*a*<sub>4</sub>*z*<sup>2</sup>+ (5  × 4  × 3  × 2)*a*<sub>5</sub>*z*<sup>3</sup> + …
+
+If we set *z* = 0, then all the terms except the first disappear and
+–cos (0) = −1= 6*a*<sub>2</sub> *a**n**d* *s**o* 
+
+$a\_{2} = - \frac{1}{6}$ .
+
+The general pattern is that *a<sub>n</sub>* = 0 whenever *n* is even and
+when *n* is odd, *a*<sub>*n*</sub>= $\pm \\\frac{1}{n!}$ with the sign
+alternating. Therefore,
+
+$$\sin{x = x - \\\frac{x^{3}}{3!} + \\\frac{x^{5}}{5!} - \\\frac{x^{7}}{7!} + \\\frac{x^{9}}{9!} - \\\frac{x^{11}}{11!} + \\\ldots}$$
+
+*Exercise*: In a similar manner discover the power series expansion for
+cos(*x*).
+
+$$\cos{x = 1 - \\\frac{x^{2}}{2!} + \\\frac{x^{4}}{4!} - \\\frac{x^{6}}{6!} + \\\frac{x^{8}}{8!} - \\\frac{x^{10}}{10!} + \\\ldots}$$
+
+## 
+
+##  Connection 7. Deriving Euler’s Equation from Interlacing Power Series
+
+Once Euler had computed the power series for *e<sup>x</sup>*, cos(*x*)
+and sin(*x*), it is hard not to notice an intriguing relationship—the
+power series expansions for the trigonometric functions cosine and sine
+appears—except for the feature of the alternating signs—to be interwoven
+in the power series expansion for exponentiation. The power series terms
+for the cosine are the odd terms, and the power series terms for the
+sine are the even terms, of the power series expansion for
+*e<sup>x</sup>*.
+
+$$e^{x} = \\\sum\_{n = 0}^{\infty}\frac{x^{n}}{n!} = 1 + x + \\\frac{x^{2}}{2!} + \\\frac{x^{3}}{3!} + \\\frac{x^{4}}{4!} + \\\frac{x^{5}}{5!} + \\\frac{x^{6}}{6!\\} + \\\frac{x^{7}}{7!} + \\\ldots + \\\frac{x^{n}}{n!} + \\\ldots$$
+
+$$\sin{x = x - \\\frac{x^{3}}{3!} + \\\frac{x^{5}}{5!} - \\\frac{x^{7}}{7!} + \\\frac{x^{9}}{9!} - \\\frac{x^{11}}{11!} + \\\ldots}$$
+
+$$\cos{x = 1 - \\\frac{x^{2}}{2!} + \\\frac{x^{4}}{4!} - \\\frac{x^{6}}{6!} + \\\frac{x^{8}}{8!} - \\\frac{x^{10}}{10!} + \\\ldots}$$
+
+How can the exponential function, which rapidly grows to infinity,
+related to the cyclical sine and cosine functions of trigonometry?
+Formally, the sine function is composed of terms with the *odd* powers
+of the exponent and the cosine is composed of the terms with the *even*
+powers of the exponent—except for the alternating signs.
+
+It was Euler’s great genius to see that a deep unification could be
+achieved if one substitutes a complex number *ix* for the exponent *x*
+in the power series for *e<sup>x</sup>*. This substitution makes sense
+because the laws of addition, multiplication, and exponentiation are
+naturally extended to the complex numbers. Recall the cycle of values:
+
+*i*
+
+*–*1 l
+
+*–i*
+
+$$e^{ix} = \\\sum\_{n = 0}^{\infty}\frac{{(ix)}^{n}}{n!} = 1 + ix + \\\frac{{(ix)}^{2}}{2!} + \\\frac{{(ix)}^{3}}{3!} + \\\frac{{(ix)}^{4}}{4!} + \\\frac{{(ix)}^{5}}{5!} + \\\frac{{(ix)}^{6}}{6!\\} + \\\frac{{(ix)}^{7}}{7!} + \frac{{(ix)}^{8}}{8!\\} + \ldots$$
+
+Given the cycle of repeating values *i<sup>0</sup>* = 1, *i<sup>1</sup>*
+= *i*, *i<sup>2</sup>=* −1, *i<sup>3</sup>=* −1, *i<sup>4</sup>=* 1,
+*i<sup>5</sup>* = *i*, *i<sup>6</sup>=* −1, *i<sup>7</sup>=* −*i*,
+*i<sup>8</sup>=* 1, we obtain alternating terms with two positives and
+then two negatives:
+
+$$e^{ix} = \\\sum\_{n = 0}^{\infty}\frac{{(ix)}^{n}}{n!} = 1 + ix - \\\frac{x^{2}}{2!} - i\frac{x^{3}}{3!} + \\\frac{x^{4}}{4!} + i\frac{x^{5}}{5!} - \frac{x^{6}}{6!\\} - i\frac{x^{7}}{7!} + \frac{x^{8}}{8!\\} + \ldots$$
+
+Rearranging the terms, it turns out that the *odd* terms form the
+alternating infinite series for the cos(x) and the *even* terms form the
+alternating infinite series for the sin(x):
+
+$$e^{ix} = \left( 1 - \\\frac{x^{2}}{2!} + \\\frac{x^{4}}{4!} - \frac{x^{6}}{6!\\} + \frac{x^{8}}{8!\\} + \ldots \right) + i\left( x - \\\frac{x^{3}}{3!} + \\\frac{x^{5}}{5!} - \frac{x^{7}}{7!\\} + \frac{x^{9}}{9!\\} + \ldots \right)$$
+
+Substituting the trigonometric functions for their infinite expansions,
+we obtain the equation:
+
+*e*<sup>*i**x*</sup> = cos (*x*)+ *i* *s**i**n*(*x*)
+
+The last step is to evaluate the function for the value x = π:
+
+*e*<sup>*π**i*</sup> = cos (*π*) + *i* *s**i**n*(*π*)
+
+But since cos(π) = —1 and sin(π) = 0, we have
+
+*e*<sup>*π**i*</sup> = −1
+
+and so we have derived Euler’s identity!
+
+It remains to understand what this identity teaches us about the
+mathematics of exponentiation, trigonometry, and complex numbers and the
+deeper issue of unification.
+
+-   There is only one natural way to extend the real-valued exponential
+    function to the complex numbers.
+
+-   The exponential function “contains” the sine and cosine functions
+    “implicitly” but the unification comes within the context of complex
+    numbers.
+
+-   The most significant benefit of working in context of the complex
+    numbers, as opposed to real numbers, is that every arithmetic
+    equation (i.e., polynomial) has a solution—in fact, it systematizes
+    the theory of polynomials giving the elegant result that an
+    *n*-degree polynomial has *n* roots.
+
+Given (*e*<sup>*i**x*</sup>)<sup>*n*</sup>= (*e*<sup>*i**n**x*</sup>),
+we may derive *De Moive’s formula*
+
+> (*c**o**s*(*π*) + *i* *s**i**n*(*π*))<sup>*n*</sup>= (*c**o**s*(*n**π*) + *i* *s**i**n*(*n**π*))
+
+This explains why the real-valued polynomials have such irregular
+results concerning roots—positive numbers have two square roots, whereas
+negative numbers have none; all real numbers have exactly one cube root,
+fifth root, and so on. The above formula tells us when we are looking
+for the square roots of −1, we have that
+
+(*c**o**s*(*θ*) + *i* *s**i**n*(*θ*))<sup>2</sup>= (*c**o**s*(2*θ*) + *i* *s**i**n*(2*θ*))
+
+which, in turn, implies that
+
+−1= (*c**o**s*(2*θ*) + *i* *s**i**n*(2*θ*))
+
+The geometric question becomes what rotations when doubled result in 180
+degrees or π? The roots are *θ* = π/2 and θ= 3π/2, giving the roots *i*
+and –*i*. In other words, every nonzero complex number has *n* distinct
+*n*th roots, which divides the circle evenly. For example, the
+8<sup>th</sup> root of 1 divides the unit circle into eighths equal
+rotations of 45 degrees or π/4.
+
+*i*
+
+$\frac{1}{\sqrt{2}}( - 1 + i)\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\frac{1}{\sqrt{2}}(1 + i)$
+
+−1 1
+
+$\frac{1}{\sqrt{2}}( - 1 - i)\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\frac{1}{\sqrt{2}}(1 - i)$
+
+*–i*
+
+There is only one natural way to extent the real-valued functions to the
+complex numbers.
+
+*e*<sup>*a* + *i**b*</sup> = *e*<sup>*a*</sup>*e*<sup>*i**b*</sup> = *e*<sup>*a*</sup>\[(*c**o**s*(*b*)+ *i* *s**i**n*(*b*)\]
+
+This formula tells us that the Polar coordinates for
+*e*<sup>*a* + *i**b*</sup> is given by a radius equal to *e<sup>a</sup>*
+and central angle θ = *b.*
+
+Euler’s equation is not fundamentally creative because it is an identity
+of quantities, but because it is a bold conceptual conjecture that
+unifies previously separate mathematical domains—the domain of
+trigonometry and the domain of complex or imaginary numbers by means of
+interlacing the power series expansions for *sin*(x) and *cos*(x) and
+the exponential function *e<sup>x</sup>* expanded to include imaginary
+components to the exponents. Euler’s discovery is the result of creating
+a mathematical context which satisfies mathematical desiderata due to
+the following facts:
+
+-   There is only one natural way to extend the real-valued exponential
+    function to the complex numbers.
+
+-   The exponential function “contains” the sine and cosine functions
+    “implicitly” but the unification comes by expanding exponents to
+    complex numbers.
+
+-   The most significant benefit of working in context of the complex
+    numbers, as opposed to real numbers, is that every arithmetic
+    equation (i.e., polynomial) has a solution—in fact, it systematizes
+    the theory of polynomials giving the elegant result that an
+    *n*-degree polynomial has *n* roots.
+
+# 5.5. From Euler’s Equation to the Riemann Zeta Function
+
+*To see the world in a grain of sand*
+
+*And a heaven in a wild flower,*
+
+*Hold infinity in the palm of your hand*
+
+*And eternity in an hour….*
+
+—<span class="smallcaps">William Blake</span> (1757-1827), “Auguries of
+Innocence”
+
+As we have seen much of the development of mathematics can be seen as
+the development of number systems. These number systems emerge out of
+everyday experiences with counting, accounting, dividing, measuring, and
+rotating. Patterns in the world are a catalyst for Platonistic
+mathematical reflection—why is the Fibonacci sequence:
+
+1, 1, 2, 3, 5, 8, 21, 34, 55, 89, 144, ….
+
+so “fascinatingly prevalent” (H. S. M. Coxeter, *Introduction to
+Geometry*) in nature? Lilies have 3 petals, buttercups 5, some
+delphiniums 8, marigolds 13, asters 21, and daises have 34, 55, or even
+89 petals. Why do the pyramids of Egypt, the chambered nautilus, the
+star in the pentagon, the segments of our fingers, the limit of the
+ratios of successive Fibonacci numbers all exhibit the golden ratio φ?
+The beauty of mathematics and its intricate interconnections suggest
+something deeper than mere empirical generalization.
+
+Platonism, moreover, doesn’t give us a way to improve mathematical
+abilities or a coherent pedagogy of mathematics—if memory is all there
+is to learning, then remembering is the key to becoming a better
+mathematician. If Platonic picture is the right one, then some of us
+have the math meme and others don’t. Don’t bother trying to learn
+mathematics, if don’t have the meme you’ll just scream. Platonism,
+however, rightly points out that the patterns of mathematics are only
+imperfectly reflected in the empirical world and that the finite poverty
+of empirical stimulus is not sufficient to account for the infinity of
+mathematical knowledge. Platonism becomes mathematically grounded in the
+interaction between formalism and logicism.
+
+These abstract properties are first formalized as laws which are then
+hierarchically arranged as axioms from which theorems can be proved
+using deductive logic. This is the seductive model of mathematics we
+derive from Euclid’s *Elements*. Mathematics as a system of first truths
+and theorems. Mathematics yields certain knowledge and knowledge that is
+*a priori* or justified independently of sense experience.
+
+Formalization is not sufficient to capture the mathematical experience,
+nor is formalization in itself sufficient to guarantee logical
+consistency. Frege, for example, was able to formalize a great deal of
+arithmetic but he had to logically construct the set of natural numbers
+to ensure that there was such a consistent mathematical object. It is
+not enough to intuit that the Peano Postulates are true of the natural
+numbers in Plato’s heaven. The Peano Postulates in Frege’s foundational
+system were proven as theorems about a logical construction. The logical
+construction was supposed to exhibit a set theoretical object whose
+existence established the consistency of the postulates and whose
+construction shed light on the inherent properties of the natural
+numbers.
+
+In order to guarantee that the formal laws of the various numbers
+systems do not lead to contradiction, more complex numbers systems are
+logically constructed as equivalences classes of simpler number systems,
+and eventually, the natural numbers are constructed as set theoretical
+objects for which the Peano’s Postulates are no longer accepted as mere
+*postulates* but instead are derived as *theorems* within a foundational
+system such as ZF set theory.
+
+<table>
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 4%" />
+<col style="width: 12%" />
+<col style="width: 19%" />
+<col style="width: 31%" />
+<col style="width: 19%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th></th>
+<th><em><strong>Empirical Use</strong></em></th>
+<th><em><strong>Formalism</strong></em></th>
+<th><em><strong>Logicism &amp; Constructivism</strong></em></th>
+<th><em><strong>Anomaly</strong></em></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Natural Numbers</td>
+<td>N</td>
+<td>Counting</td>
+<td>Peano’s Postulates</td>
+<td>Frege’s construction of <strong>N</strong> from the inductive
+sets</td>
+<td><p>No solutions:</p>
+<p>x + 1 = 0</p></td>
+</tr>
+<tr class="even">
+<td>Integers</td>
+<td>Z</td>
+<td>Accounting</td>
+<td>Ring Axioms</td>
+<td>Equivalence Classes of Pairs of Natural Numbers</td>
+<td><p>No solutions:</p>
+<p><span class="math display"><em>x</em>  × 2 = 1</span></p></td>
+</tr>
+<tr class="odd">
+<td>Rational Numbers</td>
+<td>Q</td>
+<td>Dividing</td>
+<td>Field Axioms</td>
+<td>Equivalence Classes of Pairs of Integers</td>
+<td><p>No solutions:</p>
+<p><span class="math display"><em>x</em><sup>2</sup> = 2</span></p></td>
+</tr>
+<tr class="even">
+<td>Real Numbers</td>
+<td>R</td>
+<td>Measuring lengths</td>
+<td>Field Axioms with Completeness</td>
+<td><p>Dedekind Cuts</p>
+<p><em>Completeness</em>: every set bounded above has a least upper
+bound</p></td>
+<td><p>No solutions:</p>
+<p><span class="math inline"><em>x</em><sup>2</sup></span>+ 1 =
+0</p></td>
+</tr>
+<tr class="odd">
+<td>Complex Numbers</td>
+<td>C</td>
+<td>Rotations and Headings</td>
+<td>Fields with <em>n</em> roots for <em>n</em>th degree
+polynomials</td>
+<td>Equivalence Classes of Pairs of Real Numbers</td>
+<td><p>All non-trivial solutions:</p>
+<p><em>z</em> = ½ + <em>bi</em></p></td>
+</tr>
+</tbody>
+</table>
+
+This interaction suggests a more dynamic philosophy of number—in which
+the standard *competing* schools of mathematics are, in fact,
+*complementary*.
+
+<span class="smallcaps">Platonism</span>
+
+<span class="smallcaps">Intuitionism</span>
+
+<span class="smallcaps">Formalism</span>
+
+<span class="smallcaps">Empiricism</span>
+
+Rules of Thumb
+
+Patterns
+
+Predictions
+
+<span class="smallcaps">Logicism</span>
+
+Math = Logic + Set Theory
+
+Axioms as Theorems
+
+Axioms
+
+Theorems
+
+<span class="smallcaps">Meta-Mathematics</span>
+
+This development is a dynamic interaction between diverse philosophies
+of mathematics—empiricism and Platonism, formalism and intuitionism,
+logicism and mathematical creationism, in which, in the words of Cantor,
+“the essence of *mathematics* is *freedom*.” This interaction suggests
+another approach to the philosophy of mathematics. This approach does
+not merely choose among the competing philosophies of mathematics to
+explain mathematics, but instead looks to mathematical experience to
+enrich our philosophizing about mathematics.
+
+# 5.6. From the Riemann Zeta Function to Places Yet Unknown
+
+> *“I were to awaken after having slept for a thousand years, my first
+> question would be: Has the Riemann hypothesis been proven?”* David
+> Hilbert.
+
+-   The complex numbers, unlike the real numbers, has a geometry forming
+    a two-dimensional plane—thus allowing for the combination of
+    geometry and the differential calculus, the mathematical study of
+    the patterns of continuous motion and change.
+
+-   A complex function associates with each point in the complex plane a
+    “height” which is a complex number and the “landscape” you get in
+    this way can provide insight into mathematical problems—including
+    the pattern of the primes.
+
+The natural numbers are points in the complex plane—all the integers
+lying on the positive half of the x-axis. By studying the properties of
+the complex plane, mathematicians can sometimes deduce facts about the
+natural numbers. The *Riemann Hypothesis* is just this sort of problem
+in analytic number theory.
+
+How can we find a function that provides information about the primes?
+The story begins with Euler who in 1740 introduced the zeta function.
+
+$$\sum\_{n = 1}^{\infty}{\frac{1}{n^{s}}\\} = \\\frac{1}{1^{s}} + \\\frac{1}{2^{s}} + \\\frac{1}{3^{s}} + \\\ldots$$
+
+When s <u>&lt;</u> 1, the sum is *infinite* and so divergent, but when s
+&gt; 1, the sum is *finite* and so convergent. Intuitively, when s &gt;
+1, the denominator grows fast enough to that even if you are adding
+infinitely many terms, the terms diminish rapidly enough to result in a
+finite sum.
+
+What does the zeta function have to do with the primes?
+
+The Euler Product Formula (1740)
+
+$$\zeta(s) = \\\prod\_{p\\is\\prime}^{}\frac{1}{1 - \\p^{- s}}$$
+
+can be derived from the Riemann Zeta function using the idea of the
+*Sieve of Eratosthenes*.
+
+Given the zeta function’s infinite sum, we first “factor out” all the
+denominators with factors of the first prime 2. We do this by
+multiplying the infinite series by a factor of
+
+$$\frac{1}{2^{s}}$$
+
+$$\frac{1}{2^{s}}\zeta(s) = \\\frac{1}{2^{s}} + \\\frac{1}{4^{s}} + \\\frac{1}{6^{s}} + \\\ldots$$
+
+Next we subtract this multiplied series from the original:
+
+$$\zeta(s) = \\1 + \frac{1}{2^{s}} + \\\frac{1}{3^{s}} + \\\frac{1}{4^{s}} + \frac{1}{5^{s}} + \\\frac{1}{6^{s}} + \frac{1}{7^{s}} + \frac{1}{8^{s}} + \ldots$$
+
+Notice that this subtraction removes all the denominators that have a
+factor of 2:
+
+$$\left( 1 - \frac{1}{2^{s}} \right)\zeta(s) = \\1 + \frac{1}{3^{s}} + \frac{1}{5^{s}} + \frac{1}{7^{s}} + \frac{1}{9^{s}} + \frac{1}{11^{s}} + \frac{1}{12^{s}} + \ldots$$
+
+Next we multiply both sides using the next prime raised to the power *s*
+as the denominator:
+
+$$\frac{1}{3^{s}}$$
+
+$$\frac{1}{3^{s}}\left( 1 - \frac{1}{2^{s}} \right)\zeta(s) = \\\frac{1}{3^{s}} + \frac{1}{9^{s}} + \frac{1}{15^{s}} + \frac{1}{21^{s}} + \frac{1}{27^{s}} + \frac{1}{33^{s}} + \ldots$$
+
+which allows us to “factor out” the terms whose denominators have a
+factor of the prime 3 by subtracting from the previous sum:
+
+$$\left( 1 - \frac{1}{3^{s}} \right)\left( 1 - \frac{1}{2^{s}} \right)\zeta(s) = \\\frac{1}{5^{s}} + \frac{1}{7^{s}} + \frac{1}{11^{s}} + \frac{1}{13^{s}} + \frac{1}{17^{s}} + \frac{1}{19^{s}} + \ldots$$
+
+Notice that now all the denominators having a factor of 3 or 2 (or both)
+have been removed from the right-hand sum.
+
+Repeating this procedure for each of the primes in turn, we can see the
+right side is being systematically sieved:
+
+$$\ldots\left( 1 - \frac{1}{11^{s}} \right)\left( 1 - \frac{1}{7^{s}} \right)\left( 1 - \frac{1}{5^{s}} \right)\left( 1 - \frac{1}{3^{s}} \right)\left( 1 - \frac{1}{2^{s}} \right)\zeta(s) = 1$$
+
+Dividing both sides by the all products on the left to get ζ(*s*) by
+itself we obtain:
+
+$$\zeta(s) = \frac{1}{\left( 1 - \frac{1}{2^{s}} \right)\left( 1 - \frac{1}{3^{s}} \right)\left( 1 - \frac{1}{5^{s}} \right)\left( 1 - \frac{1}{7^{s}} \right)\left( 1 - \frac{1}{11} \right)\left( 1 - \frac{1}{13} \right)}$$
+
+We have derived *Euler’s Product Formula*:
+
+$$\zeta(s) = \\\prod\_{p\\is\\prime}^{}\frac{1}{1 - \\p^{- s}}$$
+
+The Euler product converges when the real part of s is &gt; 1.
+
+As a real-valued function, the zeta function is a 1-dimensional object
+and thus has no geometric structure to help you uncover the pattern of
+the primes.
+
+To do that you need to move up two dimensions, which is the key step
+that Riemann made when he replaced the real number s with complex
+numbers. This was in a remarkable paper of 1859.
+
+The *Riemann zeta function* ζ(s) is a function of a complex variable *s*
+which is defined by a power series:
+
+$$\zeta(s) = \sum\_{n = 1}^{\infty}{\frac{1}{n^{s}}\\} = \\\frac{1}{1^{s}} + \\\frac{1}{2^{s}} + \\\frac{1}{3^{s}} + \\\ldots$$
+
+In his one and only paper on number theory, *“On the Number of Prime
+Numbers Less than a Given Quantity”* (1859), Riemann wrote in eight
+pages one of the most influential paper ever written. Riemann noticed
+that:
+
+1\. The zeta function could be extended to the complex plane.
+
+2\. Euler’s product formula was only valid when the real part is greater
+than 1.
+
+3\. There is another formula for the zeta function which is valid
+everywhere except for s =1.
+
+When working with real-valued functions you can chop their parts and
+combine them to get smooth functions.
+
+The *analytic continuation theorem* (ACT) says that the situation is
+completely different with complex functions. If we know the values of an
+analytic function on a patch of plane, then there is exactly one way to
+extend it to the whole complex plane.
+
+Riemann wanted to prove Gauss’ conjecture that for large numbers *n*,
+the density of the primes below *n* is approximately 1/ln(*n*), a result
+known as the *Prime Number Theorem.* This theorem was proven by Hadamard
+and de la Vasllee Poussin in 1896.
+
+Riemann in this paper – 8 pages in length—made a bold conjecture about
+the zeros of the zeta function. He began by observing that zeta(s) = 0
+whenever s was one the even negative numbers were zeros -2, -4, -6,
+etc….. Call these the *trivial zeros*. Then he noticed that the zeta
+function must have infinitely many zeros and calculated the first 9
+zeros, noticing they were all on the line *z* = ½ + *bi*, for some real
+number *b*. In geometric terms, all nonreal zeros of the zeta function
+lie on a straight line in the complex plane that runs vertically through
+the point ½ on the x-axis—known as the *critical line*.
+
+Riemann showed that if all the complex zeros of the zeta function have
+real part equal to ½, then the degree to which the density function
+differs from the curve 1/ln(*n*) varies in a systematically random
+proportion…. Even though you can’t predict when the next prime will
+occur the overall pattern of primes is extremely regular (analogy: coin
+flipping).
+
+With the single exception of z = 1, we can calculate this function.
+
+The zeta function converges when the real part of *s* is greater than 1.
+Euler’s product formula is the special case when *s* = 1, and makes the
+connection between the harmonic series and the infinity of the primes.
+
+Now ζ(1) is the harmonic series
+
+$$\zeta(1) = \\\sum\_{n = 1}^{\infty}{\frac{1}{n}\\} = \\1 + \\\frac{1}{2} + \frac{1}{3} + \frac{1}{4} + \frac{1}{5} + \frac{1}{6} + \frac{1}{7} + \\\ldots$$
+
+and so we have a concise way of expressing the harmonic series as the
+product of all primes of the form 1/(1− 1/*p*):
+
+$$\prod\_{p\\is\\prime}^{}\frac{1}{1 - \frac{1}{p}} = \\\frac{2}{1}\\ \times \\\frac{3}{2} \times \\\frac{5}{4}\\ \times \\\frac{7}{6}\\ \times \\\frac{11}{10}\\ \times \ldots\\ \times \\\frac{p}{p - 1}\\ \times \ldots$$
+
+This identity gives us another proof of the infinity of the primes.
+
+$$1 + \frac{1}{2} + \\\frac{1}{3} + \frac{1}{4} + \frac{1}{5} + \\\ldots + \\\frac{1}{n} + \ldots = \\\frac{2}{1}\\ \times \\\frac{3}{2} \times \\\frac{5}{4}\\ \times \\\frac{7}{6}\\ \times \\\frac{11}{10}\\ \times \ldots\\ \times \\\frac{p}{p - 1}\\ \times \ldots$$
+
+The infinite sum of the harmonic series, we have already proven,
+diverges to infinity and so the left hand side is infinite. Now assume
+that the number of primes is finite. Then the right hand side of the
+equation would be finite. Contradiction. Therefore, the number of primes
+must be infinite. This completes an alternative proof of Euclid’s
+theorem about the infinity of the premise.
+
+The next step in this development involves what we might call the
+“mathematics of philosophy”—the meta-mathematical approach elaborated by
+Hilbert, but masterfully and creatively deployed by Kurt Gödel. This
+approach to mathematics not only yielded profound mathematical results
+but yielded mathematical theorems which had profound consequences for
+philosophy and for formalist approaches to mathematics. This
+intellectual symphony by Gödel was a decisive turn from the philosophy
+of mathematics (the use philosophy to explain and clarify mathematics)
+to the use of mathematical methods to obtain philosophical results (the
+“mathematics of philosophy”).
+
+*Conjecture*: The hitherto unprovability of the Riemann Hypothesis is
+related to Chaitin’s complexity interpretation of Gödel Incompleteness:
+since prime numbers can be used to code up information of arbitrary
+complexity, if you were able to predict the primes with Reimann-like
+constraints, then you would be able to decode information of arbitrarily
+high complexity, which is a contradiction.
+
+[1] It seems like voodoo economics to say that a debt of $5 multiplied a
+negative 5 times is equal to a positive $25. It’s like saying that some
+persons are so *negative* that when they finally *leave* it seems like
+someone has arrived!
+
+[2] The Harvard mathematician and satirical song writer Tom Lehrer put
+the definition of the derivative to music to a tune “There’ll Be Some
+Changes Made.”
+
+You take a function of *x* and you call it *y*,
+
+Take any *x<sub>0</sub>* that you care to try.
+
+You make a little change and call it δ*x*,
+
+The corresponding change in *y* is what you find nex’,
+
+And then you take the quotient, and now carefully
+
+Send δ*x* to zero and I think you’ll see
+
+That what the limit gives us, if our work all checks,
+
+Is what we call $\frac{dy}{dx}.$ Is just $\frac{dy}{dx}!$
+
+[3]
+
+[4] Leibniz was proud of his discovery (1674) of the quadrature or
+Leibniz-Gregory series (Gregory discovered the series in 1671):
+
+$\frac{\pi}{4} = 1 - \\\frac{1}{3} + \\\frac{1}{5} - \\\frac{1}{7} + \frac{1}{9} - \frac{1}{11} + \frac{1}{13} - \ldots$
++
+
+In an infinitely-approximating way, the series provided a “solution” to
+the classic geometrical problem of squaring the circle. But Leibniz’s
+series is practically useless in calculating the digits of π--not only
+does it converges extremely slowly but it does not yield digits that are
+*stable*. For example, if you compute the first five terms of the series
+then the partial sum is 0.8349206, which is within 1/11 of the true
+value of $\frac{\pi}{4}$, but not a single digit of the partial sum is
+correct!
