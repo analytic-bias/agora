@@ -16,14 +16,11 @@
     <div id="ggb-element" style="width: 100%"></div>
     <script>
         // let w = window.screen.width;
-        // let params = {
-        //     "perspective": "G", "material_id": "cqdmgrf9", "showToolBar": false, "enableRightClick": false, "showAlgebraInput": false, "showMenuBar": false, "preventFocus": true, "showFullscreenButton": true, "rounding": "2", "showKeyboardOnFocus": false, appletOnLoad(api) {
-        //         api.setPerspective("G");
-        //         api.showResetIcon(true);
-        //     }
-        // };
         let params = {
-            "material_id": "qkvt8bet"
+            "perspective": "G", "material_id": "qkvt8bet", "showToolBar": false, "enableRightClick": false, "showAlgebraInput": false, "showMenuBar": false, "preventFocus": true, "showFullscreenButton": true, "rounding": "2", "showKeyboardOnFocus": false, appletOnLoad(api) {
+                api.setPerspective("G");
+                api.showResetIcon(true);
+            }
         };
         let applet = new GGBApplet(params, true);
         window.addEventListener("load", function () {
