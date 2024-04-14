@@ -15,7 +15,7 @@
     <script src="https://www.geogebra.org/apps/deployggb.js"></script>
     <div id="ggb-element" style="width: 100%"></div>
     <script>
-        let w = document.getElementById("lst-geogebra-euler2gamow1").getBoundingClientRect().width;
+        let w = window.screen.width;
         let params = {
             "perspective": "G", "width": w, "height": w, "material_id": "cqdmgrf9", "showToolBar": false, "enableRightClick": false, "showAlgebraInput": false, "showMenuBar": false, "preventFocus": true, "showFullscreenButton": true, "rounding": "2", "showKeyboardOnFocus": false, appletOnLoad(api) {
                 api.setPerspective("G");
