@@ -1,0 +1,11 @@
+# Preface {.unnumbered}
+
+Here hosted the wonderful book of Urs Schreiber, [Geometry of Physics --- Perturbative Quantum Field Theory](https://ncatlab.org/nlab/show/geometry+of+physics+--+perturbative+quantum+field+theory), but with potentially less typo and better typesetting ... and perhaps surprises.
+
+## NB
+
+[source](https://ncatlab.org/nlab/source/geometry+of+physics+--+perturbative+quantum+field+theory)
+
+[chapter source schema](https://ncatlab.org/nlab/source/A+first+idea+of+quantum+field+theory+--+Spacetime)
+
+[TeX](https://ncatlab.org/nlab/tex/A+first+idea+of+quantum+field+theory+--+Spacetime)
