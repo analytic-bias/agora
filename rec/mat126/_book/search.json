@@ -54,7 +54,7 @@
     "href": "w13t14.html#sec-hw10d7",
     "title": "1  Week 13–14",
     "section": "",
-    "text": "1.1.1 Solution\nRecall that the area of the annulus at \\(x\\) (where \\(0\\leq x\\leq1\\)) is \\[A(x)=\\pi\\big[f_1(x)-y_0\\big]^2-\\pi\\big[f_2(x)-y_0\\big]^2\\] and that the volume is \\[V=\\int_a^bA(x)\\,\\mathrm{d}x,\\] which in our case are\n\n\\[\n\\begin{aligned}\nA(x)&=\\pi(3 x-3)^2-\\pi(3 \\sqrt{x}-3)^2 \\\\\n& =9 \\pi\\left[\\left(1-2 x+x^2\\right)-(1-2 \\sqrt{x}+x)\\right] \\\\\n& =9 \\pi\\left(-3 x+x^2+2 \\sqrt{x}\\right)\\text{; and}\\\\\\\\\nV&=\\int_0^{1} A(x)\\,\\mathrm{d}x\\class{alref}{\\cssId{alref1}{}}\\\\\n&=9 \\pi \\int_0^1\\left(-3 x+x^2+2 \\sqrt{x}\\right)\\,\\mathrm{d}x\\\\\n& =9 \\pi\\left[-\\frac{3}{2} x^2+\\frac{1}{3} x^3+\\frac{4}{3} x^{3 / 2}\\right]_0^1\\\\\n&=9 \\pi\\left(-\\frac{3}{2}+\\frac{5}{3}\\right)=\\frac{3}{2} \\pi.\n\\end{aligned}\n\\]\n\n\n\nWebAssign’s solution has a typo on this line.\n\n\n\n\n\n1.1.2 Sketch\nSketch the region, the solid, and a typical disk or washer. (Do this on paper. Your instructor may ask you to turn in this work.) Mathematicians usually call them annuli (sing. annulus), not washers.\n\n\n\n\n\n\n                                                \n\n\n\n\n&lt;&gt;:19: SyntaxWarning:\n\ninvalid escape sequence '\\s'\n\n&lt;&gt;:19: SyntaxWarning:\n\ninvalid escape sequence '\\s'\n\n/var/folders/c0/4qrqlv397jv6hb07vk8nx63r0000gn/T/ipykernel_19859/3307894159.py:19: SyntaxWarning:\n\ninvalid escape sequence '\\s'\n\n\n\n\n\n\nPlot of \\(y=3x\\) and \\(y=3\\sqrt{x}\\) with area between curves from \\(x=0\\) to \\(x=1\\)\n\n\n\n\n\n\n\nFigure 1.1: Figures for HW 10.7 - SCalcCC5 6.2.014.",
+    "text": "1.1.1 Solution\nRecall that the area of the annulus at \\(x\\) (where \\(0\\leq x\\leq1\\)) is \\[A(x)=\\pi\\big[f_1(x)-y_0\\big]^2-\\pi\\big[f_2(x)-y_0\\big]^2\\] and that the volume is \\[V=\\int_a^bA(x)\\,\\mathrm{d}x,\\] which in our case are\n\n\\[\n\\begin{aligned}\nA(x)&=\\pi(3 x-3)^2-\\pi(3 \\sqrt{x}-3)^2 \\\\\n& =9 \\pi\\left[\\left(1-2 x+x^2\\right)-(1-2 \\sqrt{x}+x)\\right] \\\\\n& =9 \\pi\\left(-3 x+x^2+2 \\sqrt{x}\\right)\\text{; and}\\\\\\\\\nV&=\\int_0^{1} A(x)\\,\\mathrm{d}x\\class{alref}{\\cssId{alref1}{}}\\\\\n&=9 \\pi \\int_0^1\\left(-3 x+x^2+2 \\sqrt{x}\\right)\\,\\mathrm{d}x\\\\\n& =9 \\pi\\left[-\\frac{3}{2} x^2+\\frac{1}{3} x^3+\\frac{4}{3} x^{3 / 2}\\right]_0^1\\\\\n&=9 \\pi\\left(-\\frac{3}{2}+\\frac{5}{3}\\right)=\\frac{3}{2} \\pi.\n\\end{aligned}\n\\]\n\n\n\nWebAssign’s solution has a typo on this line.\n\n\n\n\n\n1.1.2 Sketch\nSketch the region, the solid, and a typical disk or washer. (Do this on paper. Your instructor may ask you to turn in this work.) Mathematicians usually call them annuli (sing. annulus), not washers.\n\n\n\n\n\n\n                                                \n\n\n\n\n&lt;&gt;:19: SyntaxWarning:\n\ninvalid escape sequence '\\s'\n\n&lt;&gt;:19: SyntaxWarning:\n\ninvalid escape sequence '\\s'\n\n/var/folders/y1/yqgmwn896xb19zv9fw21mtd00000gn/T/ipykernel_10568/3307894159.py:19: SyntaxWarning:\n\ninvalid escape sequence '\\s'\n\n\n\n\n\n\nPlot of \\(y=3x\\) and \\(y=3\\sqrt{x}\\) with area between curves from \\(x=0\\) to \\(x=1\\)\n\n\n\n\n\n\n\nFigure 1.1: Figures for HW 10.7 - SCalcCC5 6.2.014.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Week 13--14</span>"
     ]
@@ -64,7 +64,7 @@
     "href": "w13t14.html#sec-hw10d10",
     "title": "1  Week 13–14",
     "section": "1.2 HW 10.10 - SCalcCC5 6.3.025.",
-    "text": "1.2 HW 10.10 - SCalcCC5 6.3.025.\n\nConsider the following. \\[\nx=4 \\sqrt{\\sin (y)}, \\quad 0 \\leq y \\leq \\pi, \\quad x=0;\\quad \\text { about } y=4\n\\]\n\n1.2.1 (a)\nSet up an integral for the volume of the solid obtained by rotating the region bounded by the given curve about the specified axis.\n\n1.2.1.1 Solution\n\n\\[\n\\begin{aligned}\n\\class{alref}{\\cssId{alref2}{\\phantom{.}}}\nA(y)&=\\underbrace{2\\pi(4-y)}_{\\text{circumference}} \\cdot \\underbrace{4\\sqrt{\\sin (y)}}_{\\text{height}},\\,\\text{and thus}\\\\\nV&=\\int_0^{\\pi} 2 \\pi(4-y) 4 \\sqrt{\\sin (y)}\\,\\mathrm{d}y.\\\\\\\\\n\\end{aligned}\n\\]\n\n\n\\(\\leftarrow\\) area of the red cylinder at y\n\nWhen to use cylindrical shells or annuli?\n\nthe line around which the region is rotated is parallel to the axis of the independent variable \\(\\rightarrow\\) annuli (Section 1.1);\nthe line is orthogonal to the axis \\(\\rightarrow\\) cylinders (Section 1.2).\n\n\n\n\n\n\n\n\n\n                                                \n\n\n\n\n&lt;&gt;:19: SyntaxWarning:\n\ninvalid escape sequence '\\s'\n\n&lt;&gt;:19: SyntaxWarning:\n\ninvalid escape sequence '\\s'\n\n/var/folders/c0/4qrqlv397jv6hb07vk8nx63r0000gn/T/ipykernel_19859/3086083812.py:19: SyntaxWarning:\n\ninvalid escape sequence '\\s'\n\n\n\n\n\n\nPlot of \\(x=4\\sqrt{\\sin y}\\) and \\(y=4\\) with area between curves from \\(y=0\\) to \\(y=\\pi\\)\n\n\n\n\n\n\n\nFigure 1.2: Figures for HW 10.10 - SCalcCC5 6.3.025.\n\n\n\n\n\n\n1.2.2 (b)\nUse technology to evaluate the integral. (Round your answer to four decimal places.)\n\n1.2.2.1 Solution\nFor the numerical integration, we can use scipy:\n\n\n\nThe anti-derivative is non-elementary. If you’re really curious, you can start from here; you may notice that it will be much more complicated than the \\(x^n\\tan x\\) some of you asked a while ago.\n\n\nimport numpy\nimport scipy\nround(scipy.integrate.quad(lambda y:\n  2 * numpy.pi * (4 - y) *\n    4 * numpy.sqrt(numpy.sin(y)),\n  0, numpy.pi)[0],\n4)\n\n146.299\n\n\nor whatever “technology” you’d prefer.",
+    "text": "1.2 HW 10.10 - SCalcCC5 6.3.025.\n\nConsider the following. \\[\nx=4 \\sqrt{\\sin (y)}, \\quad 0 \\leq y \\leq \\pi, \\quad x=0;\\quad \\text { about } y=4\n\\]\n\n1.2.1 (a)\nSet up an integral for the volume of the solid obtained by rotating the region bounded by the given curve about the specified axis.\n\n1.2.1.1 Solution\n\n\\[\n\\begin{aligned}\n\\class{alref}{\\cssId{alref2}{\\phantom{.}}}\nA(y)&=\\underbrace{2\\pi(4-y)}_{\\text{circumference}} \\cdot \\underbrace{4\\sqrt{\\sin (y)}}_{\\text{height}},\\,\\text{and thus}\\\\\nV&=\\int_0^{\\pi} 2 \\pi(4-y) 4 \\sqrt{\\sin (y)}\\,\\mathrm{d}y.\\\\\\\\\n\\end{aligned}\n\\]\n\n\n\\(\\leftarrow\\) area of the red cylinder at y\n\nWhen to use cylindrical shells or annuli?\n\nthe line around which the region is rotated is parallel to the axis of the independent variable \\(\\rightarrow\\) annuli (Section 1.1);\nthe line is orthogonal to the axis \\(\\rightarrow\\) cylinders (Section 1.2).\n\n\n\n\n\n\n\n\n\n                                                \n\n\n\n\n&lt;&gt;:19: SyntaxWarning:\n\ninvalid escape sequence '\\s'\n\n&lt;&gt;:19: SyntaxWarning:\n\ninvalid escape sequence '\\s'\n\n/var/folders/y1/yqgmwn896xb19zv9fw21mtd00000gn/T/ipykernel_10568/3086083812.py:19: SyntaxWarning:\n\ninvalid escape sequence '\\s'\n\n\n\n\n\n\nPlot of \\(x=4\\sqrt{\\sin y}\\) and \\(y=4\\) with area between curves from \\(y=0\\) to \\(y=\\pi\\)\n\n\n\n\n\n\n\nFigure 1.2: Figures for HW 10.10 - SCalcCC5 6.3.025.\n\n\n\n\n\n\n1.2.2 (b)\nUse technology to evaluate the integral. (Round your answer to four decimal places.)\n\n1.2.2.1 Solution\nFor the numerical integration, we can use scipy:\n\n\n\nThe anti-derivative is non-elementary. If you’re really curious, you can start from here; you may notice that it will be much more complicated than the \\(x^n\\tan x\\) some of you asked a while ago.\n\n\nimport numpy\nimport scipy\nround(scipy.integrate.quad(lambda y:\n  2 * numpy.pi * (4 - y) *\n    4 * numpy.sqrt(numpy.sin(y)),\n  0, numpy.pi)[0],\n4)\n\n146.299\n\n\nor whatever “technology” you’d prefer.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Week 13--14</span>"
     ]
@@ -134,7 +134,7 @@
     "href": "w15.html#recall-curves-defined-with-polar-coordinates",
     "title": "2  Week 15",
     "section": "2.2 Recall: Curves Defined with Polar Coordinates",
-    "text": "2.2 Recall: Curves Defined with Polar Coordinates\n\n2.2.1 Change of Coordinate System\nFrom what you already know about coordinates, one can make a change of coordinate for curves from polar to Cartesian by  \\[\n\\left\\{\\begin{aligned}\nx(t)&=r(t)\\cdot\\cos\\theta(t)\\\\\ny(t)&=r(t)\\cdot\\sin\\theta(t);\n\\end{aligned}\\right.\\quad\n\\left\\{\\begin{aligned}\nr(t)&=\\sqrt{x(t)^2+y(t)^2}\\\\\n\\theta(t)&=\\arctan\\left(\\frac{y(t)}{x(t)}\\right).\n\\end{aligned}\\right.\n\\]For a curve defined by \\(r=f(\\theta)\\), one may parameterized it as \\(r=f(t),\\theta(t)=t\\).\n\n\n\nHowever, since we are considering negative \\(r\\) sometimes, e.g. HW 13.9 - SCalcCC5 A.H.1.035., you might wish to segment the curve when it passes through the origin.\n\nIf the curve is given by an equation, you might wish to try to manipulate the equation symbolically first \\[\nf(r)=g(\\theta)\\quad\\leadsto\\quad f\\left(\\sqrt{x(t)^2+y(t)^2}\\right)=g\\left(\\frac{y(t)}{x(t)}\\right),\n\\] which might make the process easier.\n\n\n2.2.2 Arc Length and Area inside Curve\n \\[\n\\begin{aligned}\nA&=\\int_a^b \\frac{1}{2} r^2\\,\\mathrm{d}\\theta,\\\\\nL&=\\int_a^b \\sqrt{r^2+\\left(\\frac{d r}{d \\theta}\\right)^2}\\,\\mathrm{d}\\theta.\n\\end{aligned}\n\\]From Prof. Rico’s notes.",
+    "text": "2.2 Recall: Curves Defined with Polar Coordinates\n\n2.2.1 Change of Coordinate System\nFrom what you already know about coordinates, one can make a change of coordinate for curves from polar to Cartesian by For a curve defined by \\(r=f(\\theta)\\), one may parameterized it as \\(r=f(t),\\theta(t)=t\\). \\[\n\\left\\{\\begin{aligned}\nx(t)&=r(t)\\cdot\\cos\\theta(t)\\\\\ny(t)&=r(t)\\cdot\\sin\\theta(t);\n\\end{aligned}\\right.\\quad\n\\left\\{\\begin{aligned}\nr(t)&=\\sqrt{x(t)^2+y(t)^2}\\\\\n\\theta(t)&=\\arctan\\left(\\frac{y(t)}{x(t)}\\right).\n\\end{aligned}\\right.\n\\]\n\n\n\nHowever, since we are considering negative \\(r\\) sometimes, e.g. HW 13.9 - SCalcCC5 A.H.1.035., you might wish to segment the curve when it passes through the origin.\n\nIf the curve is given by an equation, you might wish to try to manipulate the equation symbolically first \\[\nf(r)=g(\\theta)\\quad\\leadsto\\quad f\\left(\\sqrt{x(t)^2+y(t)^2}\\right)=g\\left(\\frac{y(t)}{x(t)}\\right),\n\\] which might make the process easier.\n\n\n2.2.2 Arc Length and Area inside Curve\nFrom Prof. Rico’s notes. \\[\n\\begin{aligned}\nA&=\\int_a^b \\frac{1}{2} r^2\\,\\mathrm{d}\\theta,\\\\\nL&=\\int_a^b \\sqrt{r^2+\\left(\\frac{d r}{d \\theta}\\right)^2}\\,\\mathrm{d}\\theta.\n\\end{aligned}\n\\]",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Week 15</span>"
     ]
@@ -194,7 +194,7 @@
     "href": "w16.html#hw14.3---wacalctutbanklt1-7.5.003c.tut.",
     "title": "3  Week 16",
     "section": "3.2 HW14.3 - WACalcTutBankLT1 7.5.003c.Tut.",
-    "text": "3.2 HW14.3 - WACalcTutBankLT1 7.5.003c.Tut.\nCompute the surface area obtained by rotating the curve \\(y = \\sqrt[3]{x}\\), for \\(x\\in [1, 125]\\) about the y-axis.\n\n3.2.1 Solution\nSince the function is bijective within the domain, let us consider again \\[\\left\\{\\begin{aligned}\ny &= \\sqrt[3]{x}\\\\\nx &\\in [1, 125]\n\\end{aligned}\\right.\\;\\implies\\;\\left\\{\\begin{aligned}\nx&=y^3\\\\\ny&\\in [1,5]\n\\end{aligned}\\right.\\] by taking the inverse (i.e. swapping the variable \\(x\\) and \\(y\\) as before).\n\n\n\nSection 4.3\n\nNow one may use the integral\n\n\\[\n\\begin{aligned}\nA&=\\int_1^5 \\underbrace{2\\pi x(y)}_{\\text{circumference}} \\cdot \\underbrace{\\sqrt{1+x'(y)^2}}_{\\text{\\color{orange}height}\\class{alref}{\\cssId{alref1}{}}}\\,\\mathrm{d}y\\\\\n&=\\cdots=\\frac{(-10 \\sqrt{10} + 5626 \\sqrt{5626}) \\cdot \\pi}{27},\n\\end{aligned}\n\\]\n\n\n\nIf you’re curious about the height part being an arc length, or that the band in the widget is a cone section instead of a cylinder, recall the discussion we had about Schwarz’s Lantern in Section 1.6.1.\n\n\nas demonstrated by the plot and widget below.",
+    "text": "3.2 HW14.3 - WACalcTutBankLT1 7.5.003c.Tut.\nCompute the surface area obtained by rotating the curve \\(y = \\sqrt[3]{x}\\), for \\(x\\in [1, 125]\\) about the y-axis.\n\n3.2.1 Solution\nSince the function is bijective within the domain, let us consider again \\[\\left\\{\\begin{aligned}\ny &= \\sqrt[3]{x}\\\\\nx &\\in [1, 125]\n\\end{aligned}\\right.\\;\\implies\\;\\left\\{\\begin{aligned}\nx&=y^3\\\\\ny&\\in [1,5]\n\\end{aligned}\\right.\\] by taking the inverse (i.e. swapping the variable \\(x\\) and \\(y\\) as before).\n\n\n\nSection 4.4\n\nNow one may use the integral\n\n\\[\n\\begin{aligned}\nA&=\\int_1^5 \\underbrace{2\\pi x(y)}_{\\text{circumference}} \\cdot \\underbrace{\\sqrt{1+x'(y)^2}}_{\\text{\\color{orange}height}\\class{alref}{\\cssId{alref1}{}}}\\,\\mathrm{d}y\\\\\n&=\\cdots=\\frac{(-10 \\sqrt{10} + 5626 \\sqrt{5626}) \\cdot \\pi}{27},\n\\end{aligned}\n\\]\n\n\n\nIf you’re curious about the height part being an arc length, or that the band in the widget is a cone section instead of a cylinder, recall the discussion we had about Schwarz’s Lantern in Section 1.6.1.\n\n\nas demonstrated by the plot and widget below.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Week 16</span>"
     ]
@@ -204,7 +204,7 @@
     "href": "w16.html#bijective-functions-inverses-and-change-of-coordinate-system",
     "title": "3  Week 16",
     "section": "3.3 Bijective Functions, Inverses, and Change of Coordinate System",
-    "text": "3.3 Bijective Functions, Inverses, and Change of Coordinate System\nThis was asked multiple times in my MLC, so I’d also like to discuss a bit about it: Section 4.3.",
+    "text": "3.3 Bijective Functions, Inverses, and Change of Coordinate System\nThis was asked multiple times in my MLC, so I’d also like to discuss a bit about it: Section 4.4.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Week 16</span>"
     ]
@@ -212,41 +212,51 @@
   {
     "objectID": "ex.html",
     "href": "ex.html",
-    "title": "4  Optional Excursions",
+    "title": "4  Excursions",
     "section": "",
     "text": "4.1 Euler’s Formula and Trigonometric Identities\nRecall Euler’s formula 1 \\[\ne^{i x}=\\cos x+i \\sin x\n\\] where \\(i=\\sqrt{-1}\\).\nSo for example, to derive the double-angle formula for cosine used above, redefine 2 \\[\n\\cos (x)=\\frac{e^{i x}+e^{-i x}}{2}\n\\] with the Euler’s formula, and write \\[\n\\cos ^2(\\theta)=\\frac{e^{2 i \\theta}+2+e^{-2 i \\theta}}{4}\\quad\\text{and}\\quad\\cos (2 \\theta)=\\frac{e^{2 i \\theta}+e^{-2 i \\theta}}{2};\n\\] which, via algebraic manipulations, gives \\[\\cos (2 \\theta)=2 \\cos ^2 \\theta-1,\\] as desired.",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Optional Excursions</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Excursions</span>"
     ]
   },
   {
     "objectID": "ex.html#sec-exeulertrigid",
     "href": "ex.html#sec-exeulertrigid",
-    "title": "4  Optional Excursions",
+    "title": "4  Excursions",
     "section": "",
-    "text": "1 The reason this formula makes sense amounts to the analytic continuation of the exponential function, which is definitely not a required topic of calculus courses; you can refer to common complex analysis textbooks if so interested. The main ingredient of the proof is the power series expansion of the exponential function.2 Recall that \\[\\operatorname{Re}(z)=\\frac{z+\\bar{z}}{2} \\quad \\text { and } \\quad \\operatorname{Im}(z)=\\frac{z-\\bar{z}}{2 i},\\] where \\(\\bar{z}\\) denotes the complex conjugate of \\(z\\).",
+    "text": "1 The reason this formula makes sense amounts to the analytic continuation of the exponential function, which is definitely not a required topic of calculus courses; you can refer to common complex analysis texts if so interested. The main ingredient of the proof is the power series expansion of the exponential function.2 Recall that \\[\\operatorname{Re}(z)=\\frac{z+\\bar{z}}{2} \\quad \\text { and } \\quad \\operatorname{Im}(z)=\\frac{z-\\bar{z}}{2 i},\\] where \\(\\bar{z}\\) denotes the complex conjugate of \\(z\\).",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Optional Excursions</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Excursions</span>"
+    ]
+  },
+  {
+    "objectID": "ex.html#triangulation-and-schwarzs-example",
+    "href": "ex.html#triangulation-and-schwarzs-example",
+    "title": "4  Excursions",
+    "section": "4.2 Triangulation and Schwarz’s Example",
+    "text": "4.2 Triangulation and Schwarz’s Example",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Excursions</span>"
     ]
   },
   {
     "objectID": "ex.html#partial-fractions",
     "href": "ex.html#partial-fractions",
-    "title": "4  Optional Excursions",
-    "section": "4.2 Partial Fractions",
-    "text": "4.2 Partial Fractions\nThis is a more technical explanation of why one wants to use partial fraction decomposition (PFD) for evaluating antiderivatives, series expansions, and various integral transforms.\n\nTheorem 4.1 (Existence and Uniqueness of PFD) 3 Let \\(f\\) and \\(g\\) be nonzero polynomials over a field \\(K\\) and let \\[\ng=\\prod_{i=1}^k p_i^{n_i}.\n\\] be a decomposition of \\(g\\) into a product of powers of distinct irreducible polynomials, then there are polynomials \\(b\\) and \\(a_{i j}\\) (unique up to signs) such that deg \\(a_{i j}&lt;\\operatorname{deg} p_i\\) and that \\[\n\\frac{\\,f\\,}{\\,g\\,}=b+\\sum_{i=1}^k \\sum_{j=1}^{n_i} \\frac{\\,a_{i,j}\\,}{\\,(p_i)^j\\,}.\n\\]\n3 The ingredients for its proof are the Euclidean division for polynomials and the Bézout’s identity.\nWhat this is saying is that if one encounters a rational function whose antiderivative, series expansion, etc. are not apparent at first sight, one can decompose the function into summands in the forms that are easier to handle, and evaluate them individually by linearity. For example, one may notice in particular that in the statement of the theorem above if \\(\\deg f&lt;\\deg g\\), then \\(b=0\\), and if \\(K\\) is algebraically closed, then \\(a_{i,j}\\in K\\) can be achieved, which is exactly the situation we encountered in the above homework question; in this case, the ``easier” summands are of the form \\[\n\\frac{c}{ax+b}\\quad\\text{where}\\quad a,b,c\\in\\mathbb{Q}.\n\\]\nFurthermore, in some cases, it is not practically required to complete the full decomposition (as that might require irrational and/or complex coefficients in the denominator); for example, you may encounter problems in the homework where summands of the form \\[\n\\frac{dx+e}{ax^2+bx+c}\\quad\\text{where}\\quad a,b,c,d,e\\in\\mathbb{Q}\n\\] already suffice.",
+    "title": "4  Excursions",
+    "section": "4.3 Partial Fractions",
+    "text": "4.3 Partial Fractions\nThis is a more technical explanation of why one wants to use partial fraction decomposition (PFD) for evaluating antiderivatives, series expansions, and various integral transforms.\n\nTheorem 4.1 (Existence and Uniqueness of PFD) 3 Let \\(f\\) and \\(g\\) be nonzero polynomials over a field \\(K\\) and let \\[\ng=\\prod_{i=1}^k p_i^{n_i}.\n\\] be a decomposition of \\(g\\) into a product of powers of distinct irreducible polynomials, then there are polynomials \\(b\\) and \\(a_{i j}\\) (unique up to signs) such that deg \\(a_{i j}&lt;\\operatorname{deg} p_i\\) and that \\[\n\\frac{\\,f\\,}{\\,g\\,}=b+\\sum_{i=1}^k \\sum_{j=1}^{n_i} \\frac{\\,a_{i,j}\\,}{\\,(p_i)^j\\,}.\n\\]\n3 The ingredients for its proof are the Euclidean division for polynomials and the Bézout’s identity.\nWhat this is saying is that if one encounters a rational function whose antiderivative, series expansion, etc. are not apparent at first sight, one can decompose the function into summands in the forms that are easier to handle, and evaluate them individually by linearity. For example, one may notice in particular that in the statement of the theorem above if \\(\\deg f&lt;\\deg g\\), then \\(b=0\\), and if \\(K\\) is algebraically closed, then \\(a_{i,j}\\in K\\) can be achieved, which is exactly the situation we encountered in the above homework question; in this case, the ``easier” summands are of the form \\[\n\\frac{c}{ax+b}\\quad\\text{where}\\quad a,b,c\\in\\mathbb{Q}.\n\\]\nFurthermore, in some cases, it is not practically required to complete the full decomposition (as that might require irrational and/or complex coefficients in the denominator); for example, you may encounter problems in the homework where summands of the form \\[\n\\frac{dx+e}{ax^2+bx+c}\\quad\\text{where}\\quad a,b,c,d,e\\in\\mathbb{Q}\n\\] already suffice.",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Optional Excursions</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Excursions</span>"
     ]
   },
   {
     "objectID": "ex.html#sec-exchangecoordinate",
     "href": "ex.html#sec-exchangecoordinate",
-    "title": "4  Optional Excursions",
-    "section": "4.3 Change of Coordinate System",
-    "text": "4.3 Change of Coordinate System\n\n4.3.1 TODO\n\nbijection, inverses\ninverse function theorem, forms and measures (too much?)",
+    "title": "4  Excursions",
+    "section": "4.4 Change of Coordinate System",
+    "text": "4.4 Change of Coordinate System\n\n4.4.1 TODO\n\nbijection, inverses\ninverse function theorem, forms and measures (too much?)",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Optional Excursions</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Excursions</span>"
     ]
   }
 ]
