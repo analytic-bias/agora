@@ -39,6 +39,7 @@ book:
   chapters:
     - index.qmd
     - euler/euler2.qmd
+    - euler/euler3.qmd
     - euclid/euclid.qmd
     # - cons/GC.qmd
     # - intro.qmd

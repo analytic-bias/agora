@@ -1,0 +1,16 @@
+# PHI 330 Guest Lecture: The Grothendieck--Ax Theorem
+
+This is a supplemental excursion from our discussion on Monday about Euler's work.
+We are going to further explore the idea that the study of formal logic, foundations of mathematics, and meta-mathematics are inseparable constituents of modern formal sciences.
+
+In particular, the topic we wish to discuss today is
+
+::: {.callout-note}
+## Grothendieck [-@EGA4, v3 10.4.11]--@Ax1968ElementaryTheoryFinite Theorem
+Let $f: \mathbb{C}^n \rightarrow \mathbb{C}^n$ be a polynomial map.
+If $f$ is injective, then $f$ is surjective.
+
+[Moreover](https://webusers.imj-prg.fr/~leila.schneps/grothendieckcircle/EGA/EGAIV.3.pdf#page=102), if $S$ is a scheme with $X$ of finite type over $S$, all radicial $S$-endomorphisms of $X$ is surjective (thus bijective).
+:::
+
+
