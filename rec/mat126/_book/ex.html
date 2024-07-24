@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>MAT 126 Online Notes – 4&nbsp; Optional Excursions</title>
+<title>MAT 126 Online Notes – 4&nbsp; Excursions</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -110,7 +110,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ex.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Optional Excursions</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ex.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Excursions</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -160,7 +160,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ex.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Optional Excursions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Excursions</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -180,10 +180,11 @@ window.Quarto = {
    
   <ul>
   <li><a href="#sec-exeulertrigid" id="toc-sec-exeulertrigid" class="nav-link active" data-scroll-target="#sec-exeulertrigid"><span class="header-section-number">4.1</span> Euler’s Formula and Trigonometric Identities</a></li>
-  <li><a href="#partial-fractions" id="toc-partial-fractions" class="nav-link" data-scroll-target="#partial-fractions"><span class="header-section-number">4.2</span> Partial Fractions</a></li>
-  <li><a href="#sec-exchangecoordinate" id="toc-sec-exchangecoordinate" class="nav-link" data-scroll-target="#sec-exchangecoordinate"><span class="header-section-number">4.3</span> Change of Coordinate System</a>
+  <li><a href="#triangulation-and-schwarzs-example" id="toc-triangulation-and-schwarzs-example" class="nav-link" data-scroll-target="#triangulation-and-schwarzs-example"><span class="header-section-number">4.2</span> Triangulation and Schwarz’s Example</a></li>
+  <li><a href="#partial-fractions" id="toc-partial-fractions" class="nav-link" data-scroll-target="#partial-fractions"><span class="header-section-number">4.3</span> Partial Fractions</a></li>
+  <li><a href="#sec-exchangecoordinate" id="toc-sec-exchangecoordinate" class="nav-link" data-scroll-target="#sec-exchangecoordinate"><span class="header-section-number">4.4</span> Change of Coordinate System</a>
   <ul>
-  <li><a href="#todo" id="toc-todo" class="nav-link" data-scroll-target="#todo"><span class="header-section-number">4.3.1</span> TODO</a></li>
+  <li><a href="#todo" id="toc-todo" class="nav-link" data-scroll-target="#todo"><span class="header-section-number">4.4.1</span> TODO</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -193,7 +194,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Optional Excursions</span></h1>
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Excursions</span></h1>
 </div>
 
 
@@ -210,19 +211,23 @@ window.Quarto = {
 </header>
 
 
+<p>All content on this page is optional for MAT 126.</p>
 <section id="sec-exeulertrigid" class="level2 page-columns page-full" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="sec-exeulertrigid"><span class="header-section-number">4.1</span> Euler’s Formula and Trigonometric Identities</h2>
 <p>Recall Euler’s formula <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> <span class="math display">\[
 e^{i x}=\cos x+i \sin x
 \]</span> where <span class="math inline">\(i=\sqrt{-1}\)</span>.</p>
-<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;The reason this formula makes sense amounts to the <em>analytic continuation of the exponential function</em>, which is definitely not a required topic of calculus courses; you can refer to common complex analysis textbooks if so interested. The main ingredient of the proof is the power series expansion of the exponential function.</p></div><div id="fn2"><p><sup>2</sup>&nbsp;Recall that <span class="math display">\[\operatorname{Re}(z)=\frac{z+\bar{z}}{2} \quad \text { and } \quad \operatorname{Im}(z)=\frac{z-\bar{z}}{2 i},\]</span> where <span class="math inline">\(\bar{z}\)</span> denotes the complex conjugate of <span class="math inline">\(z\)</span>.</p></div></div><p>So for example, to derive the double-angle formula for cosine used above, redefine <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> <span class="math display">\[
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;The reason this formula makes sense amounts to the <em>analytic continuation of the exponential function</em>, which is definitely not a required topic of calculus courses; you can refer to common complex analysis texts if so interested. The main ingredient of the proof is the power series expansion of the exponential function.</p></div><div id="fn2"><p><sup>2</sup>&nbsp;Recall that <span class="math display">\[\operatorname{Re}(z)=\frac{z+\bar{z}}{2} \quad \text { and } \quad \operatorname{Im}(z)=\frac{z-\bar{z}}{2 i},\]</span> where <span class="math inline">\(\bar{z}\)</span> denotes the complex conjugate of <span class="math inline">\(z\)</span>.</p></div></div><p>So for example, to derive the double-angle formula for cosine used above, redefine <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> <span class="math display">\[
 \cos (x)=\frac{e^{i x}+e^{-i x}}{2}
 \]</span> with the Euler’s formula, and write <span class="math display">\[
 \cos ^2(\theta)=\frac{e^{2 i \theta}+2+e^{-2 i \theta}}{4}\quad\text{and}\quad\cos (2 \theta)=\frac{e^{2 i \theta}+e^{-2 i \theta}}{2};
 \]</span> which, via algebraic manipulations, gives <span class="math display">\[\cos (2 \theta)=2 \cos ^2 \theta-1,\]</span> as desired.</p>
 </section>
-<section id="partial-fractions" class="level2 page-columns page-full" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="partial-fractions"><span class="header-section-number">4.2</span> Partial Fractions</h2>
+<section id="triangulation-and-schwarzs-example" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="triangulation-and-schwarzs-example"><span class="header-section-number">4.2</span> Triangulation and Schwarz’s Example</h2>
+</section>
+<section id="partial-fractions" class="level2 page-columns page-full" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="partial-fractions"><span class="header-section-number">4.3</span> Partial Fractions</h2>
 <p>This is a more technical explanation of why one wants to use partial fraction decomposition (PFD) for evaluating antiderivatives, series expansions, and various integral transforms.</p>
 <div id="thm-pfd-extuni" class="theorem page-columns page-full">
 <p><span class="theorem-title"><strong>Theorem 4.1 (Existence and Uniqueness of PFD)</strong></span> <a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> Let <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> be nonzero polynomials over a field <span class="math inline">\(K\)</span> and let <span class="math display">\[
@@ -238,10 +243,10 @@ g=\prod_{i=1}^k p_i^{n_i}.
 \frac{dx+e}{ax^2+bx+c}\quad\text{where}\quad a,b,c,d,e\in\mathbb{Q}
 \]</span> already suffice.</p>
 </section>
-<section id="sec-exchangecoordinate" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="sec-exchangecoordinate"><span class="header-section-number">4.3</span> Change of Coordinate System</h2>
-<section id="todo" class="level3" data-number="4.3.1">
-<h3 data-number="4.3.1" class="anchored" data-anchor-id="todo"><span class="header-section-number">4.3.1</span> TODO</h3>
+<section id="sec-exchangecoordinate" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="sec-exchangecoordinate"><span class="header-section-number">4.4</span> Change of Coordinate System</h2>
+<section id="todo" class="level3" data-number="4.4.1">
+<h3 data-number="4.4.1" class="anchored" data-anchor-id="todo"><span class="header-section-number">4.4.1</span> TODO</h3>
 <ul>
 <li>bijection, inverses</li>
 <li>inverse function theorem, forms and measures (too much?)</li>

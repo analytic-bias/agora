@@ -29,6 +29,9 @@
 		},
 		{
 			"path": "expn"
+		},
+		{
+			"path": "better-schreiber"
 		}
 	],
 	"settings": {

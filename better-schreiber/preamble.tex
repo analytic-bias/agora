@@ -1,0 +1,107 @@
+\usepackage{marginfix}[=1.2]
+\usepackage{sidenotes}
+
+\usepackage{xeCJK}
+\usepackage{fontspec}
+% \renewcommand\allcapsspacing[1]{{\addfontfeature{LetterSpace=15}#1}}
+% \renewcommand\smallcapsspacing[1]{{\addfontfeature{LetterSpace=10}#1}}
+
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{unicode-math}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+
+\usepackage{qrcode}
+\usepackage{xcolor}
+\usepackage{relsize}
+\usepackage{soul}
+% \usepackage{caption}
+
+\usepackage{tikz-cd}
+\usepackage{quiver}
+\usepackage{frege}
+\usepackage{empheq}
+
+\newcommand{\ourblue}{\color[RGB]{0, 32, 96}}
+\usetikzlibrary{fit}
+\newenvironment{dummyenv}{}{}
+\newcommand{\class}[2]{}
+\newcommand{\cssId}[2]{}
+
+\let\linebreakto\linebreak
+\renewcommand{\linebreak}{}
+\let\captionto\caption
+\let\captionsetupto\captionsetup
+\let\labelitemito\labelitemi
+\let\phantomsectionto\phantomsection
+% \let\textfloatsepto\textfloatsep
+% \let\floatsepto\floatsep
+% \let\intextsepto\intextsep
+\counterwithout{footnote}{chapter}
+
+\usepackage{graphicx} % allow embedded images
+  \setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+%   \graphicspath{{graphics/}} % set of paths to search for images
+
+\usepackage{booktabs} % book-quality tables 
+\usepackage{units}    % non-stacked fractions and better unit spacing
+\usepackage{multicol} % multiple column layout facilities
+\usepackage{lipsum}   % filler text
+\usepackage{array}
+\usepackage{fancyvrb} % extended verbatim environments
+  \fvset{fontsize=\normalsize}% default font size for fancy-verbatim environments
+\usepackage{hyperref}
+
+\usepackage{fancyhdr}
+\renewcommand{\headrulewidth}{0pt}
+\setlength{\headwidth}{820pt}
+\pagestyle{fancy}
+\fancyhf{}
+\cfoot{}\lfoot{}\rfoot{}
+\fancyhead{}
+\fancyfoot{}
+\fancyhf{}
+\fancyhead[RO,LE]{\thepage}
+\usepackage{datetime}
+\usepackage{pgfplots}
+\usepackage[super]{nth}
+
+% TODO?
+% \usepackage{quiver}
+
+\pgfplotsset{compat=1.17}
+\usetikzlibrary{intersections,angles,quotes}
+\usepgfplotslibrary{fillbetween}
+
+\def\mathnote#1{%
+  \tag*{\rlap{\hspace\marginparsep{\parbox[t]{\marginparwidth}{\footnotesize#1}}}}%
+}
+\def\mathnotes#1{%
+  \tag*{\rlap{\hspace\marginparsep\smash{\parbox[t]{\marginparwidth}{\footnotesize#1}}}}%
+}
+\def\mathnoteps#1{%
+  \tag*{\rlap{\hspace\marginparsep{\parbox[t]{\marginparwidth}{\footnotesize#1}}}}%
+}
+
+\extrafloats{100}
+
+\usepackage{ifoddpage}
+\newcommand{\oddorevenarrow}{
+  \checkoddpage
+  \ifoddpage
+    \leftarrow
+  \else
+    \rightarrow
+  \fi
+}
+
+\makeatletter
+\let\ginnatwidth\Gin@nat@width
+\makeatother
+
+\makeatletter
+\let\ginnatheight\Gin@nat@height
+\makeatother

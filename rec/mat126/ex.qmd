@@ -1,8 +1,10 @@
-# Optional Excursions
+# Excursions
+
+All content on this page is optional for MAT 126.
 
 ## Euler's Formula and Trigonometric Identities {#sec-exeulertrigid}
 Recall Euler's formula
-^[The reason this formula makes sense amounts to the *analytic continuation of the exponential function*, which is definitely not a required topic of calculus courses; you can refer to common complex analysis textbooks if so interested. The main ingredient of the proof is the power series expansion of the exponential function.]
+^[The reason this formula makes sense amounts to the *analytic continuation of the exponential function*, which is definitely not a required topic of calculus courses; you can refer to common complex analysis texts if so interested. The main ingredient of the proof is the power series expansion of the exponential function.]
 $$
 e^{i x}=\cos x+i \sin x
 $$
@@ -22,6 +24,8 @@ $$
 which, via algebraic manipulations, gives
 $$\cos (2 \theta)=2 \cos ^2 \theta-1,$$
 as desired.
+
+## Triangulation and Schwarz's Example
 
 ## Partial Fractions
 This is a more technical explanation of why one wants to use partial fraction decomposition (PFD) for evaluating antiderivatives, series expansions, and various integral transforms.

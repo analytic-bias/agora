@@ -170,7 +170,7 @@ $$\square \varphi \rightarrow \square \square \varphi .$$
 
 ::: {#lst-montague-goedel-exercise-2024-problems-1 fig-pos='H' fig-align="left"}
 
-\begin{natdummyenv}
+\begin{dummyenv}
 \nopagecolor
 \definecolor{ourblue}{HTML}{0070C0}
 $\displaystyle
@@ -200,7 +200,7 @@ $
     \node[inner sep=2pt,draw=ourblue,fit=(start) (end)] {};
   }
 \end{tikzpicture}
-\end{natdummyenv}
+\end{dummyenv}
 
 Exercise Lemma
 
@@ -211,7 +211,7 @@ Mystery Tour"^[van Benthan [2010], p. 245 describes this theorem "as a piece of 
 
 ::: {#lst-montague-goedel-exercise-2024-problems-2 fig-pos='H' fig-align="left"}
 
-\begin{natdummyenv}
+\begin{dummyenv}
 \nopagecolor
 \definecolor{ourblue}{HTML}{0070C0}
 $\displaystyle
@@ -250,7 +250,7 @@ $
     \node[inner sep=2pt,draw=ourblue,fit=(start) (end)] {};
   }
 \end{tikzpicture}
-\end{natdummyenv}
+\end{dummyenv}
 
 Exercise "Löb-Gödel Theorem"
 
@@ -346,7 +346,7 @@ Since $\textcolor{red}{{\sim}\square{}(1=2)}$, by definition, is $\textcolor{blu
 
 ::: {#lst-montague-goedel-2024-solution-to-problems-1 fig-pos='H' fig-align="left"}
 
-\begin{natdummyenv}
+\begin{dummyenv}
 \nopagecolor
 \definecolor{ourblue}{HTML}{0070C0}
 $\displaystyle
@@ -376,7 +376,7 @@ $
     \node[inner sep=2pt,draw=ourblue,fit=(start) (end)] {};
   }
 \end{tikzpicture}
-\end{natdummyenv}
+\end{dummyenv}
 
 Solution to Exercise Lemma
 
@@ -384,7 +384,7 @@ Solution to Exercise Lemma
 
 ::: {#lst-montague-goedel-2024-solution-to-problems-2 fig-pos='H' fig-align="left"}
 
-\begin{natdummyenv}
+\begin{dummyenv}
 \nopagecolor
 \definecolor{ourblue}{HTML}{0070C0}
 $\displaystyle
@@ -423,7 +423,7 @@ $
     \node[inner sep=2pt,draw=ourblue,fit=(start) (end)] {};
   }
 \end{tikzpicture}
-\end{natdummyenv}
+\end{dummyenv}
 
 Solution to Exercise "Löb-Gödel Theorem"
 

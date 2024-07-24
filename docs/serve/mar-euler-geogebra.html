@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex">
+    <title>Euler PowerPoint Geogebra Embed Serving</title>
+</head>
+
+<body>
+    <noscript>
+        <div style="display: block;"><h1>JavaScript not supported.</h1></div>
+    </noscript>
+
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+    <div id="ggb-element" style="width: 100%"></div>
+    <script>
+        // let w = window.screen.width;
+        let params = {
+            "perspective": "G", "material_id": "qkvt8bet", "showToolBar": false, "enableRightClick": false, "showAlgebraInput": false, "showMenuBar": false, "preventFocus": true, "showFullscreenButton": true, "rounding": "2", "showKeyboardOnFocus": false, appletOnLoad(api) {
+                api.setPerspective("G");
+                api.showResetIcon(true);
+            }
+        };
+        let applet = new GGBApplet(params, true);
+        window.addEventListener("load", function () {
+            applet.inject('ggb-element');
+        });
+    </script>
+</body>
+
+</html>

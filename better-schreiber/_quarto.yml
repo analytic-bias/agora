@@ -1,0 +1,82 @@
+project:
+  type: book
+  # post-render:
+  # - rm -rf ../docs/gb/
+  # - cp -r _book/ ../docs/gb/
+  # - mv ../docs/gb/Gödelian-Explorations.pdf ../docs/gb/gb.pdf
+filters:
+  - extensions/rtex.lua
+  - quarto
+  - extensions/after.lua
+# bibliography:
+  # - references.bib
+  # - /home/hypatia/Workspace/Library/zotero.bib
+csl: glossa.csl
+pdf-engine: xelatex
+reference-location: margin
+citation-location: margin
+
+book:
+  search:
+    location: sidebar
+    type: overlay
+    copy-button: true
+  title: "Urs Schreiber's Geometry of Physics ... with Less Typo and Better Typesetting"
+  author: "Urs Schreiber"
+  date: "2030-01-01"
+  chapters:
+    - index.qmd
+    - c03spacetime/index.qmd
+    # - references.qmd
+
+format-links: [pdf]
+format:
+  html:
+    css: styles.css
+    toc: true
+    toc-depth: 6
+    theme: cosmo # TODO: html theme and fonts
+    grid: 
+        margin-width: 300pt
+    comments:
+      hypothesis: 
+        theme: clean
+        showHighlights: always
+      # giscus:
+      #   repo: analytic-bias/analytic-bias-comment
+      #   repo-id: R_kgDOJt9yig
+      #   category: Gödelian Explorations Comments
+      #   category-id: DIC_kwDOJt9yis4CeBQx
+      #   mapping: url
+      #   # strict: true
+      #   reactions-enabled: true
+      #   input-position: top
+  pdf:
+    # cite-method: biblatex
+    keep-tex: true
+    fontfamily: libertinus # TODO: latex font
+    fontsize: 12pt
+    colorlinks: true
+    documentclass: scrreprt
+    classoption: [twoside]
+    geometry:
+      - paperwidth=890pt
+      - paperheight=890pt
+      - left=30pt
+      - textwidth=500pt
+      - marginparsep=30pt
+      - marginparwidth=300pt
+      - top=50pt
+      - bottom=50pt
+      - heightrounded
+    include-in-header:
+      - file: preamble.tex
+    include-before-body:
+      - file: beforebody.tex
+    # no need:
+    # documentclass: tufte-book
+    # classoption: [justified]
+    # TODO:
+    # lof: true
+    # lot: true
+    # toc
